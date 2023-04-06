@@ -1,0 +1,19 @@
+.Shedule {
+    width: 100%;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+
+    padding: var(--padding-xl);
+}
+
+.title {
+    margin-bottom: 30px;
+    font-size: var(--title-size-xl);
+    line-height: var(--line-height-size-xl);
+    text-align: center;
+}

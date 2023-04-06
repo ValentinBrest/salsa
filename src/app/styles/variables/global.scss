@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,300&display=swap");
+
+:root {
+    --font-family-main: "Jost", "Times New Roman", sans-serif;
+    --font-size-s: 12px;
+    --font-line-s: 16px;
+    --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
+    --font-size-m: 16px;
+    --font-line-m: 24px;
+    --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+    --font-size-l: 24px;
+    --font-line-l: 32px;
+    --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+    --font-size-xl: 32px;
+    --font-line-xl: 40px;
+    --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+
+    // Размеры
+    --navbar-height: 80px;
+    --sidebar-width: 300px;
+    --sidebar-width-collapsed: 80px;
+
+    // Цвета
+    --light-color: #fff;
+    --dark-color: #1b0064;
+    --text-color: #e52d87;
+    --link-color: #716b70;
+    --inverted-text-color: #e3f5f5;
+    --overlay-color: rgba(0 0 0 / 60%);
+    --input-color: #d3d3d3;
+    --input-color-focus: rgb(144 183 228 / 81.5%);
+    --gradient-color-one: #553c9a;
+    --gradient-color-two: #ee4b2b;
+
+    // z - Индексы
+    --modal-z-index: 10;
+
+    // Заголовки
+    --title-size-s: 48px;
+    --title-size-m: 56px;
+    --title-size-l: 64px;
+    --title-size-xl: 72px;
+    --line-height-size-s: 36px;
+    --line-height-size-m: 44px;
+    --line-height-size-l: 52px;
+    --line-height-size-xl: 60px;
+
+    // Отступы
+    --padding-s: 15px 0;
+    --padding-m: 30px 0;
+    --padding-l: 45px 0;
+    --padding-xl: 60px 0;
+}

@@ -57,10 +57,14 @@
     --hover-color: #e52d87;
     --link-color-light: #cacacada;
     --link-color-dark: #716b70;
+
+    // tabs
     --tabs-bg-color-light: #949494da;
     --tabs-color-light: #505050da;
     --tabs-bg-color-dark: #777777da;
     --tabs-color-dark: #fcfcfc;
+    
+    // table
     --table-head-bg-color-light: #737b7cda;
     --table-head-color-light: #e6e4e4ec;
     --table-head-bg-color-dark: #032157;
@@ -69,6 +73,13 @@
     --table-body-color-light: #444444da;
     --table-body-bg-color-dark: #0b3f9ebe;
     --table-body-color-dark: #d6d4d4e5;
+
+    // price
+    --price-bg-color-light: #d1d1d1da;
+    --price-color-light: #585252;
+    --price-bg-color-dark: #0b0c3f;
+    --price-color-dark: #c9bcbc;
+
     --inverted-text-color: #e3f5f5;
     --overlay-color: rgba(0 0 0 / 60%);
     --input-color: #d3d3d3;
@@ -94,6 +105,7 @@
     --padding-m: 30px 0;
     --padding-l: 45px 0;
     --padding-xl: 60px 0;
+    --padding-xxl: 75px 0;
     --margin-s: 15px;
     --margin-m: 30px;
     --margin-l: 45px;

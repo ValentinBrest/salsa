@@ -1,7 +1,6 @@
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button, Input } from 'shared/ui';
+import { Button, ButtonSize, ButtonTheme, Input } from 'shared/ui';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
 
 import cl from './Form.module.scss';
 
@@ -10,17 +9,23 @@ interface FormProps {
 }
 
 export const Form = ({ className }: FormProps) => {
-    const { t } = useTranslation();
 
     return (
         <div className={classNames(cl.Form, {}, [className])}>
             <div className="container">
-                <h2 className={cl.title}>ЗАПИШИТЕСЬ НА ПЕРВЫЙ УРОК</h2>
                 <div className={cl.wrap}>
-                    <Input/>
-                    <Input/>
-                    <Input/>
-                    <Button>Отправить</Button>
+                    <div className={cl.formInner}>
+                        <Text theme={TextTheme.WITHOUT} title="ЗАПИШИТЕСЬ НА ПЕРВЫЙ УРОК"/>
+
+                        <Input placeholder="Имя"/>
+                        <Input placeholder="Фамилия"/>
+                        <Input placeholder="Номер телефона"/>
+
+                        <Button theme={ButtonTheme.OUTLINE} size={ButtonSize.L} className={cl.button}>Отправить</Button>
+                        <span className={cl.text}>{'*Нажимая на кнопку "Отправить", вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности'}</span>
+                         
+                    </div>
+                    <div></div>
                 </div>
             </div>
         </div>

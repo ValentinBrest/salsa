@@ -11,7 +11,7 @@ export const prices = [
         countTimeWeek: '2 раза в неделю',
     },
     {
-        title: 'Абонемент',
+        title: 'Абонемент "Студенческий"',
         price: 50,
         limit: '1 месяц',
         countTimeWeek: '2 раза в неделю',

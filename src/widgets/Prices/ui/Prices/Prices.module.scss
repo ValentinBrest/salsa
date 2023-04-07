@@ -1,12 +1,13 @@
-.Shedule {
+.Prices {
     width: 100%;
+    padding: var(--padding-xxl);
 }
 
 .wrap {
     display: flex;
     gap: 20px;
     justify-content: space-between;
-    padding: var(--padding-xl);
+    padding-top: 30px;
 }
 
 .title {

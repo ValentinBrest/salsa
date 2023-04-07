@@ -19,8 +19,8 @@ export const PricesCard = (props: PricesCardProps) => {
 
     return (
         <div className={classNames(cl.PricesCard, {}, [className])}>
-            <div>{title}</div>
-            <div>{price}</div>
+            <div className={cl.title}>{title}</div>
+            <div>{price} руб.</div>
             <div>{limit}</div>
             <div>{countTimeWeek}</div>
         </div>

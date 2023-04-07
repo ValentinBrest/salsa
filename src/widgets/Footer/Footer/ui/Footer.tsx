@@ -16,7 +16,13 @@ export const Footer = ({ className }: FooterProps) => {
         <footer className={classNames(cl.Footer, {}, [className])}>
             <div className="container">
                 <div className={cl.wrap}>
-                    Footer
+                    <span>© 2007-2023 Школа танцев «Salsa forever»</span>
+                    <div>
+                        <span>tg</span>
+                        <span>       </span>
+                        <span>inst</span>
+                    </div>
+                    <span>SalsaMamboBrest@gmail.by</span>
                 </div>
             </div>
         </footer>

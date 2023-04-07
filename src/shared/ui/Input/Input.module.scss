@@ -1,12 +1,14 @@
 .Input {
     width: 100%;
-    height: 30px;
+    height: 40px;
 
-    font: var(--font-s);
+    font: var(--font-m);
 
     background: var(--input-color);
     border: none;
     border-radius: 3px;
+    margin-bottom: 10px;
+    padding-left: 10px;
 
     &:focus {
         background: var(--input-color-focus);

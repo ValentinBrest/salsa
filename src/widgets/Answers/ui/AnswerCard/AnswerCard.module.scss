@@ -1,5 +1,36 @@
-.PricesCard {
+.AnswerCard {
     width: 100%;
     padding: 10px 5px;
-    border: 1px solid var(--primary-color);
+
+    color: var(--table-body-color);
+
+    background-color: var(--table-body-bg-color);
+    border-radius: 5px;
 }
+
+.header {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 50px;
+    padding: 0 10px;
+
+    color: var(--table-head-color);
+
+    background-color: var(--table-head-bg-color);
+    transition: all 0.3s;
+}
+
+.sign {
+    width: 40px;
+    height: 40px;
+    fill: var(--table-head-color);
+}
+
+.body {
+    padding: 20px 10px;
+}
+

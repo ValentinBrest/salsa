@@ -1,19 +1,11 @@
 .Footer {
     width: 100%;
+    padding: var(--padding-xl);
+    background: var(--footer-bg-color);
+    color: var(--footer-color);
 }
 
 .wrap {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
     justify-content: space-between;
-
-    padding: var(--padding-xl);
-}
-
-.title {
-    margin-bottom: 30px;
-    font-size: var(--title-size-xl);
-    line-height: var(--line-height-size-xl);
-    text-align: center;
 }

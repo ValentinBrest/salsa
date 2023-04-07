@@ -58,6 +58,18 @@
     }
 }
 
+.without {
+    span {
+        &::before {
+            content: none;
+        }
+
+        &::after {
+            content: none;
+        }
+    }
+}
+
 .left {
     text-align: left;
 }

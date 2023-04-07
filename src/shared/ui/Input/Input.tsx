@@ -21,6 +21,7 @@ export const Input = memo((props: InputProps) => {
         value,
         onChange,
         type = 'text',
+        placeholder,
         isOpen,
         ...otherProps
     } = props;
@@ -43,6 +44,7 @@ export const Input = memo((props: InputProps) => {
             className={classNames(cl.Input, {}, [className])}
             type={type}
             value={value}
+            placeholder={placeholder}
             onChange={onChangeHandler}
             {...otherProps}
         />

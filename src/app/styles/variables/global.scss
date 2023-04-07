@@ -2,6 +2,8 @@
 
 :root {
     --font-family-main: "Jost", "Times New Roman", sans-serif;
+
+    // TEXT
     --font-size-s: 12px;
     --font-line-s: 16px;
     --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
@@ -15,6 +17,29 @@
     --font-line-xl: 40px;
     --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
 
+    // TITLE
+    --font-size-title-xs: 40px;
+    --font-line-title-xs: 48px;
+    --font-title-xs: var(--font-size-title-xs) / var(--font-line-title-xs) var(--font-family-main);
+    --font-size-title-s: 48px;
+    --font-line-title-s: 56px;
+    --font-title-s: var(--font-size-title-s) / var(--font-line-title-s) var(--font-family-main);
+    --font-size-title-m: 56px;
+    --font-line-title-m: 64px;
+    --font-title-m: var(--font-size-title-m) / var(--font-line-title-m) var(--font-family-main);
+    --font-size-title-l: 64px;
+    --font-line-title-l: 72px;
+    --font-title-l: var(--font-size-title-l) / var(--font-line-title-l) var(--font-family-main);
+    --font-size-title-xl: 72px;
+    --font-line-title-xl: 80px;
+    --font-title-xl: var(--font-size-title-xl) / var(--font-line-title-xl) var(--font-family-main);
+    --font-size-main-title: 128px;
+    --font-line-main-title: 136px;
+    --font-main-title: var(--font-size-main-title) / var(--font-line-main-title) var(--font-family-main);
+    --font-size-main-subtitle: 100px;
+    --font-line-main-subtitle: 108px;
+    --font-main-subtitle: var(--font-size-main-subtitle) / var(--font-line-main-subtitle) var(--font-family-main);
+
     // Размеры
     --navbar-height: 80px;
     --sidebar-width: 300px;
@@ -22,9 +47,28 @@
 
     // Цвета
     --light-color: #fff;
-    --dark-color: #1b0064;
-    --text-color: #e52d87;
-    --link-color: #716b70;
+    --light-color-second: #dfdfdfe1;
+    --dark-color: #0b0a30;
+    --dark-color-second: #1f1c57e7;
+    --dark-color-navbar: #040a22;
+    --shadow-color: rgb(171 0 157 / 22.6%);
+    --text-color-light: #f0f0f0e3;
+    --text-color-dark: #4d4d4d;
+    --hover-color: #e52d87;
+    --link-color-light: #cacacada;
+    --link-color-dark: #716b70;
+    --tabs-bg-color-light: #949494da;
+    --tabs-color-light: #505050da;
+    --tabs-bg-color-dark: #777777da;
+    --tabs-color-dark: #fcfcfc;
+    --table-head-bg-color-light: #737b7cda;
+    --table-head-color-light: #e6e4e4ec;
+    --table-head-bg-color-dark: #032157;
+    --table-head-color-dark: #e6e6e6de;
+    --table-body-bg-color-light: #9c9b9bda;
+    --table-body-color-light: #444444da;
+    --table-body-bg-color-dark: #0b3f9ebe;
+    --table-body-color-dark: #d6d4d4e5;
     --inverted-text-color: #e3f5f5;
     --overlay-color: rgba(0 0 0 / 60%);
     --input-color: #d3d3d3;
@@ -50,4 +94,8 @@
     --padding-m: 30px 0;
     --padding-l: 45px 0;
     --padding-xl: 60px 0;
+    --margin-s: 15px;
+    --margin-m: 30px;
+    --margin-l: 45px;
+    --margin-xl: 60px;
 }

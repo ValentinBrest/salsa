@@ -1,5 +1,6 @@
 .Shedule {
     width: 100%;
+    background: var(--bg-color-second);
 }
 
 .wrap {
@@ -11,46 +12,54 @@
     padding: var(--padding-xl);
 }
 
-.title {
-    margin-bottom: 30px;
-    font-size: var(--title-size-xl);
-    line-height: var(--line-height-size-xl);
-    text-align: center;
-}
-
-.subtitle {
-    font-size: var(--title-size-s);
-    line-height: var(--line-height-size-s);
-    color: #850b0b;
-    text-align: center;
-}
-
 .days {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    min-height: 60px;
+}
+
+.tab {
+    border-radius: 94% 6% 94% 6% / 5% 95% 5% 95%;
+    border-right: 3px solid var(--table-body-color);
 }
 
 .table_head {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 0.8fr 1fr 1fr 0.5fr 1fr;
     gap: 3px;
 
     height: 50px;
     margin-top: 10px;
+
+    font: var(--font-l);
+    color: var(--table-head-color);
+
+    background-color: var(--table-head-bg-color);
+    outline: 3px solid var(--hover-color);
 }
 
 .head_item {
-    font-weight: 700;
-    line-height: var(--line-height-size-l);
+    align-self: center;
+    font-weight: 500;
     text-align: center;
-    background-color: #b7b54c;
-}
+    border-right: 3px solid var(--table-head-color);
 
-.table_body {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    &:last-child {
+        border-right: none;
+    }
 }
 
 .active {
-    background-color: #ccc;
+    color: var(--text-color-light);
+    opacity: 1;
+    background-color: var(--hover-color);
+}
+
+.relax {
+    width: 100%;
+    min-height: 50px;
+
+    font: var(--font-xl);
+    color: var(--table-body-color);
+    text-align: center;
 }

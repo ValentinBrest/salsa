@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink } from 'shared/ui';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 
 import { links } from '../../../../data/links/links';
 
@@ -15,11 +16,13 @@ export const NavBar = ({ className }: NavBarProps) => {
 
     return (
         <div className={classNames(cl.NavBar, {}, [className])}>
-            <div className='container'>
+            <div className="container">
                 <div className={cl.wrap}>
                     <div className={cl.logoWrap}>
                         <div className={cl.logo}>salsa forever</div>
-                        <div className={cl.line}></div>
+                    </div>
+                    <div className={cl.line}>
+                        {<ThemeSwitcher className={cl.switcher}/>}
                     </div>
                     <div className={cl.links}>
                         {links.map((item) => (

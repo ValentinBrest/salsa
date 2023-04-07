@@ -11,26 +11,24 @@
     padding: var(--padding-xl);
 }
 
-.title {
-    margin-bottom: 30px;
-    font-size: var(--title-size-xl);
-    line-height: var(--line-height-size-xl);
-}
-
-.subtitle {
-    font-size: 100px;
-    line-height: 80px;
-    color: #850b0b;
-}
-
 .decr {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    align-self: end;
 }
 
 .pick {
+    width: 100%;
+    height: 100%;
+
     background-image: url("https://www.libertyparkmusic.com/wp-content/uploads/Depositphotos_64698027_l-2015.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    border-radius: 100%;
 }

@@ -14,7 +14,7 @@ export const Form = ({ className }: FormProps) => {
 
     return (
         <div className={classNames(cl.Form, {}, [className])}>
-            <div className='container'>
+            <div className="container">
                 <h2 className={cl.title}>ЗАПИШИТЕСЬ НА ПЕРВЫЙ УРОК</h2>
                 <div className={cl.wrap}>
                     <Input/>

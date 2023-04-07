@@ -1,8 +1,7 @@
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 
-import {prices} from '../../../../../data/prices/prices';
+import { prices } from '../../../../../data/prices/prices';
 import { PricesCard } from '../PriceCard/PricesCard';
 
 import cl from './Prices.module.scss';
@@ -16,7 +15,7 @@ export const Prices = ({ className }: PricesProps) => {
 
     return (
         <div className={classNames(cl.Prices, {}, [className])}>
-            <div className='container'>
+            <div className="container">
                 <h2 className={cl.title}>Цены</h2>
                 <div className={cl.wrap}>
                     {prices.map((item, index) => <PricesCard {...item} key={index}/>)}

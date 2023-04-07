@@ -4,5 +4,11 @@ export const days = [
     { id: 3, day: 'среда' },
     { id: 4, day: 'четверг' },
     { id: 5, day: 'пятница' },
-    { id: 6, day: 'суббота-воскресенье' },
+    { id: 6, day: 'суббота' },
 ];
+
+export const getToday = (date: Date) => {
+    const numberDay = date.getDay();
+    const today = days.filter(item => item.id == numberDay );
+    return today[0];
+};

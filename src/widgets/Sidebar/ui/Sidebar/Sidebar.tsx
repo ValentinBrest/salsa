@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { RoutePath } from 'app/providers/router/routeConfig/routeConfig';
 import AboutIcon from 'shared/assets/icons/sidebar/about.svg';
 import MainIcon from 'shared/assets/icons/sidebar/main.svg';
 import OpenMenu from 'shared/assets/icons/sidebar/menu.svg';
 import CloseMenu from 'shared/assets/icons/sidebar/xmark.svg';
-import { RoutePath } from 'app/providers/router/routeConfig/routeConfig';
 import { classNames } from 'shared/lib/classNames/classNames';
 import {
     AppLink,
@@ -31,13 +31,13 @@ export const Sidebar = ({ className }: SidebarProps) => {
     };
     return (
         <div
-            data-testid='sidebar'
+            data-testid="sidebar"
             className={classNames(cl.Sidebar, { [cl.collapsed]: collapsed }, [
                 className,
             ])}
         >
             <Button
-                data-testid='sidebar-toggle'
+                data-testid="sidebar-toggle"
                 theme={ButtonTheme.CLEAR}
                 onClick={onToggle}
                 square

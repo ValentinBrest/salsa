@@ -1,8 +1,20 @@
 .dark {
     --bg-color: var(--dark-color);
     --inverted-bg-color: var(--light-color);
-    --primary-color: var(--inverted-text-color);
-    --inverted-primary-color: var(--text-color);
+    --bg-color-second: var(--dark-color-second);
+    --inverted-bg-color-second: var(--light-color-second);
+    --bg-color-navbar: var(--dark-color-navbar);
+    --inverted-bg-color-navbar: var(--light-color);
+    --link-color: var(--link-color-light);
+    --logo-color: var(--light-color);
+    --tabs-bg-color: var(--tabs-bg-color-dark);
+    --tabs-color: var(--tabs-color-dark);
+    --table-head-bg-color: var(--table-head-bg-color-dark);
+    --table-head-color: var(--table-head-color-dark);
+    --table-body-bg-color: var(--table-body-bg-color-dark);
+    --table-body-color: var(--table-body-color-dark);
+    --primary-color: var(--text-color-dark);
+    --inverted-primary-color: var(--text-color-light);
     --secondary-color: #171ab8;
     --inverted-secondary-color: #04e016;
 }

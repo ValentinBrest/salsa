@@ -1,8 +1,7 @@
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 
-import {answers} from '../../../../../data/answers/answers';
+import { answers } from '../../../../../data/answers/answers';
 import { AnswerCard } from '../AnswerCard/AnswerCard';
 
 import cl from './Answers.module.scss';
@@ -16,7 +15,7 @@ export const Answers = ({ className }: AnswersProps) => {
 
     return (
         <div className={classNames(cl.Answers, {}, [className])}>
-            <div className='container'>
+            <div className="container">
                 <h2 className={cl.title}>Вопросы</h2>
                 <div className={cl.wrap}>
                     {answers.map((item) => <AnswerCard {...item} key={item.id}/>)}

@@ -2,9 +2,8 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
 
-import konstantin from '../../../../public/images/konstantin.jpg';
-import valentin from '../../../../public/images/valentin.jpg';
-import image from '../../../../public/intro.jpg';
+import konstantin from '../../../../public/img/konstantin.jpg';
+import valentin from '../../../../public/img/valentin.jpg';
 
 import cl from './Intro.module.scss';
 
@@ -15,33 +14,27 @@ interface IntroProps {
 export const Intro = ({ className }: IntroProps) => {
     const { t } = useTranslation();
 
-    const leftBackground = {
-        background: `bottom / contain no-repeat url(${valentin})`,
-    };
     const rightBackground = {
-        background: `bottom  / contain no-repeat url(${konstantin})`,
+        background: `center / cover no-repeat url(${valentin})`,
+    };
+    const leftBackground = {
+        background: `center  / cover no-repeat url(${konstantin})`,
     };
     return (
         <div className={classNames(cl.Intro, {}, [className])}>
             <div className={cl.wrap}>
-                <div className={cl.left}>
-                    <div style={leftBackground} className={cl.leftInner}></div>
-                </div>
+                <div style={leftBackground} className={cl.left}></div>
                 <div className={cl.center}>
-                    <div className={cl.centerInner}>
-                        <h1 className={cl.title}>САЛЬСА</h1>
-                        <h2 className={cl.subtitle}>БРЕСТ</h2>
-                        <Button
-                            size={ButtonSize.XL}
-                            theme={ButtonTheme.OUTLINE}
-                        >
-                            Хочу танцевать
-                        </Button>
-                    </div>
+                    <h1 className={cl.title}>САЛЬСА</h1>
+                    <h2 className={cl.subtitle}>БРЕСТ</h2>
+                    <Button
+                        size={ButtonSize.XL}
+                        theme={ButtonTheme.OUTLINE}
+                    >
+                        Хочу танцевать
+                    </Button>
                 </div>
-                <div className={cl.right}>
-                    <div style={rightBackground} className={cl.rightInner}></div>
-                </div>
+                <div style={rightBackground} className={cl.right}></div>
             </div>
         </div>
     );

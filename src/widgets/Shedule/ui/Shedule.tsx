@@ -2,10 +2,13 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
+import { Text } from 'shared/ui/Text/Text';
 
-import { days } from '../../../../data/shedule/getDays';
+import { days, getToday } from '../../../../data/shedule/getDays';
 import { getDayShedule } from '../../../../data/shedule/getDayShedule';
 import { tableHead } from '../../../../data/shedule/getTableHead';
+
+import { SheduleItem } from './SheduleItem/SheduleItem';
 
 import cl from './Shedule.module.scss';
 
@@ -16,8 +19,10 @@ interface SheduleProps {
 export const Shedule = ({ className }: SheduleProps) => {
     const { t } = useTranslation();
 
-    const [currentDay, setCurrentDay] = useState('понедельник');
-    const [active, setActive] = useState(1);
+    const today = getToday(new Date());
+
+    const [currentDay, setCurrentDay] = useState(today.day);
+    const [active, setActive] = useState(today.id);
 
     const openTab = (e: React.SyntheticEvent<EventTarget>, day: string) => {
         if (!(e.target instanceof HTMLButtonElement)) {
@@ -31,22 +36,21 @@ export const Shedule = ({ className }: SheduleProps) => {
     
     return (
         <div className={classNames(cl.Shedule, {}, [className])}>
-            <div className='container'>
+            <div className="container">
                 <div className={cl.wrap}>
-                    <h2 className={cl.title}>Расписание занятий</h2>
-                    <h3 className={cl.subtitle}>
-                        Чтобы смотреть дни, нажимайте на вкладки
-                    </h3>
+                    <Text title="Расписание занятий"/>
+                    <Text text="*Чтобы смотреть дни, нажимайте на вкладки"/>
+                    
                     <div className={cl.days}>
                         {days.map(({ day, id }) => {
                             return (
                                 <Button
                                     size={ButtonSize.L}
-                                    theme={ButtonTheme.BACKGROUND_INVERTED}
+                                    theme={ButtonTheme.TABS}
                                     key={id}
                                     onClick={(e) => openTab(e, day)}
                                     data-index={id}
-                                    className={`${
+                                    className={`${cl.tab} ${
                                         id === active ? `${cl.active}` : ''
                                     }`}
                                 >
@@ -55,24 +59,24 @@ export const Shedule = ({ className }: SheduleProps) => {
                             );
                         })}
                     </div>
-                    <div className={cl.table_head}>
-                        {tableHead.map((item, index) => {
-                            return (
-                                <div className={cl.head_item} key={index}>
-                                    {item}
-                                </div>
-                            );
-                        })}
-                    </div>
-                    <div className={cl.table_body}>
-                        {tableBody.map((item, index) => {
-                            return (
-                                <div className={cl.head_item} key={index}>
-                                    {item}
-                                </div>
-                            );
-                        })}
-                    </div>
+                    {tableBody.length == 0 
+                        ? <div className={cl.relax}>Домашние тренировки</div> 
+                        : <div className={cl.table}>
+                            <div className={cl.table_head}>
+                                {tableHead.map((item, index) => {
+                                    return (
+                                        <div className={cl.head_item} key={index}>
+                                            {item}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                    
+                            {tableBody.map((item, index) => (
+                                <SheduleItem key={index} data={item}/>
+                            ))}
+                        </div>}
+                    
                 </div>
             </div>
         </div>

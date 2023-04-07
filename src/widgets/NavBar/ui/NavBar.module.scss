@@ -1,30 +1,21 @@
 .NavBar {
     position: absolute;
+    z-index: 2;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2;
-    box-shadow: 0px 7px 25px 0px rgba(171, 0, 158, 0.2);
 
     width: 100%;
     height: var(--navbar-height);
     padding: 20px;
 
-    background: var(--light-color);
-}
-
-.box {
-    width: 0;
-    height: 0;
-
-    border: 0 solid transparent;
-    border-top: 69px solid black;
-    border-right-width: 100px;
-    border-left-width: 100px;
+    background: var(--bg-color-navbar);
+    box-shadow: 0 7px 25px 0 var(--shadow-color);
 }
 
 .wrap {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,24 +24,31 @@
 .logoWrap {
     display: flex;
     align-items: center;
-    position: relative;
 }
 
 .logo {
-    font: var(--font-xl);
-    color: var(--primary-color);
     margin-right: 20px;
+    font: var(--font-xl);
+    color: var(--logo-color);
 }
 
 .line {
     position: absolute;
-    right: -150px;
-    width: 60px;
-    height: 80px;
-    background-color: var(--text-color);
-	-webkit-transform: skew(20deg);
-	-moz-transform: skew(20deg);
-	-o-transform: skew(20deg);
+    left: 20%;
+    transform: skew(20deg);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: var(--navbar-height);
+
+    background-color: var(--hover-color);
+}
+
+.switcher {
+    transform: skew(-20deg);
 }
 
 .links {
@@ -59,8 +57,4 @@
 
 .link {
     margin-right: 20px;
-}
-
-.mainLink {
-    margin-right: 15px;
 }

@@ -14,7 +14,7 @@ export const Footer = ({ className }: FooterProps) => {
 
     return (
         <footer className={classNames(cl.Footer, {}, [className])}>
-            <div className='container'>
+            <div className="container">
                 <div className={cl.wrap}>
                     Footer
                 </div>

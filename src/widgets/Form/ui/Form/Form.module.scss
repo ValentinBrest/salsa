@@ -1,12 +1,13 @@
 .Form {
     width: 100%;
     padding: var(--padding-xl);
+    
 }
 
 .wrap {
     display: grid;
-    grid-template-columns: 0.7fr 1fr;
-    gap: 20px;
+    grid-template-columns: 0.7fr 0.9fr;
+    gap: 50px;
     justify-content: space-between;
 }
 
@@ -23,5 +24,10 @@
 
 .text {
     font: var(--font-m);
-    color: var(--hover-color);
+    font-style: italic;
+    color: var(--hover-color) !important;
+}
+
+.dance {
+    border-radius: 15px;
 }

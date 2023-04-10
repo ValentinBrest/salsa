@@ -14,6 +14,7 @@ interface AnswersProps {
 export const Answers = ({ className }: AnswersProps) => {
     const { t } = useTranslation();
 
+    
     return (
         <div className={classNames(cl.Answers, {}, [className])}>
             <div className="container">

@@ -5,6 +5,8 @@
     font-weight: 700;
     color: var(--hover-color);
     text-align: center;
+    font-style: inherit;
+    letter-spacing: inherit;
 
     span {
         position: relative;
@@ -46,6 +48,7 @@
     margin-bottom: var(--margin-s);
     font: var(--font-l);
     color: var(--inverted-primary-color);
+    font-style: inherit;
 }
 
 .error {
@@ -68,6 +71,11 @@
             content: none;
         }
     }
+}
+
+.italic {
+    font-style: italic;
+    letter-spacing: 0.5px;
 }
 
 .left {

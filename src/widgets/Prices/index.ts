@@ -1,4 +1,4 @@
-import { PricesCard } from './ui/PriceCard/PricesCard';
+import { PriceCard } from './ui/PriceCard/PriceCard';
 import { Prices } from './ui/Prices/Prices';
 
-export {Prices, PricesCard};
+export {Prices, PriceCard};

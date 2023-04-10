@@ -3,8 +3,6 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
 import { Portal } from 'shared/ui/Portal/Portal';
 
-import CloseIcon from '../../assets/icons/sidebar/xmark.svg';
-
 import cl from './Modal.module.scss';
 
 interface ModalProps {
@@ -75,7 +73,6 @@ export const Modal = (props: ModalProps) => {
                             theme={ButtonTheme.CLEAR}
                             className={cl.close}
                         >
-                            <CloseIcon className={cl.icon} />
                         </Button>
                         {children}
                     </div>

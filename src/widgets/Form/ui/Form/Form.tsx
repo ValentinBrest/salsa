@@ -2,6 +2,8 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme, Input } from 'shared/ui';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 
+import dance from '../../../../../public/img/dance.jpg';
+
 import cl from './Form.module.scss';
 
 interface FormProps {
@@ -9,6 +11,10 @@ interface FormProps {
 }
 
 export const Form = ({ className }: FormProps) => {
+
+    const Background = {
+        background: `center / cover no-repeat url(${dance})`,
+    };
 
     return (
         <div className={classNames(cl.Form, {}, [className])}>
@@ -22,10 +28,12 @@ export const Form = ({ className }: FormProps) => {
                         <Input placeholder="Номер телефона"/>
 
                         <Button theme={ButtonTheme.OUTLINE} size={ButtonSize.L} className={cl.button}>Отправить</Button>
-                        <span className={cl.text}>{'*Нажимая на кнопку "Отправить", вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности'}</span>
+                        <span className={cl.text}>
+                            {'*Нажимая на кнопку "Отправить", вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности'}
+                        </span>
                          
                     </div>
-                    <div></div>
+                    <div style={Background} className={cl.dance}></div>
                 </div>
             </div>
         </div>

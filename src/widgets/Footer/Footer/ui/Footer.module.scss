@@ -1,11 +1,46 @@
 .Footer {
     width: 100%;
     padding: var(--padding-xl);
-    background: var(--footer-bg-color);
     color: var(--footer-color);
+    background: var(--footer-bg-color);
 }
 
 .wrap {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    font: var(--font-m);
+}
+
+.socialWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.telegram {
+    width: 30px;
+    fill: rgb(1 204 255);
+}
+
+.instagram {
+    width: 100px;
+    height: 33px;
+    margin: 0 5px;
+}
+
+.mailWrap {
+    display: flex;
+    align-items: center;
+}
+
+.email {
+    width: 20px;
+    height: 20px;
+    fill: #64ee42;
+    margin-left: 10px;
+}
+
+.text {
+    opacity: 0.75;
 }

@@ -2,6 +2,7 @@
     position: relative;
 
     font: var(--font-m);
+    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
 
@@ -45,6 +46,12 @@
             width: 100%;
         }
     }
+
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .primary {
@@ -57,6 +64,23 @@
 
 .button {
     &:hover {
+        -webkit-text-fill-color: unset;
+
+        &::before {
+            width: 0;
+        }
+    }
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.75;
+
+    &:hover {
+        opacity: 1;
+
         -webkit-text-fill-color: unset;
 
         &::before {

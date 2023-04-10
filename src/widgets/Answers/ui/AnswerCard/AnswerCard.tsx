@@ -18,12 +18,13 @@ export const AnswerCard = (props: AnswerCardProps) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
+    
 
     return (
         <div className={classNames(cl.AnswerCard, {}, [className])}>
             <div className={cl.header} onClick={() => setIsOpen(!isOpen)}>
-                <span>{id}.{question}</span>
-                <span className={cl.sign}>{isOpen? <Up/>: <Down/>}</span>
+                <span>{id}. {question}</span>
+                <span className={classNames(cl.sign, {[cl.active]: isOpen}, [])}></span>
             </div>
             {isOpen && <div className={cl.body}>{answer}</div>}
             

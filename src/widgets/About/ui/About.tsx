@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme, Button, ButtonSize, ButtonTheme } from 'shared/ui';
-import { Text } from 'shared/ui/Text/Text';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
 
 import cl from './About.module.scss';
 
@@ -24,10 +24,10 @@ export const About = ({ className }: AboutProps) => {
                         Quis aliquid exercitationem iusto tempora mollitia optio eaque odio 
                         dolorem, sed beatae quod et tenetur nulla veniam laboriosam est 
                         voluptas minima voluptatibus, assumenda doloremque, voluptatem quibusdam 
-                        facilis! Ex officia voluptas, assumenda voluptatum mollitia veritatis!"/>
+                        facilis! Ex officia voluptas, assumenda voluptatum mollitia veritatis!" theme={TextTheme.ITALIC}/>
                         <Text text="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Quae soluta cum tenetur, enim assumenda nisi laudantium dolor fugiat 
-                        nulla inventore?...."/>
+                        nulla inventore?...." theme={TextTheme.ITALIC}/>
                         
                         <AppLink to={'/main'} theme={AppLinkTheme.BUTTON}>
                             <Button 

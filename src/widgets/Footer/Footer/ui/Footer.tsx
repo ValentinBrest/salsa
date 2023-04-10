@@ -1,8 +1,14 @@
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button, Input } from 'shared/ui';
+import { AppLink, AppLinkTheme } from 'shared/ui';
 
+import Email from '../../../../shared/assets/icons/social/email.svg';
+import Instagram from '../../../../shared/assets/icons/social/instagram.svg';
+import Telegram from '../../../../shared/assets/icons/social/telegram.svg';
+
+// import Tiktok from '../../../../shared/assets/icons/social/tiktok.svg';
+// import Viber from '../../../../shared/assets/icons/social/viber.svg';
+// import Vk from '../../../../shared/assets/icons/social/vk.svg';
+// import Youtube from '../../../../shared/assets/icons/social/youtube.svg';
 import cl from './Footer.module.scss';
 
 interface FooterProps {
@@ -10,19 +16,25 @@ interface FooterProps {
 }
 
 export const Footer = ({ className }: FooterProps) => {
-    const { t } = useTranslation();
 
     return (
         <footer className={classNames(cl.Footer, {}, [className])}>
             <div className="container">
                 <div className={cl.wrap}>
-                    <span>© 2007-2023 Школа танцев «Salsa forever»</span>
-                    <div>
-                        <span>tg</span>
-                        <span>       </span>
-                        <span>inst</span>
+                    <span className={cl.text}>© 2007-2023 Школа танцев «Salsa forever»</span>
+                    <div className={cl.socialWrap}>
+                        <AppLink to={'https://www.instagram.com/'} theme={AppLinkTheme.ICON}>
+                            <Instagram className={cl.instagram}/>
+                        </AppLink>
+                        <AppLink to={'https://web.telegram.org/z/'} theme={AppLinkTheme.ICON}>
+                            <Telegram className={cl.telegram}/>
+                        </AppLink>
+                        
                     </div>
-                    <span>SalsaMamboBrest@gmail.by</span>
+                    <div className={cl.mailWrap}>
+                        <span className={cl.text}>SalsaMamboBrest@gmail.by</span>
+                        <Email className={classNames(cl.email, {}, [])}/>
+                    </div>
                 </div>
             </div>
         </footer>

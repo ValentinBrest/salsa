@@ -3,9 +3,9 @@
 
     font: var(--font-title-xl);
     font-weight: 700;
+    font-style: inherit;
     color: var(--hover-color);
     text-align: center;
-    font-style: inherit;
     letter-spacing: inherit;
 
     span {
@@ -47,8 +47,8 @@
 .text {
     margin-bottom: var(--margin-s);
     font: var(--font-l);
-    color: var(--inverted-primary-color);
     font-style: inherit;
+    color: var(--inverted-primary-color);
 }
 
 .error {

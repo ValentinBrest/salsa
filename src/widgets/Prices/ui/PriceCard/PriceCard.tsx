@@ -21,10 +21,12 @@ export const PriceCard = (props: PriceCardProps) => {
     return (
         <div style={background} className={classNames(cl.PriceCard, {}, [className])}>
             
-            <div className={cl.title}>{title}</div>
-            <div>{price} руб.</div>
-            <div>{limit}</div>
-            <div>{countTimeWeek}</div>
+            <div className={cl.title}><span>{title}</span></div>
+            <div>
+                <span>{price} руб.</span>
+            </div>
+            <div><span>{limit}</span></div>
+            <div><span>{countTimeWeek}</span></div>
         </div>
     );
 };

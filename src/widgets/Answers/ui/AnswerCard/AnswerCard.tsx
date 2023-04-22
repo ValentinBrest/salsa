@@ -21,7 +21,7 @@ export const AnswerCard = (props: AnswerCardProps) => {
     
 
     return (
-        <div className={classNames(cl.AnswerCard, {}, [className])}>
+        <div className={classNames(cl.AnswerCard, {[cl.open]: isOpen}, [className])}>
             <div className={cl.header} onClick={() => setIsOpen(!isOpen)}>
                 <span>{id}. {question}</span>
                 <span className={classNames(cl.sign, {[cl.active]: isOpen}, [])}></span>

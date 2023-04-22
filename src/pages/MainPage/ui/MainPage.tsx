@@ -1,13 +1,22 @@
-import { useTranslation } from 'react-i18next';
+import React from 'react';
+import { About } from 'widgets/About';
+import { Answers } from 'widgets/Answers';
+import { Footer } from 'widgets/Footer';
+import { Form } from 'widgets/Form';
+import { Intro } from 'widgets/Intro';
+import { NavBar } from 'widgets/NavBar';
+import { Prices } from 'widgets/Prices';
+import { Shedule } from 'widgets/Shedule';
 
-function MainPage() {
-    const { t } = useTranslation('main');
-
+export const MainPage = () => {
     return (
         <>
-            <div>{t('glavnaya-stranica')}</div>
+            <Intro />
+            <About />
+            <Shedule />
+            <Prices />
+            <Answers />
+            <Form />
         </>
     );
-}
-
-export default MainPage;
+};

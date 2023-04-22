@@ -10,6 +10,9 @@
     --font-size-m: 16px;
     --font-line-m: 24px;
     --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+    --font-size-ml: 18px;
+    --font-line-ml: 26px;
+    --font-ml: var(--font-size-ml) / var(--font-line-ml) var(--font-family-main);
     --font-size-l: 24px;
     --font-line-l: 32px;
     --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
@@ -75,10 +78,13 @@
     --table-body-color-dark: #d6d4d4e5;
 
     // price
-    --price-bg-color-light: #d1d1d1da;
-    --price-color-light: #585252;
-    --price-bg-color-dark: #0b0c3f;
-    --price-color-dark: #c9bcbc;
+    --price-bg-color-light: #fff;
+    --price-color-light: #484848;
+    --price-bg-color-dark: #131314;
+    --price-color-dark: #e7e7e7;
+    --price-color-shadow-light: #bebebe96;
+    --price-color-shadow-dark: #7615765e;
+
     --inverted-text-color: #e3f5f5;
     --overlay-color: rgba(0 0 0 / 60%);
     --input-color: #d3d3d3;

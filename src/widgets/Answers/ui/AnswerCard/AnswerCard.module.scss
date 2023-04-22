@@ -2,6 +2,11 @@
     width: 100%;
     color: var(--table-body-color);
     border-radius: 5px;
+    padding-top: 20px;
+    transition: all 0.3s;
+    &:hover {
+        background-color: rgba(71, 71, 71, 0.248);
+    }
 }
 
 .header {
@@ -87,4 +92,8 @@
 .body {
     padding: 20px 10px;
     font-style: italic;
+}
+
+.open {
+    background-color: rgba(71, 71, 71, 0.248);
 }

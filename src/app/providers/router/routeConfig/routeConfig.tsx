@@ -7,7 +7,7 @@ export enum AppRoutes {
     MAIN = 'main',
     ABOUT = 'about',
     EVENTS = 'events',
-    NOT_FOUND = 'not_found'
+    NOT_FOUND = 'not_found',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {

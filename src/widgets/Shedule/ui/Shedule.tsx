@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
@@ -17,7 +16,6 @@ interface SheduleProps {
 }
 
 export const Shedule = ({ className }: SheduleProps) => {
-    const { t } = useTranslation();
 
     const today = getToday(new Date());
 
@@ -35,11 +33,11 @@ export const Shedule = ({ className }: SheduleProps) => {
     const tableBody = getDayShedule(currentDay);
     
     return (
-        <div className={classNames(cl.Shedule, {}, [className])}>
+        <div id="shedule" className={classNames(cl.Shedule, {}, [className])}>
             <div className="container">
                 <div className={cl.wrap}>
                     <Text title="Расписание занятий"/>
-                    <Text text="*Чтобы смотреть дни, нажимайте на вкладки" theme={TextTheme.ITALIC}/>
+                    <Text text="*Чтобы смотреть расписание на день, нажимайте на вкладки" theme={TextTheme.ITALIC}/>
                     
                     <div className={cl.days}>
                         {days.map(({ day, id }) => {
@@ -54,7 +52,7 @@ export const Shedule = ({ className }: SheduleProps) => {
                                         id === active ? `${cl.active}` : ''
                                     }`}
                                 >
-                                    {t(day)}
+                                    {day}
                                 </Button>
                             );
                         })}

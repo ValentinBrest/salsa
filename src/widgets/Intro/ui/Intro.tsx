@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { animateScroll as scroll, Link as LinkScroll } from 'react-scroll';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
 
@@ -12,8 +12,6 @@ interface IntroProps {
 }
 
 export const Intro = ({ className }: IntroProps) => {
-    const { t } = useTranslation();
-
     const rightBackground = {
         background: `center / cover no-repeat url(${valentin})`,
     };
@@ -27,12 +25,14 @@ export const Intro = ({ className }: IntroProps) => {
                 <div className={cl.center}>
                     <h1 className={cl.title}>САЛЬСА</h1>
                     <h2 className={cl.subtitle}>БРЕСТ</h2>
-                    <Button
-                        size={ButtonSize.XL}
-                        theme={ButtonTheme.OUTLINE}
-                    >
-                        Хочу танцевать
-                    </Button>
+                    <LinkScroll to="form" smooth={true}>
+                        <Button
+                            size={ButtonSize.XL}
+                            theme={ButtonTheme.OUTLINE}
+                        >
+                            Хочу танцевать
+                        </Button>
+                    </LinkScroll>
                 </div>
                 <div style={rightBackground} className={cl.right}></div>
             </div>

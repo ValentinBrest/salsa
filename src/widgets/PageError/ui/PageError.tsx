@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui';
 
@@ -9,7 +8,6 @@ interface PageErrorProps {
 }
 
 export const PageError = ({className}: PageErrorProps) => {
-    const {t} = useTranslation();
 
     const reloadPage = () => {
         location.reload();
@@ -17,12 +15,12 @@ export const PageError = ({className}: PageErrorProps) => {
 
     return (
         <div className={classNames(cl.PageError, {}, [className])}>
-            <p>{t('voznikla-nepredvidennaya-oshibka')}</p>
+            <p>Возникла непредвиденная ошибка</p>
             <Button 
                 onClick={reloadPage} 
                 theme={ButtonTheme.BACKGROUND_INVERTED}
             >
-                {t('obnovit-stranicu')}
+                Обновить страницу
             </Button>
         </div>
     );

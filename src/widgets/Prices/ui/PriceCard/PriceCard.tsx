@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 
 import cl from './PriceCard.module.scss';
@@ -24,7 +23,6 @@ export const PriceCard = (props: PriceCardProps) => {
         background,
     } = props;
 
-    const { t } = useTranslation();
 
     return (
         <div

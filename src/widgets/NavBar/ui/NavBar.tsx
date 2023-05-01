@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { animateScroll as scroll, Link as LinkScroll } from 'react-scroll';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink } from 'shared/ui';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
@@ -12,8 +12,6 @@ interface NavBarProps {
 }
 
 export const NavBar = ({ className }: NavBarProps) => {
-    const { t } = useTranslation();
-
     return (
         <div className={classNames(cl.NavBar, {}, [className])}>
             <div className="container">
@@ -22,19 +20,20 @@ export const NavBar = ({ className }: NavBarProps) => {
                         <div className={cl.logo}>salsa forever</div>
                     </div>
                     <div className={cl.line}>
-                        {<ThemeSwitcher className={cl.switcher}/>}
+                        {<ThemeSwitcher className={cl.switcher} />}
                     </div>
                     <div className={cl.links}>
                         {links.map((item) => (
-                            <AppLink
-                                to={item.to}
-                                className={cl.link}
-                                key={item.id}
-                            >
-                                {item.name}
-                            </AppLink>
+                            <LinkScroll to={item.scroll} key={item.id} smooth={true}>
+                                <AppLink
+                                    to={item.to}
+                                    className={cl.link}
+                                    key={item.id}
+                                >
+                                    {item.name}
+                                </AppLink>
+                            </LinkScroll>
                         ))}
-
                     </div>
                 </div>
             </div>

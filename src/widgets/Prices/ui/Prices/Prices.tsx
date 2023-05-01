@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Text } from 'shared/ui/Text/Text';
 
@@ -16,7 +15,6 @@ interface PricesProps {
 }
 
 export const Prices = ({ className }: PricesProps) => {
-    const { t } = useTranslation();
 
     const Background1 = {
         background: `bottom / cover no-repeat url(${abonement1})`,
@@ -34,7 +32,7 @@ export const Prices = ({ className }: PricesProps) => {
     const bagroundArr = [Background1, Background2, Background3, Background4];
 
     return (
-        <div className={classNames(cl.Prices, {}, [className])}>
+        <div id="price" className={classNames(cl.Prices, {}, [className])}>
             {/* <div className="container"> */}
             <Text title="Абонементы"/>
             <div className={cl.wrap}>

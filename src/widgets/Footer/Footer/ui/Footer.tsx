@@ -18,7 +18,7 @@ interface FooterProps {
 export const Footer = ({ className }: FooterProps) => {
 
     return (
-        <footer className={classNames(cl.Footer, {}, [className])}>
+        <footer id="contact" className={classNames(cl.Footer, {}, [className])}>
             <div className="container">
                 <div className={cl.wrap}>
                     <span className={cl.text}>© 2007-2023 Школа танцев «Salsa forever»</span>

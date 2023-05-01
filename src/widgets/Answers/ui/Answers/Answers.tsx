@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Text } from 'shared/ui/Text/Text';
 
@@ -12,11 +11,10 @@ interface AnswersProps {
 }
 
 export const Answers = ({ className }: AnswersProps) => {
-    const { t } = useTranslation();
 
     
     return (
-        <div className={classNames(cl.Answers, {}, [className])}>
+        <div id="question" className={classNames(cl.Answers, {}, [className])}>
             <div className="container">
                 <Text title="Вопросы"/>
                 <div className={cl.wrap}>

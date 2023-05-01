@@ -8,16 +8,17 @@ import cl from './Form.module.scss';
 
 interface FormProps {
     className?: string;
+    backgroundColor?: string ;
 }
 
-export const Form = ({ className }: FormProps) => {
+export const Form = ({ className, backgroundColor }: FormProps) => {
 
     const Background = {
         background: `center / cover no-repeat url(${dance})`,
     };
 
     return (
-        <div id="form" className={classNames(cl.Form, {}, [className])}>
+        <div style={{background: backgroundColor}} id="form" className={classNames(cl.Form, {}, [className])}>
             <div className="container">
                 <div className={cl.wrap}>
                     <div className={cl.formInner}>

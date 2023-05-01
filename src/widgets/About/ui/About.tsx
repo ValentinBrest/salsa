@@ -15,13 +15,18 @@ import cl from './About.module.scss';
 
 interface AboutProps {
     className?: string;
+    backgroundColor?: string;
 }
 
-export const About = ({ className }: AboutProps) => {
+export const About = ({ className, backgroundColor }: AboutProps) => {
     const [isVisible, setIsVisible] = useState(false);
 
     return (
-        <div id="about" className={classNames(cl.About, {}, [className])}>
+        <div 
+            style={{background: backgroundColor}} 
+            id="about" 
+            className={classNames(cl.About, {}, [className])}
+        >
             <div className="container">
                 <div className={cl.wrap}>
                     <div className={cl.decr}>

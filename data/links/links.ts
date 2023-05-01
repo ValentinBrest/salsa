@@ -11,7 +11,7 @@ export const links = [
         id: 4,
         name: 'Мероприятия',
         to: RoutePath.main,
-        scroll: '',
+        scroll: 'events',
     },
     {
         id: 2,

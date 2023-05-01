@@ -1,0 +1,55 @@
+.PriceCardV2 {
+    overflow: hidden;
+
+    width: 100%;
+    min-height: 500px;
+    max-width: 350px;
+
+    border-radius: 50px;
+    position: relative;
+    box-shadow: 0 7px 25px 0 var(--price-color-shadow);
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background: var(--price-bg-color);
+}
+
+.priceData {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 30px 20px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--price-color);
+}
+
+.title {
+    color: var(--hover-color);
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.priceDataWrap {
+    font: var(--font-ml);
+    padding-left: 30px;
+    font-weight: 700;
+}
+
+.price,
+.countTimeWeek {
+    padding: 0 10px;
+    margin-bottom: 30px;
+}
+
+.student {
+    margin-top: 20px;
+    font: var(--font-m);
+    color: var(--hover-color);
+}

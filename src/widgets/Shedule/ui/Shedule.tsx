@@ -13,9 +13,10 @@ import cl from './Shedule.module.scss';
 
 interface SheduleProps {
     className?: string;
+    backgroundColor?: string ;
 }
 
-export const Shedule = ({ className }: SheduleProps) => {
+export const Shedule = ({ className, backgroundColor }: SheduleProps) => {
 
     const today = getToday(new Date());
 
@@ -33,7 +34,7 @@ export const Shedule = ({ className }: SheduleProps) => {
     const tableBody = getDayShedule(currentDay);
     
     return (
-        <div id="shedule" className={classNames(cl.Shedule, {}, [className])}>
+        <div style={{background: backgroundColor}} id="shedule" className={classNames(cl.Shedule, {}, [className])}>
             <div className="container">
                 <div className={cl.wrap}>
                     <Text title="Расписание занятий"/>

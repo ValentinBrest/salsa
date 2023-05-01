@@ -6,16 +6,16 @@ import abonement1 from '../../../../../public/img/prices/1_lesson.jpg';
 import abonement2 from '../../../../../public/img/prices/2_lesson.jpg';
 import abonement3 from '../../../../../public/img/prices/3_lesson.jpg';
 import abonement4 from '../../../../../public/img/prices/4_lesson.jpg';
-import { PriceCard } from '../PriceCard/PriceCard';
+import { PriceCardV2 } from '../PriceCardV2/PriceCardV2';
 
-import cl from './Prices.module.scss';
+import cl from './PricesV2.module.scss';
 
-interface PricesProps {
+interface PricesV2Props {
     className?: string;
     backgroundColor?: string ;
 }
 
-export const Prices = ({ className, backgroundColor }: PricesProps) => {
+export const PricesV2 = ({ className, backgroundColor }: PricesV2Props) => {
 
     const Background1 = {
         background: `bottom / cover no-repeat url(${abonement1})`,
@@ -33,11 +33,11 @@ export const Prices = ({ className, backgroundColor }: PricesProps) => {
     const bagroundArr = [Background1, Background2, Background3, Background4];
 
     return (
-        <div style={{background: backgroundColor}} id="price" className={classNames(cl.Prices, {}, [className])}>
+        <div style={{background: backgroundColor}} id="price" className={classNames(cl.PricesV2, {}, [className])}>
             {/* <div className="container"> */}
             <Text title="Абонементы"/>
             <div className={cl.wrap}>
-                {prices.map((item, index) => <PriceCard {...item} key={index} background={bagroundArr[index]}/>)}
+                {prices.map((item, index) => <PriceCardV2 {...item} key={index} background={bagroundArr[index]}/>)}
             </div>
                 
             {/* </div> */}

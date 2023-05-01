@@ -9,9 +9,10 @@ import cl from './Intro.module.scss';
 
 interface IntroProps {
     className?: string;
+    backgroundColor?: string ;
 }
 
-export const Intro = ({ className }: IntroProps) => {
+export const Intro = ({ className, backgroundColor }: IntroProps) => {
     const rightBackground = {
         background: `center / cover no-repeat url(${valentin})`,
     };
@@ -19,7 +20,7 @@ export const Intro = ({ className }: IntroProps) => {
         background: `center  / cover no-repeat url(${konstantin})`,
     };
     return (
-        <div className={classNames(cl.Intro, {}, [className])}>
+        <div style={{background: backgroundColor}} className={classNames(cl.Intro, {}, [className])}>
             <div className={cl.wrap}>
                 <div style={leftBackground} className={cl.left}></div>
                 <div className={cl.center}>

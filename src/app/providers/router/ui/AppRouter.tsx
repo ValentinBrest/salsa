@@ -11,7 +11,7 @@ const AppRouter = () => {
                     <Route
                         key={path}
                         path={path}
-                        element={<div>{element}</div>}
+                        element={<div style={{width: '100%'}}>{element}</div>}
                     />
                 ))}
             </Routes>

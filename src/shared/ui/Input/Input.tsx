@@ -3,15 +3,15 @@ import { classNames } from 'shared/lib/classNames/classNames';
 
 import cl from './Input.module.scss';
 
-type HTMLInputProps = Omit<
-    InputHTMLAttributes<HTMLInputElement>,
-    'value' | 'onChange'
->;
+// type HTMLInputProps = Omit<
+//     InputHTMLAttributes<HTMLInputElement>,
+//     'value' | 'onChange'
+// >;
 
-interface InputProps extends HTMLInputProps {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     className?: string;
-    value?: string;
-    onChange?: (value: string) => void;
+    // value?: string;
+    // onChange?: (value: string) => void;
     isOpen?: boolean;
 }
 
@@ -19,16 +19,18 @@ export const Input = memo((props: InputProps) => {
     const {
         className,
         value,
-        onChange,
+        // onChange,
         type = 'text',
         placeholder,
         isOpen,
         ...otherProps
     } = props;
 
-    const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        onChange?.(e.target.value);
-    };
+
+    
+    // const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    //     onChange?.(e.target.value);
+    // };
 
     const refInput = useRef<HTMLInputElement>();
 
@@ -45,7 +47,7 @@ export const Input = memo((props: InputProps) => {
             type={type}
             value={value}
             placeholder={placeholder}
-            onChange={onChangeHandler}
+            // onChange={onChangeHandler}
             {...otherProps}
         />
     );

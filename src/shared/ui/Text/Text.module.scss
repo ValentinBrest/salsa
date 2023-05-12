@@ -52,12 +52,15 @@
 }
 
 .error {
+    font: var(--font-s);
+
     .title {
         color: var(--red-light);
     }
 
     .text {
-        color: var(--red-dark);
+        font: var(--font-m);
+        color: var(--red-light);
     }
 }
 

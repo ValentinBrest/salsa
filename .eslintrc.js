@@ -7,7 +7,6 @@ module.exports = {
     extends: [
         'plugin:react/recommended',
         'plugin:@typescript-eslint/recommended',
-        'plugin:storybook/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -18,7 +17,6 @@ module.exports = {
         'react',
         '@typescript-eslint',
         'simple-import-sort',
-        'i18next',
         'react-hooks',
     ],
     settings: {
@@ -36,11 +34,6 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': 'warn',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
-        'i18next/no-literal-string': 'off',
-        // 'i18next/no-literal-string': [
-        //     'error',
-        //     { markupOnly: true, onlyAttribute: [''] },
-        // ],
         semi: 'error',
         'no-multi-spaces': 'error',
         'no-console': 'warn',
@@ -73,14 +66,6 @@ module.exports = {
         ],
     },
     overrides: [
-        {
-            files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
-            rules: {
-                'i18next/no-literal-string': 'off',
-                'max-len': 'off',
-            },
-        },
-        
         {
             files: ['data/**/*.ts'],
             rules: {

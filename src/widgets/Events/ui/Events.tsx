@@ -15,23 +15,23 @@ export const Events = ({ className, backgroundColor }: EventsProps) => {
             <div className="container">
                 <Text title="Мероприятия"/>
                 <div className={cl.wrap}>
-                    <iframe src='https://www.youtube.com/embed/JjVC1PtXRxo'
-                        frameBorder='0'
-                        allow='autoplay; encrypted-media'
+                    <iframe src="https://www.youtube.com/embed/JjVC1PtXRxo"
+                        frameBorder="0"
+                        allow="autoplay; encrypted-media"
                         allowFullScreen
-                        title='video'
+                        title="video"
                     />
-                    <iframe src='https://www.youtube.com/embed/u_9hLeLM7yI'
-                        frameBorder='0'
-                        allow='autoplay; encrypted-media'
+                    <iframe src="https://www.youtube.com/embed/u_9hLeLM7yI"
+                        frameBorder="0"
+                        allow="autoplay; encrypted-media"
                         allowFullScreen
-                        title='video'
+                        title="video"
                     />
-                    <iframe src='https://www.youtube.com/embed/ziJ7plGga3g'
-                        frameBorder='0'
-                        allow='autoplay; encrypted-media'
+                    <iframe src="https://www.youtube.com/embed/ziJ7plGga3g"
+                        frameBorder="0"
+                        allow="autoplay; encrypted-media"
                         allowFullScreen
-                        title='video'
+                        title="video"
                     />
                     
                 </div>

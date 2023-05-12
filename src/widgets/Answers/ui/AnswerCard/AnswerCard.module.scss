@@ -1,11 +1,15 @@
 .AnswerCard {
     width: 100%;
-    color: var(--table-body-color);
-    border-radius: 5px;
     padding-top: 20px;
+
+    color: var(--table-body-color);
+
+    border-radius: 5px;
+
     transition: all 0.3s;
+
     &:hover {
-        background-color: rgba(71, 71, 71, 0.248);
+        background-color: rgb(71 71 71 / 24.8%);
     }
 }
 
@@ -95,5 +99,5 @@
 }
 
 .open {
-    background-color: rgba(71, 71, 71, 0.248);
+    background-color: rgb(71 71 71 / 24.8%);
 }

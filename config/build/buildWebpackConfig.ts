@@ -18,7 +18,7 @@ export function buildWebpackConfig (options: BuildOptions): webpack.Configuratio
             clean: true,
         },
         performance : {
-            hints : false
+            hints : false,
         },
         plugins: buildPlugins(html, isDev),
         module: {

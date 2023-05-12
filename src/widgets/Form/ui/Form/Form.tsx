@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { SubmitHandler,useForm, Controller } from 'react-hook-form';
+import { Controller,SubmitHandler,useForm } from 'react-hook-form';
 import InputMask from 'react-input-mask';
 import emailjs from '@emailjs/browser';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -106,14 +106,14 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                             placeholder="Телефон"
                             mask="+375 (99) 999-99-99"
                             {...register('phone', {
-                                    required: 'Поле обязательно к заполнению',
-                                    validate: (value, formValues) => value === '1',
-                                    // minLength : {
-                                    //     value: 50,
-                                    //     message: 'минимум 2 буквы',
-                                    // } ,
-                                 })}
-                            />
+                                required: 'Поле обязательно к заполнению',
+                                validate: (value, formValues) => value === '1',
+                                // minLength : {
+                                //     value: 50,
+                                //     message: 'минимум 2 буквы',
+                                // } ,
+                            })}
+                        />
                         {errors?.phone && <Text theme={TextTheme.ERROR} text={errors?.phone?.message}/>}
                             
                         {/* <textarea placeholder="Здесь можете написать вопросы" name="text"></textarea> */}

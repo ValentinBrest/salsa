@@ -44,6 +44,14 @@
     }
 }
 
+.subTitle {
+    font: var(--font-title-s);
+    font-weight: 700;
+    font-style: inherit;
+    color: var(--inverted-primary-color);
+    letter-spacing: inherit;
+}
+
 .text {
     margin-bottom: var(--margin-s);
     font: var(--font-l);

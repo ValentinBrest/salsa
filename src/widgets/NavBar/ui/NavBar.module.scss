@@ -8,7 +8,7 @@
 
     width: 100%;
     height: var(--navbar-height);
-    padding: 20px;
+    padding: 25px;
 
     background: var(--bg-color-navbar);
     box-shadow: 0 7px 25px 0 var(--shadow-color);
@@ -21,17 +21,15 @@
     justify-content: space-between;
 }
 
-.logoWrap {
-    display: flex;
-    align-items: center;
+.linkLogo {
+    position: absolute;
+    width: 80px;
+    height: 80px;
 }
 
 .logo {
-    margin-right: 20px;
-    font: var(--font-xl);
-    color: var(--logo-color);
+   width: 100%;
 }
-
 .line {
     position: absolute;
     left: 20%;
@@ -58,3 +56,4 @@
 .link {
     margin-right: 20px;
 }
+

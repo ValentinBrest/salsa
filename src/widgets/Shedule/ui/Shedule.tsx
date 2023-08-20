@@ -18,20 +18,20 @@ interface SheduleProps {
 
 export const Shedule = ({ className, backgroundColor }: SheduleProps) => {
 
-    const today = getToday(new Date());
+    // const today = getToday(new Date());
 
-    const [currentDay, setCurrentDay] = useState(today.day);
-    const [active, setActive] = useState(today.id);
+    // const [currentDay, setCurrentDay] = useState(today.day);
+    // const [active, setActive] = useState(today.id);
 
-    const openTab = (e: React.SyntheticEvent<EventTarget>, day: string) => {
-        if (!(e.target instanceof HTMLButtonElement)) {
-            return;
-        }
-        setActive(+e.target.dataset.index);
-        setCurrentDay(day);
-    };
+    // const openTab = (e: React.SyntheticEvent<EventTarget>, day: string) => {
+    //     if (!(e.target instanceof HTMLButtonElement)) {
+    //         return;
+    //     }
+    //     setActive(+e.target.dataset.index);
+    //     setCurrentDay(day);
+    // };
 
-    const tableBody = getDayShedule(currentDay);
+    // const tableBody = getDayShedule(currentDay);
     
     return (
         <div style={{background: backgroundColor}} id="shedule" className={classNames(cl.Shedule, {}, [className])}>
@@ -40,7 +40,7 @@ export const Shedule = ({ className, backgroundColor }: SheduleProps) => {
                     <Text title="Расписание занятий"/>
                     <Text text="*Чтобы смотреть расписание на день, нажимайте на вкладки" theme={TextTheme.ITALIC}/>
                     
-                    <div className={cl.days}>
+                    {/* <div className={cl.days}>
                         {days.map(({ day, id }) => {
                             return (
                                 <Button
@@ -57,8 +57,8 @@ export const Shedule = ({ className, backgroundColor }: SheduleProps) => {
                                 </Button>
                             );
                         })}
-                    </div>
-                    {tableBody.length == 0 
+                    </div> */}
+                    {/* {tableBody.length == 0 
                         ? <div className={cl.relax}>Домашние тренировки</div> 
                         : <div className={cl.table}>
                             <div className={cl.table_head}>
@@ -74,7 +74,7 @@ export const Shedule = ({ className, backgroundColor }: SheduleProps) => {
                             {tableBody.map((item, index) => (
                                 <SheduleItem key={index} data={item}/>
                             ))}
-                        </div>}
+                        </div>} */}
                     
                 </div>
             </div>

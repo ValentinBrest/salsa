@@ -20,6 +20,7 @@ interface TextProps {
     className?: string;
     title?: string;
     text?: string;
+    subTitle?: string;
     theme?: TextTheme;
     align?: TextAlign;
 }
@@ -29,6 +30,7 @@ export const Text = memo((props: TextProps) => {
         className,
         title,
         text,
+        subTitle,
         theme = TextTheme.PRIMARY,
         align = TextAlign.LEFT,
     } = props;
@@ -36,6 +38,7 @@ export const Text = memo((props: TextProps) => {
     return (
         <div className={classNames(cl.Text, {[cl[theme]]: true}, [className, cl[align]])}>
             {title && <div className={cl.title}><span>{title}</span></div>}
+            {subTitle && <div className={cl.subTitle}>{subTitle}</div>}
             {text && <div className={cl.text}>{text}</div>}
         </div>
     );

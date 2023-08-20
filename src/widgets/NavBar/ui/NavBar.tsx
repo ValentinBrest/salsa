@@ -1,8 +1,8 @@
 import { animateScroll as scroll, Link as LinkScroll } from 'react-scroll';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppLink } from 'shared/ui';
+import { AppLink, AppLinkTheme } from 'shared/ui';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
-
+import logo from './logo.png';
 import { links } from '../../../../data/links/links';
 
 import cl from './NavBar.module.scss';
@@ -14,17 +14,22 @@ interface NavBarProps {
 export const NavBar = ({ className }: NavBarProps) => {
     return (
         <div className={classNames(cl.NavBar, {}, [className])}>
-            <div className="container">
+            <div className='container'>
                 <div className={cl.wrap}>
-                    <div className={cl.logoWrap}>
-                        <div className={cl.logo}>salsa forever</div>
-                    </div>
+                    <AppLink to='/' className={cl.linkLogo} key={'salsa'} theme={AppLinkTheme.BUTTON}>
+                        <img className={cl.logo} src={logo} alt='salsa-brest' />
+                    </AppLink>
+
                     <div className={cl.line}>
                         {<ThemeSwitcher className={cl.switcher} />}
                     </div>
                     <div className={cl.links}>
                         {links.map((item) => (
-                            <LinkScroll to={item.scroll} key={item.id} smooth={true}>
+                            <LinkScroll
+                                to={item.scroll}
+                                key={item.id}
+                                smooth={true}
+                            >
                                 <AppLink
                                     to={item.to}
                                     className={cl.link}

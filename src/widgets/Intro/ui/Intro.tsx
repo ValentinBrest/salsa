@@ -1,9 +1,7 @@
-import { animateScroll as scroll, Link as LinkScroll } from 'react-scroll';
+import { Link as LinkScroll } from 'react-scroll';
+import SimpleImageSlider from 'react-simple-image-slider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
-
-import konstantin from '../../../../public/img/konstantin.jpg';
-import valentin from '../../../../public/img/valentin.jpg';
 
 import cl from './Intro.module.scss';
 
@@ -13,16 +11,33 @@ interface IntroProps {
 }
 
 export const Intro = ({ className, backgroundColor }: IntroProps) => {
-    const rightBackground = {
-        background: `center / cover no-repeat url(${valentin})`,
-    };
-    const leftBackground = {
-        background: `center  / cover no-repeat url(${konstantin})`,
-    };
+
+    const images = [
+        { url: 'img/konstantin.jpg' },
+        { url: 'img/valentin.jpg' },
+    ];
+
+    const images2 = [
+        { url: 'img/valentin.jpg' },
+        { url: 'img/konstantin.jpg' },
+    ];
+      
+    
     return (
         <div style={{background: backgroundColor}} className={classNames(cl.Intro, {}, [className])}>
             <div className={cl.wrap}>
-                <div style={leftBackground} className={cl.left}></div>
+                <div className={cl.left}>
+                    <SimpleImageSlider
+                        style={{}}
+                        width={'100%'}
+                        height={'100%'}
+                        images={images}
+                        showBullets={false}
+                        showNavs={false}
+                        autoPlay={true} 
+                        autoPlayDelay = {5}
+                    /></div>
+                
                 <div className={cl.center}>
                     <h1 className={cl.title}>САЛЬСА</h1>
                     <h2 className={cl.subtitle}>БРЕСТ</h2>
@@ -35,7 +50,18 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                         </Button>
                     </LinkScroll>
                 </div>
-                <div style={rightBackground} className={cl.right}></div>
+                <div className={cl.right}>
+                    <SimpleImageSlider
+                        style={{}}
+                        width={'100%'}
+                        height={'100%'}
+                        images={images2}
+                        showBullets={false}
+                        showNavs={false}
+                        autoPlay={true} 
+                        autoPlayDelay = {5}
+                    />
+                </div>
             </div>
         </div>
     );

@@ -16,9 +16,12 @@
 
 .wrap {
     position: relative;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    height: 100%;
 }
 
 .linkLogo {
@@ -28,10 +31,12 @@
 }
 
 .logo {
-   width: 100%;
+    width: 100%;
 }
+
 .line {
     position: absolute;
+    top: -25px;
     left: 20%;
     transform: skew(20deg);
 
@@ -56,4 +61,3 @@
 .link {
     margin-right: 20px;
 }
-

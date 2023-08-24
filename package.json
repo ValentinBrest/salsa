@@ -79,6 +79,7 @@
     "react-hook-form": "^7.43.9",
     "react-input-mask": "^2.0.4",
     "react-router-dom": "^6.2.1",
-    "react-scroll": "^1.8.9"
+    "react-scroll": "^1.8.9",
+    "react-simple-image-slider": "^2.4.1"
   }
 }

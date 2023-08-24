@@ -1,17 +1,13 @@
 import { AppRoutes, RoutePath } from '../../src/app/providers/router/routeConfig/routeConfig';
 
+
+
 export const links = [
     {
         id: 1,
         name: 'О школе',
         to: RoutePath.main,
         scroll: 'about',
-    },
-    {
-        id: 4,
-        name: 'Мероприятия',
-        to: RoutePath.main,
-        scroll: 'events',
     },
     {
         id: 2,
@@ -21,9 +17,15 @@ export const links = [
     },
     {
         id: 3,
-        name: 'Цены',
+        name: 'Абонементы',
         to: RoutePath.main,
         scroll: 'price',
+    },
+    {
+        id: 4,
+        name: 'Фотографии',
+        to: RoutePath.main,
+        scroll: 'events',
     },
     {
         id: 5,

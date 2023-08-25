@@ -3,7 +3,7 @@ import { Controller,SubmitHandler,useForm } from 'react-hook-form';
 import InputMask from 'react-input-mask';
 import emailjs from '@emailjs/browser';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button, ButtonSize, ButtonTheme, Input } from 'shared/ui';
+import { AppLink, AppLinkTheme, Button, ButtonSize, ButtonTheme, Input } from 'shared/ui';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 
 import dance from '../../../../../public/img/dance.jpg';
@@ -84,21 +84,16 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                         })}/>
                         {errors?.last_name && <Text theme={TextTheme.ERROR} text={errors?.last_name?.message}/>}
 
-                        <input className={classNames(cl.Input, {}, [className])} placeholder="Возраст" {...register('age', {
+                        <input type="number" className={classNames(cl.Input, {}, [className])} placeholder="Возраст" {...register('age', {
                             required: 'Поле обязательно к заполнению',
-                            pattern: {
-                                value: /[А-яЁё]/,
-                                message: 'только кириллица',
-                            },
-                            maxLength : {
-                                value: 15,
-                                message: 'максимум 15 букв',
-                            } ,
-                            minLength : {
-                                value: 2,
-                                message: 'минимум 2 буквы',
-                            } ,
+                            // pattern: {
+                            //     value: /^(?:100|[1-9]\d|[6-9])$/,
+                            //     message: 'Возраст должен быть с 6 до 65 лет',
+                            // },
+                            min: 6, max: 50,
                         })}/>
+                        {errors?.age?.type == 'min' && <Text theme={TextTheme.ERROR} text={'Минимальный возраст 6 лет'}/>}
+                        {errors?.age?.type == 'max' && <Text theme={TextTheme.ERROR} text={'Максимальный возраст 50 лет'}/>}
                         {errors?.age && <Text theme={TextTheme.ERROR} text={errors?.age?.message}/>}
                                                 
                         <InputMask 
@@ -128,7 +123,8 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                             Отправить
                         </Button>
                         <span className={cl.text}>
-                            {'*Нажимая на кнопку "Отправить", вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности'}
+                            {'*Нажимая на кнопку "Отправить", вы даете согласие на обработку персональных данных и соглашаетесь '}
+                            {<AppLink className={cl.politics} to={''}>c политикой конфиденциальности</AppLink>}.
                         </span>
                          
                     </form>

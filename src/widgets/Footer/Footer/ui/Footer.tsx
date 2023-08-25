@@ -22,7 +22,7 @@ export const Footer = ({ className, backgroundColor }: FooterProps) => {
         <footer style={{background: backgroundColor}} id="contact" className={classNames(cl.Footer, {}, [className])}>
             <div className="container">
                 <div className={cl.wrap}>
-                    <span className={cl.text}>© 2007-2023 Школа танцев «Salsa forever»</span>
+                    <span className={cl.text}>© 2007-2023 Школа танцев «СальсаБрест»</span>
                     <div className={cl.socialWrap}>
                         <AppLink to={'https://www.instagram.com/'} theme={AppLinkTheme.ICON}>
                             <Instagram className={cl.instagram}/>

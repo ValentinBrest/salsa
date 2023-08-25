@@ -3,7 +3,6 @@ import { Modal } from 'shared/ui/Modal/Modal';
 
 import { AppLink, AppLinkTheme } from './AppLink/AppLink';
 import { Button, ButtonSize, ButtonTheme } from './Button/Button';
-import { Loader } from './Loader/Loader';
 
 
 export {
@@ -12,7 +11,6 @@ export {
     Button, 
     ButtonSize, 
     Input,
-    Loader, 
     Modal, 
     ButtonTheme,
 };

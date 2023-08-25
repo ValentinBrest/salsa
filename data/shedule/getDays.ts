@@ -9,6 +9,7 @@ export const days = [
 
 export const getToday = (date: Date) => {
     const numberDay = date.getDay();
+    if (numberDay === 7) return days[0];
     const today = days.filter(item => item.id == numberDay );
     return today[0];
 };

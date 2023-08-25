@@ -19,13 +19,13 @@ export const links = [
         id: 3,
         name: 'Абонементы',
         to: RoutePath.main,
-        scroll: 'price',
+        scroll: 'abonement',
     },
     {
         id: 4,
         name: 'Фотографии',
         to: RoutePath.main,
-        scroll: 'events',
+        scroll: 'photos',
     },
     {
         id: 5,

@@ -1,9 +1,11 @@
-.Events {
+.Photos {
     width: 100%;
     padding: var(--padding-xxl);
 }
 
 .wrap {
+    position: relative;
     display: flex;
     justify-content: space-around;
+    object-fit: fill;
 }

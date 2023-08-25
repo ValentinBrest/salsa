@@ -35,10 +35,10 @@
 }
 
 .line {
-    position: absolute;
-    top: -25px;
-    left: 20%;
-    transform: skew(20deg);
+    // position: absolute;
+    // top: -25px;
+    // left: 20%;
+    transform: skew(-14deg);
 
     display: flex;
     align-items: center;
@@ -51,7 +51,7 @@
 }
 
 .switcher {
-    transform: skew(-20deg);
+    transform: skew(14deg);
 }
 
 .links {

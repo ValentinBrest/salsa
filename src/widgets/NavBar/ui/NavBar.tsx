@@ -22,9 +22,7 @@ export const NavBar = ({ className }: NavBarProps) => {
                         <img className={cl.logo} src={logo} alt="salsa-brest" />
                     </AppLink>
 
-                    <div className={cl.line}>
-                        {<ThemeSwitcher className={cl.switcher} />}
-                    </div>
+                    
                     <div className={cl.links}>
                         {links.map((item) => (
                             <LinkScroll
@@ -41,6 +39,9 @@ export const NavBar = ({ className }: NavBarProps) => {
                                 </AppLink>
                             </LinkScroll>
                         ))}
+                    </div>
+                    <div className={cl.line}>
+                        {<ThemeSwitcher className={cl.switcher} />}
                     </div>
                 </div>
             </div>

@@ -22,13 +22,11 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
         { url: 'img/konstantin.jpg' },
     ];
       
-    
     return (
         <div style={{background: backgroundColor}} className={classNames(cl.Intro, {}, [className])}>
             <div className={cl.wrap}>
                 <div className={cl.left}>
                     <SimpleImageSlider
-                        style={{}}
                         width={'100%'}
                         height={'100%'}
                         images={images}

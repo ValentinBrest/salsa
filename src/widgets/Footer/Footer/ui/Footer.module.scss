@@ -1,7 +1,12 @@
 .Footer {
+    flex: 0 0 auto;
+
     width: 100%;
+    max-height: 150px;
     padding: var(--padding-xl);
+
     color: var(--footer-color);
+
     background: var(--footer-bg-color);
 }
 

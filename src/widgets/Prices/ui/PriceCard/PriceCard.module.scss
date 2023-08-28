@@ -4,8 +4,7 @@
     overflow: hidden;
 
     width: 100%;
-    max-width: 350px;
-    min-height: 500px;
+    min-height: 350px;
 
     border-radius: 50px;
     box-shadow: 0 7px 25px 0 var(--price-color-shadow);
@@ -13,7 +12,7 @@
 
 .wrap {
     width: 100%;
-    height: 100%;
+    height: 350px;
     opacity: 0.8;
     background: var(--price-bg-color);
 }
@@ -35,8 +34,10 @@
 
 .title {
     margin-bottom: 50px;
+
+    font: var(--font-title-s);
     font-weight: 700;
-    color: var(--hover-color);
+    color: var(--hover-color) !important;
     text-align: center;
 }
 

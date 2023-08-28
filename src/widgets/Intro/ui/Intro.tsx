@@ -3,6 +3,9 @@ import SimpleImageSlider from 'react-simple-image-slider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
 
+import konstantin from '../../../../public/img/konstantin.jpg';
+import valentin from '../../../../public/img/valentin.jpg';
+
 import cl from './Intro.module.scss';
 
 interface IntroProps {
@@ -13,13 +16,13 @@ interface IntroProps {
 export const Intro = ({ className, backgroundColor }: IntroProps) => {
 
     const images = [
-        { url: 'img/konstantin.jpg' },
-        { url: 'img/valentin.jpg' },
+        { url: konstantin },
+        { url: valentin },
     ];
 
     const images2 = [
-        { url: 'img/valentin.jpg' },
-        { url: 'img/konstantin.jpg' },
+        { url: valentin },
+        { url: konstantin },
     ];
       
     return (

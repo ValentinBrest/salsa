@@ -34,13 +34,13 @@ export const Prices = ({ className, backgroundColor }: PricesProps) => {
 
     return (
         <div style={{background: backgroundColor}} id="price" className={classNames(cl.Prices, {}, [className])}>
-            {/* <div className="container"> */}
-            <Text title="Абонементы"/>
-            <div className={cl.wrap}>
-                {prices.map((item, index) => <PriceCard {...item} key={index} background={bagroundArr[index]}/>)}
-            </div>
+            <div className="container">
+                <Text title="Цены на абонементы"/>
+                <div className={cl.wrap}>
+                    {prices.map((item, index) => <PriceCard {...item} key={index} background={bagroundArr[index]}/>)}
+                </div>
                 
-            {/* </div> */}
+            </div>
         </div>
     );
 };

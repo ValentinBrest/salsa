@@ -2,6 +2,7 @@ import { RouteProps } from 'react-router-dom';
 import { AboutPage } from 'pages/AboutPage';
 import { MainPage } from 'pages/MainPage';
 import { NotFoundPage } from 'pages/NotFoundPage';
+import { PricePage } from 'pages/PricePage';
 
 export enum AppRoutes {
     MAIN = 'main',
@@ -29,7 +30,7 @@ export const routeConfig: RouteProps[] = [
     // },
     {
         path: RoutePath.prices,
-        element: <AboutPage />,
+        element: <PricePage />,
     },
     {
         path: RoutePath.not_found,

@@ -2,6 +2,9 @@ import SimpleImageSlider from 'react-simple-image-slider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 
+import konstantin from '../../../../public/img/konstantin.jpg';
+import valentin from '../../../../public/img/valentin.jpg';
+
 import cl from './Photos.module.scss';
 
 interface PhotosProps {
@@ -12,12 +15,12 @@ interface PhotosProps {
 export const Photos = ({ className, backgroundColor }: PhotosProps) => {
 
     const images = [
-        { url: 'img/valentin.jpg' },
-        { url: 'img/konstantin.jpg' },
-        { url: 'img/valentin.jpg' },
-        { url: 'img/konstantin.jpg' },
-        { url: 'img/valentin.jpg' },
-        { url: 'img/konstantin.jpg' },
+        { url: valentin },
+        { url: konstantin },
+        { url: valentin },
+        { url: konstantin },
+        { url: valentin },
+        { url: konstantin },
     ];
     
     return (

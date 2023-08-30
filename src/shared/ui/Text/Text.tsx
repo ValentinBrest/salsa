@@ -32,14 +32,18 @@ export const Text = memo((props: TextProps) => {
         text,
         subTitle,
         theme = TextTheme.PRIMARY,
-        align = TextAlign.LEFT,
+        align = TextAlign.CENTER,
     } = props;
     
     return (
-        <div className={classNames(cl.Text, {[cl[theme]]: true}, [className, cl[align]])}>
-            {title && <div className={cl.title}><span>{title}</span></div>}
-            {subTitle && <div className={cl.subTitle}>{subTitle}</div>}
-            {text && <div className={cl.text}>{text}</div>}
-        </div>
+        < >
+            {title && <div className={classNames(cl.title, {[cl[theme]]: true}, [className, cl[align]])} >
+                <span>{title}</span>
+            </div>}
+
+            {subTitle && <div className={classNames(cl.subTitle, {[cl[theme]]: true}, [className, cl[align]])}>{subTitle}</div>}
+
+            {text && <div className={classNames(cl.text, {[cl[theme]]: true}, [className, cl[align]])} >{text}</div>}
+        </>
     );
 });

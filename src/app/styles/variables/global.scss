@@ -79,12 +79,12 @@
     --table-body-color-dark: #d6d4d4e5;
 
     // price
-    --price-bg-color-light: #fff;
-    --price-color-light: #484848;
-    --price-bg-color-dark: #131314;
-    --price-color-dark: #e7e7e7;
-    --price-color-shadow-light: #bebebe96;
-    --price-color-shadow-dark: #7615765e;
+    --price-header-color-light: rgba(221, 191, 57, 0.699);
+    --price-header-color-dark: rgb(58, 14, 66);
+    --price-color-light-even: #e2db779f;
+    --price-color-dark-even: #1e1144c7;
+    --price-color-light-odd: #dbcb86;
+    --price-color-dark-odd: #36072e;
     --inverted-text-color: #e3f5f5;
     --overlay-color: rgba(0 0 0 / 60%);
     --input-color: #d3d3d3;

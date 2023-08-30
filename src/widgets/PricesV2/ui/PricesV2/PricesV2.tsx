@@ -37,7 +37,7 @@ export const PricesV2 = ({ className, backgroundColor }: PricesV2Props) => {
             {/* <div className="container"> */}
             <Text title="Абонементы"/>
             <div className={cl.wrap}>
-                {prices.map((item, index) => <PriceCardV2 {...item} key={index} background={bagroundArr[index]}/>)}
+                {/* {prices.map((item, index) => <PriceCardV2 {...item} key={index} background={bagroundArr[index]}/>)} */}
             </div>
                 
             {/* </div> */}

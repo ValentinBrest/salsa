@@ -11,6 +11,9 @@
 
     background: var(--bg-color-navbar);
     box-shadow: 0 7px 25px 0 var(--shadow-color);
+    @media (max-width: 992px) {
+        display: none;
+    }
 }
 
 .wrap {

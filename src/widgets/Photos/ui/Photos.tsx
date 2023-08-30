@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import SimpleImageSlider from 'react-simple-image-slider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
@@ -13,7 +14,6 @@ interface PhotosProps {
 }
 
 export const Photos = ({ className, backgroundColor }: PhotosProps) => {
-
     const images = [
         { url: valentin },
         { url: konstantin },
@@ -30,8 +30,9 @@ export const Photos = ({ className, backgroundColor }: PhotosProps) => {
                 <Text text="Фотографии с вечеринок, мероприятий, отдыха и жизни." align={TextAlign.CENTER}/>
                 <div className={cl.wrap}>
                     <SimpleImageSlider
-                        width={896}
-                        height={504}
+                        style={{}}
+                        width={'100%'}
+                        height={'100%'}
                         images={images}
                         showBullets={true}
                         showNavs={true}

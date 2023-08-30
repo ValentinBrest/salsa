@@ -84,11 +84,6 @@
     }
 }
 
-.italic {
-    font-style: italic;
-    letter-spacing: 0.5px;
-}
-
 .left {
     text-align: left;
 }
@@ -99,4 +94,11 @@
 
 .center {
     text-align: center;
+}
+
+@import "./Text.media";
+
+.italic {
+    font-style: italic;
+    letter-spacing: 0.5px;
 }

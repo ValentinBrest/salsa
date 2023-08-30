@@ -1,0 +1,38 @@
+@media (max-width: 1200px) {
+    .Photos {
+        padding: var(--padding-xl);
+    }
+}
+
+@media (max-width: 992px) {
+    .Photos {
+        padding: var(--padding-l);
+    }
+
+    .wrap {
+        width: 720px;
+        height: 405px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Photos {
+        padding: var(--padding-m);
+    }
+
+    .wrap {
+        width: 520px;
+        height: 292px;
+    }
+}
+
+@media (max-width: 576px) {
+    .Photos {
+        padding: var(--padding-s);
+    }
+
+    .wrap {
+        width: 300px;
+        height: 169px;
+    }
+}

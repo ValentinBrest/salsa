@@ -15,9 +15,9 @@ export const MainPage = () => {
 
     return (
         <>
-            <Intro/>
+            {/* <Intro/> */}
             <About />
-            <Shedule backgroundColor={bgSecond}/>
+            {/* <Shedule backgroundColor={bgSecond}/> */}
             <Abonement />
             {/* <Events /> */}
             {/* <PricesV2 backgroundColor={bgSecond}/> */}

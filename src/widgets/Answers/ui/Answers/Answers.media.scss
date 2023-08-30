@@ -1,0 +1,27 @@
+@media (max-width: 1200px) {
+    .Answers {
+        padding: var(--padding-xl);
+    }
+}
+
+@media (max-width: 992px) {
+    .Answers {
+        padding: var(--padding-l);
+    }
+}
+
+@media (max-width: 768px) {
+    .Answers {
+        padding: var(--padding-m);
+    }
+
+    .wrap {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .Answers {
+        padding: var(--padding-s);
+    }
+}

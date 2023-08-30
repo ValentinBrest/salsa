@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-
-import Down from '../../../../shared/assets/icons/down.svg';
-import Up from '../../../../shared/assets/icons/up.svg';
+import { Text } from 'shared/ui/Text/Text';
 
 import cl from './AnswerCard.module.scss';
 
@@ -23,10 +21,10 @@ export const AnswerCard = (props: AnswerCardProps) => {
     return (
         <div className={classNames(cl.AnswerCard, {[cl.open]: isOpen}, [className])}>
             <div className={cl.header} onClick={() => setIsOpen(!isOpen)}>
-                <span>{id}. {question}</span>
+                <Text text={`${id}. ${question}`} className={cl.text}/>
                 <span className={classNames(cl.sign, {[cl.active]: isOpen}, [])}></span>
             </div>
-            {isOpen && <div className={cl.body}>{answer}</div>}
+            {isOpen && <Text className={cl.body} text={answer}/>}
             
         </div>
     );

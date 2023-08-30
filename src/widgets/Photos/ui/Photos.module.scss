@@ -5,7 +5,12 @@
 
 .wrap {
     position: relative;
-    display: flex;
-    justify-content: space-around;
+
+    width: 896px;
+    height: 504px;
+    margin: 0 auto;
+
     object-fit: fill;
 }
+
+@import "./Photos.media";

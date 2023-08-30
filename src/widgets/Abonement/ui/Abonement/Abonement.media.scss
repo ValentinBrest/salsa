@@ -1,0 +1,36 @@
+@media (max-width: 1200px) {
+    .Abonement {
+        padding: var(--padding-xl);
+    }
+
+    .wrap {
+        grid-template-columns: 35% 60%;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .Abonement {
+        padding: var(--padding-l);
+    }
+
+    .wrap {
+        display: flex;
+    }
+
+    .pick {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .Abonement {
+        padding: var(--padding-m);
+    }
+}
+
+@media (max-width: 576px) {
+    .Abonement {
+        padding: var(--padding-s);
+    }
+}

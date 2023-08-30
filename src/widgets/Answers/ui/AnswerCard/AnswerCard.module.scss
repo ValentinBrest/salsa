@@ -28,6 +28,11 @@
     border-bottom: 1px solid var(--hover-color);
 }
 
+.text {
+    flex: 1 0 0;
+    text-align: start;
+}
+
 .sign {
     position: relative;
     width: 35px;
@@ -101,3 +106,5 @@
 .open {
     background-color: rgb(71 71 71 / 24.8%);
 }
+
+@import "./AnswerCard.media";

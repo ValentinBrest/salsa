@@ -15,17 +15,17 @@ export const MainPage = () => {
 
     return (
         <>
-            {/* <Intro/> */}
+            <Intro/>
             <About />
             {/* <Shedule backgroundColor={bgSecond}/> */}
-            <Abonement />
+            <Abonement backgroundColor={bgSecond}/>
             {/* <Events /> */}
             {/* <PricesV2 backgroundColor={bgSecond}/> */}
-            <Photos backgroundColor={bgSecond}/>
+            <Photos />
             {/* <Memo backgroundColor={bgSecond}/> */}
             {/* <Prices /> */}
-            <Answers />
-            <Form backgroundColor={bgSecond}/>
+            <Answers backgroundColor={bgSecond}/>
+            <Form />
         </>
     );
 };

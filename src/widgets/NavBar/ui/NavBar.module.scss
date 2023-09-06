@@ -1,5 +1,5 @@
 .NavBar {
-    z-index: 2;
+    z-index: var(--navbar-z-index);
 
     display: flex;
     align-items: center;
@@ -11,9 +11,6 @@
 
     background: var(--bg-color-navbar);
     box-shadow: 0 7px 25px 0 var(--shadow-color);
-    @media (max-width: 992px) {
-        display: none;
-    }
 }
 
 .wrap {
@@ -27,7 +24,6 @@
 }
 
 .linkLogo {
-    position: absolute;
     width: 80px;
     height: 80px;
 }
@@ -60,3 +56,9 @@
 .link {
     margin-right: 20px;
 }
+
+.menu {
+    display: none;
+}
+
+@import "./NavBar.media"

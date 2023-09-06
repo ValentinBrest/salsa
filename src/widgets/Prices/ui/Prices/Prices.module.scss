@@ -20,6 +20,7 @@
     justify-content: center;
 
     height: 100%;
+    word-wrap: normal;
 
     text-align: center;
 
@@ -64,3 +65,5 @@
 .fff {
     margin-bottom: 0;
 }
+
+@import "./Prices.media"

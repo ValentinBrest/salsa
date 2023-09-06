@@ -1,0 +1,35 @@
+@media (max-width: 992px) {
+    .title {
+        span {
+            &::after,
+            &::before {
+                content: "";
+                width: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .wrap {
+        display: grid;
+        grid-template-columns: [start] 30% [line2] 20% [line3] 21% [line4] 24% [end];
+        grid-template-rows: [row1-start] 100px [row2] 50px [row3] 75px [row4] 75px [row5] 50px [row6] 50px [row7] 50px [row8] 75px [last];
+        gap: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .fff,
+    .body {
+        font: var(--font-s);
+        font-style: italic;
+        hyphens: manual;
+    }
+
+    .old,
+    .note, {
+        font: var(--font-xs);
+        font-style: italic;
+    }
+}

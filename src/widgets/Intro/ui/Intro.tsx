@@ -3,6 +3,7 @@ import SimpleImageSlider from 'react-simple-image-slider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
 
+import Klaksa from '../../../../public/img/klaksa.svg';
 import konstantin from '../../../../public/img/konstantin.jpg';
 import valentin from '../../../../public/img/valentin.jpg';
 
@@ -38,7 +39,7 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                         autoPlay={true} 
                         autoPlayDelay = {5}
                     /></div>
-                
+                <div className={cl.star}></div>
                 <div className={cl.center}>
                     <h1 className={cl.title}>САЛЬСА</h1>
                     <h2 className={cl.subtitle}>БРЕСТ</h2>

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Link as LinkScroll } from 'react-scroll';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from 'shared/ui';
@@ -14,37 +15,73 @@ interface NavBarProps {
 }
 
 export const NavBar = ({ className }: NavBarProps) => {
-    return (
-        <div className={classNames(cl.NavBar, {}, [className])}>
-            <div className="container">
-                <div className={cl.wrap}>
-                    <AppLink to="/" className={cl.linkLogo} key={'salsa'} theme={AppLinkTheme.BUTTON}>
-                        <img className={cl.logo} src={logo} alt="salsa-brest" />
-                    </AppLink>
+    const [isOpenMenu, setIsOpenMenu] = useState(false);
 
+    const onHandleMenu = () => setIsOpenMenu(!isOpenMenu);
+
+    useEffect(() => {
+        isOpenMenu ? document.body.classList.add('lock') : document.body.classList.remove('lock');
+    }, [isOpenMenu]);
+
+    return (
+        <>
+            <div className={classNames(cl.NavBar, {}, [className])}>
+                <div className="container">
+                    <div className={cl.wrap}>
+                        <AppLink 
+                            to="/" 
+                            className={cl.linkLogo} 
+                            key={'salsa'} 
+                            theme={AppLinkTheme.BUTTON} 
+                        >
+                            <img className={cl.logo} src={logo} alt="salsa-brest" />
+                        </AppLink>
+
+
+                        <div className={classNames(cl.burger, {}, [className])} onClick={onHandleMenu}/>
                     
-                    <div className={cl.links}>
-                        {links.map((item) => (
-                            <LinkScroll
-                                to={item.scroll}
-                                key={item.id}
-                                smooth={true}
-                            >
-                                <AppLink
-                                    to={item.to}
-                                    className={cl.link}
+                        <div className={cl.links}>
+                            {links.map((item) => (
+                                <LinkScroll
+                                    to={item.scroll}
                                     key={item.id}
+                                    smooth={true}
                                 >
-                                    {item.name}
-                                </AppLink>
-                            </LinkScroll>
-                        ))}
-                    </div>
-                    <div className={cl.line}>
-                        {<ThemeSwitcher className={cl.switcher} />}
+                                    <AppLink
+                                        to={item.to}
+                                        className={cl.link}
+                                        key={item.id}
+                                    >
+                                        {item.name}
+                                    </AppLink>
+                                </LinkScroll>
+                            ))}
+                        </div>
+                        <div className={cl.line}>
+                            {<ThemeSwitcher className={cl.switcher} />}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            {<div className={classNames(cl.menu, {[cl.visible]: isOpenMenu})}>
+                {links.map((item) => (
+                    <LinkScroll
+                        className={cl.mobileLink}
+                        to={item.scroll}
+                        key={item.id}
+                        smooth={true}
+                        onClick={onHandleMenu}
+                    >
+                        <AppLink
+                            to={item.to}
+                            key={item.id}
+                        >
+                            {item.name}
+                        </AppLink>
+                    </LinkScroll>
+                ))}
+            </div>}
+        </>
+        
     );
 };

@@ -77,6 +77,12 @@
         transition: top 0.5s;
     }
 
+    .guitar {
+        position: absolute;
+        opacity: 0.5;
+        width: 70%;
+    }
+
     .visible {
         position: fixed;
         z-index: var(--menu-z-index);

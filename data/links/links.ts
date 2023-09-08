@@ -9,12 +9,12 @@ export const links = [
         to: RoutePath.main,
         scroll: 'about',
     },
-    {
-        id: 2,
-        name: 'Расписание',
-        to:RoutePath.main,
-        scroll: 'shedule',
-    },
+    // {
+    //     id: 2,
+    //     name: 'Расписание',
+    //     to:RoutePath.main,
+    //     scroll: 'shedule',
+    // },
     {
         id: 3,
         name: 'Абонементы',

@@ -5,6 +5,7 @@ import { AppLink, AppLinkTheme } from 'shared/ui';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 
 import { links } from '../../../../data/links/links';
+import Guitar from '../../../../public/img/instuments/guitar.svg';
 
 import logo from './logo.png';
 
@@ -64,6 +65,7 @@ export const NavBar = ({ className }: NavBarProps) => {
                 </div>
             </div>
             {<div className={classNames(cl.menu, {[cl.visible]: isOpenMenu})}>
+                <Guitar className={cl.guitar}/>
                 {links.map((item) => (
                     <LinkScroll
                         className={cl.mobileLink}

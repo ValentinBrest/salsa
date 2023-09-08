@@ -3,7 +3,6 @@ import SimpleImageSlider from 'react-simple-image-slider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
 
-import Klaksa from '../../../../public/img/klaksa.svg';
 import konstantin from '../../../../public/img/konstantin.jpg';
 import valentin from '../../../../public/img/valentin.jpg';
 

@@ -11,6 +11,8 @@ import {
 } from 'shared/ui';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 
+import Conga from '../../../../public/img/instuments/conga.svg';
+
 import cl from './About.module.scss';
 
 interface AboutProps {
@@ -68,7 +70,8 @@ export const About = ({ className, backgroundColor }: AboutProps) => {
                         </Button>
                         {/* </AppLink> */}
                     </div>
-                    <div className={cl.pick}></div>
+                    <Conga className={cl.conga}/>
+                    {/* <div className={cl.pick}></div> */}
                 </div>
             </div>
         </div>

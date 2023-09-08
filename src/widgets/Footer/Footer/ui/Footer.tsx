@@ -4,8 +4,8 @@ import { AppLink, AppLinkTheme } from 'shared/ui';
 import Email from '../../../../shared/assets/icons/social/email.svg';
 import Instagram from '../../../../shared/assets/icons/social/instagram.svg';
 import Telegram from '../../../../shared/assets/icons/social/telegram.svg';
+import Tiktok from '../../../../shared/assets/icons/social/tiktok.svg';
 
-// import Tiktok from '../../../../shared/assets/icons/social/tiktok.svg';
 // import Viber from '../../../../shared/assets/icons/social/viber.svg';
 // import Vk from '../../../../shared/assets/icons/social/vk.svg';
 // import Youtube from '../../../../shared/assets/icons/social/youtube.svg';
@@ -29,6 +29,9 @@ export const Footer = ({ className, backgroundColor }: FooterProps) => {
                         </AppLink>
                         <AppLink to={'https://web.telegram.org/z/'} theme={AppLinkTheme.ICON}>
                             <Telegram className={cl.telegram}/>
+                        </AppLink>
+                        <AppLink to={'https://web.telegram.org/z/'} theme={AppLinkTheme.ICON}>
+                            <Tiktok className={cl.tiktok}/>
                         </AppLink>
                         
                     </div>

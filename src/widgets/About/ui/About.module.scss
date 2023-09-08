@@ -1,16 +1,22 @@
 .About {
     width: 100%;
     padding: var(--padding-xxl);
+    overflow: hidden;
 }
 
 .wrap {
+    position: relative;
+
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 70% 30%;
     gap: 20px;
+
     height: 100%;
 }
 
 .decr {
+    z-index: 3;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,15 +27,20 @@
     // align-self: end;
 }
 
-.pick {
-    width: 100%;
-    height: 500px;
+.conga {
+    position: absolute;
+    top: 50px;
 
-    background-image: url("https://www.libertyparkmusic.com/wp-content/uploads/Depositphotos_64698027_l-2015.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    border-radius: 100%;
+    right: 0;
+    transform: rotate(5deg);
+
+    height: 400px
+
+    // background-image: url("https://www.libertyparkmusic.com/wp-content/uploads/Depositphotos_64698027_l-2015.jpg");
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: contain;
+    // border-radius: 100%;
 }
 
 @import "./About.media";

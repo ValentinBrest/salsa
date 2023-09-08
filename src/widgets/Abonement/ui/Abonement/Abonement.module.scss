@@ -1,30 +1,47 @@
 .Abonement {
+    overflow: hidden;
     width: 100%;
     padding: var(--padding-xxl);
 }
 
 .wrap {
+    position: relative;
+
     display: grid;
     grid-template-columns: 40% 60%;
     gap: 20px;
+
     height: 100%;
+    margin-bottom: 150px;
+}
+
+.sax {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    opacity: 0.85;
+
+    width: 75%;
 }
 
 .decr {
+    z-index: 3;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.pick {
-    width: 100%;
-    height: 500px;
+// .pick {
+//     width: 100%;
+//     height: 500px;
 
-    background-image: url("https://chers.by/wa-data/public/shop/products/09/94/19409/images/50472/50472.970.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
+//     background-image: url("https://chers.by/wa-data/public/shop/products/09/94/19409/images/50472/50472.970.png");
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-size: contain;
+// }
 
 @import "./Abonement.media";

@@ -2,6 +2,9 @@ import { RoutePath } from 'app/providers/router';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme, Button, ButtonSize, ButtonTheme } from 'shared/ui';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
+import { Prices } from 'widgets/Prices';
+
+import Saxophone from '../../../../../public/img/instuments/saxophone.svg';
 
 import cl from './Abonement.module.scss';
 
@@ -16,7 +19,9 @@ export const Abonement = ({ className, backgroundColor }: PricesProps) => {
             id="abonement" className={classNames(cl.Abonement, {}, [className])}>
             <div className="container">
                 <div className={cl.wrap}>
-                    <div className={cl.pick}/>
+                    <div></div>
+                    <Saxophone className={cl.sax}/>
+                    {/* <div className={cl.pick}/> */}
                     <div className={cl.decr}>
                         <Text title="Абонементы" />
                         <Text subTitle="Занятия в группах" align={TextAlign.RIGHT} />
@@ -28,7 +33,7 @@ export const Abonement = ({ className, backgroundColor }: PricesProps) => {
                         <Text align={TextAlign.RIGHT} className=""
                             text="Срок обучения неограничен. Нет предела совершенству! В среднем, за месяц, при занятиях 3 раза в неделю, можно научиться танцевать"
                         />
-                        <AppLink to={RoutePath.prices} theme={AppLinkTheme.BUTTON}>
+                        {/* <AppLink to={RoutePath.prices} theme={AppLinkTheme.BUTTON}>
                             <Button
                                 className={cl.button}
                                 size={ButtonSize.L}
@@ -36,16 +41,12 @@ export const Abonement = ({ className, backgroundColor }: PricesProps) => {
                             >
                                 {'Узнать цены'}
                             </Button>
-                        </AppLink>
+                        </AppLink> */}
                     </div>
                     
-                </div>
+                </div> 
 
-
-                
-                
-                
-                
+                <Prices/>
             </div>
         </div>
     );

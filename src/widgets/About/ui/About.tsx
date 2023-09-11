@@ -11,7 +11,7 @@ import {
 } from 'shared/ui';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 
-import Conga from '../../../../public/img/instuments/conga.svg';
+import Conga from '../../../../public/img/instuments/conga2.svg';
 
 import cl from './About.module.scss';
 

@@ -39,16 +39,19 @@
     margin: 0 5px;
 }
 
-.mailWrap {
+.mailWrap,
+.phoneWrap {
     display: flex;
     align-items: center;
+    color: var(--footer-color);
 }
 
-.email {
+.email,
+.phone {
     width: 20px;
     height: 20px;
     margin-left: 10px;
-    fill: #64ee42;
+    fill: var(--hover-color);
 }
 
 .text {

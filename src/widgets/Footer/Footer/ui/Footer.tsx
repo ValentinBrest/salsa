@@ -3,6 +3,7 @@ import { AppLink, AppLinkTheme } from 'shared/ui';
 
 import Email from '../../../../shared/assets/icons/social/email.svg';
 import Instagram from '../../../../shared/assets/icons/social/instagram.svg';
+import Phone from '../../../../shared/assets/icons/social/phone.svg';
 import Telegram from '../../../../shared/assets/icons/social/telegram.svg';
 import Tiktok from '../../../../shared/assets/icons/social/tiktok.svg';
 
@@ -35,9 +36,15 @@ export const Footer = ({ className, backgroundColor }: FooterProps) => {
                         </AppLink>
                         
                     </div>
-                    <div className={cl.mailWrap}>
-                        <span className={cl.text}>SalsaMamboBrest@gmail.by</span>
-                        <Email className={classNames(cl.email, {}, [])}/>
+                    <div className={cl.contactWrap}>
+                        <a href={'tel:+375339939039'} className={cl.phoneWrap}>
+                            <span className={cl.text}>+ 375 33 993 90 39</span>
+                            <Phone className={classNames(cl.phone, {}, [])}/>
+                        </a>
+                        <a href={'malito:SalsaMamboBrest@gmail.by'} className={cl.mailWrap}>
+                            <span className={cl.text}>SalsaMamboBrest@gmail.by</span>
+                            <Email className={classNames(cl.email, {}, [])}/>
+                        </a>
                     </div>
                 </div>
             </div>

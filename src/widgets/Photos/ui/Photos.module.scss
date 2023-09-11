@@ -4,11 +4,13 @@
 }
 
 .wrap {
+
+    // height: 504px;
     position: relative;
 
-    width: 896px;
-    height: 504px;
+    width: 100%;
     margin: 0 auto;
+    padding-top: 56.25%;
 
     object-fit: fill;
 }

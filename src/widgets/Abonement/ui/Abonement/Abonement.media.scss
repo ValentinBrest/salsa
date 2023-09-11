@@ -33,18 +33,27 @@
         padding: var(--padding-m);
     }
 
+    .wrap {
+        gap: unset;
+    }
+
     .sax {
-        width: 100%;
         top: unset;
         bottom: -25%;
         left: 50%;
         transform: translateX(-50%);
+
+        width: 100%;
     }
 }
 
 @media (max-width: 576px) {
     .Abonement {
         padding: var(--padding-m);
+    }
+
+    .wrap {
+        margin-bottom: 30px;
     }
 
     .sax {

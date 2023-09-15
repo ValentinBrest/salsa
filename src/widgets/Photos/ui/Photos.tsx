@@ -40,8 +40,6 @@ export const Photos = ({ className, backgroundColor }: PhotosProps) => {
                         showNavs={true}
                         navSize={isTabletScreen? 30: 50}
                         navMargin={isTabletScreen? 15: 30}
-                        // autoPlay={true} 
-                        // autoPlayDelay = {5}
                     />
                 </div>
                 

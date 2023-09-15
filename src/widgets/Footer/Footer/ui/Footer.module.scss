@@ -21,6 +21,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    a {
+        display: block;
+        height: 30px;
+    }
 }
 
 .telegram {
@@ -41,16 +45,45 @@
 
 .mailWrap,
 .phoneWrap {
+    position: relative;
+
     display: flex;
     align-items: center;
+
     color: var(--footer-color);
+    text-decoration: none;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+
+        width: 0;
+        height: 2px;
+
+        background: var(--hover-color);
+
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        background-position: 0;
+
+        &::before {
+            width: 100%;
+        }
+    }
 }
 
 .email,
 .phone {
     width: 20px;
     height: 20px;
-    margin-left: 10px;
+    margin-right: 10px;
     fill: var(--hover-color);
 }
 

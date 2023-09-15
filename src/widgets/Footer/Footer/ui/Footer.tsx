@@ -7,9 +7,6 @@ import Phone from '../../../../shared/assets/icons/social/phone.svg';
 import Telegram from '../../../../shared/assets/icons/social/telegram.svg';
 import Tiktok from '../../../../shared/assets/icons/social/tiktok.svg';
 
-// import Viber from '../../../../shared/assets/icons/social/viber.svg';
-// import Vk from '../../../../shared/assets/icons/social/vk.svg';
-// import Youtube from '../../../../shared/assets/icons/social/youtube.svg';
 import cl from './Footer.module.scss';
 
 interface FooterProps {
@@ -23,27 +20,27 @@ export const Footer = ({ className, backgroundColor }: FooterProps) => {
         <footer style={{background: backgroundColor}} id="contact" className={classNames(cl.Footer, {}, [className])}>
             <div className="container">
                 <div className={cl.wrap}>
-                    <span className={cl.text}>© 2007-2023 Школа танцев «СальсаБрест»</span>
+                    <span className={cl.text}>© 2023 Школа танцев «СальсаБрест»</span>
                     <div className={cl.socialWrap}>
-                        <AppLink to={'https://www.instagram.com/'} theme={AppLinkTheme.ICON}>
+                        <a href={'https://www.instagram.com/'}>
                             <Instagram className={cl.instagram}/>
-                        </AppLink>
-                        <AppLink to={'https://web.telegram.org/z/'} theme={AppLinkTheme.ICON}>
+                        </a>
+                        <a href={'https://web.telegram.org/z/'}>
                             <Telegram className={cl.telegram}/>
-                        </AppLink>
-                        <AppLink to={'https://web.telegram.org/z/'} theme={AppLinkTheme.ICON}>
+                        </a>
+                        <a href={'https://web.telegram.org/z/'}>
                             <Tiktok className={cl.tiktok}/>
-                        </AppLink>
+                        </a>
                         
                     </div>
                     <div className={cl.contactWrap}>
                         <a href={'tel:+375339939039'} className={cl.phoneWrap}>
+                            <Phone className={cl.phone}/>
                             <span className={cl.text}>+ 375 33 993 90 39</span>
-                            <Phone className={classNames(cl.phone, {}, [])}/>
                         </a>
                         <a href={'malito:SalsaMamboBrest@gmail.by'} className={cl.mailWrap}>
-                            <span className={cl.text}>SalsaMamboBrest@gmail.by</span>
-                            <Email className={classNames(cl.email, {}, [])}/>
+                            <Email className={cl.email}/>
+                            <span className={cl.text}>salsabrest@gmail.by</span>
                         </a>
                     </div>
                 </div>

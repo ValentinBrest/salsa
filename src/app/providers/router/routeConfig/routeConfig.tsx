@@ -7,7 +7,7 @@ import { PricePage } from 'pages/PricePage';
 
 export enum AppRoutes {
     MAIN = 'main',
-    POLITICS = 'politics',
+    // POLITICS = 'politics',
     // ABOUT = 'about',
     // PRICES = 'prices',
     // EVENTS = 'events',
@@ -16,7 +16,7 @@ export enum AppRoutes {
 
 export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.MAIN]: '/',
-    [AppRoutes.POLITICS]: '/politics',
+    // [AppRoutes.POLITICS]: '/politics',
     // [AppRoutes.PRICES]: '/prices',
     // [AppRoutes.EVENTS]: '/events',
     [AppRoutes.NOT_FOUND]: '*',
@@ -27,10 +27,10 @@ export const routeConfig: RouteProps[] = [
         path: RoutePath.main,
         element: <MainPage />,
     },
-    {
-        path: RoutePath.politics,
-        element: <PoliticsPage />,
-    },
+    // {
+    //     path: RoutePath.politics,
+    //     element: <PoliticsPage />,
+    // },
     // {
     //     path: RoutePath.about,
     //     element: <AboutPage />,

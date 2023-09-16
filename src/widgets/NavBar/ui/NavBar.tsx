@@ -7,7 +7,7 @@ import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { links } from '../../../../data/links/links';
 import Guitar from '../../../../public/img/instuments/guitar.svg';
 
-import logo from './logo.png';
+import logo from '../../../../public/img/logo.png';
 
 import cl from './NavBar.module.scss';
 
@@ -21,26 +21,34 @@ export const NavBar = ({ className }: NavBarProps) => {
     const onHandleMenu = () => setIsOpenMenu(!isOpenMenu);
 
     useEffect(() => {
-        isOpenMenu ? document.body.classList.add('lock') : document.body.classList.remove('lock');
+        isOpenMenu
+            ? document.body.classList.add('lock')
+            : document.body.classList.remove('lock');
     }, [isOpenMenu]);
 
     return (
         <>
             <div className={classNames(cl.NavBar, {}, [className])}>
-                <div className="container">
+                <div className='container'>
                     <div className={cl.wrap}>
-                        <AppLink 
-                            to="/" 
-                            className={cl.linkLogo} 
-                            key={'salsa'} 
-                            theme={AppLinkTheme.BUTTON} 
+                        <AppLink
+                            to='/'
+                            className={cl.linkLogo}
+                            key={'salsa'}
+                            theme={AppLinkTheme.BUTTON}
                         >
-                            <img className={cl.logo} src={logo} alt="salsa-brest" />
+                            <img
+                                className={cl.logo}
+                                src={logo}
+                                alt='salsa-brest'
+                            />
                         </AppLink>
 
+                        <div
+                            className={classNames(cl.burger, {}, [className])}
+                            onClick={onHandleMenu}
+                        />
 
-                        <div className={classNames(cl.burger, {}, [className])} onClick={onHandleMenu}/>
-                    
                         <div className={cl.links}>
                             {links.map((item) => (
                                 <LinkScroll
@@ -64,26 +72,28 @@ export const NavBar = ({ className }: NavBarProps) => {
                     </div>
                 </div>
             </div>
-            {<div className={classNames(cl.menu, {[cl.visible]: isOpenMenu})}>
-                <Guitar className={cl.guitar}/>
-                {links.map((item) => (
-                    <LinkScroll
-                        className={cl.mobileLink}
-                        to={item.scroll}
-                        key={item.id}
-                        smooth={true}
-                        onClick={onHandleMenu}
-                    >
-                        <AppLink
-                            to={item.to}
+            {
+                <div
+                    className={classNames(cl.menu, {
+                        [cl.visible]: isOpenMenu,
+                    })}
+                >
+                    <Guitar className={cl.guitar} />
+                    {links.map((item) => (
+                        <LinkScroll
+                            className={cl.mobileLink}
+                            to={item.scroll}
                             key={item.id}
+                            smooth={true}
+                            onClick={onHandleMenu}
                         >
-                            {item.name}
-                        </AppLink>
-                    </LinkScroll>
-                ))}
-            </div>}
+                            <AppLink to={item.to} key={item.id}>
+                                {item.name}
+                            </AppLink>
+                        </LinkScroll>
+                    ))}
+                </div>
+            }
         </>
-        
     );
 };

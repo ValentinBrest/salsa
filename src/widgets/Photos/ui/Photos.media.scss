@@ -18,11 +18,20 @@
     .Photos {
         padding: var(--padding-m);
     }
-
+    .wrap {
+        width: unset;
+    }
 }
+
 
 @media (max-width: 576px) {
     .Photos {
         padding: var(--padding-m);
+    }
+}
+
+@media (max-width: 390px) {
+    .wrap {
+        height: 70vh;
     }
 }

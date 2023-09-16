@@ -113,11 +113,13 @@
 
     .title {
         background-color: var(--bg-color);
+        font: var(--font-main-subtitle);
+        font-weight: 700;
     }
 
     .subtitle {
         margin-bottom: 10px;
-        font: var(--font-main-subtitle);
+        font: var(--font-title-xl);
         font-weight: 700;
     }
 }

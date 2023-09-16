@@ -106,3 +106,18 @@
         width: 55px;
     }
 }
+
+@media (max-width: 576px) { 
+    .NavBar {
+        height: calc(var(--navbar-height) - 10px);
+        padding: 5px;
+    }
+
+    .line {
+        height: calc(var(--navbar-height) - 10px);
+    }
+    .visible {
+        top: calc(var(--navbar-height) - 10px);
+    }
+}
+

@@ -28,11 +28,11 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                             <Text className={cl.withoutMargin} text={'Для этого отправьте сообщение '}/>
                             <div className={cl.wantToDance}><span>"Хочу танцевать сальсу"</span></div>
                             <Text className={cl.withoutMargin} text={' в директ нашей страницы в '}/>
-                            <a href="https://www.instagram.com/">
+                            <a href="https://www.instagram.com/salsabrest/">
                                 <Instagram className={cl.insta}/>
                             </a>
                             <Text text={'или в'}/>
-                            <a href={'https://web.telegram.org/z/'} >
+                            <a href={'https://t.me/salsaworlddance'} >
                                 <Telegram className={cl.telegram}/>
                             </a>
                         </div>

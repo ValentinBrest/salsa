@@ -2,6 +2,7 @@ import { Link as LinkScroll } from 'react-scroll';
 import SimpleImageSlider from 'react-simple-image-slider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
+import { useMediaQuery } from 'react-responsive';
 
 import m1 from '../../../../public/img/main/1-min.jpg';
 import m2 from '../../../../public/img/main/2-min.jpg';
@@ -16,11 +17,12 @@ interface IntroProps {
 }
 
 export const Intro = ({ className, backgroundColor }: IntroProps) => {
+    const isMobileScreen = useMediaQuery({ query: '(max-width: 576px)' });
+    const images = [{ url: m3 }, { url: m1 }];
 
-    const images = [{ url: m4 }, { url: m1 }];
+    const images2 = [{ url: m2 }, { url: m4 }];
 
-    const images2 = [{ url: m3 }, { url: m2 }];
-
+    const totalImg = [{ url: m4 }, { url: m1 }, { url: m3 }, { url: m2 }];
     return (
         <div
             style={{ background: backgroundColor }}
@@ -31,7 +33,9 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                     <SimpleImageSlider
                         width={'100%'}
                         height={'100%'}
-                        images={images}
+                        images={
+                            isMobileScreen ? totalImg : images
+                        }
                         showBullets={false}
                         showNavs={false}
                         autoPlay={true}
@@ -51,18 +55,20 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                         </Button>
                     </LinkScroll>
                 </div>
-                <div className={cl.right}>
-                    <SimpleImageSlider
-                        style={{}}
-                        width={'100%'}
-                        height={'100%'}
-                        images={images2}
-                        showBullets={false}
-                        showNavs={false}
-                        autoPlay={true}
-                        autoPlayDelay={5}
-                    />
-                </div>
+                {!isMobileScreen && (
+                    <div className={cl.right}>
+                        <SimpleImageSlider
+                            style={{}}
+                            width={'100%'}
+                            height={'100%'}
+                            images={images2}
+                            showBullets={false}
+                            showNavs={false}
+                            autoPlay={true}
+                            autoPlayDelay={5}
+                        />
+                    </div>
+                )}
             </div>
         </div>
     );

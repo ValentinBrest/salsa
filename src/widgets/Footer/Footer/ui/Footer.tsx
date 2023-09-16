@@ -22,13 +22,13 @@ export const Footer = ({ className, backgroundColor }: FooterProps) => {
                 <div className={cl.wrap}>
                     <span className={cl.text}>© 2023 Школа танцев «СальсаБрест»</span>
                     <div className={cl.socialWrap}>
-                        <a href={'https://www.instagram.com/'}>
+                        <a href={'https://www.instagram.com/salsabrest/'}>
                             <Instagram className={cl.instagram}/>
                         </a>
-                        <a href={'https://web.telegram.org/z/'}>
+                        <a href={'https://t.me/salsaworlddance'}>
                             <Telegram className={cl.telegram}/>
                         </a>
-                        <a href={'https://web.telegram.org/z/'}>
+                        <a href={'https://www.tiktok.com/@salsabrest1'}>
                             <Tiktok className={cl.tiktok}/>
                         </a>
                         

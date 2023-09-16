@@ -15,6 +15,7 @@ export const Events = ({ className, backgroundColor }: EventsProps) => {
             <div className="container">
                 <Text title="Мероприятия"/>
                 <div className={cl.wrap}>
+                    
                     <iframe src="https://www.youtube.com/embed/JjVC1PtXRxo"
                         frameBorder="0"
                         allow="autoplay; encrypted-media"

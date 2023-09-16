@@ -8,6 +8,7 @@ import ph3 from '../../../../public/img/gallery/3.jpg';
 import ph2 from '../../../../public/img/gallery/2.jpg';
 import ph4 from '../../../../public/img/gallery/4.jpg';
 import ph5 from '../../../../public/img/gallery/5.jpg';
+import ph6 from '../../../../public/img/gallery/6.jpg';
 
 import cl from './Photos.module.scss';
 
@@ -20,11 +21,12 @@ export const Photos = ({ className, backgroundColor }: PhotosProps) => {
     const isTabletScreen = useMediaQuery({ query: '(max-width: 768px)' });
 
     const images = [
-        { url: ph1 },
-        { url: ph2 },
         { url: ph3 },
+        { url: ph6 },
+        { url: ph2 },
         { url: ph4 },
         { url: ph5 },
+        { url: ph1 },
     ];
 
     return (

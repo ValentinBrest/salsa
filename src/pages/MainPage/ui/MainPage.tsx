@@ -1,4 +1,5 @@
 import { Abonement } from 'widgets/Abonement';
+import { Abonement2 } from 'widgets/Abonement2';
 import { About } from 'widgets/About';
 import { Answers } from 'widgets/Answers';
 import { Events } from 'widgets/Events';
@@ -16,6 +17,7 @@ export const MainPage = () => {
             <Intro/>
             <About />
             {/* <Shedule backgroundColor={bgSecond}/> */}
+            <Abonement2 backgroundColor={bgSecond}/>
             <Abonement backgroundColor={bgSecond}/>
             {/* <Events /> */}
             <Photos />

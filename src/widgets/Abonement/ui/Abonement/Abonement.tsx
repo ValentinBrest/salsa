@@ -4,7 +4,7 @@ import { AppLink, AppLinkTheme, Button, ButtonSize, ButtonTheme } from 'shared/u
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import { Prices } from 'widgets/Prices';
 
-import Saxophone from '../../../../../public/img/instuments/saxophone.svg';
+import saxophone from '../../../../../public/img/instuments/saxophone.png';
 
 import cl from './Abonement.module.scss';
 
@@ -20,7 +20,7 @@ export const Abonement = ({ className, backgroundColor }: PricesProps) => {
             <div className="container">
                 <div className={cl.wrap}>
                     <div></div>
-                    <Saxophone className={cl.sax}/>
+                    <img src={saxophone} className={cl.sax}/>
                     {/* <div className={cl.pick}/> */}
                     <div className={cl.decr}>
                         <Text title="Абонементы" />

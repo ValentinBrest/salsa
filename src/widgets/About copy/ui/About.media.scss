@@ -1,0 +1,38 @@
+@media (max-width: 1200px) {
+    .About {
+        padding: var(--padding-xl);
+    }
+
+    .wrap {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .About {
+        padding: var(--padding-l);
+    }
+
+    .wrap {
+        display: flex;
+    }
+
+    // .pick {
+    //     display: none;
+    // }
+    .conga {
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 768px) {
+    .About {
+        padding: var(--padding-m);
+    }
+}
+
+@media (max-width: 576px) {
+    .About {
+        padding: var(--padding-m);
+    }
+}

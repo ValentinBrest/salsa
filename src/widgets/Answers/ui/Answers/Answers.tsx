@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Text } from 'shared/ui/Text/Text';
 
 import { answers } from '../../../../../data/answers/answers';
-import Clave from '../../../../../public/img/instuments/clave.svg';
+import clave from '../../../../../public/img/instuments/clave.png';
 import { AnswerCard } from '../AnswerCard/AnswerCard';
 
 import cl from './Answers.module.scss';
@@ -20,7 +20,7 @@ export const Answers = ({ className, backgroundColor }: AnswersProps) => {
             <div className="container">
                 <Text title="Вопросы"/>
                 <div className={cl.wrap}>
-                    <Clave className={cl.clave}/>
+                    <img src={clave} className={cl.clave}/>
                     {answers.map((item) => <AnswerCard {...item} key={item.id} className={cl.AnswersCard}/>)}
                 </div>
             </div>

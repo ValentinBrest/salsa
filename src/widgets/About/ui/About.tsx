@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { RoutePath } from 'app/providers/router';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -11,7 +10,7 @@ import {
 } from 'shared/ui';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 
-import Conga from '../../../../public/img/instuments/conga2.svg';
+import conga from '../../../../public/img/instuments/conga.png';
 
 import cl from './About.module.scss';
 
@@ -24,53 +23,24 @@ export const About = ({ className, backgroundColor }: AboutProps) => {
     const [isVisible, setIsVisible] = useState(false);
 
     return (
-        <div 
-            style={{background: backgroundColor}} 
-            id="about" 
+        <div
+            style={{ background: backgroundColor }}
+            id='about'
             className={classNames(cl.About, {}, [className])}
         >
-            <div className="container">
+            <div className='container'>
                 <div className={cl.wrap}>
                     <div className={cl.decr}>
-                        <Text title="О ШКОЛЕ" />
+                        {/* <Text title='Почему Сальса' /> */}
 
                         <Text
-                            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Hic harum reprehenderit aliquam. Commodi saepe beatae eos. 
-                        Quis aliquid exercitationem iusto tempora mollitia optio eaque odio 
-                        dolorem, sed beatae quod et tenetur nulla veniam laboriosam est 
-                        voluptas minima voluptatibus, assumenda doloremque, voluptatem quibusdam 
-                        facilis! Ex officia voluptas, assumenda voluptatum mollitia veritatis!"
-                            theme={TextTheme.ITALIC}
+                            text='Сальса – музыкальный термин, включающий в себя множество разновидностей  ритмических стилей и музыкальных форм, но на нашем сайте под словом «сальса» мы будем подразумевать именно танец. '
                         />
-                        {!isVisible && <Text
-                            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Quae soluta cum tenetur, enim assumenda nisi laudantium dolor fugiat 
-                        nulla inventore?...."
-                            theme={TextTheme.ITALIC}
-                        />}
-                        {isVisible && <Text
-                            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Quae soluta cum tenetur, enim assumenda nisi laudantium dolor fugiat 
-                        nulla inventore? Lorem d exercitationem iusto tempora mollitia optio eaque odio 
-                        dolorem, sed beatae quod et tenetur nulla veniam laboriosam est 
-                        voluptas minima voluptatibus, assumenda doloremque, voluptatem quibusdam 
-                        facilis! Ex officia voluptas, assumenda "
-                            theme={TextTheme.ITALIC}
-                        />}
-
-                        {/* <AppLink to={RoutePath.about} theme={AppLinkTheme.BUTTON}> */}
-                        <Button
-                            className={cl.button}
-                            size={ButtonSize.L}
-                            theme={ButtonTheme.OUTLINE}
-                            onClick={() => setIsVisible(!isVisible)}
-                        >
-                            {isVisible ? 'Скрыть' : 'Узнать больше'}
-                        </Button>
-                        {/* </AppLink> */}
+                        <Text
+                            text='Итак. Сальса – популярный латиноамериканский танец, который танцуют по всему миру. Хотите танцевать сальсу дома, на сальса-вечеринках в Бресте, в Минске или практически в любом крупном (и не только) городе мира? Хотите удивлять родных, друзей, знакомых и коллег на торжествах, в клубах и на корпоративах? Хотите просто быть здоровыми и жить полноценной жизнью? Тогда вы обратились по адресу!'
+                        />
                     </div>
-                    <Conga className={cl.conga}/>
+                    <img src={conga} className={cl.conga} />
                     {/* <div className={cl.pick}></div> */}
                 </div>
             </div>

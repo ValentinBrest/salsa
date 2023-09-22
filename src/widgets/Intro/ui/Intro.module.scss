@@ -9,7 +9,7 @@
     position: relative;
 
     display: grid;
-    grid-template-columns: 1fr 0.7fr 1fr;
+    grid-template-columns: 0.9fr 1fr 0.9fr;
 
     width: 100%;
     height: 100%;
@@ -30,27 +30,39 @@
 .left {
     position: relative;
     object-fit: cover;
-    clip-path: polygon(0 0, 100% 0, 68% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
 }
 
 .center {
+    position: relative;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     width: 100%;
     height: 100%;
+}
+.logo {
+    position: absolute;
+    top: 58%;
+    transform: translateY(-55%);
+    width: 450px;
 }
 
 .right {
     position: relative;
     object-fit: cover;
-    clip-path: polygon(32% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .title {
-    font: var(--font-main-title);
+    // position: absolute;
+    // right: 5%;
+    // top: 20px;
+    margin-top: 70px;
+    font: var(--font-title-xl);
     font-weight: 700;
 }
 
@@ -58,6 +70,13 @@
     margin-bottom: 10px;
     font: var(--font-main-subtitle);
     font-weight: 700;
+}
+
+.btn {
+    // position: absolute;
+    // bottom: 50px;
+    // left: 25%;
+    margin-bottom: 10px;
 }
 
 @import "./Intro.media"

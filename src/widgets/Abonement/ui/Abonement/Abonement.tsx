@@ -1,10 +1,8 @@
-import { RoutePath } from 'app/providers/router';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppLink, AppLinkTheme, Button, ButtonSize, ButtonTheme } from 'shared/ui';
-import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
+import { Text, TextAlign } from 'shared/ui/Text/Text';
 import { Prices } from 'widgets/Prices';
 
-import saxophone from '../../../../../public/img/instuments/saxophone.png';
+import trambone from '../../../../../public/img/instuments/trambone.png';
 
 import cl from './Abonement.module.scss';
 
@@ -19,9 +17,7 @@ export const Abonement = ({ className, backgroundColor }: PricesProps) => {
             id="abonement" className={classNames(cl.Abonement, {}, [className])}>
             <div className="container">
                 <div className={cl.wrap}>
-                    <div></div>
-                    <img src={saxophone} className={cl.sax}/>
-                    {/* <div className={cl.pick}/> */}
+                    <img src={trambone} className={cl.trambone}/>
                     <div className={cl.decr}>
                         <Text title="Абонементы" />
                         <Text subTitle="Занятия в группах" align={TextAlign.RIGHT} />
@@ -33,15 +29,6 @@ export const Abonement = ({ className, backgroundColor }: PricesProps) => {
                         <Text align={TextAlign.RIGHT} className=""
                             text="Срок обучения неограничен. Нет предела совершенству! В среднем, за месяц, при занятиях 3 раза в неделю, можно научиться танцевать"
                         />
-                        {/* <AppLink to={RoutePath.prices} theme={AppLinkTheme.BUTTON}>
-                            <Button
-                                className={cl.button}
-                                size={ButtonSize.L}
-                                theme={ButtonTheme.OUTLINE}
-                            >
-                                {'Узнать цены'}
-                            </Button>
-                        </AppLink> */}
                     </div>
                     
                 </div> 

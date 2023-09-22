@@ -1,24 +1,22 @@
-.Abonement {
-    overflow: hidden;
+.WhySalsa {
     width: 100%;
-    padding: var(--padding-xxl);
+    padding: var(--padding-xl);
+
+    // max-height: 400px;
 }
 
 .wrap {
     position: relative;
     display: grid;
-    grid-template-columns: 60% 40%;
-    height: 100%;
+    grid-template-columns: 25% 75%;
 }
 
-.trambone {
+.sax {
     position: absolute;
     z-index: 2;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-
-    width: 45%;
+    top: 40px;
+    left: 55px;
+    transform: rotate(5deg);
 }
 
 .decr {
@@ -30,4 +28,8 @@
     justify-content: center;
 }
 
-@import "./Abonement.media";
+.epigraph {
+    align-self: self-end;
+}
+
+@import "./WhySalsa.media";

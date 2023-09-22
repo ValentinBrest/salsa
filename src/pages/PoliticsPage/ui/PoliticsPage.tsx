@@ -1,7 +1,7 @@
 import React from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
-import { About } from 'widgets/About';
+// import { About } from 'widgets/AboutSalsa';
 
 import cl from './PoliticsPage.module.scss';
 

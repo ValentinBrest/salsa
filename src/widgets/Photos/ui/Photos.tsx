@@ -4,8 +4,8 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Text, TextAlign } from 'shared/ui/Text/Text';
 
 import ph1 from '../../../../public/img/gallery/1.jpg';
-import ph3 from '../../../../public/img/gallery/3.jpg';
 import ph2 from '../../../../public/img/gallery/2.jpg';
+import ph3 from '../../../../public/img/gallery/3.jpg';
 import ph4 from '../../../../public/img/gallery/4.jpg';
 import ph5 from '../../../../public/img/gallery/5.jpg';
 import ph6 from '../../../../public/img/gallery/6.jpg';
@@ -32,13 +32,13 @@ export const Photos = ({ className, backgroundColor }: PhotosProps) => {
     return (
         <div
             style={{ background: backgroundColor }}
-            id='photos'
+            id="photos"
             className={classNames(cl.Photos, {}, [className])}
         >
-            <div className='container'>
-                <Text title='Фотографии' />
+            <div className="container">
+                <Text title="Фотографии" />
                 <Text
-                    text='Фотографии с вечеринок, мероприятий, отдыха и жизни.'
+                    text="Фотографии с вечеринок, мероприятий, отдыха и жизни."
                     align={TextAlign.CENTER}
                 />
                 <div className={cl.wrap}>

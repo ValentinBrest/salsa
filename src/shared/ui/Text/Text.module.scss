@@ -59,18 +59,33 @@
     color: var(--inverted-primary-color);
 }
 
-// .error {
-//     font: var(--font-m);
+.epigraph {
+    display: flex;
+    flex-direction: column;
 
-//     .title {
-//         color: var(--red-light);
-//     }
+    width: 400px;
+    padding-bottom: 30px;
 
-//     .text {
-//         font: var(--font-m);
-//         color: var(--red-light);
-//     }
-// }
+    font: var(--font-m);
+    color: var(--epigraph-color);
+}
+
+.author {
+    margin-top: 10px;
+}
+
+.error {
+    font: var(--font-m);
+
+    .title {
+        color: var(--red-light);
+    }
+
+    .text {
+        font: var(--font-m);
+        color: var(--red-light);
+    }
+}
 
 .without {
     span {

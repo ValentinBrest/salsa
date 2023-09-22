@@ -1,0 +1,72 @@
+.WhySchool {
+    width: 100%;
+    padding: var(--padding-xl);
+}
+
+.wrap {
+    position: relative;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    gap: 10px;
+}
+
+.invertedwrap {
+    position: relative;
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+.guiro {
+    position: absolute;
+    z-index: 2;
+    top: 200px;
+    right: -50px;
+
+    width: 350px;
+}
+
+.decr {
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.travel {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+
+    & img {
+        display: block;
+        width: 250px;
+        min-height: 150px;
+        object-fit: cover;
+    }
+}
+
+.teacher {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    & img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.epigraph {
+    align-self: flex-end;
+}
+
+.button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@import "./WhySchool.media";

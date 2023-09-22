@@ -1,13 +1,15 @@
 import { Abonement } from 'widgets/Abonement';
-import { Abonement2 } from 'widgets/Abonement2';
-import { About } from 'widgets/About';
+import { AboutSalsa } from 'widgets/AboutSalsa';
 import { Answers } from 'widgets/Answers';
 import { Events } from 'widgets/Events';
 import { Form } from 'widgets/Form';
 import { Intro } from 'widgets/Intro';
+import { Lessons } from 'widgets/Lessons';
 import { Memo } from 'widgets/Memo';
 import { Photos } from 'widgets/Photos';
 import { Shedule } from 'widgets/Shedule';
+import { WhySalsa } from 'widgets/WhySalsa';
+import { WhySchool } from 'widgets/WhySchool';
 
 export const MainPage = () => {
     const bgSecond = 'var(--bg-color-second)';
@@ -15,14 +17,16 @@ export const MainPage = () => {
     return (
         <>
             <Intro/>
-            <About />
+            <AboutSalsa />
             {/* <Shedule backgroundColor={bgSecond}/> */}
-            <Abonement2 backgroundColor={bgSecond}/>
-            <Abonement backgroundColor={bgSecond}/>
+            <WhySalsa backgroundColor={bgSecond}/>
+            <WhySchool/>
+            <Lessons backgroundColor={bgSecond}/>
+            <Abonement />
             {/* <Events /> */}
-            <Photos />
+            <Photos backgroundColor={bgSecond}/>
             {/* <Memo backgroundColor={bgSecond}/> */}
-            <Answers backgroundColor={bgSecond}/>
+            <Answers />
             <Form />
         </>
     );

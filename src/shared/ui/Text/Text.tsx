@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, ReactNode } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 
 import cl from './Text.module.scss';
@@ -18,11 +18,13 @@ export enum TextAlign {
 
 interface TextProps {
     className?: string;
-    title?: string;
-    text?: string;
+    title?: ReactNode;
+    text?: ReactNode;
+    epigraph?: ReactNode;
     subTitle?: string;
     theme?: TextTheme;
     align?: TextAlign;
+    author?: ReactNode,
 }
 
 export const Text = memo((props: TextProps) => {
@@ -31,8 +33,10 @@ export const Text = memo((props: TextProps) => {
         title,
         text,
         subTitle,
+        epigraph,
         theme = TextTheme.PRIMARY,
         align = TextAlign.CENTER,
+        author,
     } = props;
     
     return (
@@ -44,6 +48,8 @@ export const Text = memo((props: TextProps) => {
             {subTitle && <div className={classNames(cl.subTitle, {[cl[theme]]: true}, [className, cl[align]])}>{subTitle}</div>}
 
             {text && <div className={classNames(cl.text, {[cl[theme]]: true}, [className, cl[align]])} >{text}</div>}
+            
+            {epigraph && <div className={classNames(cl.epigraph, {[cl[theme]]: true}, [className, cl[align]])} >{epigraph} <div className={cl.author}>{author}</div></div>}
         </>
     );
 });

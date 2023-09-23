@@ -19,7 +19,7 @@ export const WhySchool = ({ className, backgroundColor }: WhySchoolProps) => {
     const [isVisible, setIsVisible] = useState(false);
     return (
         <div style={{background: backgroundColor}} 
-            id="whySchool" className={classNames(cl.WhySchool, {}, [className])}>
+            id="about" className={classNames(cl.WhySchool, {}, [className])}>
             <div className="container">
                 <div className={cl.wrap}>
                     

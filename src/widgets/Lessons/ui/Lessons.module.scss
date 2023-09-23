@@ -1,7 +1,7 @@
 .Lessons {
     overflow: hidden;
     width: 100%;
-    padding: var(--padding-xl);
+    padding: var(--padding-l);
 }
 
 .wrap {
@@ -27,12 +27,12 @@
     // align-self: end;
 }
 
-.conga {
+.bongi {
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translateY(-50%);
-
+    transform: translateY(-40%);
+    opacity: 0.75;
     // transform: rotate(5deg);
 
     height: 260px

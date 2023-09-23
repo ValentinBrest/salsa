@@ -24,8 +24,8 @@
 }
 
 .linkLogo {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
 }
 
 .logo {
@@ -46,7 +46,9 @@
 }
 
 .switcher {
-    transform: skew(14deg);
+    // transform: skew(14deg);
+    background-color: var(--hover-color);
+    height: 40px;
 }
 
 .links {

@@ -1,13 +1,13 @@
 .Abonement {
     overflow: hidden;
     width: 100%;
-    padding: var(--padding-xxl);
+    padding: var(--padding-l);
 }
 
 .wrap {
     position: relative;
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 70% 30%;
     height: 100%;
 }
 
@@ -17,7 +17,7 @@
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-
+    opacity: 0.75;
     width: 45%;
 }
 

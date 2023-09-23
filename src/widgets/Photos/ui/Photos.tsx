@@ -9,6 +9,7 @@ import ph3 from '../../../../public/img/gallery/3.jpg';
 import ph4 from '../../../../public/img/gallery/4.jpg';
 import ph5 from '../../../../public/img/gallery/5.jpg';
 import ph6 from '../../../../public/img/gallery/6.jpg';
+import ph7 from '../../../../public/img/gallery/7.jpg';
 
 import cl from './Photos.module.scss';
 
@@ -27,6 +28,7 @@ export const Photos = ({ className, backgroundColor }: PhotosProps) => {
         { url: ph4 },
         { url: ph5 },
         { url: ph1 },
+        { url: ph7 },
     ];
 
     return (
@@ -36,9 +38,9 @@ export const Photos = ({ className, backgroundColor }: PhotosProps) => {
             className={classNames(cl.Photos, {}, [className])}
         >
             <div className="container">
-                <Text title="Фотографии" />
+                <Text title="Фотогалерея" />
                 <Text
-                    text="Фотографии с вечеринок, мероприятий, отдыха и жизни."
+                    text="Фотографии с вечеринок, мероприятий и занятий."
                     align={TextAlign.CENTER}
                 />
                 <div className={cl.wrap}>

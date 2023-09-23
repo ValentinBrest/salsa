@@ -1,6 +1,6 @@
 .WhySalsa {
     width: 100%;
-    padding: var(--padding-xl);
+    padding: var(--padding-l);
 
     // max-height: 400px;
 }
@@ -17,6 +17,7 @@
     top: 40px;
     left: 55px;
     transform: rotate(5deg);
+    opacity: 0.75;
 }
 
 .decr {

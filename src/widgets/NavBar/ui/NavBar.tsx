@@ -66,9 +66,9 @@ export const NavBar = ({ className }: NavBarProps) => {
                                 </LinkScroll>
                             ))}
                         </div>
-                        <div className={cl.line}>
+                        {/* <div className={cl.line}> */}
                             {<ThemeSwitcher className={cl.switcher} />}
-                        </div>
+                        {/* </div> */}
                     </div>
                 </div>
             </div>

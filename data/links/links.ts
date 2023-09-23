@@ -4,6 +4,12 @@ import { AppRoutes, RoutePath } from '../../src/app/providers/router/routeConfig
 
 export const links = [
     {
+        id: 7,
+        name: 'Сальса',
+        to: RoutePath.main,
+        scroll: 'salsa',
+    },
+    {
         id: 1,
         name: 'О школе',
         to: RoutePath.main,
@@ -23,7 +29,7 @@ export const links = [
     },
     {
         id: 4,
-        name: 'Фотографии',
+        name: 'Фотогалерея',
         to: RoutePath.main,
         scroll: 'photos',
     },

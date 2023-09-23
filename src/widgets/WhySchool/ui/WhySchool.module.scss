@@ -1,6 +1,6 @@
 .WhySchool {
     width: 100%;
-    padding: var(--padding-xl);
+    padding: var(--padding-l);
 }
 
 .wrap {
@@ -23,6 +23,7 @@
     right: -50px;
 
     width: 350px;
+    opacity: 0.75;
 }
 
 .decr {
@@ -45,6 +46,17 @@
         width: 250px;
         min-height: 150px;
         object-fit: cover;
+    }
+
+    .minsk {
+        transform: rotate(5deg);
+    }
+    .moskow {
+        transform: rotate(-3deg) scale(1.1);
+    }
+    .piter {
+        transform: rotate(10deg);
+        
     }
 }
 

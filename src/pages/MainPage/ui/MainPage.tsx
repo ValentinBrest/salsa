@@ -4,6 +4,7 @@ import { Answers } from 'widgets/Answers';
 import { Events } from 'widgets/Events';
 import { Form } from 'widgets/Form';
 import { Intro } from 'widgets/Intro';
+import { IntroV2 } from 'widgets/Introv2';
 import { Lessons } from 'widgets/Lessons';
 import { Memo } from 'widgets/Memo';
 import { Photos } from 'widgets/Photos';
@@ -16,7 +17,7 @@ export const MainPage = () => {
 
     return (
         <>
-            <Intro/>
+            <IntroV2/>
             <AboutSalsa />
             {/* <Shedule backgroundColor={bgSecond}/> */}
             <WhySalsa backgroundColor={bgSecond}/>
@@ -27,7 +28,7 @@ export const MainPage = () => {
             <Photos backgroundColor={bgSecond}/>
             {/* <Memo backgroundColor={bgSecond}/> */}
             <Answers />
-            <Form />
+            <Form backgroundColor={bgSecond} />
         </>
     );
 };

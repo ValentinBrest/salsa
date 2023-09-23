@@ -1,7 +1,7 @@
 .title {
     margin-bottom: var(--margin-m);
 
-    font: var(--font-title-xl);
+    font: var(--font-title-l);
     font-weight: 700;
     font-style: inherit;
     color: var(--hover-color);
@@ -45,7 +45,7 @@
 }
 
 .subTitle {
-    font: var(--font-title-s);
+    font: var(--font-title-xs);
     font-weight: 700;
     font-style: inherit;
     color: var(--inverted-primary-color);
@@ -54,7 +54,7 @@
 
 .text {
     margin-bottom: var(--margin-s);
-    font: var(--font-l);
+    font: var(--font-ml);
     font-style: inherit;
     color: var(--inverted-primary-color);
 }
@@ -76,6 +76,7 @@
 
 .error {
     font: var(--font-m);
+    margin-bottom: unset;
 
     .title {
         color: var(--red-light);
@@ -88,6 +89,8 @@
 }
 
 .without {
+    font: var(--font-title-m);
+    font-weight: 700;
     span {
         &::before {
             content: none;

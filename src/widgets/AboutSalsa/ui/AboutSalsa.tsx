@@ -1,14 +1,5 @@
-import { useState } from 'react';
-import { RoutePath } from 'app/providers/router';
 import { classNames } from 'shared/lib/classNames/classNames';
-import {
-    AppLink,
-    AppLinkTheme,
-    Button,
-    ButtonSize,
-    ButtonTheme,
-} from 'shared/ui';
-import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { Text } from 'shared/ui/Text/Text';
 
 import conga from '../../../../public/img/instuments/conga.png';
 
@@ -24,7 +15,7 @@ export const AboutSalsa = ({ className, backgroundColor }: AboutSalsaProps) => {
     return (
         <div
             style={{ background: backgroundColor }}
-            id="aboutSalsa"
+            id="salsa"
             className={classNames(cl.AboutSalsa, {}, [className])}
         >
             <div className="container">

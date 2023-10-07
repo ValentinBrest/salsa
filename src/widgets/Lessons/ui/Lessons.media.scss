@@ -1,6 +1,6 @@
 @media (max-width: 1200px) {
     .Lessons {
-        padding: var(--padding-xxl);
+        padding: var(--padding-xl);
     }
 
     .wrap {
@@ -9,7 +9,7 @@
 }
 
 @media (max-width: 992px) {
-    .About {
+    .Lessons {
         padding: var(--padding-l);
     }
 
@@ -20,19 +20,19 @@
     // .pick {
     //     display: none;
     // }
-    .conga {
-        opacity: 0.5;
+    .bongi {
+        opacity: 0.2;
     }
 }
 
 @media (max-width: 768px) {
-    .About {
+    .Lessons {
         padding: var(--padding-m);
     }
 }
 
 @media (max-width: 576px) {
-    .About {
+    .Lessons {
         padding: var(--padding-m);
     }
 }

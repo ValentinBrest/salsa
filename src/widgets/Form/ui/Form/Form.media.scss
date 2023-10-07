@@ -10,7 +10,8 @@
     }
 
     .wrap {
-        gap: 10px;
+        gap: 0;
+        grid-template-columns: 0.9fr 0.9fr;
     }
 }
 
@@ -31,5 +32,8 @@
 @media (max-width: 576px) {
     .Form {
         padding: var(--padding-m);
+    }
+    .form {
+        width: 100%;
     }
 }

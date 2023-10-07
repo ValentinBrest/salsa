@@ -54,8 +54,6 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
         background: `center / cover no-repeat url(${dance})`,
     };
 
-    console.log(isValid, errors)
-
     return (
         <div
             style={{ background: backgroundColor }}
@@ -90,7 +88,7 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                 onSubmit={handleSubmit(onSubmit)}
                             >
                                 <div className={cl.formInner}>
-                                    <div className={cl.inputWrap}>
+                                    {/* <div className={cl.inputWrap}>
                                         <input
                                             autoComplete='off'
                                             className={classNames(
@@ -124,9 +122,9 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                                 }
                                             />
                                         )}
-                                    </div>
+                                    </div> */}
 
-                                    <div className={cl.inputWrap}>
+                                    <div id={cl.fio} className={cl.inputWrap}>
                                         <input
                                         autoComplete='off'
                                             className={classNames(
@@ -134,7 +132,7 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                                 {},
                                                 [className]
                                             )}
-                                            placeholder='Фамилия'
+                                            placeholder='Фамилия и имя'
                                             {...register('last_name', {
                                                 required:
                                                     'Поле обязательно к заполнению',

@@ -1,12 +1,13 @@
 .WhySchool {
     width: 100%;
     padding: var(--padding-l);
+    overflow: hidden;
 }
 
 .wrap {
     position: relative;
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 80% 20%;
     gap: 10px;
 }
 
@@ -22,7 +23,7 @@
     top: 200px;
     right: -50px;
 
-    width: 350px;
+    width: 280px;
     opacity: 0.75;
 }
 
@@ -76,9 +77,25 @@
 }
 
 .button {
+    width: 30px;
+    height: 50px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.svg {
+    transform: rotate(90deg);
+    width: 30px;
+    height: 100%;
+    fill: var(--hover-color);
+}
+
+.svgInverted {
+    transform: rotate(-90deg);
+    width: 30px;
+    height: 100%;
+    fill: var(--hover-color);
 }
 
 @import "./WhySchool.media";

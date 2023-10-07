@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 :root {
     --font-family-main: "Jost", "Times New Roman", sans-serif;
+    // --font-family-main: 'Pacifico', cursive;
 
     // TEXT
     --font-size-xs: 8px;
@@ -55,8 +57,8 @@
     --sidebar-width-collapsed: 80px;
 
     // Цвета
-    --light-color: #fff;
-    --light-color-second: #dfdfdfe1;
+    --light-color: #f3e9c0;
+    --light-color-second: #fff;
     --dark-color: #0b0a30;
     --dark-color-second: #040a22;
     --dark-color-navbar: #040a22;
@@ -74,6 +76,10 @@
     --tabs-color-light: #505050da;
     --tabs-bg-color-dark: #777777da;
     --tabs-color-dark: #fcfcfc;
+
+    //form
+    --form-bg-color-light: #f3e9c0;
+    --form-bg-color-dark: #0b0a30;
 
     // table
     --table-head-bg-color-light: #737b7cda;
@@ -93,7 +99,7 @@
     --price-color-light-odd: #dbcb86;
     --price-color-dark-odd: #36072e;
     --inverted-text-color: #e3f5f5;
-    --overlay-color: rgba(0 0 0 / 60%);
+    --overlay-color: rgba(0 0 0 / 80%);
     --input-color: #d3d3d3;
     --input-color-focus: rgb(144 183 228 / 81.5%);
     --gradient-color-one: #553c9a;
@@ -103,6 +109,7 @@
     --menu-z-index: 10;
     --intro-z-index: 5;
     --navbar-z-index: 11;
+    --modal-z-index: 50;
 
     // Заголовки
     --title-size-s: 48px;

@@ -2,6 +2,7 @@ import React, { ReactNode, useCallback, useEffect } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
 import { Portal } from 'shared/ui/Portal/Portal';
+import Close from '../../../shared/assets/icons/close.svg';
 
 import cl from './Modal.module.scss';
 
@@ -15,14 +16,7 @@ interface ModalProps {
 }
 
 export const Modal = (props: ModalProps) => {
-    const { 
-        className, 
-        children, 
-        isOpen, 
-        onClose, 
-        lazy, 
-        isMounted,
-    } = props;
+    const { className, children, isOpen, onClose, isMounted } = props;
 
     const mods: Record<string, boolean> = {
         [cl.opened]: isOpen,
@@ -44,7 +38,7 @@ export const Modal = (props: ModalProps) => {
                 closeHandler();
             }
         },
-        [closeHandler],
+        [closeHandler]
     );
 
     useEffect(() => {
@@ -57,7 +51,7 @@ export const Modal = (props: ModalProps) => {
         };
     }, [isOpen, onKeyDown]);
 
-    if (lazy && !isMounted) {
+    if (!isMounted) {
         return null;
     }
 
@@ -65,15 +59,16 @@ export const Modal = (props: ModalProps) => {
         <Portal>
             <div className={classNames(cl.Modal, mods, [className])}>
                 <div className={cl.overlay} onClick={closeHandler}>
+                    <Button
+                        onClick={closeHandler}
+                        square
+                        size={ButtonSize.XL}
+                        theme={ButtonTheme.CLEAR}
+                        className={cl.close}
+                    >
+                        <Close />
+                    </Button>
                     <div className={cl.content} onClick={onContentClick}>
-                        <Button
-                            onClick={closeHandler}
-                            square
-                            size={ButtonSize.M}
-                            theme={ButtonTheme.CLEAR}
-                            className={cl.close}
-                        >
-                        </Button>
                         {children}
                     </div>
                 </div>

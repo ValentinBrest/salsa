@@ -2,6 +2,7 @@
     margin-bottom: var(--margin-m);
 
     font: var(--font-title-l);
+    // font-family: 'Lobster', cursive;
     font-weight: 700;
     font-style: inherit;
     color: var(--hover-color);
@@ -91,6 +92,7 @@
 .without {
     font: var(--font-title-m);
     font-weight: 700;
+    // font-family: 'Lobster', cursive;
     span {
         &::before {
             content: none;

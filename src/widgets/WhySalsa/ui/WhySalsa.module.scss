@@ -1,7 +1,7 @@
 .WhySalsa {
     width: 100%;
     padding: var(--padding-l);
-
+    overflow: hidden;
     // max-height: 400px;
 }
 
@@ -32,5 +32,21 @@
 .epigraph {
     align-self: self-end;
 }
+
+.svg {
+    transform: rotate(90deg);
+    width: 30px;
+    height: 100%;
+    fill: var(--hover-color);
+}
+
+.svgInverted {
+    transform: rotate(-90deg);
+    width: 30px;
+    height: 100%;
+    fill: var(--hover-color);
+}
+
+
 
 @import "./WhySalsa.media";

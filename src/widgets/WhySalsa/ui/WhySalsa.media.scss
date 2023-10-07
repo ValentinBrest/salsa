@@ -1,22 +1,21 @@
 @media (max-width: 1200px) {
-    .Abonement {
+    .WhySalsa {
         padding: var(--padding-xl);
     }
 
     .wrap {
-        grid-template-columns: 35% 60%;
+        grid-template-columns: 20% 80%;
         gap: 10px;
     }
 }
 
 @media (max-width: 992px) {
-    .Abonement {
+    .WhySalsa {
         padding: var(--padding-l);
     }
 
     .wrap {
         display: flex;
-        margin-bottom: 100px;
     }
 
     .pick {
@@ -24,12 +23,12 @@
     }
 
     .sax {
-        opacity: 0.55;
+        opacity: 0.2;
     }
 }
 
 @media (max-width: 768px) {
-    .Abonement {
+    .WhySalsa {
         padding: var(--padding-m);
     }
 
@@ -38,17 +37,12 @@
     }
 
     .sax {
-        top: unset;
-        bottom: -25%;
-        left: 50%;
-        transform: translateX(-50%);
-
-        width: 100%;
+        top: 180px;
     }
 }
 
 @media (max-width: 576px) {
-    .Abonement {
+    .WhySalsa {
         padding: var(--padding-m);
     }
 

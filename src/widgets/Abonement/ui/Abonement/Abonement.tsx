@@ -16,10 +16,10 @@ export const Abonement = ({ className, backgroundColor }: PricesProps) => {
         <div style={{background: backgroundColor}} 
             id="abonement" className={classNames(cl.Abonement, {}, [className])}>
             <div className="container">
-                <div className={cl.wrap}>
+                        <Text title="Абонементы" />
+                {/* <div className={cl.wrap}>
                     <img src={trambone} className={cl.trambone}/>
                     <div className={cl.decr}>
-                        <Text title="Абонементы" />
                         <Text subTitle="Занятия в группах" align={TextAlign.RIGHT} />
                         <Text align={TextAlign.RIGHT} 
                             text="В начинающей группе срок обучения: 0-2 месяцев. Изучаем базовые шаги, ритм, пластику тела, основные связки движений и взаимодействие в паре.
@@ -31,7 +31,7 @@ export const Abonement = ({ className, backgroundColor }: PricesProps) => {
                         />
                     </div>
                     
-                </div> 
+                </div>  */}
 
                 <Prices/>
             </div>

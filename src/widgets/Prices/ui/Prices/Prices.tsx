@@ -13,14 +13,14 @@ interface PricesProps {
 
 export const Prices = ({ className, backgroundColor }: PricesProps) => {
     const isTabletScreen = useMediaQuery({ query: '(max-width: 768px)' });
-    const isMobileScreen = useMediaQuery({ query: '(max-width: 400px)' });
+    const isMobileScreen = useMediaQuery({ query: '(max-width: 378px)' });
     return (
         <div
             style={{ background: backgroundColor }}
             id='price'
             className={classNames(cl.Prices, {}, [className])}
         >
-            <Text subTitle='Цены на абонементы' className={cl.title} />
+            {/* <Text subTitle='Цены на абонементы' className={cl.title} /> */}
             <div className={cl.wrap}>
                 {!isTabletScreen && <div />}
                 {prices.header.map((item, index) => (

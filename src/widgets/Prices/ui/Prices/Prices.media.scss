@@ -8,6 +8,11 @@
             }
         }
     }
+    .old,
+    .note, {
+        font: var(--font-m);
+        font-style: italic;
+    }
 }
 
 @media (max-width: 768px) {

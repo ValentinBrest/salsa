@@ -9,7 +9,8 @@ export enum ButtonTheme {
     OUTLINE = 'outline',
     BACKGROUND = 'background',
     BACKGROUND_INVERTED = 'backgroundInverted',
-    TABS = 'tabs'
+    TABS = 'tabs',
+    ARROW = 'arrow'
 }
 export const enum ButtonSize {
     S = 'size_s',
@@ -24,6 +25,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     square?: boolean;
     size?: ButtonSize;
     disabled?: boolean;
+    isVisible?: boolean;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -34,11 +36,13 @@ export const Button: FC<ButtonProps> = (props) => {
         square,
         size = ButtonSize.M,
         disabled = false,
+        isVisible,
         ...otherProps
     } = props;
 
     const mods: Record<string, boolean> = {
         [cl.square]: square,
+        [cl.open]: isVisible,
     };
 
     return (
@@ -48,7 +52,12 @@ export const Button: FC<ButtonProps> = (props) => {
             className={classNames(cl.Button, mods, [className, cl[theme], cl[size]])}
             {...otherProps}
         >
-            {children}
+            {theme === 'arrow' 
+                ? <div className={cl.arrowWrap}>
+                    <span className={cl.arrowLeft}></span>
+                    <span className={cl.arrowRight}></span>
+                </div>
+                : children}
         </button>
     );
 };

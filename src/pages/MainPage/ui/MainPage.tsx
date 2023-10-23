@@ -14,6 +14,7 @@ import { WhySchool } from 'widgets/WhySchool';
 
 export const MainPage = () => {
     const bgSecond = 'var(--bg-color-second)';
+    const bgFirst = 'var(--bg-color)';
 
     return (
         <>
@@ -21,7 +22,7 @@ export const MainPage = () => {
             <AboutSalsa />
             {/* <Shedule backgroundColor={bgSecond}/> */}
             <WhySalsa backgroundColor={bgSecond}/>
-            <WhySchool/>
+            <WhySchool backgroundColor={bgFirst}/>
             <Lessons backgroundColor={bgSecond}/>
             <Abonement />
             {/* <Events /> */}

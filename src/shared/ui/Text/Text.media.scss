@@ -11,7 +11,7 @@
     }
 
     .text {
-        font: var(--font-title-ml);
+        font: var(--font-ml);
     }
 }
 
@@ -64,7 +64,8 @@
     }
 
     .epigraph {
-        width: 300px;
+        font: var(--font-m);
+        width: 280px;
     }
 
     .subTitle {

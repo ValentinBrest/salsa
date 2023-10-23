@@ -9,6 +9,7 @@ interface AccordionProps {
     height?: string;
     className?: string;
     children: ReactNode;
+    background?: string;
 }
 
 
@@ -17,6 +18,7 @@ export const Accordion = (props: AccordionProps) => {
         className, 
         children, 
         height ='400px',
+        background,
         ...otherProps
     } = props;
 
@@ -26,17 +28,20 @@ export const Accordion = (props: AccordionProps) => {
         [cl.open]: isVisible,
     };
 
+    const clOpen = isVisible ? {maxHeight: height}: {};
 
     return (
         <>
             <div
+                style={clOpen}
                 className={classNames(cl.Accordion, mods, [className])}
                 {...otherProps}
             >
                 {children}
-                <div className={cl.bottom}/>
+                <div style={{background: `linear-gradient(to bottom, rgb(255 255 255 / 0%), ${background} 80%)`}} className={cl.bottom}/>
             </div>
             <Button
+                background={background}
                 theme={ButtonTheme.ARROW}
                 onClick={() => setIsVisible(!isVisible)}
                 isVisible={isVisible}

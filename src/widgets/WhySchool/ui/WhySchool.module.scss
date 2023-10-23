@@ -29,7 +29,7 @@
 
 .decr {
     z-index: 3;
-
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,20 +82,6 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-}
-
-.svg {
-    transform: rotate(90deg);
-    width: 30px;
-    height: 100%;
-    fill: var(--hover-color);
-}
-
-.svgInverted {
-    transform: rotate(-90deg);
-    width: 30px;
-    height: 100%;
-    fill: var(--hover-color);
 }
 
 @import "./WhySchool.media";

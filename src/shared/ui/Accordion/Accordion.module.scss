@@ -2,11 +2,10 @@
     position: relative;
     overflow: hidden;
     max-height: 200px;
-    transition: max-height 1s;
+    transition: max-height linear 1s;
     outline: none;
 
     &.open {
-        max-height: 3000px;
 
         .bottom {
             opacity: 0;
@@ -23,5 +22,4 @@
     height: 60px;
 
     opacity: 1;
-    background: linear-gradient(to bottom, rgb(255 255 255 / 0%), rgb(255 255 255 / 100%) 80%);
 }

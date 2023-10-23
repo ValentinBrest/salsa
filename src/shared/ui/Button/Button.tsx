@@ -26,6 +26,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     size?: ButtonSize;
     disabled?: boolean;
     isVisible?: boolean;
+    background?: string;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -37,6 +38,7 @@ export const Button: FC<ButtonProps> = (props) => {
         size = ButtonSize.M,
         disabled = false,
         isVisible,
+        background,
         ...otherProps
     } = props;
 
@@ -49,6 +51,7 @@ export const Button: FC<ButtonProps> = (props) => {
         <button 
             type="button"
             disabled={disabled}
+            style={{background: background}}
             className={classNames(cl.Button, mods, [className, cl[theme], cl[size]])}
             {...otherProps}
         >

@@ -49,7 +49,7 @@ export const WhySalsa = ({ className, backgroundColor }: WhySalsaProps) => {
                             epigraph="«Однажды одна женщина попросила меня станцевать бачату, и я ответил, что не танцую бачату. А она сказала: «О-о-о. Так вы танцуете только сальсу?» И я сказал: «Да». Сальсу, что означает гуахира, гуарача, сон монтуно, мамбо, гуагуанко, бомба, плена, мозамбик, хала-хала, пачанга… Мне что, еще одного танца в жизни не хватало?»"
                             author={<b>Френки Мартинес</b>}
                         />
-                        <Accordion height="500px" background={backgroundColor}>
+                        <Accordion height="1070px" background={backgroundColor}>
                             <Text
                                 align={TextAlign.RIGHT}
                                 className=""

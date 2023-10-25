@@ -1,4 +1,6 @@
+import { MutableRefObject, useRef, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
 import { Text, TextAlign } from 'shared/ui/Text/Text';
 import { Prices } from 'widgets/Prices';
 
@@ -12,11 +14,19 @@ interface PricesProps {
 }
 
 export const Abonement = ({ className, backgroundColor }: PricesProps) => {
+    const [isVisible, setIsVisible] = useState(false);
+    const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
+
+    useInfiniteScroll({
+        triggerRef,
+        callback: () => setIsVisible(true),
+    });
+    
     return (
-        <div style={{background: backgroundColor}} 
+        <div style={{background: backgroundColor}} ref={triggerRef}
             id="abonement" className={classNames(cl.Abonement, {}, [className])}>
             <div className="container">
-                        <Text title="Абонементы" />
+                
                 {/* <div className={cl.wrap}>
                     <img src={trambone} className={cl.trambone}/>
                     <div className={cl.decr}>
@@ -32,8 +42,10 @@ export const Abonement = ({ className, backgroundColor }: PricesProps) => {
                     </div>
                     
                 </div>  */}
-
-                <Prices/>
+                <div className={classNames(cl.wrap, {[cl.active]: isVisible}, [])}>
+                    <Text title="Абонементы" />
+                    <Prices/>
+                </div>
             </div>
         </div>
     );

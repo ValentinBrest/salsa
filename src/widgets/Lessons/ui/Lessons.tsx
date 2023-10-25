@@ -1,4 +1,6 @@
+import { MutableRefObject, useRef, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
 import { Text, TextAlign } from 'shared/ui/Text/Text';
 
 import bongi from '../../../../public/img/instuments/bongi.png';
@@ -11,17 +13,26 @@ interface LessonsProps {
 }
 
 export const Lessons = ({ className, backgroundColor }: LessonsProps) => {
+    const [isVisible, setIsVisible] = useState(false);
+    const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
+
+    useInfiniteScroll({
+        triggerRef,
+        callback: () => setIsVisible(true),
+    });
+    
     return (
         <div
             style={{ background: backgroundColor }}
-            id='lessons'
+            id="lessons"
             className={classNames(cl.Lessons, {}, [className])}
+            ref={triggerRef}
         >
-            <div className='container'>
-                <div className={cl.wrap}>
+            <div className="container">
+                <div className={classNames(cl.wrap, {[cl.active]: isVisible}, [])}>
                     <div></div>
                     <div className={cl.decr}>
-                        <Text title='Занятия' />
+                        <Text title="Занятия" />
 
                         <Text
                             align={TextAlign.RIGHT}

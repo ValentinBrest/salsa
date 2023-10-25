@@ -19,7 +19,7 @@
     .Photos {
         padding: var(--padding-m);
     }
-    .wrap {
+    .gallery {
         width: unset;
         .cart1 {
             grid-column: 1/3;
@@ -62,7 +62,7 @@
 }
 
 @media (max-width: 390px) {
-    .wrap {
+    .gallery {
         grid-template-columns: repeat(2, 1fr);
         .cart1 {
             grid-column: 1/3;

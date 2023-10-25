@@ -5,10 +5,8 @@
 }
 
 .wrap {
-    position: relative;
-    display: grid;
-    grid-template-columns: 70% 30%;
-    height: 100%;
+    transform: translateY(100%);
+    opacity: 0;
 }
 
 .trambone {
@@ -28,6 +26,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.active {
+    opacity: 1;
+    transition: all 1s;
+    transform: translateY(0%);
 }
 
 @import "./Abonement.media";

@@ -1,6 +1,7 @@
 import { MutableRefObject, useRef, useState } from 'react';
 import { RoutePath } from 'app/providers/router';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
 import {
     Accordion,
     AppLink,
@@ -15,7 +16,6 @@ import { Prices } from 'widgets/Prices';
 import saxophone from '../../../../public/img/instuments/saxophone.png';
 
 import cl from './WhySalsa.module.scss';
-import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
 
 interface WhySalsaProps {
     className?: string;
@@ -24,36 +24,35 @@ interface WhySalsaProps {
 
 export const WhySalsa = ({ className, backgroundColor }: WhySalsaProps) => {
     const [isVisible, setIsVisible] = useState(false);
-    const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>;
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
 
     useInfiniteScroll({
         triggerRef,
-        wrapperRef,
-        callback: () => console.log('1'),
+        callback: () => setIsVisible(true),
     });
     return (
-        <div ref={wrapperRef}
+        <div 
             style={{ background: backgroundColor }}
-            id='whySalsa'
+            id="whySalsa"
             className={classNames(cl.WhySalsa, {}, [className])}
+            ref={triggerRef}
         >
-            <div className='container'>
-                <div className={cl.wrap} ref={triggerRef}>
+            <div className="container" >
+                <div className={classNames(cl.wrap, {[cl.active]: isVisible}, [])}>
                     <div></div>
                     <img src={saxophone} className={cl.sax} />
                     <div className={cl.decr}>
-                        <Text title='Почему сальса?' />
+                        <Text title="Почему сальса?" />
                         <Text
                             align={TextAlign.RIGHT}
                             className={cl.epigraph}
-                            epigraph='«Однажды одна женщина попросила меня станцевать бачату, и я ответил, что не танцую бачату. А она сказала: «О-о-о. Так вы танцуете только сальсу?» И я сказал: «Да». Сальсу, что означает гуахира, гуарача, сон монтуно, мамбо, гуагуанко, бомба, плена, мозамбик, хала-хала, пачанга… Мне что, еще одного танца в жизни не хватало?»'
+                            epigraph="«Однажды одна женщина попросила меня станцевать бачату, и я ответил, что не танцую бачату. А она сказала: «О-о-о. Так вы танцуете только сальсу?» И я сказал: «Да». Сальсу, что означает гуахира, гуарача, сон монтуно, мамбо, гуагуанко, бомба, плена, мозамбик, хала-хала, пачанга… Мне что, еще одного танца в жизни не хватало?»"
                             author={<b>Френки Мартинес</b>}
                         />
-                        <Accordion height='500px' background={backgroundColor}>
+                        <Accordion height="500px" background={backgroundColor}>
                             <Text
                                 align={TextAlign.RIGHT}
-                                className=''
+                                className=""
                                 text={
                                     <>
                                         Танцевальная и музыкальная культура

@@ -1,4 +1,6 @@
+import { MutableRefObject, useRef, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
 import { Text } from 'shared/ui/Text/Text';
 
 import conga from '../../../../public/img/instuments/conga.png';
@@ -11,15 +13,22 @@ interface AboutSalsaProps {
 }
 
 export const AboutSalsa = ({ className, backgroundColor }: AboutSalsaProps) => {
+    const [isVisible, setIsVisible] = useState(false);
+    const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
 
+    useInfiniteScroll({
+        triggerRef,
+        callback: () => setIsVisible(true),
+    });
     return (
         <div
             style={{ background: backgroundColor }}
             id="salsa"
             className={classNames(cl.AboutSalsa, {}, [className])}
+            ref={triggerRef}
         >
             <div className="container">
-                <div className={cl.wrap}>
+                <div className={classNames(cl.wrap, {[cl.active]: isVisible}, [])}>
                     <div className={cl.decr}>
                         <Text
                             text={<><b>Сальса</b> – музыкальный термин, включающий в себя множество разновидностей  ритмических стилей и музыкальных форм, но на нашем сайте под словом «сальса» мы будем подразумевать именно танец.</>} 

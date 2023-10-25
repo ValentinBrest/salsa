@@ -4,16 +4,12 @@
     overflow: hidden;
 }
 
-// .wrap {
-//     position: relative;
-
-//     width: 40%;
-//     height: 80vh;
-//     margin: 0 auto;
-
-//     object-fit: fill;
-// }
 .wrap {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 300px);
@@ -97,5 +93,12 @@
         pointer-events: none;
     }
 }
+
+.active {
+    opacity: 1;
+    transition: all 1s;
+    transform: translateY(0%);
+}
+
 
 @import "./Photos.media";

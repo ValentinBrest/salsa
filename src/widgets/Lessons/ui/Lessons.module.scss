@@ -7,11 +7,13 @@
 .wrap {
     position: relative;
 
+    transform: translateY(100%);
     display: grid;
     grid-template-columns: 30% 70%;
     gap: 20px;
 
     height: 100%;
+    opacity: 0;
 }
 
 .decr {
@@ -42,6 +44,12 @@
     // background-position: center;
     // background-size: contain;
     // border-radius: 100%;
+}
+
+.active {
+    opacity: 1;
+    transition: all 1s;
+    transform: translateY(0%);
 }
 
 @import "./Lessons.media";

@@ -1,4 +1,6 @@
+import { MutableRefObject, useRef, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
 import { Accordion } from 'shared/ui';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 
@@ -12,11 +14,19 @@ interface WhySchoolProps {
 }
 
 export const WhySchool = ({ className, backgroundColor }: WhySchoolProps) => {
+    const [isVisible, setIsVisible] = useState(false);
+    const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
+
+    useInfiniteScroll({
+        triggerRef,
+        callback: () => setIsVisible(true),
+    });
+    
     return (
         <div style={{background: backgroundColor}} 
-            id="about" className={classNames(cl.WhySchool, {}, [className])}>
-            <div className="container">
-                <div className={cl.wrap}>
+            id="about" className={classNames(cl.WhySchool, {}, [className])} ref={triggerRef}>
+            <div className="container" >
+                <div className={classNames(cl.wrap, {[cl.active]: isVisible}, [])}>
                     
                     <div className={cl.decr}>
                         <Text theme={TextTheme.WITHOUT} title="Почему вам именно в школу «СальсаБрест»? " />

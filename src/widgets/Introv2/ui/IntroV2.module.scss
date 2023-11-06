@@ -76,13 +76,25 @@
     font: var(--font-title-xl);
     background: var(--hover-color);
     padding: 5px 15px;
-    transform: rotate(5deg);
+    // transform: rotate(5deg);
     margin-bottom: 15px;
     font-weight: 700;
     color: var(--light-color);
-    & span {
-        transform: rotate(-5deg);
-    }
+    // & span {
+    //     transform: rotate(-5deg);
+    // }
+}
+.subtitle {
+    font: var(--font-title-s);
+    // background: var(--hover-color);
+    padding: 5px 15px;
+    // transform: rotate(5deg);
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--light-color);
+    // & span {
+    //     transform: rotate(-5deg);
+    // }
 }
 
 .btn {

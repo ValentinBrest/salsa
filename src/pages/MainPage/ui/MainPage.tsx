@@ -18,11 +18,12 @@ export const MainPage = () => {
 
     return (
         <>
-            <IntroV2/>
+            {/* <IntroV2/> */}
+            <Intro/>
             <AboutSalsa />
             {/* <Shedule backgroundColor={bgSecond}/> */}
             <WhySalsa backgroundColor={bgSecond}/>
-            <WhySchool backgroundColor={bgFirst}/>
+            <WhySchool backgroundColor={bgFirst} backgroundColorCard={bgSecond}/>
             <Lessons backgroundColor={bgSecond}/>
             <Abonement />
             {/* <Events /> */}

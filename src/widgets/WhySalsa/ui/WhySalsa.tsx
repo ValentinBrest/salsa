@@ -1,17 +1,8 @@
 import { MutableRefObject, useRef, useState } from 'react';
-import { RoutePath } from 'app/providers/router';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
-import {
-    Accordion,
-    AppLink,
-    AppLinkTheme,
-    Button,
-    ButtonSize,
-    ButtonTheme,
-} from 'shared/ui';
-import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
-import { Prices } from 'widgets/Prices';
+import { Accordion } from 'shared/ui';
+import { Text, TextAlign } from 'shared/ui/Text/Text';
 
 import saxophone from '../../../../public/img/instuments/saxophone.png';
 
@@ -31,33 +22,39 @@ export const WhySalsa = ({ className, backgroundColor }: WhySalsaProps) => {
         callback: () => setIsVisible(true),
     });
     return (
-        <div 
+        <div
             style={{ background: backgroundColor }}
-            id="whySalsa"
+            id='whySalsa'
             className={classNames(cl.WhySalsa, {}, [className])}
             ref={triggerRef}
         >
-            <div className="container" >
-                <div className={classNames(cl.wrap, {[cl.active]: isVisible}, [])}>
+            <div className='container'>
+                <div
+                    className={classNames(
+                        cl.wrap,
+                        { [cl.active]: isVisible },
+                        []
+                    )}
+                >
                     <div></div>
                     <img src={saxophone} className={cl.sax} />
                     <div className={cl.decr}>
-                        <Text title="Почему сальса?" />
+                        <Text title='Почему сальса?' />
                         <Text
                             align={TextAlign.RIGHT}
                             className={cl.epigraph}
-                            epigraph="«Однажды одна женщина попросила меня станцевать бачату, и я ответил, что не танцую бачату. А она сказала: «О-о-о. Так вы танцуете только сальсу?» И я сказал: «Да». Сальсу, что означает гуахира, гуарача, сон монтуно, мамбо, гуагуанко, бомба, плена, мозамбик, хала-хала, пачанга… Мне что, еще одного танца в жизни не хватало?»"
+                            epigraph='«Однажды одна женщина попросила меня станцевать бачату, и я ответил, что не танцую бачату. А она сказала: «О-о-о. Так вы танцуете только сальсу?» И я сказал: «Да». Сальсу, что означает гуахира, гуарача, сон монтуно, мамбо, гуагуанко, бомба, плена, мозамбик, хала-хала, пачанга… Мне что, еще одного танца в жизни не хватало?»'
                             author={<b>Френки Мартинес</b>}
                         />
-                        <Accordion height="1070px" background={backgroundColor}>
+                        <Accordion height='1070px' background={backgroundColor}>
                             <Text
                                 align={TextAlign.RIGHT}
-                                className=""
+                                className=''
                                 text={
                                     <>
                                         Танцевальная и музыкальная культура
                                         сальсы развивается несколько сотен лет.
-                                        Музыка сальсы – это квинтэссенция всего
+                                        <b> Сальса-музыка – это квинтэссенция</b> всего
                                         лучшего, что есть в европейской
                                         классической музыке, музыке стран
                                         Латинской Америки, Африки,
@@ -72,15 +69,14 @@ export const WhySalsa = ({ className, backgroundColor }: WhySalsaProps) => {
                                         стороны жизни, работа над собой и
                                         максимально наполненный отдых и радость.
                                         Называть сальсу просто социальным танцем
-                                        – неверно. <br />
+                                        – неверно. Сальса – это про искусство
+                                        движения и про жизнь во всей ее полноте!{' '}
                                         <br />
-                                        Сальса – это про искусство движения и
-                                        про жизнь во всей ее полноте! К
-                                        сожалению, молодые люди, выбирая
-                                        направление танца, часто не обращают
-                                        внимание на то, под какую музыку они
-                                        будут тренироваться, репетировать и,
-                                        собственно, танцевать. А ведь танец –
+                                        <br />
+                                        Выбирая направление танца, обращайте
+                                        внимание на то, под какую музыку вы
+                                        будете тренироваться, репетировать и,
+                                        собственно, танцевать. Ведь танец –
                                         отражение музыки, а музыка – язык души.
                                     </>
                                 }

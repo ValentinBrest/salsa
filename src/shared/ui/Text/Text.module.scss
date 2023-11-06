@@ -46,11 +46,12 @@
 }
 
 .subTitle {
-    font: var(--font-title-xs);
+    font: var(--font-xl);
     font-weight: 700;
     font-style: inherit;
     color: var(--inverted-primary-color);
     letter-spacing: inherit;
+    padding: 0 10px;
 }
 
 .text {

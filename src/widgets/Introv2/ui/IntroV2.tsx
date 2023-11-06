@@ -34,8 +34,14 @@ export const IntroV2 = ({ className, backgroundColor }: IntroProps) => {
                 {/* <div className={cl.finish}><span>... 5, 6, 7</span></div> */}
                 <div className={cl.titleWrap}>
                     <h1 className={cl.title}>
-                        <span>СальсаБрест</span>
+                        <span>"СальсаБрест"</span>
                     </h1>
+                    <h2 className={cl.subtitle}>
+                        <span>
+                            Мы создаем бренд. Вы будете гордиться тем, что
+                            прошли нашу школу!
+                        </span>
+                    </h2>
                     <Button
                         size={ButtonSize.XL}
                         theme={ButtonTheme.OUTLINE}
@@ -60,47 +66,6 @@ export const IntroV2 = ({ className, backgroundColor }: IntroProps) => {
             <div className={cl.imgWrap}>
                 <img className={cl.logo} src={logo} alt='salsa-brest' />
             </div>
-            {/* <div className={cl.wrap}>
-                <div className={cl.left}>
-                    <SimpleImageSlider
-                        width={'100%'}
-                        height={'100%'}
-                        images={isMobileScreen ? totalImg : images}
-                        showBullets={false}
-                        showNavs={false}
-                        autoPlay={true}
-                        autoPlayDelay={5}
-                    />
-                </div>
-                <div className={cl.star}></div>
-                <div className={cl.center}>
-                    <h1 className={cl.title}>СальсаБрест</h1>
-                    <img className={cl.logo} src={logo} alt='salsa-brest' />
-                    <LinkScroll to='form' smooth={true}>
-                        <Button
-                            size={ButtonSize.XL}
-                            theme={ButtonTheme.OUTLINE}
-                            className={cl.btn}
-                        >
-                            Хочу в сальсу!
-                        </Button>
-                    </LinkScroll>
-                </div>
-                {!isMobileScreen && (
-                    <div className={cl.right}>
-                        <SimpleImageSlider
-                            style={{}}
-                            width={'100%'}
-                            height={'100%'}
-                            images={images2}
-                            showBullets={false}
-                            showNavs={false}
-                            autoPlay={true}
-                            autoPlayDelay={5}
-                        />
-                    </div>
-                )}
-            </div> */}
         </div>
     );
 };

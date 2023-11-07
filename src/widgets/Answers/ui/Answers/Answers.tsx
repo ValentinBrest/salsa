@@ -21,6 +21,7 @@ export const Answers = ({ className, backgroundColor }: AnswersProps) => {
     useInfiniteScroll({
         triggerRef,
         callback: () => setIsVisible(true),
+        threshold: 0.05,
     });
     
     return (

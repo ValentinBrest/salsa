@@ -1,24 +1,24 @@
 import { ReactNode, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
-
+import { Link as LinkScroll } from 'react-scroll';
 import cl from './Accordion.module.scss';
-
 
 interface AccordionProps {
     height?: string;
     className?: string;
     children: ReactNode;
     background?: string;
+    linkId?: string
 }
-
 
 export const Accordion = (props: AccordionProps) => {
     const {
-        className, 
-        children, 
-        height ='400px',
+        className,
+        children,
+        height = '400px',
         background,
+        linkId,
         ...otherProps
     } = props;
 
@@ -28,7 +28,16 @@ export const Accordion = (props: AccordionProps) => {
         [cl.open]: isVisible,
     };
 
-    const clOpen = isVisible ? {maxHeight: height}: {};
+    const clOpen = isVisible ? { maxHeight: height } : {};
+
+    const btn = (
+        <Button
+            background={background}
+            theme={ButtonTheme.ARROW}
+            onClick={() => setIsVisible(!isVisible)}
+            isVisible={isVisible}
+        ></Button>
+    );
 
     return (
         <>
@@ -38,15 +47,20 @@ export const Accordion = (props: AccordionProps) => {
                 {...otherProps}
             >
                 {children}
-                <div style={{background: `linear-gradient(to bottom, rgb(255 255 255 / 0%), ${background} 80%)`}} className={cl.bottom}/>
+                <div
+                    style={{
+                        background: `linear-gradient(to bottom, rgb(255 255 255 / 0%), ${background} 80%)`,
+                    }}
+                    className={cl.bottom}
+                />
             </div>
-            <Button
-                background={background}
-                theme={ButtonTheme.ARROW}
-                onClick={() => setIsVisible(!isVisible)}
-                isVisible={isVisible}
-            >
-            </Button>
+            {isVisible && linkId ? (
+                <LinkScroll to={linkId} smooth={true}>
+                    {btn}
+                </LinkScroll>
+            ) : (
+                btn
+            )}
         </>
     );
 };

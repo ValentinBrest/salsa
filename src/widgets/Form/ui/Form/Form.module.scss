@@ -115,9 +115,9 @@
 
 .politics {
     font-style: italic;
-    color: var(--link-color);
-    text-decoration: dashed;
-    text-transform: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+    
 }
 
 .active {

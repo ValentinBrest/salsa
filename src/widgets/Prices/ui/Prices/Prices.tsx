@@ -20,7 +20,6 @@ export const Prices = ({ className, backgroundColor }: PricesProps) => {
             id='price'
             className={classNames(cl.Prices, {}, [className])}
         >
-            {/* <Text subTitle='Цены на абонементы' className={cl.title} /> */}
             <div className={cl.wrap}>
                 {!isTabletScreen && <div />}
                 {prices.header.map((item, index) => (

@@ -3,6 +3,7 @@ import { AboutSalsa } from 'widgets/AboutSalsa';
 import { Answers } from 'widgets/Answers';
 import { Events } from 'widgets/Events';
 import { Form } from 'widgets/Form';
+import { Information } from 'widgets/Information';
 import { Intro } from 'widgets/Intro';
 import { IntroV2 } from 'widgets/Introv2';
 import { Lessons } from 'widgets/Lessons';
@@ -25,12 +26,13 @@ export const MainPage = () => {
             <WhySalsa backgroundColor={bgSecond}/>
             <WhySchool backgroundColor={bgFirst} backgroundColorCard={bgSecond}/>
             <Lessons backgroundColor={bgSecond}/>
-            <Abonement />
+            <Information backgroundColor={bgFirst}/>
+            <Abonement backgroundColor={bgSecond}/>
             {/* <Events /> */}
-            <Photos backgroundColor={bgSecond}/>
+            <Photos />
             {/* <Memo backgroundColor={bgSecond}/> */}
-            <Answers />
-            <Form backgroundColor={bgSecond} />
+            <Answers backgroundColor={bgSecond}/>
+            <Form />
         </>
     );
 };

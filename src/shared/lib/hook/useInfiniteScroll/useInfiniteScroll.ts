@@ -2,10 +2,11 @@ import { MutableRefObject, useEffect } from 'react';
 
 export interface UseInfiniteScrollOptions {
     callback?: () => void;
-    triggerRef: MutableRefObject<HTMLElement>
+    triggerRef: MutableRefObject<HTMLElement>;
+    threshold?: number;
 }
 
-export function useInfiniteScroll({callback, triggerRef}: UseInfiniteScrollOptions) {
+export function useInfiniteScroll({callback, triggerRef, threshold}: UseInfiniteScrollOptions) {
 
     useEffect(() => {
         const triggerElement = triggerRef.current;
@@ -14,7 +15,7 @@ export function useInfiniteScroll({callback, triggerRef}: UseInfiniteScrollOptio
 
         if (callback) {
             const options = {
-                threshold: 0.2,
+                threshold: threshold || 0.2,
             };
     
             observer = new IntersectionObserver(([entry]) => {

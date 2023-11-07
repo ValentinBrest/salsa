@@ -4,7 +4,7 @@ import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfinite
 import { Accordion, Card } from 'shared/ui';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 
-import guiro from '../../../../public/img/instuments/guiro.png';
+import guiro from '../../../../public/img/instuments/bongi.png';
 import maria from '../../../../public/img/maria.jpg';
 
 import cl from './WhySchool.module.scss';
@@ -36,13 +36,19 @@ export const WhySchool = ({
             ref={triggerRef}
         >
             <div className='container'>
-                <div className={cl.decr}>
+                <div
+                    className={classNames(
+                        cl.decr,
+                        { [cl.active]: isVisible },
+                        []
+                    )}
+                >
                     <Text
                         theme={TextTheme.WITHOUT}
                         title='Почему вам именно в школу «СальсаБрест»? '
                     />
 
-                    <Accordion height='3300px' background={backgroundColor}>
+                    <Accordion height='3300px' background={backgroundColor} linkId='about'>
                         <div className={cl.wrap}>
                             <div>
                                 <Text
@@ -111,50 +117,45 @@ export const WhySchool = ({
                                         </>
                                     }
                                 />
-                                <Card
-                                    background={backgroundColorCard}
-                                    className={cl.card}
-                                >
-                                    <>
-                                        Нередко в школах танцев одни и те же
-                                        преподаватели танцуют и преподают
-                                        несколько направлений танцев, несхожих
-                                        по своей сути. При таком подходе,
-                                        качественно уметь танцевать несколько
-                                        направлений и качественно обучать им
-                                        невозможно. Тем более САЛЬСУ! Ведь
-                                        сальса сама по себе танцевальный фьюжн,
-                                        она включает в себя множество
-                                        самодостаточных танцевальных
-                                        направлений. Студии, где преподаватели
-                                        преподают всё, к сожалению, формируют
-                                        неправильное, поверхностное
-                                        представление о сальсе. К слову, ни одна
-                                        серьезная школа в других городах не
-                                        имеет преподавателей, которые вели бы
-                                        одновременно занятия по столь разным
-                                        танцевальным направлениям. Поэтому за
-                                        САЛЬСОЙ приходите к нам. Тогда вам не
-                                        придется потом сильно удивляться, а нам
-                                        вас переучивать.
-                                    </>
-                                </Card>
                             </div>
                             <img src={guiro} className={cl.guiro} />
                         </div>
 
+                        <Card
+                            background={backgroundColorCard}
+                            className={cl.card}
+                        >
+                            <>
+                                Нередко в школах танцев одни и те же
+                                преподаватели танцуют и преподают несколько
+                                направлений танцев, несхожих по своей сути. При
+                                таком подходе, качественно уметь танцевать
+                                несколько направлений и качественно обучать им
+                                невозможно. Тем более САЛЬСУ! Ведь сальса сама
+                                по себе танцевальный фьюжн, она включает в себя
+                                множество самодостаточных танцевальных
+                                направлений. Студии, где преподаватели преподают
+                                всё, к сожалению, формируют неправильное,
+                                поверхностное представление о сальсе. К слову,
+                                ни одна серьезная школа в других городах не
+                                имеет преподавателей, которые вели бы
+                                одновременно занятия по столь разным
+                                танцевальным направлениям. Поэтому за САЛЬСОЙ
+                                приходите к нам. Тогда вам не придется потом
+                                сильно удивляться, а нам вас переучивать.
+                            </>
+                        </Card>
+
                         <div className={cl.invertedwrap}>
-                            <img src={maria} alt='maria' className={cl.maria}/>
+                            <img src={maria} alt='maria' className={cl.maria} />
                             <div>
                                 {
                                     <>
-                                        <Text
-                                            subTitle='Представляем нашего преподавателя по женскому стилю в сальсе.'
-                                        />
+                                        <Text subTitle='Представляем нашего преподавателя по женскому стилю в сальсе' />
                                         <Text
                                             align={TextAlign.CENTER}
                                             text={
-                                                <>
+                                                <><br/> 
                                                     Мария Сервантес. Начала свой
                                                     танцевальный путь с
                                                     художественной гимнастики, в
@@ -184,7 +185,7 @@ export const WhySchool = ({
                                                     отбор в virtual team Татьяны
                                                     Каннарсы. Победительница
                                                     одного из челленджей Брэнды
-                                                    Ли. Мария продолжает
+                                                    Ли. <br/> <br/> Мария продолжает
                                                     развиваться сама и с
                                                     радостью делится
                                                     приобретенным опытом со

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Text } from 'shared/ui/Text/Text';
 
@@ -7,7 +7,7 @@ import cl from './AnswerCard.module.scss';
 interface AnswerCardProps {
     className?: string;
     question: string;
-    answer: string;
+    answer: ReactNode;
     id: number;
 }
 

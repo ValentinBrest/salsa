@@ -47,7 +47,7 @@ export const Text = memo((props: TextProps) => {
 
             {subTitle && <div className={classNames(cl.subTitle, {[cl[theme]]: true}, [className, cl[align]])}>{subTitle}</div>}
 
-            {text && <div className={classNames(cl.text, {[cl[theme]]: true}, [className, cl[align]])} >{text}</div>}
+            {text && <div className={classNames(cl.text, {[cl[theme]]: true}, [className, cl[align]])}>{text}</div>}
             
             {epigraph && <div className={classNames(cl.epigraph, {[cl[theme]]: true}, [className, cl[align]])} >{epigraph} <div className={cl.author}>{author}</div></div>}
         </>

@@ -15,8 +15,9 @@ import dance from '../../../../../public/img/dance.jpg';
 import Instagram from '../../../../shared/assets/icons/social/instagram.svg';
 
 import cl from './Form.module.scss';
-import { MutableRefObject, useRef, useState } from 'react';
+import { MutableRefObject, useCallback, useRef, useState } from 'react';
 import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
+import { FormModal } from './FormModal';
 
 interface FormProps {
     className?: string;
@@ -40,13 +41,25 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
     } = useForm<Inputs>({
         mode: 'onChange',
     });
-
+    const [isAuthModal, setIsAuthModal] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
+
+    const onCloseModal = useCallback(() => {
+        setIsAuthModal(false);
+        setIsMounted(false);
+    }, []);
+
+    const onOpenModal = useCallback((e) => {
+        setIsAuthModal(true);
+        setIsMounted(true);
+    }, []);
 
     useInfiniteScroll({
         triggerRef,
         callback: () => setIsVisible(true),
+        threshold: 0.05,
     });
 
     console.log({ ...register });
@@ -93,47 +106,12 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                             <a href="https://www.instagram.com/salsabrest/">
                                 <Instagram className={cl.insta} />
                             </a>
-                            <Text text={'или заполни форму ниже'} />
+                            <Text text={'или заполните форму ниже'} />
                             <form
                                 className={cl.form}
                                 onSubmit={handleSubmit(onSubmit)}
                             >
                                 <div className={cl.formInner}>
-                                    {/* <div className={cl.inputWrap}>
-                                        <input
-                                            autoComplete='off'
-                                            className={classNames(
-                                                cl.Input,
-                                                {},
-                                                [className]
-                                            )}
-                                            placeholder='Имя'
-                                            {...register('user_name', {
-                                                required:
-                                                    'Поле обязательно к заполнению',
-                                                pattern: {
-                                                    value: /[А-яЁё]/,
-                                                    message: 'только кириллица',
-                                                },
-                                                maxLength: {
-                                                    value: 15,
-                                                    message: 'максимум 15 букв',
-                                                },
-                                                minLength: {
-                                                    value: 2,
-                                                    message: 'минимум 2 буквы',
-                                                },
-                                            })}
-                                        />
-                                        {errors?.user_name && (
-                                            <Text
-                                                theme={TextTheme.ERROR}
-                                                text={
-                                                    errors?.user_name?.message
-                                                }
-                                            />
-                                        )}
-                                    </div> */}
 
                                     <div id={cl.fio} className={cl.inputWrap}>
                                         <input
@@ -254,16 +232,22 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                         '*Нажимая на кнопку "Отправить", вы даете согласие на обработку персональных данных и соглашаетесь '
                                     }
                                     {
-                                        <AppLink
+                                        <div
                                             className={cl.politics}
-                                            to={''}
+                                            onClick={(e) => onOpenModal(e)}
                                         >
                                             c политикой конфиденциальности
-                                        </AppLink>
+                                        </div>
                                     }
                                     .
                                 </span>
                             </form>
+                            <FormModal
+                    isMounted={isMounted}
+                    isOpen={isAuthModal}
+                    onClose={onCloseModal}
+                    className={cl.modal}
+                />
                         </div>
                     </div>
 

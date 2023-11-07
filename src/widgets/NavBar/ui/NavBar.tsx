@@ -55,10 +55,11 @@ export const NavBar = ({ className }: NavBarProps) => {
                                     to={item.scroll}
                                     key={item.id}
                                     smooth={true}
+                                    className={cl.link}
                                 >
                                     <AppLink
                                         to={item.to}
-                                        className={cl.link}
+                                        
                                         key={item.id}
                                     >
                                         {item.name}

@@ -10,6 +10,7 @@ import m2 from '../../../../public/img/main/2.jpg';
 import m3 from '../../../../public/img/main/3.jpg';
 import m4 from '../../../../public/img/main/4.jpg';
 
+import './Intro.scss';
 import cl from './Intro.module.scss';
 
 interface IntroProps {
@@ -38,23 +39,27 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                         <span>L</span>
                         <span>A</span>
                     </div>
-                    <SimpleImageSlider
-                        width={'100%'}
-                        height={'100%'}
-                        images={isMobileScreen ? totalImg : images}
-                        showBullets={false}
-                        showNavs={false}
-                        autoPlay={true}
-                        autoPlayDelay={5}
-                    />
+                    <div className='slider'>
+                        <SimpleImageSlider
+                            width={'100%'}
+                            height={'100%'}
+                            images={isMobileScreen ? totalImg : images}
+                            showBullets={false}
+                            showNavs={false}
+                            autoPlay={true}
+                            autoPlayDelay={5}
+                        />
+                    </div>
                 </div>
                 <div className={cl.star}></div>
                 <div className={cl.center}>
                     <h1 className={cl.title}>«СальсаБрест»</h1>
                     <h2 className={cl.subtitle}>
                         <span>МЫ СОЗДАЁМ БРЕНД.</span>
-                        <span className={cl.cool}> Вы будете гордиться тем, что прошли нашу
-                            школу!</span>
+                        <span className={cl.cool}>
+                            {' '}
+                            Вы будете гордиться тем, что прошли нашу школу!
+                        </span>
                     </h2>
                     <img
                         className={classNames(cl.logo, {}, [cl.anim])}
@@ -80,20 +85,21 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                             <span>S</span>
                             <span>T</span>
                         </div>
-                        <SimpleImageSlider
-                            style={{}}
-                            width={'100%'}
-                            height={'100%'}
-                            images={images2}
-                            showBullets={false}
-                            showNavs={false}
-                            autoPlay={true}
-                            autoPlayDelay={5}
-                        />
+                        <div className='slider'>
+                            <SimpleImageSlider
+                                style={{}}
+                                width={'100%'}
+                                height={'100%'}
+                                images={images2}
+                                showBullets={false}
+                                showNavs={false}
+                                autoPlay={true}
+                                autoPlayDelay={5}
+                            />
+                        </div>
                     </div>
                 )}
             </div>
-
         </div>
     );
 };

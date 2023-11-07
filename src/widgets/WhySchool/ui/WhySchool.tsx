@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
 import { Accordion, Card } from 'shared/ui';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
-
+import { useMediaQuery } from 'react-responsive';
 import guiro from '../../../../public/img/instuments/bongi.png';
 import maria from '../../../../public/img/maria.jpg';
 
@@ -22,7 +22,8 @@ export const WhySchool = ({
 }: WhySchoolProps) => {
     const [isVisible, setIsVisible] = useState(false);
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
-
+    const isLaptopScreen = useMediaQuery({ query: '(max-width: 992px)' });
+    const isMobileScreen = useMediaQuery({ query: '(max-width: 576px)' });
     useInfiniteScroll({
         triggerRef,
         callback: () => setIsVisible(true),
@@ -48,7 +49,11 @@ export const WhySchool = ({
                         title='Почему вам именно в школу «СальсаБрест»? '
                     />
 
-                    <Accordion height='3300px' background={backgroundColor} linkId='about'>
+                    <Accordion
+                        height='4500px'
+                        background={backgroundColor}
+                        linkId='about'
+                    >
                         <div className={cl.wrap}>
                             <div>
                                 <Text
@@ -155,7 +160,8 @@ export const WhySchool = ({
                                         <Text
                                             align={TextAlign.CENTER}
                                             text={
-                                                <><br/> 
+                                                <>
+                                                    <br />
                                                     Мария Сервантес. Начала свой
                                                     танцевальный путь с
                                                     художественной гимнастики, в
@@ -185,9 +191,9 @@ export const WhySchool = ({
                                                     отбор в virtual team Татьяны
                                                     Каннарсы. Победительница
                                                     одного из челленджей Брэнды
-                                                    Ли. <br/> <br/> Мария продолжает
-                                                    развиваться сама и с
-                                                    радостью делится
+                                                    Ли. <br /> <br /> Мария
+                                                    продолжает развиваться сама
+                                                    и с радостью делится
                                                     приобретенным опытом со
                                                     своими учениками. А имея
                                                     вдобавок и высшее

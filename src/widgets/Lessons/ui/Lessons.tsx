@@ -40,7 +40,7 @@ export const Lessons = ({ className, backgroundColor }: LessonsProps) => {
                     <div></div>
                     <div className={cl.decr}>
                         <Text title='Занятия' />
-                        <Accordion height='700px' background={backgroundColor} linkId='lessons'>
+                        <Accordion height='1600px' background={backgroundColor} linkId='lessons'>
                             <Text
                                 align={TextAlign.RIGHT}
                                 text={

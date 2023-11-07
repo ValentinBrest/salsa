@@ -7,6 +7,10 @@
         grid-template-columns: 80% 20%;
         gap: 10px;
     }
+
+    .invertedwrap {
+        grid-template-columns: 40% 59%;
+    }
 }
 
 @media (max-width: 992px) {
@@ -25,6 +29,16 @@
     .guiro {
         opacity: 0.1;
     }
+
+    .invertedwrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .maria {
+        width: 50%;
+        align-self: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -36,6 +50,13 @@
         gap: unset;
     }
 
+    .maria {
+        width: 100%;
+    }
+
+    .card {
+        text-align: center;
+    }
     .sax {
         top: unset;
         bottom: -25%;

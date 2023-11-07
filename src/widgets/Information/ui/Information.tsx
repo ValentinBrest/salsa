@@ -40,7 +40,7 @@ export const Information = ({
                         []
                     )}
                 >
-                    <Accordion linkId='info' height='500px' background={backgroundColor}>
+                    <Accordion linkId='info' height='1400px' background={backgroundColor}>
                         <div className={cl.decr}>
                             <Text
                                 theme={TextTheme.WITHOUT}

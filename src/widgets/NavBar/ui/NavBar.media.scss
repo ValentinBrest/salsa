@@ -14,7 +14,9 @@
     }
 
     .burger {
-        position: relative;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
 
         display: flex;
         align-items: center;

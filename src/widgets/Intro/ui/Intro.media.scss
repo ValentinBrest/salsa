@@ -13,7 +13,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-        display: block;
+        display: none;
 
         width: 500px;
         height: 500px;
@@ -36,7 +36,7 @@
     .left {
         position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
 
         width: 50%;
         height: 100%;
@@ -47,7 +47,7 @@
     .right {
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
 
         width: 50%;
         height: 100%;
@@ -55,26 +55,22 @@
         clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0% 100%);
     }
 
+    // .logo {
+    //     display: none;
+    // }
+
     .title {
-        background-color: var(--bg-color);
+        font: var(--font-title-s);
+        font-weight: 700;
+        right: 0;
     }
 
     .subtitle {
         margin-bottom: 10px;
-        font: var(--font-main-subtitle);
+        font: var(--font-xl);
         font-weight: 700;
+        right: 0;
     }
-
-    // .title {
-    //     font: var(--font-main-subtitle);
-    //     font-weight: 700;
-    // }
-
-    // .subtitle {
-    //     margin-bottom: 10px;
-    //     font: var(--font-title-xl);
-    //     font-weight: 700;
-    // }
 }
 
 @media (max-width: 768px) {
@@ -89,60 +85,45 @@
         height: auto;
     }
 
-    // .left {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-
-    //     width: 100%;
-    //     height: 100%;
-
-    //     clip-path: polygon(0 0, 0% 100%, 100% 0);
-    // }
-
-    // .right {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-
-    //     width: 100%;
-    //     height: 100%;
-
-    //     clip-path: polygon(100% 100%, 0% 100%, 100% 0);
-    // }
-
-    .title {
-        background-color: var(--bg-color);
-        font: var(--font-main-subtitle);
-        font-weight: 700;
-    }
-
-    .subtitle {
-        margin-bottom: 10px;
-        font: var(--font-title-xl);
-        font-weight: 700;
-    }
+    .salsaLeft,
+    .salsaRight {
+    font-size: 60px;
+}
 }
 
 @media (max-width: 576px) {
     .Intro {
         height: calc(100vh - var(--navbar-height) + 10px);
     }
-    .star {
-        width: 300px;
-        height: 300px;
-    }
 
+    .salsaLeft,
+    .salsaRight {
+    display: none;
+}
+
+.logo {
+    display: block;
+    width: 200px;
+}
+
+    .left {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
     .title {
-        font: var(--font-title-xl);
+        font: var(--font-xl);
         font-weight: 700;
     }
 
     .subtitle {
-        font: var(--font-title-l);
+        font: var(--font-ml);
         font-weight: 700;
     }
-    .left {
-        width: 100%;
+
+    .cool {
+        font: var(--font-m);
+        font-weight: 700;
     }
 }

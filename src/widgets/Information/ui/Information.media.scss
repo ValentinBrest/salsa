@@ -1,20 +1,12 @@
 @media (max-width: 1200px) {
-    .Lessons {
+    .Information {
         padding: var(--padding-xl);
-    }
-
-    .wrap {
-        gap: 10px;
     }
 }
 
 @media (max-width: 992px) {
-    .Lessons {
+    .Information {
         padding: var(--padding-l);
-    }
-
-    .wrap {
-        display: flex;
     }
 
     // .pick {
@@ -26,13 +18,13 @@
 }
 
 @media (max-width: 768px) {
-    .Lessons {
+    .Information {
         padding: var(--padding-m);
     }
 }
 
 @media (max-width: 576px) {
-    .Lessons {
+    .Information {
         padding: var(--padding-m);
     }
 }

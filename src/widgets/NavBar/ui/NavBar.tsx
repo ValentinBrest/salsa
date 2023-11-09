@@ -45,7 +45,7 @@ export const NavBar = ({ className }: NavBarProps) => {
                         </AppLink>
 
                         <div
-                            className={classNames(cl.burger, {}, [className])}
+                            className={classNames(cl.burger, {[cl.active]: isOpenMenu}, [className])}
                             onClick={onHandleMenu}
                         />
 
@@ -57,19 +57,13 @@ export const NavBar = ({ className }: NavBarProps) => {
                                     smooth={true}
                                     className={cl.link}
                                 >
-                                    <AppLink
-                                        to={item.to}
-                                        
-                                        key={item.id}
-                                    >
+                                    <AppLink to={item.to} key={item.id}>
                                         {item.name}
                                     </AppLink>
                                 </LinkScroll>
                             ))}
                         </div>
-                        {/* <div className={cl.line}> */}
-                            {<ThemeSwitcher className={cl.switcher} />}
-                        {/* </div> */}
+                        {<ThemeSwitcher className={cl.switcher} />}
                     </div>
                 </div>
             </div>

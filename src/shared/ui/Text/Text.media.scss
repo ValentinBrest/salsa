@@ -48,7 +48,7 @@
 
 @media (max-width: 576px) {
     .title {
-        font: var(--font-title-xs);
+        font: var(--font-xl);
         font-weight: 700;
         text-align: center;
 
@@ -63,8 +63,12 @@
         }
     }
 
-    .epigraph {
+    .text {
         font: var(--font-m);
+    }
+
+    .epigraph {
+        font: var(--font-s);
         width: 280px;
     }
 

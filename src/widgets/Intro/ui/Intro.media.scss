@@ -55,10 +55,6 @@
         clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0% 100%);
     }
 
-    // .logo {
-    //     display: none;
-    // }
-
     .title {
         font: var(--font-title-s);
         font-weight: 700;
@@ -87,24 +83,28 @@
 
     .salsaLeft,
     .salsaRight {
-    font-size: 60px;
-}
+        font-size: 60px;
+    }
 }
 
 @media (max-width: 576px) {
     .Intro {
-        height: calc(100vh - var(--navbar-height) + 10px);
+        height: calc(100vh - var(--navbar-height-mobile) + 10px);
     }
 
     .salsaLeft,
     .salsaRight {
-    display: none;
-}
+        display: none;
+    }
 
-.logo {
-    display: block;
-    width: 200px;
-}
+    .opacity {
+        opacity: 0.3;
+    }
+
+    .logo {
+        display: block;
+        width: 200px;
+    }
 
     .left {
         width: 100%;
@@ -113,7 +113,7 @@
 
 @media (max-width: 360px) {
     .title {
-        font: var(--font-xl);
+        font: var(--font-title-xs);
         font-weight: 700;
     }
 
@@ -125,5 +125,9 @@
     .cool {
         font: var(--font-m);
         font-weight: 700;
+    }
+
+    .btn {
+        font: var(--font-ml);
     }
 }

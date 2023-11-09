@@ -24,11 +24,11 @@
 
         width: 40px;
         height: 6px;
-
         background: var(--hover-color);
         border-radius: 3px;
 
         &::after {
+            transition: all 0.3s;
             content: "";
 
             position: absolute;
@@ -37,7 +37,7 @@
 
             display: block;
 
-            width: 50px;
+            width: 30px;
             height: 6px;
 
             background: var(--hover-color);
@@ -55,11 +55,21 @@
 
             width: 50px;
             height: 6px;
-
+            transition: all 0.3s;
             background: var(--hover-color);
             border-radius: 3px;
         }
+
+        &.active {
+            &::after {
+                width: 50px;
+            }
+            &::before {
+                width: 30px;
+            }
+        }
     }
+    
 
     .menu {
         position: fixed;
@@ -84,6 +94,7 @@
         opacity: 0.5;
         width: 30%;
         transform: rotate(45deg);
+        bottom: 100px;
     }
 
     .visible {
@@ -112,15 +123,27 @@
 
 @media (max-width: 576px) { 
     .NavBar {
-        height: calc(var(--navbar-height) - 10px);
+        height: calc(var(--navbar-height-mobile) - 10px);
         padding: 5px;
+    }
+    .switcher {
+        height: 35px;
+        svg {
+            height: 35px;
+            width: 35px;
+        }
+    }
+
+    .linkLogo {
+        width: 40px;
+        height: 40px;
     }
 
     .line {
         height: calc(var(--navbar-height) - 10px);
     }
     .visible {
-        top: calc(var(--navbar-height) - 10px);
+        top: calc(var(--navbar-height-mobile) - 10px);
     }
 }
 

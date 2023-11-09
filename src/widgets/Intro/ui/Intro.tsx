@@ -24,7 +24,7 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
 
     const images2 = [{ url: m2 }, { url: m4 }];
 
-    const totalImg = [{ url: m4 }, { url: m1 }, { url: m3 }, { url: m2 }];
+    const totalImg = [{ url: m2 }, { url: m1 }, { url: m3 }, { url: m4 }];
     return (
         <div
             style={{ background: backgroundColor }}
@@ -39,7 +39,7 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                         <span>L</span>
                         <span>A</span>
                     </div>
-                    <div className='slider'>
+                    <div className={classNames('slider', {[cl.opacity]: isMobileScreen}, [])} >
                         <SimpleImageSlider
                             width={'100%'}
                             height={'100%'}

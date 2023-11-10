@@ -4,20 +4,17 @@
 @import "./themes/dark";
 
 body {
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-    -webkit-tap-highlight-color: transparent;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
     font: var(--font-l);
     color: var(--primary-color);
 
-        -moz-user-select: none;
-        
-            -webkit-user-select: none;
-        
-            -ms-user-select: none;
-        
-            -o-user-select: none;
-        
-            user-select: none;
+    -webkit-tap-highlight-color: rgb(255 255 255 / 0%);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .lock {
@@ -40,6 +37,36 @@ body {
     width: 1140px;
     height: 100%;
     margin: 0 auto;
+}
+
+.content-page {
+    position: relative;
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.pageup {
+    cursor: pointer;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.up {
+    display: block;
+
+    width: 40px;
+    height: 40px;
+
+    opacity: 0;
+
+    transition: all 0.3s;
+}
+
+.activeScroll {
+    .up {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -65,9 +92,4 @@ body {
     .container {
         width: 100%;
     }
-}
-
-.content-page {
-    display: flex;
-    flex: 1 0 auto;
 }

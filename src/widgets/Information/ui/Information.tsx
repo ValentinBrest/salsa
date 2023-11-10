@@ -43,8 +43,8 @@ export const Information = ({
                     <Accordion linkId='info' height='1400px' background={backgroundColor}>
                         <div className={cl.decr}>
                             <Text
-                                theme={TextTheme.WITHOUT}
-                                title='- Юридическая информация -'
+                                className={cl.title}
+                                title='Юридическая информация'
                             />
 
                             <Text

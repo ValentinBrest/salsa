@@ -45,6 +45,7 @@ export const WhySchool = ({
                     )}
                 >
                     <Text
+                        className={cl.title}
                         theme={TextTheme.WITHOUT}
                         title='Почему вам именно в школу «СальсаБрест»? '
                     />

@@ -1,12 +1,15 @@
 .Accordion {
     position: relative;
+
     overflow: hidden;
+
     max-height: 200px;
-    transition: max-height linear 1s;
+
     outline: none;
 
-    &.open {
+    transition: max-height linear 1s;
 
+    &.open {
         .bottom {
             opacity: 0;
             transition: opacity linear 1s;

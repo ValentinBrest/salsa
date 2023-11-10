@@ -6,7 +6,6 @@ import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 
 import { links } from '../../../../data/links/links';
 import guitar from '../../../../public/img/instuments/guitar.png';
-
 import logo from '../../../../public/img/logo.png';
 
 import cl from './NavBar.module.scss';
@@ -28,11 +27,11 @@ export const NavBar = ({ className }: NavBarProps) => {
 
     return (
         <>
-            <div className={classNames(cl.NavBar, {}, [className])}>
-                <div className='container'>
+            <div id="up" className={classNames(cl.NavBar, {}, [className])}>
+                <div className="container">
                     <div className={cl.wrap}>
                         <AppLink
-                            to='/'
+                            to="/"
                             className={cl.linkLogo}
                             key={'salsa'}
                             theme={AppLinkTheme.BUTTON}
@@ -40,7 +39,7 @@ export const NavBar = ({ className }: NavBarProps) => {
                             <img
                                 className={cl.logo}
                                 src={logo}
-                                alt='salsa-brest'
+                                alt="salsa-brest"
                             />
                         </AppLink>
 

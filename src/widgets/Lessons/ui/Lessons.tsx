@@ -1,12 +1,12 @@
 import { MutableRefObject, useRef, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
+import { Accordion } from 'shared/ui';
 import { Text, TextAlign } from 'shared/ui/Text/Text';
 
-import bongi from '../../../../public/img/instuments/guiro.png';
+import guiro from '../../../../public/img/instuments/guiro.png';
 
 import cl from './Lessons.module.scss';
-import { Accordion } from 'shared/ui';
 
 interface LessonsProps {
     className?: string;
@@ -20,27 +20,28 @@ export const Lessons = ({ className, backgroundColor }: LessonsProps) => {
     useInfiniteScroll({
         triggerRef,
         callback: () => setIsVisible(true),
+        threshold: 0.1,
     });
 
     return (
         <div
             style={{ background: backgroundColor }}
-            id='lessons'
+            id="lessons"
             className={classNames(cl.Lessons, {}, [className])}
             ref={triggerRef}
         >
-            <div className='container'>
+            <div className="container">
                 <div
                     className={classNames(
                         cl.wrap,
                         { [cl.active]: isVisible },
-                        []
+                        [],
                     )}
                 >
                     <div></div>
                     <div className={cl.decr}>
-                        <Text title='Занятия' />
-                        <Accordion height='1600px' background={backgroundColor} linkId='lessons'>
+                        <Text title="Занятия" />
+                        <Accordion height="1600px" background={backgroundColor} linkId="lessons">
                             <Text
                                 align={TextAlign.RIGHT}
                                 text={
@@ -56,10 +57,10 @@ export const Lessons = ({ className, backgroundColor }: LessonsProps) => {
                                         здоровый юмор и много хорошей музыки. Мы
                                         любим свое дело и делаем его качественно
                                         и с удовольствием! <b>Наша цель и наш
-                                        «движ» основаны на стремлении к
-                                        саморазвитию и самореализации в танце.
-                                        Наша задача – создание пространства для
-                                        личного роста и комфортного обучения. </b>
+                                            «движ» основаны на стремлении к
+                                            саморазвитию и самореализации в танце.
+                                            Наша задача – создание пространства для
+                                            личного роста и комфортного обучения. </b>
                                         Если вы хотите быть уверенными в своем
                                         уровне на столичных (или зарубежных)
                                         вечеренках, быть котируемым
@@ -76,14 +77,14 @@ export const Lessons = ({ className, backgroundColor }: LessonsProps) => {
                                         учеников. Но! Никто, кроме вас самих, не
                                         заставит вас двигаться вперед. Мы дадим
                                         вам все, чтобы ваш рост состоялся. <b>Ваше
-                                        дело прилагать усилия, чтобы взять то,
-                                        что дается. Силы даются идущему!</b>
+                                            дело прилагать усилия, чтобы взять то,
+                                            что дается. Силы даются идущему!</b>
                                     </>
                                 }
                             />
                         </Accordion>
                     </div>
-                    <img src={bongi} className={cl.bongi} />
+                    <img src={guiro} className={cl.guiro} alt="guiro"/>
                 </div>
             </div>
         </div>

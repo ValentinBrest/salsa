@@ -34,5 +34,5 @@ export function useInfiniteScroll({callback, triggerRef, threshold}: UseInfinite
                 observer.unobserve(triggerElement);
             }
         };
-    },[callback, triggerRef]);
+    },[callback, threshold, triggerRef]);
 }

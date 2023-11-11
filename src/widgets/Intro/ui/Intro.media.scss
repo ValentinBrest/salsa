@@ -55,17 +55,21 @@
         clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0% 100%);
     }
 
+    .opacity {
+        opacity: 0.3;
+    }
+
     .title {
+        right: 0;
         font: var(--font-title-s);
         font-weight: 700;
-        right: 0;
     }
 
     .subtitle {
+        right: 0;
         margin-bottom: 10px;
         font: var(--font-xl);
         font-weight: 700;
-        right: 0;
     }
 }
 
@@ -89,16 +93,12 @@
 
 @media (max-width: 576px) {
     .Intro {
-        height: calc(100vh - var(--navbar-height-mobile) + 10px);
+        height: calc(100vh - var(--navbar-height-mobile));
     }
 
     .salsaLeft,
     .salsaRight {
         display: none;
-    }
-
-    .opacity {
-        opacity: 0.3;
     }
 
     .logo {

@@ -20,6 +20,7 @@ interface IntroProps {
 
 export const Intro = ({ className, backgroundColor }: IntroProps) => {
     const isMobileScreen = useMediaQuery({ query: '(max-width: 576px)' });
+    const isLaptopScreen = useMediaQuery({ query: '(max-width: 992px)' });
     const images = [{ url: m3 }, { url: m1 }];
 
     const images2 = [{ url: m2 }, { url: m4 }];
@@ -39,7 +40,7 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                         <span>L</span>
                         <span>A</span>
                     </div>
-                    <div className={classNames('slider', {[cl.opacity]: isMobileScreen}, [])} >
+                    <div className={classNames('slider', {[cl.opacity]: isLaptopScreen}, [])} >
                         <SimpleImageSlider
                             width={'100%'}
                             height={'100%'}
@@ -64,9 +65,9 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                     <img
                         className={classNames(cl.logo, {}, [cl.anim])}
                         src={logo}
-                        alt='salsa-brest'
+                        alt="salsa-brest"
                     />
-                    <LinkScroll to='form' smooth={true}>
+                    <LinkScroll to="form" smooth={true}>
                         <Button
                             size={ButtonSize.XL}
                             theme={ButtonTheme.OUTLINE}
@@ -85,7 +86,7 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                             <span>S</span>
                             <span>T</span>
                         </div>
-                        <div className='slider'>
+                        <div className={classNames('slider', {[cl.opacity]: isLaptopScreen}, [])}>
                             <SimpleImageSlider
                                 style={{}}
                                 width={'100%'}

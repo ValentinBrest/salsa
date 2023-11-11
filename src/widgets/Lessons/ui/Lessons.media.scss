@@ -17,10 +17,7 @@
         display: flex;
     }
 
-    // .pick {
-    //     display: none;
-    // }
-    .bongi {
+    .guiro {
         opacity: 0.2;
     }
 }
@@ -34,5 +31,14 @@
 @media (max-width: 576px) {
     .Lessons {
         padding: var(--padding-m);
+    }
+
+    .guiro {
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translate(-50%);
+
+        height: 190px;
     }
 }

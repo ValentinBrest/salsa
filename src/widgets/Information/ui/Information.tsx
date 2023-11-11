@@ -3,7 +3,6 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 
-import bongi from '../../../../public/img/instuments/bongi.png';
 
 import cl from './Information.module.scss';
 import { Accordion } from 'shared/ui';
@@ -43,8 +42,8 @@ export const Information = ({
                     <Accordion linkId='info' height='1400px' background={backgroundColor}>
                         <div className={cl.decr}>
                             <Text
-                                theme={TextTheme.WITHOUT}
-                                title='- Юридическая информация -'
+                                className={cl.title}
+                                title='Юридическая информация'
                             />
 
                             <Text

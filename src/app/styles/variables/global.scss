@@ -12,7 +12,10 @@
     --font-size-s: 12px;
     --font-line-s: 16px;
     --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
-    --font-size-m: 16px;
+    --font-size-sm: 14px;
+    --font-line-sm: 18px;
+    --font-sm: var(--font-size-sm) / var(--font-line-sm) var(--font-family-main);
+    --font-size-m: 17px;
     --font-line-m: 24px;
     --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
     --font-size-ml: 20px;
@@ -53,7 +56,7 @@
 
     // Размеры
     --navbar-height: 80px;
-    --navbar-height-mobile: 60px;
+    --navbar-height-mobile: 50px;
     --sidebar-width: 300px;
     --sidebar-width-collapsed: 80px;
 
@@ -94,7 +97,7 @@
     --table-body-color-dark: #d6d4d4e5;
 
     // price
-    --price-header-color-light: #508e617d;
+    --price-header-color-light: rgb(71 70 70 / 25%);
     --price-header-color-dark: rgb(58, 14, 66);
     --price-color-light-even: #c1b6bc9f;
     --price-color-dark-even: #1e1144c7;

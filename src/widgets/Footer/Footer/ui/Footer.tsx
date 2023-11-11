@@ -1,5 +1,4 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppLink, AppLinkTheme } from 'shared/ui';
 
 import Email from '../../../../shared/assets/icons/social/email.svg';
 import Instagram from '../../../../shared/assets/icons/social/instagram.svg';
@@ -36,7 +35,7 @@ export const Footer = ({ className, backgroundColor }: FooterProps) => {
                     <div className={cl.contactWrap}>
                         <a href={'tel:+375339939039'} className={cl.phoneWrap}>
                             <Phone className={cl.phone}/>
-                            <span className={cl.text}>+ 375 33 993 90 39</span>
+                            <span className={cl.text}>+ 375 33 99 39 0 39</span>
                         </a>
                         <a href={'malito:SalsaMamboBrest@gmail.by'} className={cl.mailWrap}>
                             <Email className={cl.email}/>

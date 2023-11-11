@@ -26,16 +26,16 @@ export const Lessons = ({ className, backgroundColor }: LessonsProps) => {
     return (
         <div
             style={{ background: backgroundColor }}
-            id='lessons'
+            id="lessons"
             className={classNames(cl.Lessons, {}, [className])}
             ref={triggerRef}
         >
-            <div className='container'>
+            <div className="container">
                 <div
                     className={classNames(
                         cl.wrap,
                         { [cl.active]: isVisible },
-                        []
+                        [],
                     )}
                 >
                     <div></div>

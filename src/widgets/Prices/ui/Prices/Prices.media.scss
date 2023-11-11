@@ -8,6 +8,7 @@
             }
         }
     }
+
     .old,
     .note, {
         font: var(--font-m);
@@ -19,7 +20,7 @@
     .wrap {
         display: grid;
         grid-template-columns: [start] 1fr [line2] 1fr [line3] 1fr [end];
-        grid-template-rows: [row1-start] 100px [row2] 50px [row3] 65px [row4] 50px [row5] 65px [row6] 50px [row7] 65px [row8] 50px [row9] 65px [row10] 50px [row11] 65px [row12] 50px [row11] 65px [row12] 50px [row11] 65px [last];
+        grid-template-rows: [row1-start] 100px [row2] 50px [row3] 65px [row4] 50px [row5] 65px [row6] 50px [row7] 65px [row8] 50px [row9] 65px [row10] 50px [row11] 65px [last];
         gap: 3px;
 
         margin-top: 25px;

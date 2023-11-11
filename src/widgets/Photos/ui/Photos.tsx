@@ -33,7 +33,7 @@ export const Photos = ({ className, backgroundColor }: PhotosProps) => {
     useInfiniteScroll({
         triggerRef,
         callback: () => setIsVisible(true),
-        threshold: 0.05,
+        threshold: 0.001,
     });
 
     const onCloseModal = useCallback(() => {

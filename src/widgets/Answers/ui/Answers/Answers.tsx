@@ -28,7 +28,7 @@ export const Answers = ({ className, backgroundColor }: AnswersProps) => {
         <div style={{background: backgroundColor}} id="question" className={classNames(cl.Answers, {}, [className])} ref={triggerRef}>
             <div className="container">
                 <div className={classNames(cl.wrap, {[cl.active]: isVisible}, [])}>
-                    <Text title="Вопросы"/>
+                    <Text title="Вопросы" className={cl.title}/>
                     <img src={clave} className={cl.clave}/>
                     {answers.map((item) => <AnswerCard {...item} key={item.id} className={cl.AnswersCard}/>)}
                 </div>

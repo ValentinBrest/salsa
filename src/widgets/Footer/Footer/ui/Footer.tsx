@@ -39,7 +39,7 @@ export const Footer = ({ className, backgroundColor }: FooterProps) => {
                         </a>
                         <a href={'malito:SalsaMamboBrest@gmail.by'} className={cl.mailWrap}>
                             <Email className={cl.email}/>
-                            <span className={cl.text}>salsabrest@gmail.by</span>
+                            <span className={cl.text}>info@salsabrest.by</span>
                         </a>
                     </div>
                 </div>

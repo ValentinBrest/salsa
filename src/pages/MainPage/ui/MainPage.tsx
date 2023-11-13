@@ -7,7 +7,6 @@ import { Information } from 'widgets/Information';
 import { Intro } from 'widgets/Intro';
 import { IntroV2 } from 'widgets/Introv2';
 import { Lessons } from 'widgets/Lessons';
-import { Memo } from 'widgets/Memo';
 import { Photos } from 'widgets/Photos';
 import { Shedule } from 'widgets/Shedule';
 import { WhySalsa } from 'widgets/WhySalsa';
@@ -30,7 +29,6 @@ export const MainPage = () => {
             <Abonement backgroundColor={bgSecond}/>
             {/* <Events /> */}
             <Photos />
-            {/* <Memo backgroundColor={bgSecond}/> */}
             <Answers backgroundColor={bgSecond}/>
             <Form />
         </>

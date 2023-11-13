@@ -1,9 +1,9 @@
 .modalX {
     .rsis-container {
         & div {
-            background-size: contain !important;
             background-repeat: no-repeat;
-            background-position: center!important;
-        }  
-   }
-} 
+            background-position: center !important;
+            background-size: contain !important;
+        }
+    }
+}

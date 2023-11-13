@@ -1,11 +1,10 @@
 import { MutableRefObject, useRef, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
-import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
-
+import { Accordion } from 'shared/ui';
+import { Text, TextAlign } from 'shared/ui/Text/Text';
 
 import cl from './Information.module.scss';
-import { Accordion } from 'shared/ui';
 
 interface InformationProps {
     className?: string;
@@ -27,27 +26,27 @@ export const Information = ({
     return (
         <div
             style={{ background: backgroundColor }}
-            id='info'
+            id="info"
             className={classNames(cl.Information, {}, [className])}
             ref={triggerRef}
         >
-            <div className='container'>
+            <div className="container">
                 <div
                     className={classNames(
                         cl.wrap,
                         { [cl.active]: isVisible },
-                        []
+                        [],
                     )}
                 >
-                    <Accordion linkId='info' height='1400px' background={backgroundColor}>
+                    <Accordion linkId="info" height="1400px" background={backgroundColor}>
                         <div className={cl.decr}>
                             <Text
                                 className={cl.title}
-                                title='Юридическая информация'
+                                title="Юридическая информация"
                             />
 
                             <Text
-                            className={cl.text}
+                                className={cl.text}
                                 align={TextAlign.LEFT}
                                 text={
                                     <>
@@ -56,7 +55,7 @@ export const Information = ({
                                 }
                             />
                             <Text
-                            className={cl.text}
+                                className={cl.text}
                                 align={TextAlign.LEFT}
                                 text={
                                     <>
@@ -65,7 +64,7 @@ export const Information = ({
                                 }
                             />
                             <Text
-                            className={cl.text}
+                                className={cl.text}
                                 align={TextAlign.LEFT}
                                 text={
                                     <>
@@ -75,7 +74,7 @@ export const Information = ({
                                 }
                             />
                             <Text
-                            className={cl.text}
+                                className={cl.text}
                                 align={TextAlign.LEFT}
                                 text={
                                     <>

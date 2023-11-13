@@ -1,4 +1,4 @@
-import { AppRoutes, RoutePath } from '../../src/app/providers/router/routeConfig/routeConfig';
+import { RoutePath } from '../../src/app/providers/router/routeConfig/routeConfig';
 
 
 

@@ -54,7 +54,7 @@ export const answers = [
                     style={{ color: '#4d4d4d' }}
                     href='http://mfit.by/index.php?p=15'
                 >
-                    т у т
+                    тут
                 </a>
                 .
             </>

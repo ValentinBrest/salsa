@@ -2,6 +2,7 @@ import React, { ReactNode, useCallback, useEffect } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
 import { Portal } from 'shared/ui/Portal/Portal';
+
 import Close from '../../../shared/assets/icons/close.svg';
 
 import cl from './Modal.module.scss';
@@ -38,7 +39,7 @@ export const Modal = (props: ModalProps) => {
                 closeHandler();
             }
         },
-        [closeHandler]
+        [closeHandler],
     );
 
     useEffect(() => {

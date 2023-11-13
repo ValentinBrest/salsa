@@ -24,36 +24,36 @@ export const WhySalsa = ({ className, backgroundColor }: WhySalsaProps) => {
     return (
         <div
             style={{ background: backgroundColor }}
-            id='whySalsa'
+            id="whySalsa"
             className={classNames(cl.WhySalsa, {}, [className])}
             ref={triggerRef}
         >
-            <div className='container'>
+            <div className="container">
                 <div
                     className={classNames(
                         cl.wrap,
                         { [cl.active]: isVisible },
-                        []
+                        [],
                     )}
                 >
                     <div></div>
                     <img src={saxophone} className={cl.sax} />
                     <div className={cl.decr}>
-                        <Text title='Почему сальса?' />
+                        <Text title="Почему сальса?" />
                         <Text
                             align={TextAlign.RIGHT}
                             className={cl.epigraph}
-                            epigraph='«Однажды одна женщина попросила меня станцевать бачату, и я ответил, что не танцую бачату. А она сказала: «О-о-о. Так вы танцуете только сальсу?» И я сказал: «Да». Сальсу, что означает гуахира, гуарача, сон монтуно, мамбо, гуагуанко, бомба, плена, мозамбик, хала-хала, пачанга… Мне что, еще одного танца в жизни не хватало?»'
+                            epigraph="«Однажды одна женщина попросила меня станцевать бачату, и я ответил, что не танцую бачату. А она сказала: «О-о-о. Так вы танцуете только сальсу?» И я сказал: «Да». Сальсу, что означает гуахира, гуарача, сон монтуно, мамбо, гуагуанко, бомба, плена, мозамбик, хала-хала, пачанга… Мне что, еще одного танца в жизни не хватало?»"
                             author={<b>Френки Мартинес</b>}
                         />
                         <Accordion
-                            height='1070px'
+                            height="1070px"
                             background={backgroundColor}
-                            linkId='whySalsa'
+                            linkId="whySalsa"
                         >
                             <Text
                                 align={TextAlign.RIGHT}
-                                className=''
+                                className=""
                                 text={
                                     <>
                                         Танцевальная и музыкальная культура

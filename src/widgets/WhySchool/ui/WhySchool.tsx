@@ -1,9 +1,10 @@
 import { MutableRefObject, useRef, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
 import { Accordion, Card } from 'shared/ui';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
-import { useMediaQuery } from 'react-responsive';
+
 import guiro from '../../../../public/img/instuments/bongi.png';
 import maria from '../../../../public/img/maria.jpg';
 
@@ -32,28 +33,28 @@ export const WhySchool = ({
     return (
         <div
             style={{ background: backgroundColor }}
-            id='about'
+            id="about"
             className={classNames(cl.WhySchool, {}, [className])}
             ref={triggerRef}
         >
-            <div className='container'>
+            <div className="container">
                 <div
                     className={classNames(
                         cl.decr,
                         { [cl.active]: isVisible },
-                        []
+                        [],
                     )}
                 >
                     <Text
                         className={cl.title}
                         theme={TextTheme.WITHOUT}
-                        title='Почему вам именно в школу «СальсаБрест»? '
+                        title="Почему вам именно в школу «СальсаБрест»? "
                     />
 
                     <Accordion
-                        height='4500px'
+                        height="4500px"
                         background={backgroundColor}
-                        linkId='about'
+                        linkId="about"
                     >
                         <div className={cl.wrap}>
                             <div>
@@ -118,8 +119,7 @@ export const WhySchool = ({
                                             просто учим двигаться под музыку и
                                             взаимодействовать в паре, а обучаем
                                             пониманию динамических законов, и
-                                            использованию этих законов в своем
-                                            танце.
+                                            использованию этих законов в танце.
                                         </>
                                     }
                                 />
@@ -153,11 +153,11 @@ export const WhySchool = ({
                         </Card>
 
                         <div className={cl.invertedwrap}>
-                            <img src={maria} alt='maria' className={cl.maria} />
+                            <img src={maria} alt="maria" className={cl.maria} />
                             <div>
                                 {
                                     <>
-                                        <Text subTitle='Представляем нашего преподавателя по женскому стилю в сальсе' />
+                                        <Text subTitle="Представляем нашего преподавателя по женскому стилю в сальсе" />
                                         <Text
                                             align={TextAlign.CENTER}
                                             text={

@@ -1,1 +1,0 @@
-export {PoliticsPage} from './ui/PoliticsPage';

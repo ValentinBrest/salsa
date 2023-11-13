@@ -1,7 +1,9 @@
+import { MutableRefObject, useCallback, useRef, useState } from 'react';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import InputMask from 'react-input-mask';
 import emailjs from '@emailjs/browser';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
 import {
     AppLink,
     AppLinkTheme,
@@ -14,10 +16,9 @@ import { Text, TextTheme } from 'shared/ui/Text/Text';
 import dance from '../../../../../public/img/dance.jpg';
 import Instagram from '../../../../shared/assets/icons/social/instagram.svg';
 
-import cl from './Form.module.scss';
-import { MutableRefObject, useCallback, useRef, useState } from 'react';
-import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
 import { FormModal } from './FormModal';
+
+import cl from './Form.module.scss';
 
 interface FormProps {
     className?: string;
@@ -27,7 +28,7 @@ interface FormProps {
 type Inputs = {
     user_name: string;
     last_name: string;
-    age: string;
+    birth: string;
     phone: string;
 };
 
@@ -45,7 +46,8 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
     const [isMounted, setIsMounted] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
-
+    const form = useRef();
+    const [totalSend, setTotalSend] = useState({visible: false, result: ''});
     const onCloseModal = useCallback(() => {
         setIsAuthModal(false);
         setIsMounted(false);
@@ -62,15 +64,14 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
         threshold: 0.05,
     });
 
-    console.log({ ...register });
     const onSubmit: SubmitHandler<Inputs> = (data) => {
-        console.log(data);
-        // emailjs.sendForm('service_03ra7oq', 'template_vpdvwkf', form.current, 'sl7eRfWDYJKP2nyqV')
-        //     .then((result) => {
-        //         console.log('Данные отправлены успешно');
-        //     }, (error) => {
-        //         console.log('Ошибка');
-        //     });
+        emailjs.sendForm('service_03ra7oq', 'template_vpdvwkf', form.current, 'sl7eRfWDYJKP2nyqV')
+            .then((result) => {
+                setTotalSend({visible: true, result: 'Данные успешно отправлены'})
+                console.log('Данные отправлены успешно');
+            }, (error) => {
+                console.log('Ошибка');
+            });
         reset();
     };
     const Background = {
@@ -108,6 +109,7 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                             </a>
                             <Text text={'или заполните форму ниже'} />
                             <form
+                                ref={form}
                                 className={cl.form}
                                 onSubmit={handleSubmit(onSubmit)}
                             >
@@ -150,44 +152,31 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                     </div>
 
                                     <div className={cl.inputWrap}>
-                                        <input
+                                        <InputMask
                                             autoComplete="off"
-                                            type="number"
                                             className={classNames(
                                                 cl.Input,
                                                 {},
                                                 [className],
                                             )}
-                                            placeholder="Возраст"
-                                            {...register('age', {
+                                            placeholder="Дата рождения"
+                                            mask="99.99.9999"
+                                            {...register('birth', {
                                                 required:
                                                     'Поле обязательно к заполнению',
-                                                min: 18,
-                                                max: 45,
+                                                pattern: {
+                                                    value: /(0[0-9]|[12][0-9]|3[01]).(0?[1-9]|1[012]).((19|20)\d\d)/,
+                                                    message: 'некорректная дата рождения',
+                                                },    
                                             })}
                                         />
-                                        {errors?.age?.type == 'min' && (
+                                        {errors?.birth && (
                                             <Text
                                                 theme={TextTheme.ERROR}
-                                                text={
-                                                    'Минимальный возраст 18 лет'
-                                                }
+                                                text={errors?.birth?.message}
                                             />
                                         )}
-                                        {errors?.age?.type == 'max' && (
-                                            <Text
-                                                theme={TextTheme.ERROR}
-                                                text={
-                                                    'Максимальный возраст 45 лет'
-                                                }
-                                            />
-                                        )}
-                                        {errors?.age && (
-                                            <Text
-                                                theme={TextTheme.ERROR}
-                                                text={errors?.age?.message}
-                                            />
-                                        )}
+                                    
                                     </div>
 
                                     <div className={cl.inputWrap}>
@@ -198,7 +187,7 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                                 {},
                                                 [className],
                                             )}
-                                            placeholder="Телефон"
+                                            placeholder="Номер телефона"
                                             mask="+375 (99) 999-99-99"
                                             {...register('phone', {
                                                 required:
@@ -217,6 +206,8 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                         )}
                                     </div>
                                 </div>
+
+                                <Text className={cl.result}></Text>
 
                                 <Button
                                     disabled={!isValid}
@@ -243,11 +234,11 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                 </span>
                             </form>
                             <FormModal
-                    isMounted={isMounted}
-                    isOpen={isAuthModal}
-                    onClose={onCloseModal}
-                    className={cl.modal}
-                />
+                                isMounted={isMounted}
+                                isOpen={isAuthModal}
+                                onClose={onCloseModal}
+                                className={cl.modal}
+                            />
                         </div>
                     </div>
 

@@ -41,6 +41,8 @@
     height: 100%;
 
     text-align: center;
+    
+    font-style: italic;
 }
 
 .even {
@@ -70,6 +72,8 @@
 
 .fff {
     margin-bottom: 0;
+    
+    font-style: italic;
 }
 
 @import "./Prices.media"

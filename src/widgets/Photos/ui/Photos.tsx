@@ -30,6 +30,8 @@ export const Photos = ({ className, backgroundColor }: PhotosProps) => {
     const [isVisible, setIsVisible] = useState(false);
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
 
+    const photos = [ph1, ph2, ph3, ph4, ph5, ph6, ph7];
+
     useInfiniteScroll({
         triggerRef,
         callback: () => setIsVisible(true),
@@ -70,37 +72,11 @@ export const Photos = ({ className, backgroundColor }: PhotosProps) => {
                         align={TextAlign.CENTER}
                     />
                     <div className={cl.gallery} onClick={(e) => onOpenModal(e)}>
-                        <div className={classNames(cl.zoomWrap, {}, [cl.cart1])}>
-                            <img src={ph1} data-order={1} />
+                        {photos.map((item, index) => (<div key={index} className={classNames(cl.zoomWrap, {}, [cl[`cart${index+1}`]])}>
+                            <img src={item} data-order={index + 1} />
                             <Zoom className={cl.zoom} />
-                        </div>
-                        <div className={classNames(cl.zoomWrap, {}, [cl.cart2])}>
-                            <img src={ph2} data-order={2} />
-                            <Zoom className={cl.zoom} />
-                        </div>
-                        <div className={classNames(cl.zoomWrap, {}, [cl.cart3])}>
-                            <img src={ph3} data-order={3} />
-                            <Zoom className={cl.zoom} />
-                        </div>
-                        <div className={classNames(cl.zoomWrap, {}, [cl.cart4])}>
-                            <img src={ph4} data-order={4} />
-                            <Zoom className={cl.zoom} />
-                        </div>
-                        <div className={classNames(cl.zoomWrap, {}, [cl.cart5])}>
-                            <img className={cl.cart5} src={ph5} data-order={5} />
-
-                            <Zoom className={cl.zoom} />
-                        </div>
-                        <div className={classNames(cl.zoomWrap, {}, [cl.cart6])}>
-                            <img className={cl.cart6} src={ph6} data-order={6} />
-
-                            <Zoom className={cl.zoom} />
-                        </div>
-                        <div className={classNames(cl.zoomWrap, {}, [cl.cart7])}>
-                            <img className={cl.cart7} src={ph7} data-order={7} />
-
-                            <Zoom className={cl.zoom} />
-                        </div>
+                        </div>))}
+                        
                     </div>
                 </div>
                 <PhotosModal

@@ -14,7 +14,6 @@
     }
 }
 
-
 @media (max-width: 576px) {
     .arrowWrap {
         width: 70px;
@@ -23,7 +22,7 @@
     .arrowRight {
         top: 12px;
     }
-    
+
     .arrowLeft::after {
         width: 35px;
         height: 7px;
@@ -34,4 +33,3 @@
         height: 7px;
     }
 }
-

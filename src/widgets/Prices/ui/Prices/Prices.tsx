@@ -17,7 +17,7 @@ export const Prices = ({ className, backgroundColor }: PricesProps) => {
     return (
         <div
             style={{ background: backgroundColor }}
-            id='price'
+            id="price"
             className={classNames(cl.Prices, {}, [className])}
         >
             <div className={cl.wrap}>
@@ -68,12 +68,12 @@ export const Prices = ({ className, backgroundColor }: PricesProps) => {
                                     [cl.firstClm]: !(index % 4),
                                     [cl.third]: isTabletScreen && !(index % 4),
                                 },
-                                [className]
+                                [className],
                             )}
                             text={item}
                             theme={TextTheme.ITALIC}
                         />
-                    ))
+                    )),
                 )}
             </div>
         </div>

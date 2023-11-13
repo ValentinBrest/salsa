@@ -40,11 +40,11 @@ export const Lessons = ({ className, backgroundColor }: LessonsProps) => {
                 >
                     <div></div>
                     <div className={cl.decr}>
-                        <Text title='Занятия' />
+                        <Text title="Занятия" />
                         <Accordion
-                            height='1600px'
+                            height="1600px"
                             background={backgroundColor}
-                            linkId='lessons'
+                            linkId="lessons"
                         >
                             <Text
                                 align={TextAlign.RIGHT}
@@ -71,7 +71,7 @@ export const Lessons = ({ className, backgroundColor }: LessonsProps) => {
                                         </b>
                                         Если вы хотите быть уверенными в своем
                                         уровне на столичных (или зарубежных)
-                                        вечеренках, быть котируемым
+                                        вечеринках, быть котируемым
                                         партнером/партнершей, то вам в
                                         «СальсаБрест». <br />
                                         <br />
@@ -97,7 +97,7 @@ export const Lessons = ({ className, backgroundColor }: LessonsProps) => {
                             />
                         </Accordion>
                     </div>
-                    <img src={guiro} className={cl.guiro} alt='guiro' />
+                    <img src={guiro} className={cl.guiro} alt="guiro" />
                 </div>
             </div>
         </div>

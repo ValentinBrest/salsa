@@ -1,7 +1,8 @@
 import { ReactNode, useState } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
 import { Link as LinkScroll } from 'react-scroll';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { Button, ButtonTheme } from 'shared/ui';
+
 import cl from './Accordion.module.scss';
 
 interface AccordionProps {

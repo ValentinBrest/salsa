@@ -15,8 +15,10 @@
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    opacity: 0.75;
+
     width: 45%;
+
+    opacity: 0.75;
 }
 
 .decr {
@@ -29,9 +31,9 @@
 }
 
 .active {
+    transform: translateY(0%);
     opacity: 1;
     transition: all 1s;
-    transform: translateY(0%);
 }
 
 @import "./Abonement.media";

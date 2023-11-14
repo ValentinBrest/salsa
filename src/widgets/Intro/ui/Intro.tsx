@@ -5,10 +5,10 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
 
 import logo from '../../../../public/img/logo.png';
-import m1 from '../../../../public/img/main/1.jpg';
-import m2 from '../../../../public/img/main/2.jpg';
-import m3 from '../../../../public/img/main/3.jpg';
-import m4 from '../../../../public/img/main/4.jpg';
+import m1 from '../../../../public/img/main/1.webp';
+import m2 from '../../../../public/img/main/2.webp';
+import m3 from '../../../../public/img/main/3.webp';
+import m4 from '../../../../public/img/main/4.webp';
 
 import './Intro.scss';
 import cl from './Intro.module.scss';
@@ -21,11 +21,22 @@ interface IntroProps {
 export const Intro = ({ className, backgroundColor }: IntroProps) => {
     const isMobileScreen = useMediaQuery({ query: '(max-width: 576px)' });
     const isLaptopScreen = useMediaQuery({ query: '(max-width: 992px)' });
-    const images = [{ url: m3 }, { url: m1 }];
+    const images = [
+        { url: m3 },
+        { url: m1 },
+    ];
 
-    const images2 = [{ url: m2 }, { url: m4 }];
+    const images2 = [
+        { url: m2 },
+        { url: m4 },
+    ];
 
-    const totalImg = [{ url: m2 }, { url: m1 }, { url: m3 }, { url: m4 }];
+    const totalImg = [
+        { url: m2 },
+        { url: m1 },
+        { url: m3 },
+        { url: m4 },
+    ];
     return (
         <div
             style={{ background: backgroundColor }}
@@ -36,11 +47,17 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                     <div className={cl.salsaLeft}>
                         <span>S</span>
                         <span>A</span>
-                        <span>S</span>
                         <span>L</span>
+                        <span>S</span>
                         <span>A</span>
                     </div>
-                    <div className={classNames('slider', {[cl.opacity]: isLaptopScreen}, [])} >
+                    <div
+                        className={classNames(
+                            'slider',
+                            { [cl.opacity]: isLaptopScreen },
+                            []
+                        )}
+                    >
                         <SimpleImageSlider
                             width={'100%'}
                             height={'100%'}
@@ -65,9 +82,9 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                     <img
                         className={classNames(cl.logo, {}, [cl.anim])}
                         src={logo}
-                        alt="salsa-brest"
+                        alt='salsa-brest'
                     />
-                    <LinkScroll to="form" smooth={true}>
+                    <LinkScroll to='form' smooth={true}>
                         <Button
                             size={ButtonSize.XL}
                             theme={ButtonTheme.OUTLINE}
@@ -86,7 +103,13 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                             <span>S</span>
                             <span>T</span>
                         </div>
-                        <div className={classNames('slider', {[cl.opacity]: isLaptopScreen}, [])}>
+                        <div
+                            className={classNames(
+                                'slider',
+                                { [cl.opacity]: isLaptopScreen },
+                                []
+                            )}
+                        >
                             <SimpleImageSlider
                                 style={{}}
                                 width={'100%'}

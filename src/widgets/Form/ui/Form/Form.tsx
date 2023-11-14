@@ -47,7 +47,10 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
     const [isVisible, setIsVisible] = useState(false);
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
     const form = useRef();
-    const [totalSend, setTotalSend] = useState({visible: false, result: ''});
+    const [totalSend, setTotalSend] = useState({
+        visible: false,
+        result: null,
+    });
     const onCloseModal = useCallback(() => {
         setIsAuthModal(false);
         setIsMounted(false);
@@ -65,13 +68,29 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
     });
 
     const onSubmit: SubmitHandler<Inputs> = (data) => {
-        emailjs.sendForm('service_03ra7oq', 'template_vpdvwkf', form.current, 'sl7eRfWDYJKP2nyqV')
-            .then((result) => {
-                setTotalSend({visible: true, result: 'Данные успешно отправлены'})
-                console.log('Данные отправлены успешно');
-            }, (error) => {
-                console.log('Ошибка');
-            });
+        emailjs
+            .sendForm(
+                'service_03ra7oq',
+                'template_vpdvwkf',
+                form.current,
+                'sl7eRfWDYJKP2nyqV'
+            )
+            .then(
+                (result) => {
+                    setTotalSend({
+                        visible: true,
+                        result: 1,
+                    });
+                    console.log('Данные отправлены успешно');
+                },
+                (error) => {
+                    setTotalSend({
+                        visible: true,
+                        result: 2,
+                    });
+                    console.log('Лажа');
+                }
+            );
         reset();
     };
     const Background = {
@@ -81,16 +100,22 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
     return (
         <div
             style={{ background: backgroundColor }}
-            id="form"
+            id='form'
             className={classNames(cl.Form, {}, [className])}
             ref={triggerRef}
         >
-            <div className="container">
-                <div className={classNames(cl.wrap, {[cl.active]: isVisible}, [])}>
+            <div className='container'>
+                <div
+                    className={classNames(
+                        cl.wrap,
+                        { [cl.active]: isVisible },
+                        []
+                    )}
+                >
                     <div>
                         <Text
                             theme={TextTheme.WITHOUT}
-                            title="ЗАПИШИТЕСЬ НА ПЕРВЫЙ УРОК"
+                            title='ЗАПИШИТЕСЬ НА ПЕРВЫЙ УРОК'
                         />
                         <div className={cl.send}>
                             <Text
@@ -104,7 +129,7 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                 className={cl.withoutMargin}
                                 text={' в директ нашей страницы в '}
                             />
-                            <a href="https://www.instagram.com/salsabrest/">
+                            <a href='https://www.instagram.com/salsabrest/'>
                                 <Instagram className={cl.insta} />
                             </a>
                             <Text text={'или заполните форму ниже'} />
@@ -114,16 +139,15 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                 onSubmit={handleSubmit(onSubmit)}
                             >
                                 <div className={cl.formInner}>
-
                                     <div id={cl.fio} className={cl.inputWrap}>
                                         <input
-                                            autoComplete="off"
+                                            autoComplete='off'
                                             className={classNames(
                                                 cl.Input,
                                                 {},
-                                                [className],
+                                                [className]
                                             )}
-                                            placeholder="Фамилия и имя"
+                                            placeholder='Фамилия и имя'
                                             {...register('last_name', {
                                                 required:
                                                     'Поле обязательно к заполнению',
@@ -154,50 +178,51 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
 
                                     <div className={cl.inputWrap}>
                                         <InputMask
-                                            autoComplete="off"
+                                            autoComplete='off'
                                             className={classNames(
                                                 cl.Input,
                                                 {},
-                                                [className],
+                                                [className]
                                             )}
-                                            placeholder="Дата рождения"
-                                            mask="99.99.9999"
+                                            placeholder='Дата рождения'
+                                            mask='99.99.9999'
                                             {...register('birth', {
                                                 required:
                                                     'Поле обязательно к заполнению',
                                                 pattern: {
                                                     value: /(0[0-9]|[12][0-9]|3[01]).(0?[1-9]|1[012]).((19|20)\d\d)/,
-                                                    message: 'некорректная дата рождения',
-                                                },    
+                                                    message:
+                                                        'некорректная дата рождения',
+                                                },
                                             })}
                                         />
                                         {errors?.birth && (
                                             <Text
-                                                className={cl.error}    
+                                                className={cl.error}
                                                 theme={TextTheme.ERROR}
                                                 text={errors?.birth?.message}
                                             />
                                         )}
-                                    
                                     </div>
 
                                     <div className={cl.inputWrap}>
                                         <InputMask
-                                            autoComplete="off"
+                                            autoComplete='off'
                                             className={classNames(
                                                 cl.Input,
                                                 {},
-                                                [className],
+                                                [className]
                                             )}
-                                            placeholder="Номер телефона"
-                                            mask="+375 (99) 999-99-99"
+                                            placeholder='Номер телефона'
+                                            mask='+375 (99) 999-99-99'
                                             {...register('phone', {
                                                 required:
                                                     'Поле обязательно к заполнению',
                                                 pattern: {
                                                     value: /^(\+375) \((29|25|44|33)\) (\d{3})\-(\d{2})\-(\d{2})$/gm,
-                                                    message: 'некорректный номер',
-                                                },    
+                                                    message:
+                                                        'некорректный номер',
+                                                },
                                             })}
                                         />
                                         {errors?.phone && (
@@ -210,14 +235,29 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                     </div>
                                 </div>
 
-                                <Text className={cl.result}></Text>
+                                {totalSend.visible && (
+                                    <Text
+                                        text={
+                                            totalSend.result === 1
+                                                ? 'Данные успешно отправлены.'
+                                                : 'Произошла ошибка. Попробуйте еще раз.'
+                                        }
+                                        className={
+                                            cl[
+                                                totalSend.result === 1
+                                                    ? 'good'
+                                                    : 'error'
+                                            ]
+                                        }
+                                    />
+                                )}
 
                                 <Button
                                     disabled={!isValid}
                                     theme={ButtonTheme.OUTLINE}
                                     size={ButtonSize.L}
                                     className={cl.button}
-                                    type="submit"
+                                    type='submit'
                                 >
                                     Отправить
                                 </Button>

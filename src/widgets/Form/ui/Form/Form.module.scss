@@ -125,4 +125,12 @@
     transition: all 1s;
 }
 
+.good {
+    color: var(--green-light)
+}
+
+.error {
+    color: var(--red-light)
+}
+
 @import "./Form.media"

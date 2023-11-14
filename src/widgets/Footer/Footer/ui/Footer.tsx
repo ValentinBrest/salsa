@@ -37,7 +37,7 @@ export const Footer = ({ className, backgroundColor }: FooterProps) => {
                             <Phone className={cl.phone}/>
                             <span className={cl.text}>+ 375 33 99 39 0 39</span>
                         </a>
-                        <a href={'malito:SalsaMamboBrest@gmail.by'} className={cl.mailWrap}>
+                        <a href={'malito:info@salsabrest.by'} className={cl.mailWrap}>
                             <Email className={cl.email}/>
                             <span className={cl.text}>info@salsabrest.by</span>
                         </a>

@@ -30,18 +30,17 @@ export const NavBar = ({ className }: NavBarProps) => {
             <div id="up" className={classNames(cl.NavBar, {}, [className])}>
                 <div className="container">
                     <div className={cl.wrap}>
-                        <AppLink
-                            to="/"
+                        <a
+                            href="https://www.salsabrest.by"
                             className={cl.linkLogo}
                             key={'salsa'}
-                            theme={AppLinkTheme.BUTTON}
                         >
                             <img
                                 className={cl.logo}
                                 src={logo}
                                 alt="salsa-brest"
                             />
-                        </AppLink>
+                        </a>
 
                         <div
                             className={classNames(cl.burger, {[cl.active]: isOpenMenu}, [className])}

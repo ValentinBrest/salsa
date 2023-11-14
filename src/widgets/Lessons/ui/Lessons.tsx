@@ -42,7 +42,7 @@ export const Lessons = ({ className, backgroundColor }: LessonsProps) => {
                     <div className={cl.decr}>
                         <Text title="Занятия" />
                         <Accordion
-                            height="1600px"
+                            height="1200px"
                             background={backgroundColor}
                             linkId="lessons"
                         >

@@ -47,7 +47,7 @@ export const WhySalsa = ({ className, backgroundColor }: WhySalsaProps) => {
                             author={<b>Френки Мартинес</b>}
                         />
                         <Accordion
-                            height="1070px"
+                            height="800px"
                             background={backgroundColor}
                             linkId="whySalsa"
                         >

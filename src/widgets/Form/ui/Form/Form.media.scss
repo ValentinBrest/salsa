@@ -28,6 +28,10 @@
     .dance {
         display: none;
     }
+
+    .error {
+        font: var(--font-sm);
+    }
 }
 
 @media (max-width: 576px) {
@@ -39,7 +43,16 @@
         width: 100%;
     }
 
+    .Input {
+        font: var(--font-sm);
+
+        &::placeholder {
+            font: var(--font-sm);
+        }
+    }
+
     .text {
         text-align: center;
+        
     }
 }

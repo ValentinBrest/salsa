@@ -143,6 +143,7 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                         />
                                         {errors?.last_name && (
                                             <Text
+                                                className={cl.error}
                                                 theme={TextTheme.ERROR}
                                                 text={
                                                     errors?.last_name?.message
@@ -172,6 +173,7 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                         />
                                         {errors?.birth && (
                                             <Text
+                                                className={cl.error}    
                                                 theme={TextTheme.ERROR}
                                                 text={errors?.birth?.message}
                                             />
@@ -200,6 +202,7 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                         />
                                         {errors?.phone && (
                                             <Text
+                                                className={cl.error}
                                                 theme={TextTheme.ERROR}
                                                 text={errors?.phone?.message}
                                             />

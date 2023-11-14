@@ -52,7 +52,7 @@ export const WhySchool = ({
                     />
 
                     <Accordion
-                        height="4500px"
+                        height="3500px"
                         background={backgroundColor}
                         linkId="about"
                     >

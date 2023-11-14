@@ -38,7 +38,7 @@ export const Information = ({
                         [],
                     )}
                 >
-                    <Accordion linkId="info" height="1400px" background={backgroundColor}>
+                    <Accordion linkId="info" height="1000px" background={backgroundColor}>
                         <div className={cl.decr}>
                             <Text
                                 className={cl.title}

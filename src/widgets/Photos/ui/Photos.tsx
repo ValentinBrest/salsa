@@ -4,13 +4,13 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
 import { Text, TextAlign } from 'shared/ui/Text/Text';
 
-import ph1 from '../../../../public/img/gallery/1.jpg';
-import ph2 from '../../../../public/img/gallery/2-min.jpg';
-import ph3 from '../../../../public/img/gallery/3.jpg';
-import ph4 from '../../../../public/img/gallery/4.jpg';
-import ph5 from '../../../../public/img/gallery/5.jpg';
-import ph6 from '../../../../public/img/gallery/6.jpg';
-import ph7 from '../../../../public/img/gallery/7.jpg';
+import ph1 from '../../../../public/img/gallery/1.webp';
+import ph2 from '../../../../public/img/gallery/2.webp';
+import ph3 from '../../../../public/img/gallery/3.webp';
+import ph4 from '../../../../public/img/gallery/4.webp';
+import ph5 from '../../../../public/img/gallery/5.webp';
+import ph6 from '../../../../public/img/gallery/6.webp';
+import ph7 from '../../../../public/img/gallery/7.webp';
 import Zoom from '../../../shared/assets/icons/zoom.svg';
 
 import { PhotosModal } from './PhotosModal';

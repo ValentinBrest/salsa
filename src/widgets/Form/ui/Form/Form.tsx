@@ -13,7 +13,7 @@ import {
 } from 'shared/ui';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 
-import dance from '../../../../../public/img/dance.jpg';
+import dance from '../../../../../public/img/dance.webp';
 import Instagram from '../../../../shared/assets/icons/social/instagram.svg';
 
 import { FormModal } from './FormModal';
@@ -81,14 +81,12 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                         visible: true,
                         result: 1,
                     });
-                    console.log('Данные отправлены успешно');
                 },
                 (error) => {
                     setTotalSend({
                         visible: true,
                         result: 2,
                     });
-                    console.log('Лажа');
                 },
             );
         reset();
@@ -120,7 +118,7 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                         <div className={cl.send}>
                             <Text
                                 className={cl.withoutMargin}
-                                text={'Для этого отправьте сообщение '}
+                                text={'Для этого отправьте сообщение'}
                             />
                             <div className={cl.wantToDance}>
                                 <span>"Хочу танцевать сальсу"</span>
@@ -129,7 +127,7 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                 className={cl.withoutMargin}
                                 text={' в директ нашей страницы в '}
                             />
-                            <a href="https://www.instagram.com/salsabrest/">
+                            <a href="https://www.instagram.com/salsabrest/" aria-label="Перейти в инстаграм">
                                 <Instagram className={cl.insta} />
                             </a>
                             <Text text={'или заполните форму ниже'} />

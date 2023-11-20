@@ -51,7 +51,7 @@
     }
 
     .maria {
-        width: 100%;
+        width: 485px;
     }
 
     .card {
@@ -85,5 +85,11 @@
 
     .title {
         line-height: 32px;
+    }
+}
+
+@media (max-width: 485px) {
+    .maria {
+        width: 100%;
     }
 }

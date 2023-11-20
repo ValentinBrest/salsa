@@ -5,8 +5,8 @@ import { AppLink, AppLinkTheme } from 'shared/ui';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 
 import { links } from '../../../../data/links/links';
-import guitar from '../../../../public/img/instuments/guitar.png';
-import logo from '../../../../public/img/logo.png';
+import guitar from '../../../../public/img/instuments/guitar.webp';
+import logo from '../../../../public/img/logo.webp';
 
 import cl from './NavBar.module.scss';
 

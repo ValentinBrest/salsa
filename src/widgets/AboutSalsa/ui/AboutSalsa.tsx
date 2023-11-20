@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
 import { Text } from 'shared/ui/Text/Text';
 
-import conga from '../../../../public/img/instuments/conga.png';
+import conga from '../../../../public/img/instuments/conga.webp';
 
 import cl from './AboutSalsa.module.scss';
 

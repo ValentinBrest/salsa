@@ -4,7 +4,7 @@ import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfinite
 import { Accordion } from 'shared/ui';
 import { Text, TextAlign } from 'shared/ui/Text/Text';
 
-import guiro from '../../../../public/img/instuments/guiro.png';
+import guiro from '../../../../public/img/instuments/guiro.webp';
 
 import cl from './Lessons.module.scss';
 

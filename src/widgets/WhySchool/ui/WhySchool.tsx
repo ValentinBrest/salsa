@@ -5,8 +5,8 @@ import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfinite
 import { Accordion, Card } from 'shared/ui';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 
-import guiro from '../../../../public/img/instuments/bongi.png';
-import maria from '../../../../public/img/maria.jpg';
+import guiro from '../../../../public/img/instuments/bongi.webp';
+import maria from '../../../../public/img/maria.webp';
 
 import cl from './WhySchool.module.scss';
 

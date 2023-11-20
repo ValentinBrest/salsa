@@ -4,7 +4,7 @@ import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfinite
 import { Accordion } from 'shared/ui';
 import { Text, TextAlign } from 'shared/ui/Text/Text';
 
-import saxophone from '../../../../public/img/instuments/saxophone.png';
+import saxophone from '../../../../public/img/instuments/saxophone.webp';
 
 import cl from './WhySalsa.module.scss';
 

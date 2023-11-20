@@ -1,7 +1,7 @@
 import { memo, ReactNode } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 
-import pin from '../../../../public/img/pin.png';
+import pin from '../../../../public/img/pin.webp';
 
 import cl from './Card.module.scss';
 

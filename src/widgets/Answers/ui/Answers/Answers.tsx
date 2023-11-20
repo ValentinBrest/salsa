@@ -4,7 +4,7 @@ import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfinite
 import { Text } from 'shared/ui/Text/Text';
 
 import { answers } from '../../../../../data/answers/answers';
-import clave from '../../../../../public/img/instuments/clave.png';
+import clave from '../../../../../public/img/instuments/clave.webp';
 import { AnswerCard } from '../AnswerCard/AnswerCard';
 
 import cl from './Answers.module.scss';

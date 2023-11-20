@@ -6,8 +6,10 @@ import { Text, TextAlign } from 'shared/ui/Text/Text';
 
 import ph1 from '../../../../public/img/gallery/1.webp';
 import ph2 from '../../../../public/img/gallery/2.webp';
+import ph2mb from '../../../../public/img/gallery/2-mb.webp';
 import ph3 from '../../../../public/img/gallery/3.webp';
 import ph4 from '../../../../public/img/gallery/4.webp';
+import ph4mb from '../../../../public/img/gallery/4-mb.webp';
 import ph5 from '../../../../public/img/gallery/5.webp';
 import ph6 from '../../../../public/img/gallery/6.webp';
 import ph7 from '../../../../public/img/gallery/7.webp';
@@ -24,13 +26,14 @@ interface PhotosProps {
 
 export const Photos = ({ className, backgroundColor }: PhotosProps) => {
     const isLaptopScreen = useMediaQuery({ query: '(max-width: 992px)' });
+    const isTableScreen = useMediaQuery({ query: '(max-width: 768px)' });
     const [isAuthModal, setIsAuthModal] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
     const [curImg, setCurImg] = useState(1);
     const [isVisible, setIsVisible] = useState(false);
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
 
-    const photos = [ph1, ph2, ph3, ph4, ph5, ph6, ph7];
+    const photos = isTableScreen ? [ph1, ph2mb, ph3, ph4mb, ph5, ph6, ph7] :[ph1, ph2, ph3, ph4, ph5, ph6, ph7];
 
     useInfiniteScroll({
         triggerRef,

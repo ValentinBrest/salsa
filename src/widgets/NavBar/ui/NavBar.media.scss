@@ -96,11 +96,11 @@
     .guitar {
         position: absolute;
         bottom: 100px;
-        transform: rotate(45deg);
+        transform: rotate(45deg) ;
 
-        width: 30%;
+        width: 200px;
 
-        opacity: 0.5;
+        opacity: 0.3;
     }
 
     .visible {
@@ -118,6 +118,7 @@
     .mobileLink {
         margin-bottom: 30px;
         font: var(--font-l);
+        text-decoration: none;
     }
 }
 
@@ -140,6 +141,11 @@
             width: 35px;
             height: 35px;
         }
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
     }
 
     .linkLogo {

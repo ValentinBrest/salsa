@@ -51,6 +51,7 @@ export const NavBar = ({ className }: NavBarProps) => {
                             {links.map((item) => (
                                 <LinkScroll
                                     to={item.scroll}
+                                    href="/"
                                     key={item.id}
                                     smooth={true}
                                     className={cl.link}
@@ -74,6 +75,7 @@ export const NavBar = ({ className }: NavBarProps) => {
                     <img src={guitar} className={cl.guitar} alt="гитара"/>
                     {links.map((item) => (
                         <LinkScroll
+                            href="/"
                             className={cl.mobileLink}
                             to={item.scroll}
                             key={item.id}

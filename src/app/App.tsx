@@ -30,7 +30,7 @@ function App() {
                 <NavBar/>
                 <div className="content-page">
                     <AppRouter/>  
-                    <LinkScroll to={'up'} smooth={true} className={`pageup ${isSctollTo? 'activeScroll': ''}`}>
+                    <LinkScroll href="/" to={'up'} smooth={true} className={`pageup ${isSctollTo? 'activeScroll': ''}`}>
                         <Up className="up" />
                     </LinkScroll>
                 </div>

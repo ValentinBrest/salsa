@@ -124,7 +124,7 @@ export const WhySchool = ({
                                     }
                                 />
                             </div>
-                            <img src={bongi} className={cl.guiro} alt="бонги"/>
+                            <img src={bongi} className={cl.bongi} alt="бонги"/>
                         </div>
 
                         <Card

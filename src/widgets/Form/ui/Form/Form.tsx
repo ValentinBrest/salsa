@@ -37,6 +37,8 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
         register,
         handleSubmit,
         formState: { errors, isValid },
+        clearErrors,
+        getValues,
         reset,
         control,
     } = useForm<Inputs>({
@@ -45,6 +47,7 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
     const [isAuthModal, setIsAuthModal] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
     const form = useRef();
     const [totalSend, setTotalSend] = useState({
@@ -68,27 +71,30 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
     });
 
     const onSubmit: SubmitHandler<Inputs> = (data) => {
-        emailjs
-            .sendForm(
-                'service_03ra7oq',
-                'template_vpdvwkf',
-                form.current,
-                'sl7eRfWDYJKP2nyqV',
-            )
-            .then(
-                (result) => {
-                    setTotalSend({
-                        visible: true,
-                        result: 1,
-                    });
-                },
-                (error) => {
-                    setTotalSend({
-                        visible: true,
-                        result: 2,
-                    });
-                },
-            );
+        setIsLoading(true);
+        // emailjs
+        //     .sendForm(
+        //         'service_03ra7oq',
+        //         'template_vpdvwkf',
+        //         form.current,
+        //         'sl7eRfWDYJKP2nyqV',
+        //     )
+        //     .then(
+        //         (result) => {
+        //             setTotalSend({
+        //                 visible: true,
+        //                 result: 1,
+        //             });
+        //             setIsLoading(false);
+        //         },
+        //         (error) => {
+        //             setTotalSend({
+        //                 visible: true,
+        //                 result: 2,
+        //             });
+        //             setIsLoading(false);
+        //         },
+        //     );
         reset();
     };
     const Background = {
@@ -147,6 +153,7 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                             )}
                                             placeholder="Фамилия и имя"
                                             {...register('last_name', {
+                                                onBlur: () => getValues('last_name') === '' ? clearErrors('last_name'): null,
                                                 required:
                                                     'Поле обязательно к заполнению',
                                                 pattern: {
@@ -182,9 +189,11 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                                 {},
                                                 [className],
                                             )}
+                                            // clearErrors('birth')
                                             placeholder="Дата рождения"
                                             mask="99.99.9999"
                                             {...register('birth', {
+                                                onBlur: () => getValues('birth') === '' ? clearErrors('birth'): null,
                                                 required:
                                                     'Поле обязательно к заполнению',
                                                 pattern: {
@@ -214,6 +223,7 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                             placeholder="Номер телефона"
                                             mask="+375 (99) 999-99-99"
                                             {...register('phone', {
+                                                onBlur: () => getValues('phone') === '' ? clearErrors('phone'): null,
                                                 required:
                                                     'Поле обязательно к заполнению',
                                                 pattern: {
@@ -250,7 +260,7 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                     />
                                 )}
 
-                                <Button
+                                {isLoading ? <span className={cl.loader}></span> : <Button
                                     title="Отправить"
                                     disabled={!isValid}
                                     theme={ButtonTheme.OUTLINE}
@@ -259,7 +269,9 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                     type="submit"
                                 >
                                     Отправить
-                                </Button>
+                                </Button>}
+                                
+                                
                                 <span className={cl.text}>
                                     {
                                         '*Нажимая на кнопку "Отправить", вы даете согласие на обработку персональных данных и соглашаетесь '

@@ -84,7 +84,7 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                         src={logo}
                         alt="salsa-brest"
                     />
-                    <LinkScroll to="form" smooth={true}>
+                    <LinkScroll href="/" to="form" smooth={true}>
                         <Button
                             title="Записаться"
                             size={ButtonSize.XL}

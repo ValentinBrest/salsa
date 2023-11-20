@@ -33,6 +33,7 @@ export const Accordion = (props: AccordionProps) => {
 
     const btn = (
         <Button
+            title="Свернуть или развернуть текст"
             background={background}
             theme={ButtonTheme.ARROW}
             onClick={() => setIsVisible(!isVisible)}

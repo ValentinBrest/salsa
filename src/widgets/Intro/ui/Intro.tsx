@@ -55,7 +55,7 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                         className={classNames(
                             'slider',
                             { [cl.opacity]: isLaptopScreen },
-                            []
+                            [],
                         )}
                     >
                         <SimpleImageSlider
@@ -82,10 +82,11 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                     <img
                         className={classNames(cl.logo, {}, [cl.anim])}
                         src={logo}
-                        alt='salsa-brest'
+                        alt="salsa-brest"
                     />
-                    <LinkScroll to='form' smooth={true}>
+                    <LinkScroll to="form" smooth={true}>
                         <Button
+                            title="Записаться"
                             size={ButtonSize.XL}
                             theme={ButtonTheme.OUTLINE}
                             className={cl.btn}
@@ -107,7 +108,7 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                             className={classNames(
                                 'slider',
                                 { [cl.opacity]: isLaptopScreen },
-                                []
+                                [],
                             )}
                         >
                             <SimpleImageSlider

@@ -13,6 +13,7 @@ export const ThemeSwitcher = ({className}: ThemeSwitcherProps) => {
     
     return (
         <Button
+            title="Переключатель темы"
             theme={ButtonTheme.CLEAR}
             onClick={toggleTheme} 
             className={classNames('', {}, [className])}

@@ -61,6 +61,7 @@ export const Modal = (props: ModalProps) => {
             <div className={classNames(cl.Modal, mods, [className])}>
                 <div className={cl.overlay} onClick={closeHandler}>
                     <Button
+                        title="Закрыть"
                         onClick={closeHandler}
                         square
                         size={ButtonSize.XL}

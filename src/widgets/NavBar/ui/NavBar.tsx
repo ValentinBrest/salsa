@@ -71,7 +71,7 @@ export const NavBar = ({ className }: NavBarProps) => {
                         [cl.visible]: isOpenMenu,
                     })}
                 >
-                    <img src={guitar} className={cl.guitar} />
+                    <img src={guitar} className={cl.guitar} alt="гитара"/>
                     {links.map((item) => (
                         <LinkScroll
                             className={cl.mobileLink}

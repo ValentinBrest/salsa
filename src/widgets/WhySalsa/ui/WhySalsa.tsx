@@ -37,7 +37,7 @@ export const WhySalsa = ({ className, backgroundColor }: WhySalsaProps) => {
                     )}
                 >
                     <div></div>
-                    <img src={saxophone} className={cl.sax} />
+                    <img src={saxophone} className={cl.sax} alt="саксофон"/>
                     <div className={cl.decr}>
                         <Text title="Почему сальса?" />
                         <Text

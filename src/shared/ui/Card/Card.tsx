@@ -19,8 +19,8 @@ export const Card = memo((props: CardProps) => {
             style={{ background: background }}
             className={classNames(cl.Card, {}, [className])}
         >
-            <img src={pin} className={cl.left} />
-            <img src={pin} className={cl.right} />
+            <img src={pin} className={cl.left} alt="left"/>
+            <img src={pin} className={cl.right} alt="right"/>
             {children}
         </div>
     );

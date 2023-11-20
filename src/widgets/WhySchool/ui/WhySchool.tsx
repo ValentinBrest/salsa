@@ -5,7 +5,7 @@ import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfinite
 import { Accordion, Card } from 'shared/ui';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 
-import guiro from '../../../../public/img/instuments/bongi.webp';
+import bongi from '../../../../public/img/instuments/bongi.webp';
 import maria from '../../../../public/img/maria.webp';
 
 import cl from './WhySchool.module.scss';
@@ -124,7 +124,7 @@ export const WhySchool = ({
                                     }
                                 />
                             </div>
-                            <img src={guiro} className={cl.guiro} />
+                            <img src={bongi} className={cl.guiro} alt="бонги"/>
                         </div>
 
                         <Card

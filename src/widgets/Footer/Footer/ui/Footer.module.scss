@@ -53,7 +53,7 @@
 
     color: var(--footer-color);
     text-decoration: none;
-
+    
     &::before {
         content: "";
 
@@ -78,6 +78,10 @@
             width: 100%;
         }
     }
+}
+
+.phoneWrap {
+    margin-bottom: 10px;
 }
 
 .email,

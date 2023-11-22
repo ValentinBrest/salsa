@@ -9,7 +9,7 @@ import { AppRouter } from './providers/router';
 
 function App() {
     const [isSctollTo, setIsScrollTo] = useState(false);
-    
+    const bgFirst = 'var(--bg-color)';
 
     useEffect(() => {
         function handleMove() {
@@ -34,7 +34,7 @@ function App() {
                         <Up className="up" />
                     </LinkScroll>
                 </div>
-                <Footer/>
+                <Footer backgroundColor={bgFirst}/>
             </Suspense>
         </div>
     );

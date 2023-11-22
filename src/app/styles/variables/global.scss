@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,300&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 :root {
     --font-family-main: "Jost", "Times New Roman", sans-serif;
-    // --font-family-main: 'Pacifico', cursive;
 
     // TEXT
     --font-size-xs: 8px;
@@ -98,8 +96,10 @@
     --table-body-color-dark: #d6d4d4e5;
 
     // price
-    --price-header-color-light: #8cddc3;
+    --price-header-color-light: #bfedf8;
     --price-header-color-dark: rgb(58, 14, 66);
+    --price-subheader-color-light: rgb(45, 169, 201);
+    --price-subheader-color-dark: rgb(52, 12, 105);
     --price-color-light-even: #c1b6bc9f;
     --price-color-dark-even: #1e1144c7;
     --price-color-light-odd: #c9ccdd9f;

@@ -6,7 +6,7 @@
 .wrap {
     display: grid;
     grid-template-columns: [start] 35% [line2] 20% [line3] 20% [line4] 23% [end];
-    grid-template-rows: [row1-start] 100px [row2] 50px [row3] 75px [row4] 75px [row5] 50px [row6] 50px [last];
+    grid-template-rows: [row1-start] 100px [row2] 25px [row3] 50px [row4] 75px [row5] 75px [row6] 50px [row7] 50px [row8] 25px [row9] 50px [row10] 50px [row11] 75px [last];
     gap: 10px;
     align-items: center;
 
@@ -33,23 +33,52 @@
     background-color: var(--price-header-color);
 }
 
+.couple {
+    grid-column: 2 / span 3;
+    grid-row: 2;
+
+    color: var(--text-color-light);
+    text-align: center;
+
+    background-color: var(--price-subheader-color);
+}
+
+.woman {
+    grid-column: 2 / span 3;
+    grid-row: 8;
+
+    color: var(--text-color-light);
+    text-align: center;
+
+    background-color: var(--price-subheader-color);
+}
+
 .body {
     display: flex;
     align-items: center;
     justify-content: center;
 
     height: 100%;
+    margin-bottom: 0;
 
-    text-align: center;
-    
     font-style: italic;
+    text-align: center;
 }
 
 .even {
     background-color: var(--price-color-even);
 }
 
+.evenWoman {
+    grid-column: 2 / span 3;
+    background-color: var(--price-color-even);
+}
+
 .odd {
+    background-color: var(--price-color-odd);
+}
+
+.oddWoman {
     background-color: var(--price-color-odd);
 }
 
@@ -72,7 +101,6 @@
 
 .fff {
     margin-bottom: 0;
-    
     font-style: italic;
 }
 

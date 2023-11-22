@@ -1,9 +1,18 @@
 .Events {
     width: 100%;
+    overflow: hidden;
     padding: var(--padding-xxl);
 }
 
 .wrap {
     display: flex;
     justify-content: space-around;
+    height: 210px;
+
+    iframe {
+        width: 370px;
+        height: 100%;
+    }
 }
+
+@import "./Events.media";

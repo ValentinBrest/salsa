@@ -16,7 +16,7 @@ interface FooterProps {
 export const Footer = ({ className, backgroundColor }: FooterProps) => {
 
     return (
-        <footer id="contact" className={classNames(cl.Footer, {}, [className])}>
+        <footer style={{ background: backgroundColor }} id="contact" className={classNames(cl.Footer, {}, [className])}>
             <div className="container">
                 <div className={cl.wrap}>
                     <span className={cl.text}>© 2023 Школа танцев «СальсаБрест»</span>

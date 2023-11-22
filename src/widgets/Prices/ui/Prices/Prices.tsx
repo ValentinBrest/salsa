@@ -56,6 +56,8 @@ export const Prices = ({ className, backgroundColor }: PricesProps) => {
                         )}
                     </div>
                 ))}
+                {!isTabletScreen && <div />}
+                {<div className={cl.couple}>Парная сальса</div>}
                 {prices.body.map((el) =>
                     el.map((item, index) => (
                         <Text
@@ -67,6 +69,27 @@ export const Prices = ({ className, backgroundColor }: PricesProps) => {
                                     [cl.odd]: !(index % 2),
                                     [cl.firstClm]: !(index % 4),
                                     [cl.third]: isTabletScreen && !(index % 4),
+                                },
+                                [className],
+                            )}
+                            text={item}
+                            theme={TextTheme.ITALIC}
+                        />
+                    )),
+                )}
+                {!isTabletScreen && <div />}
+                {<div className={cl.woman}>Женский стиль</div>}
+                {prices.woman.map((el, elIndex) =>
+                    el.map((item, index) => (
+                        <Text
+                            key={index}
+                            className={classNames(
+                                cl.body,
+                                {
+                                    [cl.evenWoman]: !!(index % 2),
+                                    [cl.oddWoman]: !(elIndex % 2),
+                                    [cl.firstClm]: !(index % 4),
+                                    [cl.third]: isTabletScreen && !(elIndex % 1),
                                 },
                                 [className],
                             )}

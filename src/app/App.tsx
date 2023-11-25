@@ -28,12 +28,12 @@ function App() {
         <div className="app">
             <Suspense fallback="">
                 <NavBar/>
-                <div className="content-page">
+                <main className="content-page">
                     <AppRouter/>  
                     <LinkScroll href="/" to={'up'} smooth={true} className={`pageup ${isSctollTo? 'activeScroll': ''}`}>
                         <Up className="up" />
                     </LinkScroll>
-                </div>
+                </main>
                 <Footer backgroundColor={bgFirst}/>
             </Suspense>
         </div>

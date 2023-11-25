@@ -27,31 +27,35 @@ export const NavBar = ({ className }: NavBarProps) => {
 
     return (
         <>
-            <div id="up" className={classNames(cl.NavBar, {}, [className])}>
-                <div className="container">
+            <header id='up' className={classNames(cl.NavBar, {}, [className])}>
+                <div className='container'>
                     <div className={cl.wrap}>
                         <a
-                            href="https://www.salsabrest.by"
+                            href='https://www.salsabrest.by'
                             className={cl.linkLogo}
                             key={'salsa'}
                         >
                             <img
                                 className={cl.logo}
                                 src={logo}
-                                alt="salsa-brest"
+                                alt='salsa-brest'
                             />
                         </a>
 
                         <div
-                            className={classNames(cl.burger, {[cl.active]: isOpenMenu}, [className])}
+                            className={classNames(
+                                cl.burger,
+                                { [cl.active]: isOpenMenu },
+                                [className]
+                            )}
                             onClick={onHandleMenu}
                         />
 
-                        <div className={cl.links}>
+                        <nav className={cl.links}>
                             {links.map((item) => (
                                 <LinkScroll
                                     to={item.scroll}
-                                    href="/"
+                                    href='/'
                                     key={item.id}
                                     smooth={true}
                                     className={cl.link}
@@ -61,21 +65,21 @@ export const NavBar = ({ className }: NavBarProps) => {
                                     </AppLink>
                                 </LinkScroll>
                             ))}
-                        </div>
+                        </nav>
                         {<ThemeSwitcher className={cl.switcher} />}
                     </div>
                 </div>
-            </div>
+            </header>
             {
-                <div
+                <nav
                     className={classNames(cl.menu, {
                         [cl.visible]: isOpenMenu,
                     })}
                 >
-                    <img src={guitar} className={cl.guitar} alt="гитара"/>
+                    <img src={guitar} className={cl.guitar} alt='гитара' />
                     {links.map((item) => (
                         <LinkScroll
-                            href="/"
+                            href='/'
                             className={cl.mobileLink}
                             to={item.scroll}
                             key={item.id}
@@ -87,7 +91,7 @@ export const NavBar = ({ className }: NavBarProps) => {
                             </AppLink>
                         </LinkScroll>
                     ))}
-                </div>
+                </nav>
             }
         </>
     );

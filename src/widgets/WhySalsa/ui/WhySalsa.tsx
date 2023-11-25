@@ -22,7 +22,7 @@ export const WhySalsa = ({ className, backgroundColor }: WhySalsaProps) => {
         callback: () => setIsVisible(true),
     });
     return (
-        <div
+        <section
             style={{ background: backgroundColor }}
             id="whySalsa"
             className={classNames(cl.WhySalsa, {}, [className])}
@@ -92,6 +92,6 @@ export const WhySalsa = ({ className, backgroundColor }: WhySalsaProps) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };

@@ -21,7 +21,7 @@ export const AboutSalsa = ({ className, backgroundColor }: AboutSalsaProps) => {
         callback: () => setIsVisible(true),
     });
     return (
-        <div
+        <section
             style={{ background: backgroundColor }}
             id="salsa"
             className={classNames(cl.AboutSalsa, {}, [className])}
@@ -41,6 +41,6 @@ export const AboutSalsa = ({ className, backgroundColor }: AboutSalsaProps) => {
                     <img src={conga} className={cl.conga} alt="конги"/>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };

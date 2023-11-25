@@ -14,6 +14,7 @@ import {
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 
 import dance from '../../../../../public/img/dance.webp';
+import Mail from '../../../../../public/img/mail.svg';
 import Instagram from '../../../../shared/assets/icons/social/instagram.svg';
 
 import { FormModal } from './FormModal';
@@ -102,24 +103,24 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
     };
 
     return (
-        <div
+        <section
             style={{ background: backgroundColor }}
-            id="form"
+            id='form'
             className={classNames(cl.Form, {}, [className])}
             ref={triggerRef}
         >
-            <div className="container">
+            <div className='container'>
                 <div
                     className={classNames(
                         cl.wrap,
                         { [cl.active]: isVisible },
-                        [],
+                        []
                     )}
                 >
                     <div>
                         <Text
                             theme={TextTheme.WITHOUT}
-                            title="ЗАПИШИТЕСЬ НА ПЕРВЫЙ УРОК"
+                            title='ЗАПИШИТЕСЬ НА ПЕРВЫЙ УРОК'
                         />
                         <div className={cl.send}>
                             <Text
@@ -133,10 +134,22 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                 className={cl.withoutMargin}
                                 text={' в директ нашей страницы в '}
                             />
-                            <a href="https://www.instagram.com/salsabrest/" aria-label="Перейти в инстаграм">
+                            <a
+                                href='https://www.instagram.com/salsabrest/'
+                                aria-label='Перейти в инстаграм'
+                            >
                                 <Instagram className={cl.insta} />
                             </a>
-                            <Text text={'или заполните форму ниже'} />
+                            <Text text={'или напишите нам на почту'} />
+                            <a
+                                href={'malito:info@salsabrest.by'}
+                                className={cl.mailWrap}
+                            >
+                                <Mail className={cl.mail} />
+                                <Text text={'info@salsabrest.by'} />
+                            </a>
+
+                            {/* <Text text={'или заполните форму ниже'} />
                             <form
                                 ref={form}
                                 className={cl.form}
@@ -292,13 +305,13 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                 isOpen={isAuthModal}
                                 onClose={onCloseModal}
                                 className={cl.modal}
-                            />
+                            /> */}
                         </div>
                     </div>
 
                     <div style={Background} className={cl.formImg} />
                 </div>
             </div>
-        </div>
+        </section>
     );
 };

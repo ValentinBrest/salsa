@@ -24,27 +24,27 @@ export const Lessons = ({ className, backgroundColor }: LessonsProps) => {
     });
 
     return (
-        <div
+        <section
             style={{ background: backgroundColor }}
-            id="lessons"
+            id='lessons'
             className={classNames(cl.Lessons, {}, [className])}
             ref={triggerRef}
         >
-            <div className="container">
+            <div className='container'>
                 <div
                     className={classNames(
                         cl.wrap,
                         { [cl.active]: isVisible },
-                        [],
+                        []
                     )}
                 >
                     <div></div>
                     <div className={cl.decr}>
-                        <Text title="Занятия" />
+                        <Text title='Занятия' />
                         <Accordion
-                            height="1200px"
+                            height='1200px'
                             background={backgroundColor}
-                            linkId="lessons"
+                            linkId='lessons'
                         >
                             <Text
                                 align={TextAlign.RIGHT}
@@ -97,9 +97,9 @@ export const Lessons = ({ className, backgroundColor }: LessonsProps) => {
                             />
                         </Accordion>
                     </div>
-                    <img src={guiro} className={cl.guiro} alt="guiro" />
+                    <img src={guiro} className={cl.guiro} alt='guiro' />
                 </div>
             </div>
-        </div>
+        </section>
     );
 };

@@ -25,7 +25,7 @@ export const Answers = ({ className, backgroundColor }: AnswersProps) => {
     });
     
     return (
-        <div style={{background: backgroundColor}} id="question" className={classNames(cl.Answers, {}, [className])} ref={triggerRef}>
+        <section style={{background: backgroundColor}} id="question" className={classNames(cl.Answers, {}, [className])} ref={triggerRef}>
             <div className="container">
                 <div className={classNames(cl.wrap, {[cl.active]: isVisible}, [])}>
                     <Text title="Вопросы" className={cl.title}/>
@@ -33,6 +33,6 @@ export const Answers = ({ className, backgroundColor }: AnswersProps) => {
                     {answers.map((item) => <AnswerCard {...item} key={item.id} className={cl.AnswersCard}/>)}
                 </div>
             </div>
-        </div>
+        </section>
     );
 };

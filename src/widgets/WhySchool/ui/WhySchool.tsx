@@ -31,7 +31,7 @@ export const WhySchool = ({
     });
 
     return (
-        <div
+        <section
             style={{ background: backgroundColor }}
             id="about"
             className={classNames(cl.WhySchool, {}, [className])}
@@ -212,6 +212,6 @@ export const WhySchool = ({
                     </Accordion>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };

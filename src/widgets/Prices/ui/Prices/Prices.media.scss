@@ -1,6 +1,6 @@
 @media (max-width: 992px) {
     .wrap {
-        grid-template-rows: [row1-start] 100px [row2]  25px [row3] 50px [row4] 75px [row5] 75px [row6] 50px [row7] 50px [row8] 25px [row9] 50px [row10] 50px [row11] 115px [last];
+        grid-template-rows: [row1-start] 100px [row2]  25px [row3] 50px [row4] 75px [row5] 75px [row6] 50px [row7] 50px [row8] 25px [last];
     }
 
     .title {
@@ -24,7 +24,7 @@
     .wrap {
         display: grid;
         grid-template-columns: [start] 1fr [line2] 1fr [line3] 1fr [end];
-        grid-template-rows: [row1-start] 100px [row2]  35px [row3] 50px [row4] 65px [row5] 50px [row6] 65px [row7] 50px [row8] 65px [row9] 50px [row10] 65px [row11] 50px [row12] 65px [row13] 35px [row14] 50px [row15] 55px [row16] 50px [row17] 55px [row18] 55px [row19] 55px [last];
+        grid-template-rows: [row1-start] 100px [row2]  35px [row3] 50px [row4] 65px [row5] 50px [row6] 65px [row7] 50px [row8] 65px [row9] 50px [row10] 65px [row11] 50px [row12] 65px [row13] 35px [row14] 50px [row15] 55px [row16] 50px [row17] 55px [last];
         gap: 3px;
 
         margin-top: 25px;
@@ -53,7 +53,7 @@
 
 @media (max-width: 450px) {
     .wrap {
-        grid-template-rows: [row1-start] 100px [row2]  35px [row3] 50px [row4] 65px [row5] 50px [row6] 65px [row7] 50px [row8] 65px [row9] 50px [row10] 65px [row11] 50px [row12] 65px [row13] 35px [row14] 50px [row15] 55px [row16] 50px [row17] 55px [row18] 70px [row19] 55px [last];
+        grid-template-rows: [row1-start] 100px [row2]  35px [row3] 50px [row4] 65px [row5] 50px [row6] 65px [row7] 50px [row8] 65px [row9] 50px [row10] 65px [row11] 50px [row12] 65px [row13] 35px [row14] 50px [row15] 55px [row16] 80px [row17] 55px  [last];
     }
 
     .fff,

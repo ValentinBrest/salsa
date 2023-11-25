@@ -61,7 +61,7 @@ export const Photos = ({ className, backgroundColor }: PhotosProps) => {
     const styles = isLaptopScreen ? {width: '100%'}: {};
 
     return (
-        <div
+        <section
             style={{ background: backgroundColor }}
             id="photos"
             className={classNames(cl.Photos, {}, [className])}
@@ -90,6 +90,6 @@ export const Photos = ({ className, backgroundColor }: PhotosProps) => {
                     index={curImg}
                 />
             </div>
-        </div>
+        </section>
     );
 };

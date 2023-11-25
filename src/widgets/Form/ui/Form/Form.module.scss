@@ -11,7 +11,7 @@
     gap: 50px;
     justify-content: space-between;
 
-    height: 800px;
+    height: 620px;
 
     opacity: 0;
 }
@@ -147,6 +147,15 @@
     border-radius: 50%;
 
     animation: rotation 1s linear infinite;
+}
+
+.mailWrap {
+        text-decoration: none;
+}
+
+.mail {
+    width: 150px;
+    height: 150px;
 }
 
 @keyframes rotation {

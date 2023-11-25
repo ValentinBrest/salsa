@@ -38,7 +38,7 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
         { url: m4 },
     ];
     return (
-        <div
+        <section
             style={{ background: backgroundColor }}
             className={classNames(cl.Intro, {}, [className])}
         >
@@ -125,6 +125,6 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                     </div>
                 )}
             </div>
-        </div>
+        </section>
     );
 };

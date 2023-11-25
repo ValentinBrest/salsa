@@ -22,7 +22,7 @@ export const Abonement = ({ className, backgroundColor }: PricesProps) => {
     });
     
     return (
-        <div style={{background: backgroundColor}} ref={triggerRef}
+        <section style={{background: backgroundColor}} ref={triggerRef}
             id="abonement" className={classNames(cl.Abonement, {}, [className])}>
             <div className="container">
                 <div className={classNames(cl.wrap, {[cl.active]: isVisible}, [])}>
@@ -30,6 +30,6 @@ export const Abonement = ({ className, backgroundColor }: PricesProps) => {
                     <Prices/>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };

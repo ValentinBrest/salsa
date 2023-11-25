@@ -20,7 +20,7 @@ export const Events = ({ className, backgroundColor }: EventsProps) => {
     });
     
     return (
-        <div 
+        <section 
             style={{background: backgroundColor}} 
             id="events" 
             className={classNames(cl.Events, {}, [className])} 
@@ -56,6 +56,6 @@ export const Events = ({ className, backgroundColor }: EventsProps) => {
                     </div>
                 </div> 
             </div>
-        </div>
+        </section>
     );
 };

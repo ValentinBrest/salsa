@@ -1,5 +1,4 @@
 import { MutableRefObject, useRef, useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
 import { Accordion, Card } from 'shared/ui';
@@ -23,8 +22,6 @@ export const WhySchool = ({
 }: WhySchoolProps) => {
     const [isVisible, setIsVisible] = useState(false);
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
-    const isLaptopScreen = useMediaQuery({ query: '(max-width: 992px)' });
-    const isMobileScreen = useMediaQuery({ query: '(max-width: 576px)' });
     useInfiniteScroll({
         triggerRef,
         callback: () => setIsVisible(true),

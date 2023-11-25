@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link as LinkScroll } from 'react-scroll';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppLink, AppLinkTheme } from 'shared/ui';
+import { AppLink } from 'shared/ui';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 
 import { links } from '../../../../data/links/links';

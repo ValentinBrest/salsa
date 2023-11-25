@@ -26,10 +26,6 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
         threshold: 0.05,
     });
 
-    const Background = {
-        background: `center / cover no-repeat url(${dance})`,
-    };
-
     return (
         <section
             style={{ background: backgroundColor }}
@@ -79,7 +75,7 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                         </div>
                     </div>
 
-                    <div style={Background} className={cl.formImg} />
+                    <img loading="lazy" src={dance} className={cl.formImg} alt='все на танцы'/>
                 </div>
             </div>
         </section>

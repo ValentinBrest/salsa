@@ -97,7 +97,7 @@ export const Lessons = ({ className, backgroundColor }: LessonsProps) => {
                             />
                         </Accordion>
                     </div>
-                    <img src={guiro} className={cl.guiro} alt='guiro' />
+                    <img loading="lazy" src={guiro} className={cl.guiro} alt='guiro' />
                 </div>
             </div>
         </section>

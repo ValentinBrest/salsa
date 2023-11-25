@@ -2,7 +2,7 @@
     .Form {
         padding: var(--padding-xl);
     }
-    .wrap {
+    .formImg {
         height: 670px;
     }
 }
@@ -26,6 +26,9 @@
     .wrap {
         display: flex;
         height: 100%;
+    }
+    .formImg {
+        display: none;
     }
 
     .dance {

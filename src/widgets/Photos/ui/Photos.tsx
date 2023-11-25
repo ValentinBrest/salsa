@@ -76,7 +76,7 @@ export const Photos = ({ className, backgroundColor }: PhotosProps) => {
                     />
                     <div className={cl.gallery} onClick={(e) => onOpenModal(e)}>
                         {photos.map((item, index) => (<div key={index} className={classNames(cl.zoomWrap, {}, [cl[`cart${index+1}`]])}>
-                            <img src={item} data-order={index + 1} alt="фото"/>
+                            <img loading="lazy" src={item} data-order={index + 1} alt="фото"/>
                             <Zoom className={cl.zoom} />
                         </div>))}
                         

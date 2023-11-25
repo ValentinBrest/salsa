@@ -11,13 +11,14 @@
     gap: 50px;
     justify-content: space-between;
 
-    height: 620px;
-
     opacity: 0;
 }
 
 .formImg {
     border-radius: 15px;
+    height: 620px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .send {

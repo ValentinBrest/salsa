@@ -30,28 +30,28 @@ export const WhySchool = ({
     return (
         <section
             style={{ background: backgroundColor }}
-            id="about"
+            id='about'
             className={classNames(cl.WhySchool, {}, [className])}
             ref={triggerRef}
         >
-            <div className="container">
+            <div className='container'>
                 <div
                     className={classNames(
                         cl.decr,
                         { [cl.active]: isVisible },
-                        [],
+                        []
                     )}
                 >
                     <Text
                         className={cl.title}
                         theme={TextTheme.WITHOUT}
-                        title="Почему вам именно в школу «СальсаБрест»? "
+                        title='Почему вам именно в школу «СальсаБрест»? '
                     />
 
                     <Accordion
-                        height="3500px"
+                        height='3500px'
                         background={backgroundColor}
-                        linkId="about"
+                        linkId='about'
                     >
                         <div className={cl.wrap}>
                             <div>
@@ -121,7 +121,12 @@ export const WhySchool = ({
                                     }
                                 />
                             </div>
-                            <img src={bongi} className={cl.bongi} alt="бонги"/>
+                            <img
+                                loading='lazy'
+                                src={bongi}
+                                className={cl.bongi}
+                                alt='бонги'
+                            />
                         </div>
 
                         <Card
@@ -150,11 +155,16 @@ export const WhySchool = ({
                         </Card>
 
                         <div className={cl.invertedwrap}>
-                            <img src={maria} alt="maria" className={cl.maria} />
+                            <img
+                                loading='lazy'
+                                src={maria}
+                                alt='maria'
+                                className={cl.maria}
+                            />
                             <div>
                                 {
                                     <>
-                                        <Text subTitle="Представляем нашего преподавателя по женскому стилю в сальсе" />
+                                        <Text subTitle='Представляем нашего преподавателя по женскому стилю в сальсе' />
                                         <Text
                                             align={TextAlign.CENTER}
                                             text={

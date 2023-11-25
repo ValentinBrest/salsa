@@ -29,7 +29,7 @@ export const Answers = ({ className, backgroundColor }: AnswersProps) => {
             <div className="container">
                 <div className={classNames(cl.wrap, {[cl.active]: isVisible}, [])}>
                     <Text title="Вопросы" className={cl.title}/>
-                    <img src={clave} className={cl.clave} alt="клавы"/>
+                    <img loading="lazy" src={clave} className={cl.clave} alt="клавы"/>
                     {answers.map((item) => <AnswerCard {...item} key={item.id} className={cl.AnswersCard}/>)}
                 </div>
             </div>

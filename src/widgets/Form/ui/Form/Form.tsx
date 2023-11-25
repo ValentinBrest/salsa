@@ -66,7 +66,7 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                             </a>
                             <Text text={'или напишите нам на почту'} />
                             <a
-                                href={'malito:info@salsabrest.by'}
+                                href={'mailto:info@salsabrest.by'}
                                 className={cl.mailWrap}
                             >
                                 <Mail className={cl.mail} />

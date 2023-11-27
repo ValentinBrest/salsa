@@ -43,8 +43,17 @@
     }
 }
 
+.wrapSocial {
+    display: flex;
+}
+
 .insta {
     height: 80px;
+}
+
+.telega {
+    height: 70px;
+    fill: rgb(1 204 255);
 }
 
 .form {

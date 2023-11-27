@@ -6,7 +6,7 @@ import { Text, TextTheme } from 'shared/ui/Text/Text';
 import dance from '../../../../../public/img/dance.webp';
 import Mail from '../../../../../public/img/mail.svg';
 import Instagram from '../../../../shared/assets/icons/social/instagram.svg';
-
+import Telegram from '../../../../shared/assets/icons/social/telegram.svg';
 import cl from './Form.module.scss';
 
 interface FormProps {
@@ -14,9 +14,7 @@ interface FormProps {
     backgroundColor?: string;
 }
 
-
 export const Form = ({ className, backgroundColor }: FormProps) => {
-    
     const [isVisible, setIsVisible] = useState(false);
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
 
@@ -56,14 +54,22 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                             </div>
                             <Text
                                 className={cl.withoutMargin}
-                                text={' в директ нашей страницы в '}
+                                text={' в директ'}
                             />
-                            <a
-                                href='https://www.instagram.com/salsabrest/'
-                                aria-label='Перейти в инстаграм'
-                            >
-                                <Instagram className={cl.insta} />
-                            </a>
+                            <div className={cl.wrapSocial}>
+                                <a
+                                    href='https://www.instagram.com/salsabrest/'
+                                    aria-label='Перейти в инстаграм'
+                                >
+                                    <Instagram className={cl.insta} />
+                                </a>
+                                <a
+                                    href='https://t.me/salsabrestdirect'
+                                    aria-label='Перейти в телеграм'
+                                >
+                                    <Telegram className={cl.telega} />
+                                </a>
+                            </div>
                             <Text text={'или напишите нам на почту'} />
                             <a
                                 href={'mailto:info@salsabrest.by'}
@@ -75,7 +81,12 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                         </div>
                     </div>
 
-                    <img loading="lazy" src={dance} className={cl.formImg} alt='все на танцы'/>
+                    <img
+                        loading='lazy'
+                        src={dance}
+                        className={cl.formImg}
+                        alt='все на танцы'
+                    />
                 </div>
             </div>
         </section>

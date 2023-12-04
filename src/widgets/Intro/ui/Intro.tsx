@@ -73,10 +73,10 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                 <div className={cl.center}>
                     <h1 className={cl.title}>«СальсаБрест»</h1>
                     <h2 className={cl.subtitle}>
-                        <span>МЫ СОЗДАЁМ БРЕНД.</span>
+                        <span>Первая школа сальсы в Бресте</span>
                         <span className={cl.cool}>
                             {' '}
-                            Вы будете гордиться тем, что прошли нашу школу!
+                            САЛЬСА - больше, чем танец!
                         </span>
                     </h2>
                     <img

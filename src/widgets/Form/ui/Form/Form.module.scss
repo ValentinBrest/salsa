@@ -168,6 +168,30 @@
     height: 150px;
 }
 
+.direct {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+    font: var(--font-m);
+    &::after {
+        width: 230px;
+    }
+
+    &:hover::after {
+        content: attr(data-text);
+        border-radius: 3px;
+        position: absolute;
+        left: -36px;
+        right: 0%;
+        bottom: -22px;
+        z-index: 1;
+        background: var(--inverted-primary-color);
+        padding: 5px;
+        color: var(--primary-color);
+    }
+}
+
 @keyframes rotation {
     0% {
         transform: rotate(0deg);

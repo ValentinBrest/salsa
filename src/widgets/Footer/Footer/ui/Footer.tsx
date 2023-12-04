@@ -33,8 +33,10 @@ export const Footer = ({ className, backgroundColor }: FooterProps) => {
                             <Instagram className={cl.instagram} />
                         </a>
                         <a
-                            href={'https://t.me/salsabrestdirect'}
+                            href={'https://t.me/salsabrest'}
                             aria-label='Перейти в телеграм'
+                            className={cl.direct}
+                            data-text={'Телеграм-канал "СальсаБрест"'}
                         >
                             <Telegram className={cl.telegram} />
                         </a>

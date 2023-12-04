@@ -66,6 +66,8 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                 <a
                                     href='https://t.me/salsabrestdirect'
                                     aria-label='Перейти в телеграм'
+                                    className={cl.direct}
+                                    data-text={'Директ школы "СальсаБрест"'}
                                 >
                                     <Telegram className={cl.telega} />
                                 </a>

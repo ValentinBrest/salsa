@@ -21,11 +21,11 @@ export const MainPage = () => {
             <WhySalsa backgroundColor={bgSecond}/>
             <WhySchool backgroundColor={bgFirst} backgroundColorCard={bgSecond}/>
             <Lessons backgroundColor={bgSecond}/>
+            <Abonement backgroundColor={bgFirst}/>
+            <Events backgroundColor={bgSecond}/>
+            <Photos backgroundColor={bgFirst}/>
+            <Answers backgroundColor={bgSecond}/>
             <Information backgroundColor={bgFirst}/>
-            <Abonement backgroundColor={bgSecond}/>
-            <Events backgroundColor={bgFirst}/>
-            <Photos backgroundColor={bgSecond}/>
-            <Answers backgroundColor={bgFirst}/>
             <Form backgroundColor={bgSecond}/>
         </>
     );

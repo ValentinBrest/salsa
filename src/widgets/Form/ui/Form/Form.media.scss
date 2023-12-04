@@ -31,6 +31,13 @@
         display: none;
     }
 
+    .direct {
+        &:hover::after {
+            left: -180px;
+            bottom: -22px;
+            }
+    }
+
     .dance {
         display: none;
     }

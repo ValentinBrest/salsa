@@ -5,6 +5,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
 
 import logo from '../../../../public/img/logo.webp';
+import logoNewYear from '../../../../public/img/newYear/logo_new_year.png';
 import m1 from '../../../../public/img/main/1.webp';
 import m2 from '../../../../public/img/main/2.webp';
 import m3 from '../../../../public/img/main/3.webp';
@@ -81,7 +82,7 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                     </h2>
                     <img
                         className={classNames(cl.logo, {}, [cl.anim])}
-                        src={logo}
+                        src={logoNewYear}
                         alt="salsa-brest"
                     />
                     <LinkScroll href="/" to="form" smooth={true}>

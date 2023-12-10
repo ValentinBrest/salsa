@@ -1,7 +1,19 @@
 .Events {
     overflow: hidden;
     width: 100%;
-    padding: var(--padding-xxl);
+    padding: var(--padding-l);
+    padding-bottom: 120px;
+    position: relative;
+}
+
+.snowMan {
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    z-index: 50;
+    width: 188px;
+    height: 111px;
+    opacity: 0.75;
 }
 
 .superWrap {
@@ -11,13 +23,14 @@
 }
 
 .wrap {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-around;
-    height: 210px;
+    gap: 10px;
 
     iframe {
         width: 370px;
-        height: 100%;
+        height: 210px;
     }
 }
 

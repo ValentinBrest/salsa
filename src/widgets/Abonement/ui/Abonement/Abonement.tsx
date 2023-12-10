@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
 import { Text } from 'shared/ui/Text/Text';
 import { Prices } from 'widgets/Prices';
-
+import violet from '../../../../../public/img/newYear/violet.png';
 import cl from './Abonement.module.scss';
 
 interface PricesProps {
@@ -20,14 +20,31 @@ export const Abonement = ({ className, backgroundColor }: PricesProps) => {
         callback: () => setIsVisible(true),
         threshold: 0.05,
     });
-    
+
     return (
-        <section style={{background: backgroundColor}} ref={triggerRef}
-            id="abonement" className={classNames(cl.Abonement, {}, [className])}>
-            <div className="container">
-                <div className={classNames(cl.wrap, {[cl.active]: isVisible}, [])}>
-                    <Text title="Абонементы" />
-                    <Prices/>
+        <section
+            style={{ background: backgroundColor }}
+            ref={triggerRef}
+            id='abonement'
+            className={classNames(cl.Abonement, {}, [className])}
+        >
+            <div className='container'>
+                <div
+                    className={classNames(
+                        cl.wrap,
+                        { [cl.active]: isVisible },
+                        []
+                    )}
+                >
+                    <Text
+                        // title="Абонементы"
+                        hardTitle={[
+                            'Аб',
+                            <img src={violet} key='1' className={'toy'}/>,
+                            'нементы',
+                        ]}
+                    />
+                    <Prices />
                 </div>
             </div>
         </section>

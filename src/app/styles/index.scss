@@ -86,10 +86,22 @@ body {
         width: 540px;
         padding: 0 10px;
     }
+    .toy {
+        width: 25px;
+    }
 }
 
 @media (max-width: 576px) {
     .container {
         width: 100%;
     }
+    .toy {
+        width: 17px;
+    }
 }
+
+
+@font-face {
+    font-family: "NewYear"; 
+    src: url("./newYear.ttf"); 
+} 

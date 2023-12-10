@@ -2,6 +2,16 @@
     overflow: hidden;
     width: 100%;
     padding: var(--padding-l);
+    position: relative;
+}
+
+.partSnow {
+    position: absolute;
+    left: 50%;
+    opacity: 0.4;
+    top: -20px;
+    width: 202px;
+    height: 109px;
 }
 
 .wrap {

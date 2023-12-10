@@ -6,6 +6,7 @@ import { Form } from 'widgets/Form';
 import { Information } from 'widgets/Information';
 import { Intro } from 'widgets/Intro';
 import { Lessons } from 'widgets/Lessons';
+import { NewYear } from 'widgets/NewYear';
 import { Photos } from 'widgets/Photos';
 import { WhySalsa } from 'widgets/WhySalsa';
 import { WhySchool } from 'widgets/WhySchool';
@@ -27,6 +28,7 @@ export const MainPage = () => {
             <Answers backgroundColor={bgSecond}/>
             <Information backgroundColor={bgFirst}/>
             <Form backgroundColor={bgSecond}/>
+            <NewYear backgroundColor={bgFirst}/>
         </>
     );
 };

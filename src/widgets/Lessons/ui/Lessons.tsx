@@ -58,6 +58,15 @@ export const Lessons = ({ className, backgroundColor }: LessonsProps) => {
                                         знания и умения. А уровень погружения в
                                         танец зависит от вашего желания.
                                         <br />
+                                        <br /> На парных занятиях часть урока
+                                        отведена под соло, так как без умения
+                                        танцевать сольно невозможно научиться
+                                        качественному танцеванию в паре. На
+                                        парной части занятия пары постоянно
+                                        меняются, что обеспечивает значительно
+                                        более быстрый рост навыка
+                                        ведения/следования.
+                                        <br />
                                         <br /> У нас на занятиях дружеская
                                         атмосфера, здоровый юмор и много хорошей
                                         музыки. Мы любим свое дело и делаем его
@@ -97,7 +106,12 @@ export const Lessons = ({ className, backgroundColor }: LessonsProps) => {
                             />
                         </Accordion>
                     </div>
-                    <img loading="lazy" src={guiro} className={cl.guiro} alt='guiro' />
+                    <img
+                        loading='lazy'
+                        src={guiro}
+                        className={cl.guiro}
+                        alt='guiro'
+                    />
                 </div>
             </div>
         </section>

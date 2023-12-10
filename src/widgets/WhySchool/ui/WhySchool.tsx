@@ -3,10 +3,9 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
 import { Accordion, Card } from 'shared/ui';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
-
 import bongi from '../../../../public/img/instuments/bongi.webp';
 import maria from '../../../../public/img/maria.webp';
-
+import orange from '../../../../public/img/newYear/orange.png';
 import cl from './WhySchool.module.scss';
 
 interface WhySchoolProps {
@@ -45,7 +44,12 @@ export const WhySchool = ({
                     <Text
                         className={cl.title}
                         theme={TextTheme.WITHOUT}
-                        title='Почему вам именно в школу «СальсаБрест»? '
+                        hardTitle={[
+                            'Почему вам именн',
+                            <img src={orange} key='1' className={'toy'}/>,
+                            ' в школу «СальсаБрест',
+                        ]}
+                        // title='Почему вам именно в школу «СальсаБрест»? '
                     />
 
                     <Accordion
@@ -203,7 +207,7 @@ export const WhySchool = ({
                                                     продолжает развиваться сама
                                                     и с радостью делится
                                                     приобретенным опытом со
-                                                    своими учениками. А имея
+                                                    своими обучающимися. А имея
                                                     вдобавок и высшее
                                                     педагогическое образование,
                                                     она максимально

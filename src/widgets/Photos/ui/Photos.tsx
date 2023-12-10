@@ -1,4 +1,10 @@
-import { MutableRefObject, useCallback, useEffect, useRef, useState } from 'react';
+import {
+    MutableRefObject,
+    useCallback,
+    useEffect,
+    useRef,
+    useState,
+} from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
@@ -14,7 +20,7 @@ import ph5 from '../../../../public/img/gallery/5.webp';
 import ph6 from '../../../../public/img/gallery/6.webp';
 import ph7 from '../../../../public/img/gallery/7.webp';
 import Zoom from '../../../shared/assets/icons/zoom.svg';
-
+import green from '../../../../public/img/newYear/green.png';
 import { PhotosModal } from './PhotosModal';
 
 import cl from './Photos.module.scss';
@@ -33,7 +39,9 @@ export const Photos = ({ className, backgroundColor }: PhotosProps) => {
     const [isVisible, setIsVisible] = useState(false);
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
 
-    const photos = isTableScreen ? [ph1, ph2mb, ph3, ph4mb, ph5, ph6, ph7] :[ph1, ph2, ph3, ph4, ph5, ph6, ph7];
+    const photos = isTableScreen
+        ? [ph1, ph2mb, ph3, ph4mb, ph5, ph6, ph7]
+        : [ph1, ph2, ph3, ph4, ph5, ph6, ph7];
 
     useInfiniteScroll({
         triggerRef,
@@ -58,28 +66,52 @@ export const Photos = ({ className, backgroundColor }: PhotosProps) => {
             : document.body.classList.remove('lock');
     }, [isAuthModal]);
 
-    const styles = isLaptopScreen ? {width: '100%'}: {};
+    const styles = isLaptopScreen ? { width: '100%' } : {};
 
     return (
         <section
             style={{ background: backgroundColor }}
-            id="photos"
+            id='photos'
             className={classNames(cl.Photos, {}, [className])}
             ref={triggerRef}
         >
-            <div className="container" style={styles}>
-                <div className={classNames(cl.wrap, {[cl.active]: isVisible}, [])}>
-                    <Text title="Фотогалерея" />
+            <div className='container' style={styles}>
+                <div
+                    className={classNames(
+                        cl.wrap,
+                        { [cl.active]: isVisible },
+                        []
+                    )}
+                >
+                    {/* <Text title="Фотогалерея" /> */}
                     <Text
-                        text="Фотографии с вечеринок, мероприятий и занятий."
+                        hardTitle={[
+                            'Фот',
+                            <img src={green} key='2' className={'toy'}/>,
+                            'галерея',
+                        ]}
+                    />
+                    <Text
+                        text='Фотографии с вечеринок, мероприятий и занятий.'
                         align={TextAlign.CENTER}
                     />
                     <div className={cl.gallery} onClick={(e) => onOpenModal(e)}>
-                        {photos.map((item, index) => (<div key={index} className={classNames(cl.zoomWrap, {}, [cl[`cart${index+1}`]])}>
-                            <img loading="lazy" src={item} data-order={index + 1} alt="фото"/>
-                            <Zoom className={cl.zoom} />
-                        </div>))}
-                        
+                        {photos.map((item, index) => (
+                            <div
+                                key={index}
+                                className={classNames(cl.zoomWrap, {}, [
+                                    cl[`cart${index + 1}`],
+                                ])}
+                            >
+                                <img
+                                    loading='lazy'
+                                    src={item}
+                                    data-order={index + 1}
+                                    alt='фото'
+                                />
+                                <Zoom className={cl.zoom} />
+                            </div>
+                        ))}
                     </div>
                 </div>
                 <PhotosModal

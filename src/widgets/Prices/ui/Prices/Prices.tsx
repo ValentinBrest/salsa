@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 
 import { prices } from '../../../../../data/prices/prices';
-
+import meshok from '../../../../../public/img/newYear/meshok.png';
 import cl from './Prices.module.scss';
 
 interface PricesProps {
@@ -17,9 +17,15 @@ export const Prices = ({ className, backgroundColor }: PricesProps) => {
     return (
         <div
             style={{ background: backgroundColor }}
-            id="price"
+            id='price'
             className={classNames(cl.Prices, {}, [className])}
         >
+            <img
+                loading='lazy'
+                src={meshok}
+                className={cl.meshok}
+                alt='meshok'
+            />
             <div className={cl.wrap}>
                 {!isTabletScreen && <div />}
                 {prices.header.map((item, index) => (
@@ -27,7 +33,7 @@ export const Prices = ({ className, backgroundColor }: PricesProps) => {
                         key={index}
                         className={classNames(cl.header, {}, [className])}
                     >
-                        {index === 0 && isMobileScreen? (
+                        {index === 0 && isMobileScreen ? (
                             <Text
                                 text={'"Студен-ческий"'}
                                 theme={TextTheme.ITALIC}
@@ -70,12 +76,12 @@ export const Prices = ({ className, backgroundColor }: PricesProps) => {
                                     [cl.firstClm]: !(index % 4),
                                     [cl.third]: isTabletScreen && !(index % 4),
                                 },
-                                [className],
+                                [className]
                             )}
                             text={item}
                             theme={TextTheme.ITALIC}
                         />
-                    )),
+                    ))
                 )}
                 {!isTabletScreen && <div />}
                 {<div className={cl.woman}>Женский стиль</div>}
@@ -89,14 +95,15 @@ export const Prices = ({ className, backgroundColor }: PricesProps) => {
                                     [cl.evenWoman]: !!(index % 2),
                                     [cl.oddWoman]: !(elIndex % 2),
                                     [cl.firstClm]: !(index % 4),
-                                    [cl.third]: isTabletScreen && !(elIndex % 1),
+                                    [cl.third]:
+                                        isTabletScreen && !(elIndex % 1),
                                 },
-                                [className],
+                                [className]
                             )}
                             text={item}
                             theme={TextTheme.ITALIC}
                         />
-                    )),
+                    ))
                 )}
             </div>
         </div>

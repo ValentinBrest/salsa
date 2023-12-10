@@ -25,16 +25,22 @@ function App() {
         };
     }, []);
     return (
-        <div className="app">
-            <Suspense fallback="">
-                <NavBar/>
-                <main className="content-page">
-                    <AppRouter/>  
-                    <LinkScroll href="/" to={'up'} aria-label="наверх" smooth={true} className={`pageup ${isSctollTo? 'activeScroll': ''}`}>
-                        <Up className="up" />
+        <div className='app'>
+            <Suspense fallback=''>
+                <NavBar />
+                <main className='content-page'>
+                    <AppRouter />
+                    <LinkScroll
+                        href='/'
+                        to={'up'}
+                        aria-label='наверх'
+                        smooth={true}
+                        className={`pageup ${isSctollTo ? 'activeScroll' : ''}`}
+                    >
+                        <Up className='up' />
                     </LinkScroll>
                 </main>
-                <Footer backgroundColor={bgFirst}/>
+                <Footer backgroundColor={bgFirst} />
             </Suspense>
         </div>
     );

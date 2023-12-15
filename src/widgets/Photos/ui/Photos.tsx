@@ -19,6 +19,10 @@ import ph4mb from '../../../../public/img/gallery/4-mb.webp';
 import ph5 from '../../../../public/img/gallery/5.webp';
 import ph6 from '../../../../public/img/gallery/6.webp';
 import ph7 from '../../../../public/img/gallery/7.webp';
+import ph8 from '../../../../public/img/gallery/8.webp';
+import ph9 from '../../../../public/img/gallery/9.webp';
+import ph10 from '../../../../public/img/gallery/10.webp';
+import ph11 from '../../../../public/img/gallery/11.webp';
 import Zoom from '../../../shared/assets/icons/zoom.svg';
 import green from '../../../../public/img/newYear/green.png';
 import { PhotosModal } from './PhotosModal';
@@ -40,8 +44,8 @@ export const Photos = ({ className, backgroundColor }: PhotosProps) => {
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
 
     const photos = isTableScreen
-        ? [ph1, ph2mb, ph3, ph4mb, ph5, ph6, ph7]
-        : [ph1, ph2, ph3, ph4, ph5, ph6, ph7];
+        ? [ph1, ph2, ph3, ph4mb, ph5, ph6, ph7, ph8, ph9, ph10, ph11]
+        : [ph1, ph2, ph3, ph4, ph5, ph6, ph7, ph8, ph9, ph10, ph11];
 
     useInfiniteScroll({
         triggerRef,

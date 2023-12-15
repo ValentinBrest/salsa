@@ -2,17 +2,17 @@ import { MutableRefObject, useRef, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
 import logo from '../../../../public/img/logo.webp';
-import svitok from '../../../../public/img/newYear/svitok.png';
-import venok from '../../../../public/img/newYear/venok.png';
+import svitok from '../../../../public/img/newYear/svitok.webp';
+import venok from '../../../../public/img/newYear/venok.webp';
+import bg from '../../../../public/img/newYear/newYearDark.webp';
 
 import cl from './NewYear.module.scss';
 
 interface NewYearProps {
     className?: string;
-    backgroundColor?: string;
 }
 
-export const NewYear = ({ className, backgroundColor }: NewYearProps) => {
+export const NewYear = ({ className }: NewYearProps) => {
     const [isVisible, setIsVisible] = useState(false);
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
 
@@ -22,7 +22,11 @@ export const NewYear = ({ className, backgroundColor }: NewYearProps) => {
     });
     return (
         <section
-            style={{ background: backgroundColor }}
+            style={{
+                backgroundImage: `url(${bg})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+            }}
             id='salsa'
             className={classNames(cl.NewYear, {}, [className])}
             ref={triggerRef}

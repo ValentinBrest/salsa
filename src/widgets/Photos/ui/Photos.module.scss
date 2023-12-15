@@ -12,8 +12,8 @@
 .gallery {
     display: grid;
     grid-auto-rows: 300px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 300px);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 150px);
     gap: 10px;
 
     img {
@@ -48,7 +48,7 @@
 
     .cart5 {
         overflow: hidden;
-        grid-column: 4/5;
+        grid-column: 6/7;
         grid-row: 3/6;
     }
 
@@ -62,6 +62,30 @@
         overflow: hidden;
         grid-column: 2/4;
         grid-row: 5/6;
+    }
+
+    .cart8 {
+        overflow: hidden;
+        grid-column: 4/6;
+        grid-row: 4/6;
+    }
+
+    .cart9 {
+        overflow: hidden;
+        grid-column: 5/6;
+        grid-row: 1/4;
+    }
+
+    .cart10 {
+        overflow: hidden;
+        grid-column: 4/5;
+        grid-row: 3/4;
+    }
+
+    .cart11 {
+        overflow: hidden;
+        grid-column: 6/7;
+        grid-row: 1/3;
     }
 }
 

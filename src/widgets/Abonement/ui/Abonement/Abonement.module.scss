@@ -36,4 +36,9 @@
     transition: all 1s;
 }
 
+.text {
+    margin-top: 20px;
+    font: var(--font-m)
+}
+
 @import "./Abonement.media";

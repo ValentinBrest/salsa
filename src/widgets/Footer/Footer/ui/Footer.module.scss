@@ -92,6 +92,11 @@
     fill: var(--hover-color);
 }
 
+.wrapText {
+    display: flex;
+    flex-direction: column;
+}
+
 .text {
     text-align: center;
     opacity: 0.75;

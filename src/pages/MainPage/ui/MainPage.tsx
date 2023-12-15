@@ -28,7 +28,7 @@ export const MainPage = () => {
             <Answers backgroundColor={bgSecond}/>
             <Information backgroundColor={bgFirst}/>
             <Form backgroundColor={bgSecond}/>
-            <NewYear backgroundColor={bgFirst}/>
+            <NewYear/>
         </>
     );
 };

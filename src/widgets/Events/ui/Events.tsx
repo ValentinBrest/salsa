@@ -4,7 +4,7 @@ import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfinite
 import { Text } from 'shared/ui/Text/Text';
 import cl from './Events.module.scss';
 
-import snowMan from '../../../../public/img/newYear/snowman.png';
+import snowMan from '../../../../public/img/newYear/snowman.webp';
 
 interface EventsProps {
     className?: string;
@@ -69,7 +69,7 @@ export const Events = ({ className, backgroundColor }: EventsProps) => {
                             title='video'
                         />
                         <iframe
-                            src='https://www.youtube.com/embed/u_9hLeLM7yI'
+                            src='https://www.youtube.com/embed/b9w-RyB-oCM?si=WsH9XdEVPTXCQrRI'
                             loading='lazy'
                             frameBorder='0'
                             allow='autoplay; encrypted-media'
@@ -78,7 +78,7 @@ export const Events = ({ className, backgroundColor }: EventsProps) => {
                         />
                         <iframe
                             loading='lazy'
-                            src='https://www.youtube.com/embed/epWiSNsGPYc?si=ZwJ95tpv40txB2Uh'
+                            src='https://www.youtube.com/embed/Ic1BuTlEwFc?si=IHQZQ7xm33LvBUof'
                             frameBorder='0'
                             allow='autoplay; encrypted-media'
                             allowFullScreen
@@ -86,7 +86,7 @@ export const Events = ({ className, backgroundColor }: EventsProps) => {
                         />
                         <iframe
                             loading='lazy'
-                            src='https://www.youtube.com/embed/zjO2AyC8wQ0?si=BFvX4-BOpr5Fyzhi'
+                            src='https://www.youtube.com/embed/Wud8Wq4huIs?si=NKAu3HAyBiTpFFX8'
                             frameBorder='0'
                             allow='autoplay; encrypted-media'
                             allowFullScreen

@@ -53,13 +53,6 @@ export const Prices = ({ className, backgroundColor }: PricesProps) => {
                                 className={cl.old}
                             />
                         )}
-                        {item.note && (
-                            <Text
-                                text={item.note}
-                                theme={TextTheme.ITALIC}
-                                className={cl.note}
-                            />
-                        )}
                     </div>
                 ))}
                 {!isTabletScreen && <div />}

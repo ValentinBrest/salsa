@@ -4,7 +4,7 @@ import SimpleImageSlider from 'react-simple-image-slider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
 
-import logo from '../../../../public/img/logo.webp';
+// import logo from '../../../../public/img/logo.webp';
 import logoNewYear from '../../../../public/img/newYear/logo_new_year.webp';
 import m1 from '../../../../public/img/main/1.webp';
 import m2 from '../../../../public/img/main/2.webp';

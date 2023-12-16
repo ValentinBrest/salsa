@@ -46,6 +46,7 @@ export const Events = ({ className, backgroundColor }: EventsProps) => {
                     <div className={cl.wrap}>
                         <iframe
                             src='https://www.youtube.com/embed/u_9hLeLM7yI'
+                            srcDoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/u_9hLeLM7yI?autoplay=1><img src=https://img.youtube.com/vi/u_9hLeLM7yI/hqdefault.jpg alt='Fabrizio & Tania'><span>▶</span></a>"
                             loading='lazy'
                             frameBorder='0'
                             allow='autoplay; encrypted-media'
@@ -54,7 +55,8 @@ export const Events = ({ className, backgroundColor }: EventsProps) => {
                         />
                         <iframe
                             loading='lazy'
-                            src='https://www.youtube.com/embed/epWiSNsGPYc?si=ZwJ95tpv40txB2Uh'
+                            src='https://www.youtube.com/embed/epWiSNsGPYc'
+                            srcDoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/epWiSNsGPYc?autoplay=1><img src=https://img.youtube.com/vi/epWiSNsGPYc/hqdefault.jpg alt='Terry SalsAlianza & Amely'><span>▶</span></a>"
                             frameBorder='0'
                             allow='autoplay; encrypted-media'
                             allowFullScreen
@@ -62,14 +64,16 @@ export const Events = ({ className, backgroundColor }: EventsProps) => {
                         />
                         <iframe
                             loading='lazy'
-                            src='https://www.youtube.com/embed/zjO2AyC8wQ0?si=BFvX4-BOpr5Fyzhi'
+                            src='https://www.youtube.com/embed/zjO2AyC8wQ0'
+                            srcDoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/zjO2AyC8wQ0?autoplay=1><img src=https://img.youtube.com/vi/zjO2AyC8wQ0/hqdefault.jpg alt='Rodrigo Cortazar & Alien Ramirez'><span>▶</span></a>"
                             frameBorder='0'
                             allow='autoplay; encrypted-media'
                             allowFullScreen
                             title='video'
                         />
                         <iframe
-                            src='https://www.youtube.com/embed/b9w-RyB-oCM?si=WsH9XdEVPTXCQrRI'
+                            src='https://www.youtube.com/embed/b9w-RyB-oCM'
+                            srcDoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/b9w-RyB-oCM?autoplay=1><img src=https://img.youtube.com/vi/b9w-RyB-oCM/hqdefault.jpg alt='Fernando Sosa and Tropical Gem Shine'><span>▶</span></a>"
                             loading='lazy'
                             frameBorder='0'
                             allow='autoplay; encrypted-media'
@@ -78,7 +82,8 @@ export const Events = ({ className, backgroundColor }: EventsProps) => {
                         />
                         <iframe
                             loading='lazy'
-                            src='https://www.youtube.com/embed/Ic1BuTlEwFc?si=IHQZQ7xm33LvBUof'
+                            src='https://www.youtube.com/embed/Ic1BuTlEwFc'
+                            srcDoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/Ic1BuTlEwFc?autoplay=1><img src=https://img.youtube.com/vi/Ic1BuTlEwFc/hqdefault.jpg alt='Adolfo Indacochea Mambo'><span>▶</span></a>"
                             frameBorder='0'
                             allow='autoplay; encrypted-media'
                             allowFullScreen
@@ -86,7 +91,8 @@ export const Events = ({ className, backgroundColor }: EventsProps) => {
                         />
                         <iframe
                             loading='lazy'
-                            src='https://www.youtube.com/embed/Wud8Wq4huIs?si=NKAu3HAyBiTpFFX8'
+                            src='https://www.youtube.com/embed/Wud8Wq4huIs'
+                            srcDoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/Wud8Wq4huIs?autoplay=1><img src=https://img.youtube.com/vi/Wud8Wq4huIs/hqdefault.jpg alt='Adolfo Indacochea Mambo'><span>▶</span></a>"
                             frameBorder='0'
                             allow='autoplay; encrypted-media'
                             allowFullScreen

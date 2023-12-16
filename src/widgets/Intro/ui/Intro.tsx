@@ -5,7 +5,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
 
 import logo from '../../../../public/img/logo.webp';
-import logoNewYear from '../../../../public/img/newYear/logo_new_year.png';
+import logoNewYear from '../../../../public/img/newYear/logo_new_year.webp';
 import m1 from '../../../../public/img/main/1.webp';
 import m2 from '../../../../public/img/main/2.webp';
 import m3 from '../../../../public/img/main/3.webp';
@@ -29,13 +29,13 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
     const images = [
         { url: m1 },
         { url: m8 },
-        { url: m5 },
+        { url: m6 },
         { url: m3 },
     ];
 
     const images2 = [
         { url: m2 },
-        { url: m6 },
+        { url: m5 },
         { url: m7 },
         { url: m4 },
     ];
@@ -93,6 +93,7 @@ export const Intro = ({ className, backgroundColor }: IntroProps) => {
                         </span>
                     </h2>
                     <img
+                        loading='lazy'
                         className={classNames(cl.logo, {}, [cl.anim])}
                         src={logoNewYear}
                         alt="salsa-brest"

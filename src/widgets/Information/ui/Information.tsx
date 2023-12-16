@@ -4,7 +4,7 @@ import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfinite
 import { Accordion } from 'shared/ui';
 import { Text, TextAlign } from 'shared/ui/Text/Text';
 
-import tree from '../../../../public/img/newYear/tree.png';
+import tree from '../../../../public/img/newYear/tree.webp';
 
 import cl from './Information.module.scss';
 

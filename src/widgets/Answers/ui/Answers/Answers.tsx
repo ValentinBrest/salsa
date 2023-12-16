@@ -42,7 +42,23 @@ export const Answers = ({ className, backgroundColor }: AnswersProps) => {
                 >
                     <Text
                         // title={`Вопросы`}
-                        hardTitle={['В', <img src={blue} className={'toy'} key="1"/>, 'пр', <img src={blue} className={'toy'} key='2'/>, 'сы']}
+                        hardTitle={[
+                            'В',
+                            <img
+                                loading='lazy'
+                                src={blue}
+                                className={'toy'}
+                                key='1'
+                            />,
+                            'пр',
+                            <img
+                                loading='lazy'
+                                src={blue}
+                                className={'toy'}
+                                key='2'
+                            />,
+                            'сы',
+                        ]}
                         className={cl.title}
                     />
                     <img

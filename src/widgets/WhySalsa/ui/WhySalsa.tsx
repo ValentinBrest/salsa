@@ -6,7 +6,7 @@ import { Text, TextAlign } from 'shared/ui/Text/Text';
 
 import gold from '../../../../public/img/newYear/gold.png';
 import saxophone from '../../../../public/img/instuments/saxophone.webp';
-import partSnow from '../../../../public/img/newYear/partSnow.png';
+import partSnow from '../../../../public/img/newYear/partSnow.webp';
 
 import cl from './WhySalsa.module.scss';
 
@@ -56,7 +56,7 @@ export const WhySalsa = ({ className, backgroundColor }: WhySalsaProps) => {
                             // title='Почему сальса?'
                             hardTitle={[
                                 'П',
-                                <img src={gold} key='1' className={'toy'} />,
+                                <img loading='lazy' src={gold} key='1' className={'toy'} />,
                                 'чему сальса?',
                             ]}
                         />

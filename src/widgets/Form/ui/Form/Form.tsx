@@ -42,7 +42,7 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                     <div>
                         <Text
                             theme={TextTheme.WITHOUT}
-                            title='ЗАПИШИТЕСЬ НА ПЕРВЫЙ УРОК'
+                            title='ЗАПИШИТЕСЬ НА ПРОБНЫЙ УРОК'
                         />
                         <div className={cl.send}>
                             <Text

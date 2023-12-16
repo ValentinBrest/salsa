@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 
 import { prices } from '../../../../../data/prices/prices';
-import meshok from '../../../../../public/img/newYear/meshok.png';
+import meshok from '../../../../../public/img/newYear/meshok.webp';
 import cl from './Prices.module.scss';
 
 interface PricesProps {

@@ -40,7 +40,7 @@ export const Abonement = ({ className, backgroundColor }: PricesProps) => {
                         // title="Абонементы"
                         hardTitle={[
                             'Аб',
-                            <img src={violet} key='1' className={'toy'} />,
+                            <img loading='lazy' src={violet} key='1' className={'toy'} />,
                             'нементы',
                         ]}
                     />

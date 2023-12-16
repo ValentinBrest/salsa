@@ -31,7 +31,7 @@ export const NavBar = ({ className }: NavBarProps) => {
                 <div className='container'>
                     <div className={cl.wrap}>
                         <a
-                            href='https://www.salsabrest.by'
+                            href='https://salsabrest.by'
                             className={cl.linkLogo}
                             key={'salsa'}
                         >

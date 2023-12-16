@@ -56,7 +56,7 @@ export const WhySalsa = ({ className, backgroundColor }: WhySalsaProps) => {
                             // title='Почему сальса?'
                             hardTitle={[
                                 'П',
-                                <img loading='lazy' src={gold} key='1' className={'toy'} />,
+                                <img loading='lazy' src={gold} alt='toy' key='1' className={'toy'} />,
                                 'чему сальса?',
                             ]}
                         />

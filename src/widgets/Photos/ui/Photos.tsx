@@ -91,7 +91,7 @@ export const Photos = ({ className, backgroundColor }: PhotosProps) => {
                     <Text
                         hardTitle={[
                             'Фот',
-                            <img loading='lazy' src={green} key='2' className={'toy'}/>,
+                            <img loading='lazy' src={green} alt='toy' key='2' className={'toy'}/>,
                             'галерея',
                         ]}
                     />

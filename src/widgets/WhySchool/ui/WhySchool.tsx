@@ -46,7 +46,7 @@ export const WhySchool = ({
                         theme={TextTheme.WITHOUT}
                         hardTitle={[
                             'Почему вам именн',
-                            <img loading='lazy' src={orange} key='1' className={'toy'}/>,
+                            <img loading='lazy' alt='toy' src={orange} key='1' className={'toy'}/>,
                             ' в школу «СальсаБрест',
                         ]}
                         // title='Почему вам именно в школу «СальсаБрест»? '

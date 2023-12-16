@@ -10,6 +10,7 @@ import { NewYear } from 'widgets/NewYear';
 import { Photos } from 'widgets/Photos';
 import { WhySalsa } from 'widgets/WhySalsa';
 import { WhySchool } from 'widgets/WhySchool';
+import SnowStorm from 'react-snowstorm';
 
 export const MainPage = () => {
     const bgSecond = 'var(--bg-color-second)';
@@ -17,6 +18,7 @@ export const MainPage = () => {
 
     return (
         <>
+            <SnowStorm />
             <Intro/>
             <AboutSalsa />
             <WhySalsa backgroundColor={bgSecond}/>

@@ -48,6 +48,7 @@ export const Answers = ({ className, backgroundColor }: AnswersProps) => {
                                 loading='lazy'
                                 src={blue}
                                 className={'toy'}
+                                alt='toy'
                                 key='1'
                             />,
                             'пр',
@@ -55,6 +56,7 @@ export const Answers = ({ className, backgroundColor }: AnswersProps) => {
                                 loading='lazy'
                                 src={blue}
                                 className={'toy'}
+                                alt='toy'
                                 key='2'
                             />,
                             'сы',

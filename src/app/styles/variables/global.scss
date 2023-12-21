@@ -4,9 +4,6 @@
     --font-family-main: "Jost", "Times New Roman", sans-serif;
 
     // TEXT
-    --font-size-xs: 8px;
-    --font-line-xs: 12px;
-    --font-xs: var(--font-size-xs) / var(--font-line-xs) var(--font-family-main);
     --font-size-s: 12px;
     --font-line-s: 16px;
     --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
@@ -42,21 +39,10 @@
     --font-size-title-xl: 72px;
     --font-line-title-xl: 80px;
     --font-title-xl: var(--font-size-title-xl) / var(--font-line-title-xl) var(--font-family-main);
-    --font-size-title-xxl: 82px;
-    --font-line-title-xxl: 90px;
-    --font-title-xxl: var(--font-size-title-xxl) / var(--font-line-title-xxl) var(--font-family-main);
-    --font-size-main-title: 128px;
-    --font-line-main-title: 136px;
-    --font-main-title: var(--font-size-main-title) / var(--font-line-main-title) var(--font-family-main);
-    --font-size-main-subtitle: 100px;
-    --font-line-main-subtitle: 108px;
-    --font-main-subtitle: var(--font-size-main-subtitle) / var(--font-line-main-subtitle) var(--font-family-main);
 
     // Размеры
     --navbar-height: 80px;
     --navbar-height-mobile: 50px;
-    --sidebar-width: 300px;
-    --sidebar-width-collapsed: 80px;
 
     // Цвета
     --light-color: #e9e9e9;
@@ -113,28 +99,13 @@
 
     // z - Индексы
     --menu-z-index: 10;
-    --intro-z-index: 5;
     --navbar-z-index: 11;
     --modal-z-index: 50;
 
-    // Заголовки
-    --title-size-s: 48px;
-    --title-size-m: 56px;
-    --title-size-l: 64px;
-    --title-size-xl: 72px;
-    --line-height-size-s: 36px;
-    --line-height-size-m: 44px;
-    --line-height-size-l: 52px;
-    --line-height-size-xl: 60px;
-
     // Отступы
-    --padding-s: 15px 0;
     --padding-m: 30px 0;
     --padding-l: 45px 0;
     --padding-xl: 60px 0;
-    --padding-xxl: 75px 0;
     --margin-s: 15px;
     --margin-m: 30px;
-    --margin-l: 45px;
-    --margin-xl: 60px;
 }

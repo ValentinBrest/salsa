@@ -8,10 +8,6 @@
     .Information {
         padding: var(--padding-l);
     }
-
-    .bongi {
-        opacity: 0.2;
-    }
 }
 
 @media (max-width: 768px) {
@@ -21,10 +17,6 @@
 }
 
 @media (max-width: 576px) {
-    .Information {
-        padding: var(--padding-m);
-    }
-
     .title {
         line-height: 32px;
     }

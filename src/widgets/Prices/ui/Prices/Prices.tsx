@@ -9,9 +9,14 @@ import cl from './Prices.module.scss';
 interface PricesProps {
     className?: string;
     backgroundColor?: string;
+    isNewYear?: boolean;
 }
 
-export const Prices = ({ className, backgroundColor }: PricesProps) => {
+export const Prices = ({
+    className,
+    backgroundColor,
+    isNewYear = false,
+}: PricesProps) => {
     const isTabletScreen = useMediaQuery({ query: '(max-width: 768px)' });
     const isMobileScreen = useMediaQuery({ query: '(max-width: 378px)' });
     return (
@@ -20,12 +25,14 @@ export const Prices = ({ className, backgroundColor }: PricesProps) => {
             id='price'
             className={classNames(cl.Prices, {}, [className])}
         >
-            <img
-                loading='lazy'
-                src={meshok}
-                className={cl.meshok}
-                alt='meshok'
-            />
+            {isNewYear && (
+                <img
+                    loading='lazy'
+                    src={meshok}
+                    className={cl.meshok}
+                    alt='meshok'
+                />
+            )}
             <div className={cl.wrap}>
                 {!isTabletScreen && <div />}
                 {prices.header.map((item, index) => (

@@ -5,13 +5,19 @@ import { Text, TextAlign } from 'shared/ui/Text/Text';
 import { Prices } from 'widgets/Prices';
 import violet from '../../../../../public/img/newYear/violet.png';
 import cl from './Abonement.module.scss';
+import { abonement } from '../../../../../data/abonement';
 
 interface PricesProps {
     className?: string;
     backgroundColor?: string;
+    isNewYear?: boolean;
 }
 
-export const Abonement = ({ className, backgroundColor }: PricesProps) => {
+export const Abonement = ({
+    className,
+    backgroundColor,
+    isNewYear = false,
+}: PricesProps) => {
     const [isVisible, setIsVisible] = useState(false);
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
 
@@ -36,19 +42,28 @@ export const Abonement = ({ className, backgroundColor }: PricesProps) => {
                         []
                     )}
                 >
+                    {isNewYear ? (
+                        <Text
+                            hardTitle={[
+                                'Аб',
+                                <img
+                                    loading='lazy'
+                                    src={violet}
+                                    key='1'
+                                    className={'toy'}
+                                    alt='o'
+                                />,
+                                'нементы',
+                            ]}
+                        />
+                    ) : (
+                        <Text title={abonement.title} />
+                    )}
+                    <Prices isNewYear={isNewYear} />
                     <Text
-                        // title="Абонементы"
-                        hardTitle={[
-                            'Аб',
-                            <img loading='lazy' src={violet} key='1' className={'toy'} alt='toy'/>,
-                            'нементы',
-                        ]}
-                    />
-                    <Prices />
-                    <Text className={cl.text} align={TextAlign.LEFT}
-                        text={
-                            '*Протанцовка - дополнительное занятие, где можно самостоятельно отработать парные фигуры, изученные на уроках. На протанцовке присутствует преподаватель, которому можно задавать вопросы.'
-                        }
+                        className={cl.text}
+                        align={TextAlign.LEFT}
+                        text={abonement.note}
                     />
                 </div>
             </div>

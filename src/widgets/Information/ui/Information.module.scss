@@ -34,17 +34,6 @@
     opacity: 0.3;
 }
 
-.bongi {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-40%);
-
-    height: 260px;
-
-    opacity: 0.75;
-}
-
 .active {
     transform: translateY(0%);
     opacity: 1;

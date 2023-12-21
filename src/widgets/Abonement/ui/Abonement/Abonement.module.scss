@@ -9,27 +9,6 @@
     opacity: 0;
 }
 
-.trambone {
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-
-    width: 45%;
-
-    opacity: 0.75;
-}
-
-.decr {
-    z-index: 3;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 .active {
     transform: translateY(0%);
     opacity: 1;
@@ -38,7 +17,7 @@
 
 .text {
     margin-top: 20px;
-    font: var(--font-m)
+    font: var(--font-m);
 }
 
 @import "./Abonement.media";

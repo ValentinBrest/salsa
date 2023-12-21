@@ -37,36 +37,11 @@
             bottom: -22px;
             }
     }
-
-    .dance {
-        display: none;
-    }
-
-    .error {
-        font: var(--font-sm);
-    }
 }
 
 @media (max-width: 576px) {
     .Form {
         padding: var(--padding-m);
-    }
-
-    .form {
-        width: 100%;
-    }
-
-    .Input {
-        font: var(--font-sm);
-
-        &::placeholder {
-            font: var(--font-sm);
-        }
-    }
-
-    .text {
-        text-align: center;
-        
     }
 
     .insta {

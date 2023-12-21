@@ -8,6 +8,7 @@ import Mail from '../../../../../public/img/mail.svg';
 import Instagram from '../../../../shared/assets/icons/social/instagram.svg';
 import Telegram from '../../../../shared/assets/icons/social/telegram.svg';
 import cl from './Form.module.scss';
+import { form } from '../../../../../data/form';
 
 interface FormProps {
     className?: string;
@@ -42,19 +43,19 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                     <div>
                         <Text
                             theme={TextTheme.WITHOUT}
-                            title='ЗАПИШИТЕСЬ НА ПРОБНЫЙ УРОК'
+                            title={form.title}
                         />
                         <div className={cl.send}>
                             <Text
                                 className={cl.withoutMargin}
-                                text={'Для этого отправьте сообщение'}
+                                text={form.suptitle}
                             />
                             <div className={cl.wantToDance}>
-                                <span>"Хочу танцевать сальсу"</span>
+                                <span>{form.message}</span>
                             </div>
                             <Text
                                 className={cl.withoutMargin}
-                                text={' в директ'}
+                                text={form.toDirect}
                             />
                             <div className={cl.wrapSocial}>
                                 <a
@@ -67,18 +68,18 @@ export const Form = ({ className, backgroundColor }: FormProps) => {
                                     href='https://t.me/salsabrestdirect'
                                     aria-label='Перейти в телеграм'
                                     className={cl.direct}
-                                    data-text={'Директ школы "СальсаБрест"'}
+                                    data-text={form.direct}
                                 >
                                     <Telegram className={cl.telega} />
                                 </a>
                             </div>
-                            <Text text={'или напишите нам на почту'} />
+                            <Text text={form.messagePost} />
                             <a
-                                href={'mailto:info@salsabrest.by'}
+                                href={`mailto:${form.mail}`}
                                 className={cl.mailWrap}
                             >
                                 <Mail className={cl.mail} />
-                                <Text text={'info@salsabrest.by'} />
+                                <Text text={form.mail} />
                             </a>
                         </div>
                     </div>

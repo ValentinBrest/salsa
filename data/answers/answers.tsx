@@ -1,3 +1,6 @@
+
+export const answersTitle = 'Вопросы';
+
 export const answers = [
     {
         id: 1,
@@ -55,3 +58,4 @@ export const answers = [
         ),
     },
 ];
+

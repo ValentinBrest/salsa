@@ -4,6 +4,7 @@ import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfinite
 import { Text } from 'shared/ui/Text/Text';
 
 import { answers } from '../../../../../data/answers/answers';
+import { answersTitle } from '../../../../../data/answers/answers';
 import clave from '../../../../../public/img/instuments/clave.webp';
 import blue from '../../../../../public/img/newYear/blue.png';
 import { AnswerCard } from '../AnswerCard/AnswerCard';
@@ -13,9 +14,14 @@ import cl from './Answers.module.scss';
 interface AnswersProps {
     className?: string;
     backgroundColor?: string;
+    isNewYear?: boolean;
 }
 
-export const Answers = ({ className, backgroundColor }: AnswersProps) => {
+export const Answers = ({
+    className,
+    backgroundColor,
+    isNewYear = false,
+}: AnswersProps) => {
     const [isVisible, setIsVisible] = useState(false);
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
 
@@ -40,29 +46,32 @@ export const Answers = ({ className, backgroundColor }: AnswersProps) => {
                         []
                     )}
                 >
-                    <Text
-                        // title={`Вопросы`}
-                        hardTitle={[
-                            'В',
-                            <img
-                                loading='lazy'
-                                src={blue}
-                                className={'toy'}
-                                alt='toy'
-                                key='1'
-                            />,
-                            'пр',
-                            <img
-                                loading='lazy'
-                                src={blue}
-                                className={'toy'}
-                                alt='toy'
-                                key='2'
-                            />,
-                            'сы',
-                        ]}
-                        className={cl.title}
-                    />
+                    {isNewYear ? (
+                        <Text
+                            hardTitle={[
+                                'В',
+                                <img
+                                    loading='lazy'
+                                    src={blue}
+                                    className={'toy'}
+                                    alt='o'
+                                    key='1'
+                                />,
+                                'пр',
+                                <img
+                                    loading='lazy'
+                                    src={blue}
+                                    className={'toy'}
+                                    alt='o'
+                                    key='2'
+                                />,
+                                'сы',
+                            ]}
+                            className={cl.title}
+                        />
+                    ) : (
+                        <Text title={answersTitle} className={cl.title} />
+                    )}
                     <img
                         loading='lazy'
                         src={clave}

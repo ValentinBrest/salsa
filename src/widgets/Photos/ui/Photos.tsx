@@ -12,7 +12,6 @@ import { Text, TextAlign } from 'shared/ui/Text/Text';
 
 import ph1 from '../../../../public/img/gallery/1.webp';
 import ph2 from '../../../../public/img/gallery/2.webp';
-import ph2mb from '../../../../public/img/gallery/2-mb.webp';
 import ph3 from '../../../../public/img/gallery/3.webp';
 import ph4 from '../../../../public/img/gallery/4.webp';
 import ph4mb from '../../../../public/img/gallery/4-mb.webp';
@@ -26,15 +25,20 @@ import ph11 from '../../../../public/img/gallery/11.webp';
 import Zoom from '../../../shared/assets/icons/zoom.svg';
 import green from '../../../../public/img/newYear/green.png';
 import { PhotosModal } from './PhotosModal';
-
+import { photos } from '../../../../data/photos';
 import cl from './Photos.module.scss';
 
 interface PhotosProps {
     className?: string;
     backgroundColor?: string;
+    isNewYear?: boolean;
 }
 
-export const Photos = ({ className, backgroundColor }: PhotosProps) => {
+export const Photos = ({
+    className,
+    backgroundColor,
+    isNewYear = false,
+}: PhotosProps) => {
     const isLaptopScreen = useMediaQuery({ query: '(max-width: 992px)' });
     const isTableScreen = useMediaQuery({ query: '(max-width: 768px)' });
     const [isAuthModal, setIsAuthModal] = useState(false);
@@ -43,7 +47,7 @@ export const Photos = ({ className, backgroundColor }: PhotosProps) => {
     const [isVisible, setIsVisible] = useState(false);
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
 
-    const photos = isTableScreen
+    const photosAll = isTableScreen
         ? [ph1, ph2, ph3, ph4mb, ph5, ph6, ph7, ph8, ph9, ph10, ph11]
         : [ph1, ph2, ph3, ph4, ph5, ph6, ph7, ph8, ph9, ph10, ph11];
 
@@ -87,20 +91,26 @@ export const Photos = ({ className, backgroundColor }: PhotosProps) => {
                         []
                     )}
                 >
-                    {/* <Text title="Фотогалерея" /> */}
-                    <Text
-                        hardTitle={[
-                            'Фот',
-                            <img loading='lazy' src={green} alt='toy' key='2' className={'toy'}/>,
-                            'галерея',
-                        ]}
-                    />
-                    <Text
-                        text='Фотографии с вечеринок, мероприятий и занятий.'
-                        align={TextAlign.CENTER}
-                    />
+                    {isNewYear ? (
+                        <Text
+                            hardTitle={[
+                                'Фот',
+                                <img
+                                    loading='lazy'
+                                    src={green}
+                                    alt='o'
+                                    key='2'
+                                    className={'toy'}
+                                />,
+                                'галерея',
+                            ]}
+                        />
+                    ) : (
+                        <Text title={photos.title} />
+                    )}
+                    <Text text={photos.subtitle} align={TextAlign.CENTER} />
                     <div className={cl.gallery} onClick={(e) => onOpenModal(e)}>
-                        {photos.map((item, index) => (
+                        {photosAll.map((item, index) => (
                             <div
                                 key={index}
                                 className={classNames(cl.zoomWrap, {}, [

@@ -3,15 +3,20 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
 import { Text } from 'shared/ui/Text/Text';
 import cl from './Events.module.scss';
-
+import { events } from '../../../../data/events';
 import snowMan from '../../../../public/img/newYear/snowman.webp';
 
 interface EventsProps {
     className?: string;
     backgroundColor?: string;
+    isNewYear?: boolean;
 }
 
-export const Events = ({ className, backgroundColor }: EventsProps) => {
+export const Events = ({
+    className,
+    backgroundColor,
+    isNewYear = false,
+}: EventsProps) => {
     const [isVisible, setIsVisible] = useState(false);
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
 
@@ -22,18 +27,23 @@ export const Events = ({ className, backgroundColor }: EventsProps) => {
 
     return (
         <section
-            style={{ background: backgroundColor }}
+            style={{
+                background: backgroundColor,
+                paddingBottom: isNewYear ? '120px' : '50px',
+            }}
             id='events'
             className={classNames(cl.Events, {}, [className])}
             ref={triggerRef}
         >
-            <img
-                loading='lazy'
-                src={snowMan}
-                className={cl.snowMan}
-                alt='snowMan'
-            />
-            
+            {isNewYear && (
+                <img
+                    loading='lazy'
+                    src={snowMan}
+                    className={cl.snowMan}
+                    alt='snowMan'
+                />
+            )}
+
             <div className='container'>
                 <div
                     className={classNames(
@@ -42,7 +52,7 @@ export const Events = ({ className, backgroundColor }: EventsProps) => {
                         []
                     )}
                 >
-                    <Text title='Как выглядит сальса?' />
+                    <Text title={events.title} />
                     <div className={cl.wrap}>
                         <iframe
                             src='https://www.youtube.com/embed/u_9hLeLM7yI'

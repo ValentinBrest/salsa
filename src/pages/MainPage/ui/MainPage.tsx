@@ -16,21 +16,27 @@ export const MainPage = () => {
     const bgSecond = 'var(--bg-color-second)';
     const bgFirst = 'var(--bg-color)';
 
+    const isNewYear = new Date() <= new Date('2024-01-15');
+
     return (
         <>
-            <SnowStorm />
-            <Intro/>
+            {isNewYear && <SnowStorm />}
+            <Intro isNewYear={isNewYear} />
             <AboutSalsa />
-            <WhySalsa backgroundColor={bgSecond}/>
-            <WhySchool backgroundColor={bgFirst} backgroundColorCard={bgSecond}/>
-            <Lessons backgroundColor={bgSecond}/>
-            <Abonement backgroundColor={bgFirst}/>
-            <Events backgroundColor={bgSecond}/>
-            <Photos backgroundColor={bgFirst}/>
-            <Answers backgroundColor={bgSecond}/>
-            <Information backgroundColor={bgFirst}/>
-            <Form backgroundColor={bgSecond}/>
-            <NewYear/>
+            <WhySalsa isNewYear={isNewYear} backgroundColor={bgSecond} />
+            <WhySchool
+                isNewYear={isNewYear}
+                backgroundColor={bgFirst}
+                backgroundColorCard={bgSecond}
+            />
+            <Lessons backgroundColor={bgSecond} />
+            <Abonement isNewYear={isNewYear} backgroundColor={bgFirst} />
+            <Events isNewYear={isNewYear} backgroundColor={bgSecond} />
+            <Photos isNewYear={isNewYear} backgroundColor={bgFirst} />
+            <Answers isNewYear={isNewYear} backgroundColor={bgSecond} />
+            <Information isNewYear={isNewYear} backgroundColor={bgFirst} />
+            <Form backgroundColor={bgSecond} />
+            {isNewYear && <NewYear />}
         </>
     );
 };

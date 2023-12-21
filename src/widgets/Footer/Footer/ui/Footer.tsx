@@ -5,7 +5,7 @@ import Instagram from '../../../../shared/assets/icons/social/instagram.svg';
 import Phone from '../../../../shared/assets/icons/social/phone.svg';
 import Telegram from '../../../../shared/assets/icons/social/telegram.svg';
 import Tiktok from '../../../../shared/assets/icons/social/tiktok.svg';
-
+import { footer } from '../../../../../data/footer';
 import cl from './Footer.module.scss';
 
 interface FooterProps {
@@ -24,9 +24,9 @@ export const Footer = ({ className, backgroundColor }: FooterProps) => {
                 <div className={cl.wrap}>
                     <div className={cl.wrapText}>
                         <span className={cl.text}>
-                            © 2023 Школа танцев «СальсаБрест»
+                            {footer.name}
                         </span>
-                        <span className={cl.text}>УНП 291763778</span>
+                        <span className={cl.text}>{footer.unp}</span>
                     </div>
                     <div className={cl.socialWrap}>
                         <a
@@ -39,7 +39,7 @@ export const Footer = ({ className, backgroundColor }: FooterProps) => {
                             href={'https://t.me/salsabrest'}
                             aria-label='Перейти в телеграм'
                             className={cl.direct}
-                            data-text={'Телеграм-канал "СальсаБрест"'}
+                            data-text={footer.telegramLabel}
                         >
                             <Telegram className={cl.telegram} />
                         </a>
@@ -51,16 +51,16 @@ export const Footer = ({ className, backgroundColor }: FooterProps) => {
                         </a>
                     </div>
                     <div className={cl.contactWrap}>
-                        <a href={'tel:+375339939039'} className={cl.phoneWrap}>
+                        <a href={`tel:${footer.tel}`} className={cl.phoneWrap}>
                             <Phone className={cl.phone} />
-                            <span className={cl.text}>+ 375 33 99 39 0 39</span>
+                            <span className={cl.text}>{footer.tel}</span>
                         </a>
                         <a
-                            href='mailto:info@salsabrest.by'
+                            href={`mailto:${footer.mail}`}
                             className={cl.mailWrap}
                         >
                             <Email className={cl.email} />
-                            <span className={cl.text}>info@salsabrest.by</span>
+                            <span className={cl.text}>{footer.mail}</span>
                         </a>
                     </div>
                 </div>

@@ -63,34 +63,4 @@
     transition: all 1s;
 }
 
-.teacher {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-
-    & img {
-        display: block;
-        width: 100%;
-    }
-}
-
-.epigraph {
-    align-self: flex-end;
-}
-
-.button {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-
-    width: 30px;
-    height: 50px;
-}
-
-.active {
-    transform: translateY(0%);
-    opacity: 1;
-    transition: all 1s;
-}
-
 @import "./WhySchool.media";

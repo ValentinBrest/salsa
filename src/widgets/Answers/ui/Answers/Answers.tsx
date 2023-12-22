@@ -53,7 +53,7 @@ export const Answers = ({
                                 <img
                                     loading='lazy'
                                     src={blue}
-                                    className={'toy'}
+                                    className={'toy medium'}
                                     alt='o'
                                     key='1'
                                 />,
@@ -61,7 +61,7 @@ export const Answers = ({
                                 <img
                                     loading='lazy'
                                     src={blue}
-                                    className={'toy'}
+                                    className={'toy medium'}
                                     alt='o'
                                     key='2'
                                 />,

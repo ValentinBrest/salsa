@@ -69,6 +69,22 @@ body {
     }
 }
 
+.toy {
+    width: 30px;
+}
+
+.small {
+    height: 34px;
+}
+
+.medium {
+    height: 36px;
+}
+
+.large {
+    height: 39px;
+}
+
 @media (max-width: 1200px) {
     .container {
         width: 960px;
@@ -86,8 +102,21 @@ body {
         width: 540px;
         padding: 0 10px;
     }
+
     .toy {
         width: 25px;
+    }
+
+    .small {
+        height: 28.3px;
+    }
+
+    .medium {
+        height: 30px;
+    }
+
+    .large {
+        height: 32.5px;
     }
 }
 
@@ -95,13 +124,26 @@ body {
     .container {
         width: 100%;
     }
+
     .toy {
         width: 17px;
     }
-}
 
+    .small {
+        height: 19.26px;
+    }
+
+    .medium {
+        height: 20.4px;
+    }
+
+    .large {
+        height: 22.1px;
+    }
+}
 
 @font-face {
     font-family: "NewYear"; 
-    src: url("./newYear.ttf"); 
-} 
+    src: url("./newYear.ttf");
+    font-display: swap;
+}

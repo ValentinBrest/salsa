@@ -100,7 +100,7 @@ export const Photos = ({
                                     src={green}
                                     alt='o'
                                     key='2'
-                                    className={'toy'}
+                                    className={'toy medium'}
                                 />,
                                 'галерея',
                             ]}

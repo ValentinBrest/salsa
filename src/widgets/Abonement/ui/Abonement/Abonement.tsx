@@ -50,7 +50,7 @@ export const Abonement = ({
                                     loading='lazy'
                                     src={violet}
                                     key='1'
-                                    className={'toy'}
+                                    className={'toy small'}
                                     alt='o'
                                 />,
                                 'нементы',

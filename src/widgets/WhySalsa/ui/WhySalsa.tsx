@@ -68,7 +68,7 @@ export const WhySalsa = ({
                                         src={gold}
                                         alt='o'
                                         key='1'
-                                        className={'toy'}
+                                        className={'toy small'}
                                     />,
                                     'чему сальса?',
                                 ]}

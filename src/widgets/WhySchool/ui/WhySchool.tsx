@@ -55,7 +55,7 @@ export const WhySchool = ({
                                     alt='o'
                                     src={orange}
                                     key='1'
-                                    className={'toy'}
+                                    className={'toy large'}
                                 />,
                                 ' в школу «СальсаБрест',
                             ]}

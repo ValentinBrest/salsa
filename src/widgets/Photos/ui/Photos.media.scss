@@ -91,6 +91,9 @@
         .cart1 {
             grid-column: 1/3;
             grid-row: 1/3;
+            img {
+                object-position: top;
+            }
         }
 
         .cart2 {
@@ -115,6 +118,9 @@
         .cart6 {
             grid-column: 1/3;
             grid-row: 10/14;
+            img {
+                object-position: top;
+            }
         }
 
         .cart7 {

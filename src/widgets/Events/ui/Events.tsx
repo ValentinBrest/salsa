@@ -52,7 +52,7 @@ export const Events = ({
                         []
                     )}
                 >
-                    <Text title={events.title} />
+                    <Text title={events.title}  className={cl.title}/>
                     <div className={cl.wrap}>
                         <iframe
                             src='https://www.youtube.com/embed/u_9hLeLM7yI'

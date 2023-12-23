@@ -49,7 +49,7 @@ export const WhySchool = ({
                             className={cl.title}
                             theme={TextTheme.WITHOUT}
                             hardTitle={[
-                                'Почему вам именн',
+                                'П',
                                 <img
                                     loading='lazy'
                                     alt='o'
@@ -57,7 +57,7 @@ export const WhySchool = ({
                                     key='1'
                                     className={'toy large'}
                                 />,
-                                ' в школу «СальсаБрест',
+                                'чему вам именнo в школу «СальсаБрест»?',
                             ]}
                         />
                     ) : (

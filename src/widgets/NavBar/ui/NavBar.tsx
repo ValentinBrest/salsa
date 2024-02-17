@@ -7,8 +7,9 @@ import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { links } from '../../../../data/links/links';
 import guitar from '../../../../public/img/instuments/guitar.webp';
 import logo from '../../../../public/img/logo.webp';
-
+import newProjects from '../../../../public/img/new.webp';
 import cl from './NavBar.module.scss';
+import { Theme, useTheme } from 'app/providers/ThemeProvider';
 
 interface NavBarProps {
     className?: string;
@@ -16,7 +17,8 @@ interface NavBarProps {
 
 export const NavBar = ({ className }: NavBarProps) => {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
-
+    const [disableThemeSwitcher, setDisableThemeSwitcher] = useState(false);
+    const { theme } = useTheme();
     const onHandleMenu = () => setIsOpenMenu(!isOpenMenu);
 
     useEffect(() => {
@@ -24,6 +26,14 @@ export const NavBar = ({ className }: NavBarProps) => {
             ? document.body.classList.add('lock')
             : document.body.classList.remove('lock');
     }, [isOpenMenu]);
+
+    useEffect(() => {
+        if (theme === Theme.SALSAMANIA) {
+            setDisableThemeSwitcher(true);
+        } else {
+            setDisableThemeSwitcher(false);
+        }
+    }, [theme]);
 
     return (
         <>
@@ -52,7 +62,7 @@ export const NavBar = ({ className }: NavBarProps) => {
                         />
 
                         <nav className={cl.links}>
-                            {links.map((item) => (
+                            {links.map((item, index) => (
                                 <LinkScroll
                                     to={item.scroll}
                                     href='/'
@@ -60,13 +70,26 @@ export const NavBar = ({ className }: NavBarProps) => {
                                     smooth={true}
                                     className={cl.link}
                                 >
+                                    {index === 0 && (
+                                        <img
+                                            className={cl.newProjects}
+                                            src={newProjects}
+                                            alt='newProjects'
+                                        />
+                                    )}
                                     <AppLink to={item.to} key={item.id}>
                                         {item.name}
                                     </AppLink>
                                 </LinkScroll>
                             ))}
                         </nav>
-                        {<ThemeSwitcher className={cl.switcher} />}
+                        {disableThemeSwitcher ? (
+                            <div
+                                style={{ width: '40px', height: '40px' }}
+                            ></div>
+                        ) : (
+                            <ThemeSwitcher className={cl.switcher} />
+                        )}
                     </div>
                 </div>
             </header>
@@ -76,7 +99,12 @@ export const NavBar = ({ className }: NavBarProps) => {
                         [cl.visible]: isOpenMenu,
                     })}
                 >
-                    <img loading='lazy' src={guitar} className={cl.guitar} alt='гитара' />
+                    <img
+                        loading='lazy'
+                        src={guitar}
+                        className={cl.guitar}
+                        alt='гитара'
+                    />
                     {links.map((item) => (
                         <LinkScroll
                             href='/'

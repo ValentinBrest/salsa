@@ -27,7 +27,6 @@ export const NewYear = ({ className }: NewYearProps) => {
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
             }}
-            id='salsa'
             className={classNames(cl.NewYear, {}, [className])}
             ref={triggerRef}
         >

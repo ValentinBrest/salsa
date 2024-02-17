@@ -44,6 +44,19 @@
     }
 }
 
+.animation {
+    background: linear-gradient(90deg, #d39f64, #ffb400, #ff3333, #d39f64);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textflow 5s linear infinite;
+  }
+  @keyframes textflow {
+    from {background-position: 0% center}         
+    to {background-position: 200% center}
+  }
+
 .subTitle {
     padding: 0 10px;
 

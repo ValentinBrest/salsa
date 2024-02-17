@@ -1,9 +1,11 @@
 import { useContext } from 'react';
 
-import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from './ThemeContext';
+import { LOCAL_STORAGE_THEME_KEY, LOCAL_STORAGE_THEME_KEY_PREVIOUS, Theme, ThemeContext } from './ThemeContext';
 
 interface useThemeResult {
     toggleTheme: () => void;
+    setSalsaManiaTheme: () => void;
+    setTheme: (theme) => void;
     theme: Theme;
 }
 
@@ -16,8 +18,18 @@ export function useTheme ():useThemeResult {
         localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
     };
 
+    const setSalsaManiaTheme = () => {
+        const newTheme = Theme.SALSAMANIA;
+        localStorage.setItem(LOCAL_STORAGE_THEME_KEY_PREVIOUS, theme);
+        setTheme(newTheme);
+        localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
+    };
+
+
     return {
         theme,
         toggleTheme,
+        setSalsaManiaTheme,
+        setTheme,
     };
 }

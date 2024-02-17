@@ -26,6 +26,7 @@ interface TextProps {
     theme?: TextTheme;
     align?: TextAlign;
     author?: ReactNode;
+    animation?: boolean;
 }
 
 export const Text = memo((props: TextProps) => {
@@ -39,6 +40,7 @@ export const Text = memo((props: TextProps) => {
         align = TextAlign.CENTER,
         author,
         hardTitle,
+        animation,
     } = props;
 
     return (
@@ -50,7 +52,11 @@ export const Text = memo((props: TextProps) => {
                         cl[align],
                     ])}
                 >
-                    <span>{title}</span>
+                    {animation ? (
+                        <span className={cl.animation}>{title}</span>
+                    ) : (
+                        <span>{title}</span>
+                    )}
                 </div>
             )}
 

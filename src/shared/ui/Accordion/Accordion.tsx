@@ -11,12 +11,14 @@ interface AccordionProps {
     children: ReactNode;
     background?: string;
     linkId?: string
+    startHeight?: string;
 }
 
 export const Accordion = (props: AccordionProps) => {
     const {
         className,
         children,
+        startHeight = '200px',
         height = '400px',
         background,
         linkId,
@@ -29,7 +31,7 @@ export const Accordion = (props: AccordionProps) => {
         [cl.open]: isVisible,
     };
 
-    const clOpen = isVisible ? { maxHeight: height } : {};
+    const clOpen = isVisible ? { maxHeight: height } : {maxHeight: startHeight};
 
     const btn = (
         <Button

@@ -4,6 +4,12 @@ import { RoutePath } from '../../src/app/providers/router/routeConfig/routeConfi
 
 export const links = [
     {
+        id: 8,
+        name: 'Проект',
+        to: RoutePath.project,
+        scroll: 'project',
+    },
+    {
         id: 7,
         name: 'Сальса',
         to: RoutePath.main,

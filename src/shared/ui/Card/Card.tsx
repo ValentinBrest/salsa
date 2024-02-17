@@ -9,18 +9,19 @@ interface CardProps {
     className?: string;
     children?: ReactNode;
     background?: string;
+    withoutPic?: boolean;
 }
 
 export const Card = memo((props: CardProps) => {
-    const { className, children, background } = props;
+    const { className, children, background, withoutPic = true } = props;
 
     return (
         <div
             style={{ background: background }}
             className={classNames(cl.Card, {}, [className])}
         >
-            <img src={pin} className={cl.left} alt="left"/>
-            <img src={pin} className={cl.right} alt="right"/>
+            {withoutPic || <img src={pin} className={cl.left} alt='left' />}
+            {withoutPic || <img src={pin} className={cl.right} alt='right' />}
             {children}
         </div>
     );

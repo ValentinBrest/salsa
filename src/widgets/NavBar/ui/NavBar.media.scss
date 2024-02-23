@@ -119,6 +119,11 @@
         margin-bottom: 30px;
         font: var(--font-l);
         text-decoration: none;
+        position: relative;
+    }
+
+    .newProjects {
+        top: -13px;
     }
 }
 

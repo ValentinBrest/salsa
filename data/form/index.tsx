@@ -2,8 +2,8 @@ import { footer } from '../footer';
 
 export const form = {
     title: 'ЗАПИШИТЕСЬ НА ПРОБНЫЙ УРОК',
-    suptitle: 'Для этого отправьте сообщение',
-    message: 'Хочу танцевать сальсу',
+    suptitle: 'Для этого отправьте',
+    message: '➕',
     toDirect: ' в директ',
     direct: 'Директ школы "СальсаБрест"',
     messagePost: 'или напишите нам на почту',

@@ -10,7 +10,8 @@ export enum ButtonTheme {
     BACKGROUND = 'background',
     BACKGROUND_INVERTED = 'backgroundInverted',
     TABS = 'tabs',
-    ARROW = 'arrow'
+    ARROW = 'arrow',
+    PERSPECTIVE = 'perspective',
 }
 export const enum ButtonSize {
     S = 'size_s',
@@ -31,9 +32,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const Button: FC<ButtonProps> = (props) => {
     const {
-        className, 
-        children, 
-        theme, 
+        className,
+        children,
+        theme,
         square,
         size = ButtonSize.M,
         disabled = false,
@@ -48,19 +49,27 @@ export const Button: FC<ButtonProps> = (props) => {
     };
 
     return (
-        <button 
-            type="button"
+        <button
+            type='button'
             disabled={disabled}
-            style={{background: background}}
-            className={classNames(cl.Button, mods, [className, cl[theme], cl[size]])}
+            style={{ background: background }}
+            className={classNames(cl.Button, mods, [
+                className,
+                cl[theme],
+                cl[size],
+            ])}
             {...otherProps}
         >
-            {theme === 'arrow' 
-                ? <div className={cl.arrowWrap}>
+            {theme === 'arrow' ? (
+                <div className={cl.arrowWrap}>
                     <span className={cl.arrowLeft}></span>
                     <span className={cl.arrowRight}></span>
                 </div>
-                : children}
+            ) : theme === 'perspective' ? (
+                <span className={cl.perspectiveInner}>{children}</span>
+            ) : (
+                children
+            )}
         </button>
     );
 };

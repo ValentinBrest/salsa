@@ -8,6 +8,7 @@ export enum TextTheme {
     ERROR = 'error',
     WITHOUT = 'without',
     ITALIC = 'italic',
+    THREED = 'threeD'
 }
 
 export enum TextAlign {

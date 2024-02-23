@@ -138,4 +138,10 @@
     letter-spacing: 0.5px;
 }
 
+.threeD {
+    font: var(--font-ml);
+    font-style: inherit;
+    color: var(--text-color-light-salsamania);
+}
+
 @import "./Text.media";

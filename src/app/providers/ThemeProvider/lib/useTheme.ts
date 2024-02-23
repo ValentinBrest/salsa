@@ -20,7 +20,7 @@ export function useTheme ():useThemeResult {
 
     const setSalsaManiaTheme = () => {
         const newTheme = Theme.SALSAMANIA;
-        localStorage.setItem(LOCAL_STORAGE_THEME_KEY_PREVIOUS, theme);
+        localStorage.setItem(LOCAL_STORAGE_THEME_KEY_PREVIOUS, theme !== newTheme ? theme: Theme.LIGHT);
         setTheme(newTheme);
         localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
     };

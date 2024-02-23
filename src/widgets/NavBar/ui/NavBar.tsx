@@ -105,7 +105,7 @@ export const NavBar = ({ className }: NavBarProps) => {
                         className={cl.guitar}
                         alt='гитара'
                     />
-                    {links.map((item) => (
+                    {links.map((item, index) => (
                         <LinkScroll
                             href='/'
                             className={cl.mobileLink}
@@ -114,6 +114,13 @@ export const NavBar = ({ className }: NavBarProps) => {
                             smooth={true}
                             onClick={onHandleMenu}
                         >
+                            {index === 0 && (
+                                <img
+                                    className={cl.newProjects}
+                                    src={newProjects}
+                                    alt='newProjects'
+                                />
+                            )}
                             <AppLink to={item.to} key={item.id}>
                                 {item.name}
                             </AppLink>

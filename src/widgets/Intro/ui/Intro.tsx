@@ -1,11 +1,13 @@
 import { useMediaQuery } from 'react-responsive';
+import { Link } from 'react-router-dom';
 import { Link as LinkScroll } from 'react-scroll';
 import SimpleImageSlider from 'react-simple-image-slider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
 
+import { intro } from '../../../../data/intro';
 import logo from '../../../../public/img/logo.webp';
-import logoNewYear from '../../../../public/img/newYear/logo_new_year.webp';
 import m1 from '../../../../public/img/main/1.webp';
 import m2 from '../../../../public/img/main/2.webp';
 import m3 from '../../../../public/img/main/3.webp';
@@ -14,7 +16,9 @@ import m5 from '../../../../public/img/main/5.webp';
 import m6 from '../../../../public/img/main/6.webp';
 import m7 from '../../../../public/img/main/7.webp';
 import m8 from '../../../../public/img/main/8.webp';
-import { intro } from '../../../../data/intro';
+import logoNewYear from '../../../../public/img/newYear/logo_new_year.webp';
+import klaksa from '../../../../public/img/project/salsamania/klaksa.webp';
+
 import './Intro.scss';
 import cl from './Intro.module.scss';
 
@@ -92,23 +96,62 @@ export const Intro = ({
                         <span>{intro.school}</span>
                         <span className={cl.cool}>{intro.subtitle}</span>
                     </h2>
-                    <img
-                        loading='lazy'
-                        className={classNames(cl.logo, {}, [cl.anim])}
-                        style={{ height: getHeightLogo() }}
-                        src={isNewYear ? logoNewYear : logo}
-                        alt='salsa-brest'
-                    />
+
                     <LinkScroll href='/' to='form' smooth={true}>
                         <Button
                             title={intro.singUp}
-                            size={ButtonSize.XL}
+                            size={ButtonSize.L}
                             theme={ButtonTheme.OUTLINE}
                             className={cl.btn}
                         >
                             {intro.singUp}
                         </Button>
                     </LinkScroll>
+
+                    <img
+                        loading='lazy'
+                        className={classNames(cl.logo, {}, [cl.anim])}
+                        src={isNewYear ? logoNewYear : logo}
+                        alt='salsa-brest'
+                    />
+
+                    <div className={cl.salsaWrap}>
+                        <Link to={'/project'}>
+                            <Button
+                                title={intro.singUp}
+                                size={ButtonSize.XL}
+                                theme={ButtonTheme.PERSPECTIVE}
+                                className={cl.btnSalsa}
+                            >
+                                <>
+                                    <Text
+                                        text={'Участвуй в'}
+                                        theme={TextTheme.THREED}
+                                        className={cl.project}
+                                        // animation={true}
+                                    />
+                                    <Text
+                                        text={'проекте'}
+                                        theme={TextTheme.THREED}
+                                        className={cl.project}
+                                        // animation={true}
+                                    />
+                                    <Text
+                                        text={'"СальсаМания"'}
+                                        className={cl.titleSalsamania}
+                                        // animation={true}
+                                        theme={TextTheme.THREED}
+                                    />
+                                </>
+                            </Button>
+                        </Link>
+                    </div>
+                    <img
+                        loading='lazy'
+                        className={classNames(cl.klaksa, {}, [cl.anim])}
+                        src={klaksa}
+                        alt='salsa-brest'
+                    />
                 </div>
                 {!isMobileScreen && (
                     <div className={cl.right}>

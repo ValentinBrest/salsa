@@ -6,7 +6,7 @@ export const links = [
     {
         id: 8,
         name: 'Проект',
-        to: RoutePath.project,
+        to: RoutePath.main,
         scroll: 'project',
     },
     {

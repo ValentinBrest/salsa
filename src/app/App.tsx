@@ -1,20 +1,23 @@
 import { Suspense, useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { Link as LinkScroll } from 'react-scroll';
+import { MainPage } from 'pages/MainPage';
 import { Footer } from 'widgets/Footer';
 import { NavBar } from 'widgets/NavBar';
 
 import Up from '../../public/img/toUp.svg';
-import UpSalsamania from '../../public/img/toUpSalsamania.svg';
 
-import { AppRouter } from './providers/router';
-import { Theme, useTheme } from './providers/ThemeProvider';
-import { LOCAL_STORAGE_THEME_KEY_PREVIOUS } from './providers/ThemeProvider/lib/ThemeContext';
+import { useTheme } from './providers/ThemeProvider';
+import {
+    LOCAL_STORAGE_THEME_KEY_PREVIOUS,
+    Theme,
+} from './providers/ThemeProvider/lib/ThemeContext';
 
 function App() {
     const [isSctollTo, setIsScrollTo] = useState(false);
+    const [isSalsamaniaTheme, setIsSalsamaniaTheme] = useState(false);
+    const { setTheme } = useTheme();
     const bgFirst = 'var(--bg-color)';
-    const { pathname } = useLocation();
 
     useEffect(() => {
         function handleMove() {
@@ -30,23 +33,35 @@ function App() {
         };
     }, []);
 
-    const { theme, setTheme } = useTheme();
-
     useEffect(() => {
-        if (theme === Theme.SALSAMANIA && pathname !== '/project') {
+        if (!isSalsamaniaTheme) {
             setTheme(
                 localStorage.getItem(LOCAL_STORAGE_THEME_KEY_PREVIOUS) ||
-                    Theme.LIGHT
+                    Theme.LIGHT,
             );
         }
-    }, [pathname, setTheme, theme]);
+    }, []);
 
     return (
         <div className='app'>
             <Suspense fallback=''>
-                <NavBar />
+                <NavBar setIsSalsamaniaTheme={setIsSalsamaniaTheme} />
                 <main className='content-page'>
-                    <AppRouter />
+                    <Routes>
+                        <Route
+                            path='/'
+                            element={
+                                <div style={{ width: '100%' }}>
+                                    <MainPage
+                                        isSalsamaniaTheme={isSalsamaniaTheme}
+                                        setIsSalsamaniaTheme={
+                                            setIsSalsamaniaTheme
+                                        }
+                                    />
+                                </div>
+                            }
+                        />
+                    </Routes>
                     <LinkScroll
                         href='/'
                         to={'up'}

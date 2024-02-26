@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Link as LinkScroll } from 'react-scroll';
+import { Theme, useTheme } from 'app/providers/ThemeProvider';
+import {
+    LOCAL_STORAGE_THEME_KEY,
+    LOCAL_STORAGE_THEME_KEY_PREVIOUS,
+} from 'app/providers/ThemeProvider/lib/ThemeContext';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink } from 'shared/ui';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
@@ -8,18 +13,33 @@ import { links } from '../../../../data/links/links';
 import guitar from '../../../../public/img/instuments/guitar.webp';
 import logo from '../../../../public/img/logo.webp';
 import newProjects from '../../../../public/img/new.webp';
+
 import cl from './NavBar.module.scss';
-import { Theme, useTheme } from 'app/providers/ThemeProvider';
 
 interface NavBarProps {
     className?: string;
+    setIsSalsamaniaTheme: (value: boolean) => void;
 }
 
-export const NavBar = ({ className }: NavBarProps) => {
+export const NavBar = ({ className, setIsSalsamaniaTheme }: NavBarProps) => {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
     const [disableThemeSwitcher, setDisableThemeSwitcher] = useState(false);
-    const { theme } = useTheme();
-    const onHandleMenu = () => setIsOpenMenu(!isOpenMenu);
+    const { theme, setSalsaManiaTheme, setTheme } = useTheme();
+    const onHandleMenu = (scroll: string, isTableScreen) => {
+        if (scroll === 'project') {
+            setSalsaManiaTheme();
+            setIsSalsamaniaTheme(true);
+            isTableScreen && setIsOpenMenu(!isOpenMenu);
+        } else {
+            const newTheme =
+                localStorage.getItem(LOCAL_STORAGE_THEME_KEY_PREVIOUS) ||
+                Theme.LIGHT;
+            setIsSalsamaniaTheme(false);
+            setTheme(newTheme);
+            localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
+            isTableScreen && setIsOpenMenu(!isOpenMenu);
+        }
+    };
 
     useEffect(() => {
         isOpenMenu
@@ -58,7 +78,7 @@ export const NavBar = ({ className }: NavBarProps) => {
                                 { [cl.active]: isOpenMenu },
                                 [className]
                             )}
-                            onClick={onHandleMenu}
+                            onClick={() => setIsOpenMenu(!isOpenMenu)}
                         />
 
                         <nav className={cl.links}>
@@ -69,6 +89,7 @@ export const NavBar = ({ className }: NavBarProps) => {
                                     key={item.id}
                                     smooth={true}
                                     className={cl.link}
+                                    onClick={() => onHandleMenu(item.scroll, false)}
                                 >
                                     {index === 0 && (
                                         <img
@@ -112,7 +133,7 @@ export const NavBar = ({ className }: NavBarProps) => {
                             to={item.scroll}
                             key={item.id}
                             smooth={true}
-                            onClick={onHandleMenu}
+                            onClick={() => onHandleMenu(item.scroll, true)}
                         >
                             {index === 0 && (
                                 <img

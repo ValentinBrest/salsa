@@ -1,5 +1,5 @@
 import { render } from 'react-dom';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
 import { ThemeProvider } from 'app/providers/ThemeProvider';
 
@@ -8,12 +8,12 @@ import App from './app/App';
 import 'app/styles/index.scss';
 
 render(
-    <HashRouter>
+    <BrowserRouter>
         <ErrorBoundary>
             <ThemeProvider>
                 <App />
             </ThemeProvider>
         </ErrorBoundary>
-    </HashRouter>,
+    </BrowserRouter>,
     document.getElementById('root'),
 );

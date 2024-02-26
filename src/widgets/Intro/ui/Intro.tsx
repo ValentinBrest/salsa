@@ -2,6 +2,7 @@ import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 import { Link as LinkScroll } from 'react-scroll';
 import SimpleImageSlider from 'react-simple-image-slider';
+import { useTheme } from 'app/providers/ThemeProvider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
@@ -26,12 +27,14 @@ interface IntroProps {
     className?: string;
     backgroundColor?: string;
     isNewYear?: boolean;
+    setIsSalsamaniaTheme?: (value: boolean) => void;
 }
 
 export const Intro = ({
     className,
     backgroundColor,
     isNewYear = false,
+    setIsSalsamaniaTheme,
 }: IntroProps) => {
     const isMobileScreen = useMediaQuery({ query: '(max-width: 576px)' });
     const isTabletScreen = useMediaQuery({ query: '(max-width: 768px)' });
@@ -39,6 +42,11 @@ export const Intro = ({
     const images = [{ url: m1 }, { url: m8 }, { url: m6 }, { url: m3 }];
 
     const images2 = [{ url: m2 }, { url: m5 }, { url: m7 }, { url: m4 }];
+    const { setSalsaManiaTheme } = useTheme();
+    const onHandleButton = () => {
+        setSalsaManiaTheme();
+        setIsSalsamaniaTheme(true);
+    };
 
     const totalImg = [
         { url: m2 },
@@ -50,16 +58,6 @@ export const Intro = ({
         { url: m3 },
         { url: m4 },
     ];
-
-    const getHeightLogo = () => {
-        if (isMobileScreen) {
-            return isNewYear ? '201px' : '150px';
-        } else if (isTabletScreen) {
-            return isNewYear ? '255px' : '190px';
-        } else {
-            return isNewYear ? '302px' : '225px';
-        }
-    };
     return (
         <section
             style={{ background: backgroundColor }}
@@ -116,30 +114,28 @@ export const Intro = ({
                     />
 
                     <div className={cl.salsaWrap}>
-                        <Link to={'/project'}>
+                        <Link to={'/'}>
                             <Button
                                 title={intro.singUp}
                                 size={ButtonSize.XL}
                                 theme={ButtonTheme.PERSPECTIVE}
                                 className={cl.btnSalsa}
+                                onClick={onHandleButton}
                             >
                                 <>
                                     <Text
                                         text={'Участвуй в'}
                                         theme={TextTheme.THREED}
                                         className={cl.project}
-                                        // animation={true}
                                     />
                                     <Text
                                         text={'проекте'}
                                         theme={TextTheme.THREED}
                                         className={cl.project}
-                                        // animation={true}
                                     />
                                     <Text
                                         text={'"СальсаМания"'}
                                         className={cl.titleSalsamania}
-                                        // animation={true}
                                         theme={TextTheme.THREED}
                                     />
                                 </>

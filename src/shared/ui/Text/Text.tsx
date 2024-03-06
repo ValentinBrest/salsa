@@ -1,6 +1,8 @@
 import { memo, ReactNode } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 
+import BACK from '../../assets/icons/back.svg';
+
 import cl from './Text.module.scss';
 
 export enum TextTheme {
@@ -8,7 +10,7 @@ export enum TextTheme {
     ERROR = 'error',
     WITHOUT = 'without',
     ITALIC = 'italic',
-    THREED = 'threeD'
+    THREED = 'threeD',
 }
 
 export enum TextAlign {
@@ -28,6 +30,7 @@ interface TextProps {
     align?: TextAlign;
     author?: ReactNode;
     animation?: boolean;
+    back?: () => void;
 }
 
 export const Text = memo((props: TextProps) => {
@@ -42,6 +45,7 @@ export const Text = memo((props: TextProps) => {
         author,
         hardTitle,
         animation,
+        back,
     } = props;
 
     return (
@@ -53,11 +57,16 @@ export const Text = memo((props: TextProps) => {
                         cl[align],
                     ])}
                 >
-                    {animation ? (
-                        <span className={cl.animation}>{title}</span>
-                    ) : (
-                        <span>{title}</span>
-                    )}
+                    <span className={cl.innerTitleWrap}>
+                        {back && (
+                            <BACK onClick={() => back()} className={cl.back} />
+                        )}
+                        {animation ? (
+                            <span className={cl.animation}>{title}</span>
+                        ) : (
+                            <span>{title}</span>
+                        )}
+                    </span>
                 </div>
             )}
 

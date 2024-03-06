@@ -31,6 +31,12 @@
         font: var(--font-ml);
         text-align: center;
     }
+
+    .back {
+        width: 50px;
+        height: 65px;
+        left: -70px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -43,6 +49,11 @@
     .subTitle {
         font: var(--font-l);
         font-weight: 700;
+    }
+
+    .back {
+        height: 50px;
+        left: -60px;
     }
 }
 
@@ -76,5 +87,10 @@
         font: var(--font-l);
         font-weight: 700;
         text-align: center;
+    }
+
+    .back {
+        height: 38px;
+        left: -48px;
     }
 }

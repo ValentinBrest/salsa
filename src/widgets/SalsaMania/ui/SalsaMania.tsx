@@ -15,13 +15,16 @@ import SIEMIA from '../../../../public/img/project/salsamania/seimia.webp';
 import TALK from '../../../../public/img/project/salsamania/talk.webp';
 
 import cl from './SalsaMania.module.scss';
+import { useTheme } from 'app/providers/ThemeProvider';
+import { LOCAL_STORAGE_THEME_KEY, LOCAL_STORAGE_THEME_KEY_PREVIOUS, Theme } from 'app/providers/ThemeProvider/lib/ThemeContext';
 
 interface SalsaManiaProps {
     className?: string;
     backgroundColor?: string;
+    setIsSalsamaniaTheme?: (value: boolean) => void;
 }
 
-export const SalsaMania = ({ backgroundColor }: SalsaManiaProps) => {
+export const SalsaMania = ({ backgroundColor, setIsSalsamaniaTheme }: SalsaManiaProps) => {
     const isMobileScreen = useMediaQuery({ query: '(max-width: 576px)' });
     const isTableScreen = useMediaQuery({ query: '(max-width: 992px)' });
     const getHeightAccordion = () => {
@@ -96,6 +99,16 @@ export const SalsaMania = ({ backgroundColor }: SalsaManiaProps) => {
     ];
     const [stageVisible, setStageVisible] = useState([{ ...projects[0] }]);
 
+    const { setTheme } = useTheme();
+    const backPage = () => {
+        const newTheme =
+            localStorage.getItem(LOCAL_STORAGE_THEME_KEY_PREVIOUS) ||
+            Theme.LIGHT;
+        setIsSalsamaniaTheme(false);
+        setTheme(newTheme);
+        localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
+    };
+
     return (
         <>
             <section
@@ -107,12 +120,10 @@ export const SalsaMania = ({ backgroundColor }: SalsaManiaProps) => {
                     className={cl.title}
                     animation={true}
                     theme={TextTheme.WITHOUT}
+                    back={backPage}
                 />
                 <div className='container'>
-                    <Text
-                        className={cl.mainText}
-                        text={salsamania.main}
-                    />
+                    <Text className={cl.mainText} text={salsamania.main} />
                     <div className={cl.wrap}>
                         {projects.map((item) => (
                             <LinkScroll

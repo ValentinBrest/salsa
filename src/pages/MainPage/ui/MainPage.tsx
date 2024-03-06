@@ -30,7 +30,7 @@ export const MainPage = ({
     return (
         <>
             {isSalsamaniaTheme ? (
-                <SalsaMania backgroundColor={bgSecond} />
+                <SalsaMania backgroundColor={bgSecond} setIsSalsamaniaTheme={setIsSalsamaniaTheme}/>
             ) : (
                 <>
                     {isNewYear && <SnowStorm />}

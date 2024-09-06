@@ -14,7 +14,7 @@
 .wrap {
     display: grid;
     grid-template-columns: [start] 35% [line2] 20% [line3] 20% [line4] 23% [end];
-    grid-template-rows: [row1-start] 100px [row2] 25px [row3] 50px [row4] 75px [row5] 75px [row6] 50px [row7] 50px [row8] 50px [row9] 50px [row10] 25px [row11] 55px [last];
+    grid-template-rows: [row1-start] 100px [row2] 25px [row3] 60px [row4] 60px [row5] 60px [row6] 75px [row7] 75px [row8] 75px [row9] 75px [row10] 75px [last];
     gap: 10px;
     align-items: center;
 

@@ -84,8 +84,8 @@ export const Prices = ({
                     ))
                 )}
                 {!isTabletScreen && <div />}
-                {<div className={cl.woman}>Женский стиль</div>}
-                {prices.woman.map((el, elIndex) =>
+                {/* {<div className={cl.woman}>Женский стиль</div>} */}
+                {/* {prices.woman.map((el, elIndex) =>
                     el.map((item, index) => (
                         <Text
                             key={index}
@@ -104,7 +104,7 @@ export const Prices = ({
                             theme={TextTheme.ITALIC}
                         />
                     ))
-                )}
+                )} */}
             </div>
         </div>
     );

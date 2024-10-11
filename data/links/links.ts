@@ -3,12 +3,12 @@ import { RoutePath } from '../../src/app/providers/router/routeConfig/routeConfi
 
 
 export const links = [
-    {
-        id: 8,
-        name: 'Проект',
-        to: RoutePath.main,
-        scroll: 'project',
-    },
+    // {
+    //     id: 8,
+    //     name: 'Проект',
+    //     to: RoutePath.main,
+    //     scroll: 'project',
+    // },
     {
         id: 7,
         name: 'Сальса',

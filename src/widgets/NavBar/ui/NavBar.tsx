@@ -91,13 +91,13 @@ export const NavBar = ({ className, setIsSalsamaniaTheme }: NavBarProps) => {
                                     className={cl.link}
                                     onClick={() => onHandleMenu(item.scroll, false)}
                                 >
-                                    {index === 0 && (
+                                    {/* {index === 0 && (
                                         <img
                                             className={cl.newProjects}
                                             src={newProjects}
                                             alt='newProjects'
                                         />
-                                    )}
+                                    )} */}
                                     <AppLink to={item.to} key={item.id}>
                                         {item.name}
                                     </AppLink>
@@ -135,13 +135,13 @@ export const NavBar = ({ className, setIsSalsamaniaTheme }: NavBarProps) => {
                             smooth={true}
                             onClick={() => onHandleMenu(item.scroll, true)}
                         >
-                            {index === 0 && (
+                            {/* {index === 0 && (
                                 <img
                                     className={cl.newProjects}
                                     src={newProjects}
                                     alt='newProjects'
                                 />
-                            )}
+                            )} */}
                             <AppLink to={item.to} key={item.id}>
                                 {item.name}
                             </AppLink>

@@ -113,7 +113,7 @@ export const Intro = ({
                         alt='salsa-brest'
                     />
 
-                    <div className={cl.salsaWrap}>
+                    {/* <div className={cl.salsaWrap}>
                         <Link to={'/'}>
                             <Button
                                 title={intro.singUp}
@@ -147,7 +147,7 @@ export const Intro = ({
                         className={classNames(cl.klaksa, {}, [cl.anim])}
                         src={klaksa}
                         alt='salsa-brest'
-                    />
+                    /> */}
                 </div>
                 {!isMobileScreen && (
                     <div className={cl.right}>

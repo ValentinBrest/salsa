@@ -29,39 +29,30 @@ export const MainPage = ({
 
     return (
         <>
-            {isSalsamaniaTheme ? (
+            {/* {isSalsamaniaTheme ? (
                 <SalsaMania backgroundColor={bgSecond} setIsSalsamaniaTheme={setIsSalsamaniaTheme}/>
-            ) : (
-                <>
-                    {isNewYear && <SnowStorm />}
-                    <Intro
-                        isNewYear={isNewYear}
-                        setIsSalsamaniaTheme={setIsSalsamaniaTheme}
-                    />
-                    <AboutSalsa />
-                    <WhySalsa
-                        isNewYear={isNewYear}
-                        backgroundColor={bgSecond}
-                    />
-                    <WhySchool
-                        isNewYear={isNewYear}
-                        backgroundColor={bgFirst}
-                        backgroundColorCard={bgSecond}
-                    />
-                    <Lessons backgroundColor={bgSecond} />
-                    <Abonement
-                        isNewYear={isNewYear}
-                        backgroundColor={bgFirst}
-                    />
-                    <Events isNewYear={isNewYear} backgroundColor={bgSecond} />
-                    <Photos isNewYear={isNewYear} backgroundColor={bgFirst} />
-                    <Answers isNewYear={isNewYear} backgroundColor={bgSecond} />
-                    <Information
-                        isNewYear={isNewYear}
-                        backgroundColor={bgFirst}
-                    />
-                </>
-            )}
+            ) : ( */}
+            <>
+                {isNewYear && <SnowStorm />}
+                <Intro
+                    isNewYear={isNewYear}
+                    setIsSalsamaniaTheme={setIsSalsamaniaTheme}
+                />
+                <AboutSalsa />
+                <WhySalsa isNewYear={isNewYear} backgroundColor={bgSecond} />
+                <WhySchool
+                    isNewYear={isNewYear}
+                    backgroundColor={bgFirst}
+                    backgroundColorCard={bgSecond}
+                />
+                <Lessons backgroundColor={bgSecond} />
+                <Abonement isNewYear={isNewYear} backgroundColor={bgFirst} />
+                <Events isNewYear={isNewYear} backgroundColor={bgSecond} />
+                <Photos isNewYear={isNewYear} backgroundColor={bgFirst} />
+                <Answers isNewYear={isNewYear} backgroundColor={bgSecond} />
+                <Information isNewYear={isNewYear} backgroundColor={bgFirst} />
+            </>
+            {/* )} */}
             <Form backgroundColor={bgSecond} />
             {isNewYear && <NewYear />}
         </>

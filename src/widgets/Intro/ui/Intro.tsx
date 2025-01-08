@@ -108,6 +108,11 @@ export const Intro = ({
 
                     <img
                         loading='lazy'
+                        style={
+                            isNewYear
+                                ? { width: 225, height: 302 }
+                                : { width: 250, height: 250 }
+                        }
                         className={classNames(cl.logo, {}, [cl.anim])}
                         src={isNewYear ? logoNewYear : logo}
                         alt='salsa-brest'

@@ -62,8 +62,8 @@ export const Prices = ({
                         )}
                     </div>
                 ))}
-                {!isTabletScreen && <div />}
-                {<div className={cl.couple}>Парная сальса</div>}
+                {/* {!isTabletScreen && <div />} */}
+                {/* {<div className={cl.couple}>Парная сальса</div>} */}
                 {prices.body.map((el) =>
                     el.map((item, index) => (
                         <Text

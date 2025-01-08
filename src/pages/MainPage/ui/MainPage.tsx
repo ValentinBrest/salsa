@@ -25,7 +25,7 @@ export const MainPage = ({
     const bgSecond = 'var(--bg-color-second)';
     const bgFirst = 'var(--bg-color)';
 
-    const isNewYear = new Date() <= new Date('2024-01-15');
+    const isNewYear = new Date() <= new Date('2025-01-15');
 
     return (
         <>

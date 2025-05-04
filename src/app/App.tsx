@@ -1,6 +1,7 @@
 import { Suspense, useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Link as LinkScroll } from 'react-scroll';
+import { CoursePage } from 'pages/CoursePage';
 import { MainPage } from 'pages/MainPage';
 import { Footer } from 'widgets/Footer';
 import { NavBar } from 'widgets/NavBar';
@@ -53,6 +54,19 @@ function App() {
                             element={
                                 <div style={{ width: '100%' }}>
                                     <MainPage
+                                        isSalsamaniaTheme={isSalsamaniaTheme}
+                                        setIsSalsamaniaTheme={
+                                            setIsSalsamaniaTheme
+                                        }
+                                    />
+                                </div>
+                            }
+                        />
+                        <Route
+                            path='/course'
+                            element={
+                                <div style={{ width: '100%' }}>
+                                    <CoursePage
                                         isSalsamaniaTheme={isSalsamaniaTheme}
                                         setIsSalsamaniaTheme={
                                             setIsSalsamaniaTheme

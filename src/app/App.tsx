@@ -6,7 +6,7 @@ import { MainPage } from 'pages/MainPage';
 import { Footer } from 'widgets/Footer';
 import { NavBar } from 'widgets/NavBar';
 
-import Up from '../../public/img/toUp.svg';
+import Up from '../../public/icon/toUp.svg';
 
 import { useTheme } from './providers/ThemeProvider';
 import {

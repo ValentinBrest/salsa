@@ -41,7 +41,7 @@
     height: calc(100vh - var(--navbar-height));
 
     font-size: 100px;
-    color: var(--salsa-color);
+    color: var(--text-color);
 
     opacity: 0.8;
 }
@@ -57,14 +57,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
     width: 100%;
     height: 100%;
 }
 
 .logo {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    z-index: 50;
+}
+
+.logoNewYear {
+    width: 200px;
+    height: 260px;
 }
 
 .right {
@@ -78,7 +86,8 @@
     z-index: 10;
     right: -16px;
 
-    font: var(--font-title-xl);
+    font-size: var(--font-size-title-xl);
+    line-height: var(--font-line-title-xl);
     font-weight: 700;
 }
 
@@ -93,57 +102,16 @@
     margin-bottom: 10px;
     padding: 5px 15px;
 
-    font: var(--font-xl);
+    font-size: var(--font-size-xl);
+    line-height: var(--font-line-xl);
     font-weight: 700;
     text-align: center;
 }
 
-.cool {
-    font: var(--font-l);
+.salsaIsMore {
+    font-size: var(--font-size-l);
+    line-height: var(--font-line-l);
     font-weight: 700;
-}
-
-.btn {
-    position: relative;
-    z-index: 10;
-    margin-bottom: 20px;
-}
-
-.salsaWrap {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-}
-
-.klaksa {
-    width: 100%;
-    object-fit: contain;
-    position: absolute;
-    bottom: 0;
-}
-
-.project {
-    font: var(--font-title-s);
-    font-weight: 700;
-    line-height: 50px;
-    margin: 0;
-}
-
-.titleSalsamania {
-    font: var(--font-title-m);
-    font-weight: 700;
-    line-height: 50px;
-    margin: 0;
-    color: white;
-}
-
-.btnSalsa {
-    position: absolute;
-    z-index: 10;
-    margin-top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 @import "./Intro.media"

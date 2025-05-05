@@ -91,19 +91,23 @@
 }
 
 .size_s {
-    font: var(--font-s);
+    width: var(--font-size-s);
+    height: var(--font-line-s);
 }
 
 .size_m {
-    font: var(--font-m);
+    width: var(--font-size-m);
+    height: var(--font-line-m);
 }
 
 .size_l {
-    font: var(--font-l);
+    width: var(--font-size-l);
+    height: var(--font-line-l);
 }
 
 .size_xl {
-    font: var(--font-xl);
+    width: var(--font-size-xl);
+    height: var(--font-line-xl);
 }
 
 .arrow {
@@ -129,7 +133,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 66px;
+    width: 40px;
     height: 10px;
 }
 
@@ -160,7 +164,7 @@
     width: 40px;
     height: 10px;
 
-    background-color: var(--hover-color);
+    background-color: var(--gold-color);
     border-radius: 6px 10px 10px 6px;
 
     transition: all 1s cubic-bezier(0.25, 1.7, 0.35, 0.8);
@@ -193,7 +197,7 @@
     width: 40px;
     height: 10px;
 
-    background-color: var(--hover-color);
+    background-color: var(--gold-color);
     border-radius: 10px 6px 6px 10px;
 
     transition: all 1s cubic-bezier(0.25, 1.7, 0.35, 0.8);
@@ -207,33 +211,6 @@
 .open .arrowRight::after {
     transform-origin: center center;
     transform: rotate(70deg);
-}
-
-.perspective {
-    margin: 0;
-    padding: 0;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-    border: 0;
-    background-color:  var(--bg-color);
-}
-
-.perspectiveInner {
-    margin-top: -12px;
-    align-self: center;
-    transform: perspective(300px) rotateX(15deg) scaleY(0.8);
-    transition: all 0.5s;
-    font-size: 90px;
-    letter-spacing: 3px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9), 0 10px 0 #000000;
-
-    &:hover {
-        transform: perspective(1000px) rotateX(15deg) scale(1.07);
-        text-shadow: 0 0 10px black, 0 2px 0 #000000;
-    }
 }
 
 @import "./Button.media";

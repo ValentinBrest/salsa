@@ -1,19 +1,12 @@
 import { useEffect, useState } from 'react';
-import { Link as LinkScroll } from 'react-scroll';
-import { Theme, useTheme } from 'app/providers/ThemeProvider';
-import {
-    LOCAL_STORAGE_THEME_KEY,
-    LOCAL_STORAGE_THEME_KEY_PREVIOUS,
-} from 'app/providers/ThemeProvider/lib/ThemeContext';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppLink } from 'shared/ui';
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+import { Button, LinkScroll, NavLogo } from 'shared/ui';
 
 import { links } from '../../../../data/links/links';
 import guitar from '../../../../public/img/instuments/guitar.webp';
-import logo from '../../../../public/img/logo.webp';
-import newProjects from '../../../../public/img/new.webp';
 
+import { useMediaQuery } from 'react-responsive';
+import { Drawer } from 'shared/ui/Drawer';
 import cl from './NavBar.module.scss';
 
 interface NavBarProps {
@@ -23,23 +16,35 @@ interface NavBarProps {
 
 export const NavBar = ({ className, setIsSalsamaniaTheme }: NavBarProps) => {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
-    const [disableThemeSwitcher, setDisableThemeSwitcher] = useState(false);
-    const { theme, setSalsaManiaTheme, setTheme } = useTheme();
-    const onHandleMenu = (scroll: string, isTableScreen) => {
-        if (scroll === 'project') {
-            setSalsaManiaTheme();
-            setIsSalsamaniaTheme(true);
-            isTableScreen && setIsOpenMenu(!isOpenMenu);
-        } else {
-            const newTheme =
-                localStorage.getItem(LOCAL_STORAGE_THEME_KEY_PREVIOUS) ||
-                Theme.LIGHT;
-            setIsSalsamaniaTheme(false);
-            setTheme(newTheme);
-            localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
-            isTableScreen && setIsOpenMenu(!isOpenMenu);
-        }
+    const isTableScreen = useMediaQuery({ query: '(max-width: 992px)' });
+    const [isMobile, setIsMobile] = useState(false);
+    const onHandleMenu = () => {
+        isMobile && setIsOpenMenu(!isOpenMenu);
     };
+
+    const navLinks = links.map((link) => {
+        if (link?.items) {
+            return (
+                <Drawer
+                    items={link.items}
+                    name={link.name}
+                    onHandleMenu={() => onHandleMenu()}
+                    key={link.id}
+                />
+            );
+        } else {
+            return (
+                <LinkScroll
+                    href='/'
+                    className='navbarLink'
+                    name={link.name}
+                    to={link.scroll ?? '/'}
+                    key={link.id}
+                    onClick={() => onHandleMenu()}
+                />
+            );
+        }
+    });
 
     useEffect(() => {
         isOpenMenu
@@ -47,75 +52,40 @@ export const NavBar = ({ className, setIsSalsamaniaTheme }: NavBarProps) => {
             : document.body.classList.remove('lock');
     }, [isOpenMenu]);
 
+
     useEffect(() => {
-        if (theme === Theme.SALSAMANIA) {
-            setDisableThemeSwitcher(true);
-        } else {
-            setDisableThemeSwitcher(false);
-        }
-    }, [theme]);
+        setIsMobile(isTableScreen);
+      }, [isTableScreen]);
 
     return (
         <>
             <header id='up' className={classNames(cl.NavBar, {}, [className])}>
                 <div className='container'>
                     <div className={cl.wrap}>
-                        <a
-                            href='https://salsabrest.by'
-                            className={cl.linkLogo}
-                            key={'salsa'}
-                        >
-                            <img
-                                className={cl.logo}
-                                src={logo}
-                                alt='salsa-brest'
-                            />
-                        </a>
+                        <NavLogo />
+                        {isMobile && (
+                            <Button
+                                className={cl.btnBurger}
+                                onClick={() => setIsOpenMenu(!isOpenMenu)}
+                            >
+                                <span
+                                    className={classNames(
+                                        cl.burger,
+                                        { [cl.active]: isOpenMenu },
+                                        [className]
+                                    )}
+                                />
+                            </Button>
+                        )}
 
-                        <div
-                            className={classNames(
-                                cl.burger,
-                                { [cl.active]: isOpenMenu },
-                                [className]
-                            )}
-                            onClick={() => setIsOpenMenu(!isOpenMenu)}
-                        />
-
-                        <nav className={cl.links}>
-                            {links.map((item, index) => (
-                                <LinkScroll
-                                    to={item.scroll}
-                                    href='/'
-                                    key={item.id}
-                                    smooth={true}
-                                    className={cl.link}
-                                    onClick={() => onHandleMenu(item.scroll, false)}
-                                >
-                                    {/* {index === 0 && (
-                                        <img
-                                            className={cl.newProjects}
-                                            src={newProjects}
-                                            alt='newProjects'
-                                        />
-                                    )} */}
-                                    <AppLink to={item.to} key={item.id}>
-                                        {item.name}
-                                    </AppLink>
-                                </LinkScroll>
-                            ))}
-                        </nav>
-                        {disableThemeSwitcher ? (
-                            <div
-                                style={{ width: '40px', height: '40px' }}
-                            ></div>
-                        ) : (
-                            <ThemeSwitcher className={cl.switcher} />
+                        {!isMobile && (
+                            <nav className={cl.links}>{navLinks}</nav>
                         )}
                     </div>
                 </div>
             </header>
-            {
-                <nav
+            {isMobile && (
+                <div
                     className={classNames(cl.menu, {
                         [cl.visible]: isOpenMenu,
                     })}
@@ -126,29 +96,9 @@ export const NavBar = ({ className, setIsSalsamaniaTheme }: NavBarProps) => {
                         className={cl.guitar}
                         alt='гитара'
                     />
-                    {links.map((item, index) => (
-                        <LinkScroll
-                            href='/'
-                            className={cl.mobileLink}
-                            to={item.scroll}
-                            key={item.id}
-                            smooth={true}
-                            onClick={() => onHandleMenu(item.scroll, true)}
-                        >
-                            {/* {index === 0 && (
-                                <img
-                                    className={cl.newProjects}
-                                    src={newProjects}
-                                    alt='newProjects'
-                                />
-                            )} */}
-                            <AppLink to={item.to} key={item.id}>
-                                {item.name}
-                            </AppLink>
-                        </LinkScroll>
-                    ))}
-                </nav>
-            }
+                    {navLinks}
+                </div>
+            )}
         </>
     );
 };

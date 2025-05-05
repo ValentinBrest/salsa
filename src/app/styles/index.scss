@@ -2,7 +2,6 @@
 @import "./variables/global";
 @import "./themes/light";
 @import "./themes/dark";
-@import "./themes/salsamania";
 
 body {
     -moz-user-select: none;
@@ -11,7 +10,8 @@ body {
     -o-user-select: none;
     user-select: none;
 
-    font: var(--font-l);
+    font-size: var(--font-size-m);
+    line-height: var(--font-line-m);
     color: var(--primary-color);
 
     -webkit-tap-highlight-color: rgb(255 255 255 / 0%);
@@ -32,6 +32,29 @@ body {
     min-height: 100vh;
 
     background: var(--bg-color);
+    
+    font-family: "Jost", "Times New Roman", sans-serif;
+}
+
+.notFound {
+    height: calc(100vh - 150px - var(--navbar-height));
+    background: var(--bg-color-second);
+    padding: var(--padding-l);
+
+    .wrap {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.modal {
+    position: absolute;
+    width: 100vh;
+    height: 100%;
+    z-index: 100;
 }
 
 .container {
@@ -46,30 +69,10 @@ body {
     flex: 1 0 auto;
 }
 
-.pageup {
-    cursor: pointer;
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
+main {
+    position: relative;
 }
 
-.up {
-    display: block;
-
-    width: 40px;
-    height: 40px;
-
-    opacity: 0;
-
-    transition: all 0.3s;
-    fill: "#e52d87a3";
-}
-
-.activeScroll {
-    .up {
-        opacity: 1;
-    }
-}
 
 .toy {
     width: 30px;
@@ -87,6 +90,104 @@ body {
     height: 39px;
 }
 
+.link {
+    position: relative;
+
+    font-size: var(--font-size-m);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    background-image:
+        linear-gradient(
+            to right,
+            var(--primary-color),
+            var(--primary-color) 50%,
+            var(--primary-color) 50%
+        );
+    background-position: -100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 200% 100%;
+
+    transition: all 0.3s ease-in-out;
+
+    -webkit-text-fill-color: transparent;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+
+        display: block;
+
+        width: 0;
+        height: 2px;
+
+        background: var(--primary-color);
+
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        background-position: 0;
+
+        &::before {
+            width: 100%;
+        }
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.navbarLink {
+    margin-right: 20px;
+    position: relative;
+}
+
+.drawerLink {
+    font-size: var(--font-size-m);
+    text-transform: none;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+
+.pageup {
+    cursor: pointer;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.pageup.link:hover::before {
+    display: none;
+}
+
+.up {
+    display: block;
+
+    width: 40px;
+    height: 40px;
+
+    opacity: 0;
+
+    transition: all 0.3s;
+}
+
+.activeScroll {
+    .up {
+        opacity: 1;
+    }
+}
+
 @media (max-width: 1200px) {
     .container {
         width: 960px;
@@ -96,6 +197,19 @@ body {
 @media (max-width: 992px) {
     .container {
         width: 720px;
+    }
+
+    .navbarLink {
+        margin-right: 0;
+        margin-bottom: 30px;
+        font-size: var(--font-size-m);
+        line-height: var(--font-line-m);
+        text-decoration: none;
+        position: relative;
+    }
+
+    .notFound {
+        height: calc(100% - var(--navbar-height));
     }
 }
 
@@ -143,16 +257,3 @@ body {
         height: 22.1px;
     }
 }
-
-@font-face {
-    font-family: "NewYear"; 
-    src: url("./newYear.ttf");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Algerian"; 
-    src: url("./Algerian\ Regular.ttf");
-    font-display: swap;
-}
-

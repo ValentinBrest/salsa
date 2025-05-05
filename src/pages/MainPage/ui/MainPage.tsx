@@ -1,5 +1,4 @@
 import SnowStorm from 'react-snowstorm';
-import { Abonement } from 'widgets/Abonement';
 import { AboutSalsa } from 'widgets/AboutSalsa';
 import { Answers } from 'widgets/Answers';
 import { Events } from 'widgets/Events';
@@ -7,11 +6,10 @@ import { Form } from 'widgets/Form';
 import { Information } from 'widgets/Information';
 import { Intro } from 'widgets/Intro';
 import { Lessons } from 'widgets/Lessons';
-import { NewYear } from 'widgets/NewYear';
 import { Photos } from 'widgets/Photos';
-import { SalsaMania } from 'widgets/SalsaMania';
-import { WhySalsa } from 'widgets/WhySalsa';
-import { WhySchool } from 'widgets/WhySchool';
+import { Prices } from 'widgets/Prices';
+import { Salsa } from 'widgets/Salsa';
+import { School } from 'widgets/School';
 
 interface MainPageProps {
     isSalsamaniaTheme?: boolean;
@@ -36,17 +34,16 @@ export const MainPage = ({
                 {isNewYear && <SnowStorm />}
                 <Intro
                     isNewYear={isNewYear}
-                    setIsSalsamaniaTheme={setIsSalsamaniaTheme}
                 />
                 <AboutSalsa />
-                <WhySalsa isNewYear={isNewYear} backgroundColor={bgSecond} />
-                <WhySchool
-                    isNewYear={isNewYear}
-                    backgroundColor={bgFirst}
-                    backgroundColorCard={bgSecond}
-                />
+                <Salsa backgroundColor={bgSecond} isNewYear={isNewYear} />
+                <School
+                backgroundColor={bgFirst}
+                backgroundColorCard={bgSecond}
+                isNewYear={isNewYear}
+            />
                 <Lessons backgroundColor={bgSecond} />
-                <Abonement isNewYear={isNewYear} backgroundColor={bgFirst} />
+                <Prices backgroundColor={bgFirst} isNewYear={isNewYear} />
                 <Events isNewYear={isNewYear} backgroundColor={bgSecond} />
                 <Photos isNewYear={isNewYear} backgroundColor={bgFirst} />
                 <Answers isNewYear={isNewYear} backgroundColor={bgSecond} />
@@ -54,7 +51,7 @@ export const MainPage = ({
             </>
             {/* )} */}
             <Form backgroundColor={bgSecond} />
-            {isNewYear && <NewYear />}
+        
         </>
     );
 };

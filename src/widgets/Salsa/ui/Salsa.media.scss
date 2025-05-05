@@ -1,0 +1,55 @@
+@media (max-width: 1200px) {
+    .Salsa {
+        padding: var(--padding-xl);
+    }
+
+    .wrap {
+        grid-template-columns: 20% 80%;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .Salsa {
+        padding: var(--padding-l);
+    }
+
+    .wrap {
+        display: flex;
+    }
+
+    .sax {
+        opacity: 0.2;
+    }
+}
+
+@media (max-width: 768px) {
+    .Salsa {
+        padding: var(--padding-m);
+    }
+
+    .wrap {
+        gap: unset;
+    }
+
+    .sax {
+        top: 180px;
+    }
+
+    .partSnow {
+        width: 101px;
+        height: 54px;
+    }
+}
+
+@media (max-width: 576px) {
+    .Salsa {
+        padding: var(--padding-m);
+    }
+
+    .sax {
+        top: 70px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}

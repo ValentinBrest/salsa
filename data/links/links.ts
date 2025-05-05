@@ -1,48 +1,74 @@
-import { RoutePath } from '../../src/app/providers/router/routeConfig/routeConfig';
-
-
-
 export const links = [
-    // {
-    //     id: 8,
-    //     name: 'Проект',
-    //     to: RoutePath.main,
-    //     scroll: 'project',
-    // },
     {
-        id: 7,
-        name: 'Сальса',
-        to: RoutePath.main,
-        scroll: 'salsa',
-    },
-    {
-        id: 1,
-        name: 'О школе',
-        to: RoutePath.main,
-        scroll: 'about',
-    },
-    {
-        id: 3,
-        name: 'Абонементы',
-        to: RoutePath.main,
-        scroll: 'abonement',
-    },
-    {
-        id: 4,
-        name: 'Фотогалерея',
-        to: RoutePath.main,
-        scroll: 'photos',
-    },
-    {
-        id: 5,
-        name: 'Вопросы',
-        to: RoutePath.main,
-        scroll: 'question',
-    },
-    {
-        id: 6,
-        name: 'Контакты',
-        to: RoutePath.main,
-        scroll: 'contact',
-    },
+    id: 7,
+    name: 'Сальса',
+    items: [
+        {
+            id: 1,
+            name: 'О сальсе',
+            to: '/',
+            scroll: 'about',
+        },
+        {
+            id: 2,
+            name: 'Почему сальса?',
+            to: '/',
+            scroll: 'salsa',
+        },
+        {
+            id: 3,
+            name: 'Как выглядит сальса?',
+            to: '/',
+            scroll: 'lookSalsa',
+        },
+    ]
+},
+{
+    id: 1,
+    name: 'О школе',
+    items: [
+        {
+            id: 0,
+            name: 'Школа "СальсаБрест"',
+            to: '/',
+            scroll: 'school',
+        },
+        {
+            id: 1,
+            name: 'Наши занятия',
+            to: '/',
+            scroll: 'lessons',
+        },
+        {
+            id: 2,
+            name: 'Юридическая информация',
+            to: '/',
+            scroll: 'info',
+        },
+    ]
+},
+{
+    id: 3,
+    name: 'Цены',
+    to: '/',
+    scroll: 'prices',
+},
+{
+    id: 4,
+    name: 'Фотогалерея',
+    to: '/',
+    scroll: 'photos',
+},
+{
+    id: 5,
+    name: 'Вопросы',
+    to: '/',
+    scroll: 'question',
+},
+{
+    id: 6,
+    name: 'Контакты',
+    to: '/',
+    scroll: 'contact',
+},
 ];

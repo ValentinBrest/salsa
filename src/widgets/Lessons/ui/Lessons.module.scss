@@ -6,15 +6,12 @@
 
 .wrap {
     position: relative;
-    transform: translateY(100%);
 
     display: grid;
     grid-template-columns: 30% 70%;
     gap: 20px;
 
     height: 100%;
-
-    opacity: 0;
 }
 
 .decr {
@@ -35,12 +32,6 @@
     height: 240px;
 
     opacity: 0.75;
-}
-
-.active {
-    transform: translateY(0%);
-    opacity: 1;
-    transition: all 1s;
 }
 
 @import "./Lessons.media";

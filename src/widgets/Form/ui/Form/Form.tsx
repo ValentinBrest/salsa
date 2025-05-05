@@ -4,9 +4,9 @@ import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfinite
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 
 import dance from '../../../../../public/img/dance.webp';
-import Mail from '../../../../../public/img/mail.svg';
-import Instagram from '../../../../shared/assets/icons/social/instagram.svg';
-import Telegram from '../../../../shared/assets/icons/social/telegram.svg';
+import Mail from '../../../../../public/icon/social/email.svg';
+import Instagram from '../../../../../public/icon/social/instagram.svg';
+import Telegram from '../../../../../public/icon/social/telegram.svg';
 import cl from './Form.module.scss';
 import { form } from '../../../../../data/form';
 

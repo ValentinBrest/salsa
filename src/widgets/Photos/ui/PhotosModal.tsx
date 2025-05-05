@@ -21,12 +21,11 @@ interface PhotosModalProps {
     className?: string;
     isOpen: boolean;
     onClose: () => void;
-    isMounted: boolean;
     index: number;
 }
 
 export const PhotosModal = (props: PhotosModalProps) => {
-    const { className, isOpen, onClose, isMounted, index } = props;
+    const { className = '', isOpen, onClose, index } = props;
     const isTabletScreen = useMediaQuery({ query: '(max-width: 768px)' });
 
     const images = [
@@ -47,7 +46,6 @@ export const PhotosModal = (props: PhotosModalProps) => {
             className={classNames('modalX', {}, [className])}
             isOpen={isOpen}
             onClose={onClose}
-            isMounted={isMounted}
         >
             <SimpleImageSlider
                 style={{

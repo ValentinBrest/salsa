@@ -1,27 +1,25 @@
 import { ReactNode, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Text } from 'shared/ui/Text/Text';
+import { Text,TextAlign } from 'shared/ui';
 
-import cl from './AnswerCard.module.scss';
+import cl from './QuestionCard.module.scss';
 
-interface AnswerCardProps {
+interface QuestionCardProps {
     className?: string;
     question: string;
     answer: ReactNode;
     id: number;
 }
 
-export const AnswerCard = (props: AnswerCardProps) => {
-    const { className, question, answer, id } = props;
+export const QuestionCard = (props: QuestionCardProps) => {
+    const { className = '', question, answer, id } = props;
 
     const [isOpen, setIsOpen] = useState(false);
 
-    
-
     return (
-        <div className={classNames(cl.AnswerCard, {[cl.open]: isOpen}, [className])}>
+        <div className={classNames(cl.QuestionCard, {[cl.open]: isOpen}, [className])}>
             <div className={cl.header} onClick={() => setIsOpen(!isOpen)}>
-                <Text text={`${id}. ${question}`} className={cl.text}/>
+                <Text text={`${id}. ${question}`} className={cl.text} align={TextAlign.LEFT}/>
                 <span className={classNames(cl.sign, {[cl.active]: isOpen}, [])}></span>
             </div>
             {isOpen && <Text className={cl.body} text={answer}/>}

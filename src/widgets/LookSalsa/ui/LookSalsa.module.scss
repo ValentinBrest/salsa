@@ -1,4 +1,4 @@
-.Events {
+.LookSalsa {
     overflow: hidden;
     width: 100%;
     padding: var(--padding-l);
@@ -8,20 +8,18 @@
 .snowMan {
     position: absolute;
     bottom: -2px;
-    left: 50%;
+    left: 34%;
     z-index: 50;
     width: 188px;
     height: 111px;
     opacity: 0.75;
 }
 
-.superWrap {
-    transform: translateY(100%);
+.wrap {
     height: 100%;
-    opacity: 0;
 }
 
-.wrap {
+.videoWrap {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-around;
@@ -33,10 +31,5 @@
     }
 }
 
-.active {
-    transform: translateY(0%);
-    opacity: 1;
-    transition: all 1s;
-}
 
-@import "./Events.media";
+@import "./LookSalsa.media";

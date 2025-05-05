@@ -1,0 +1,1 @@
+export { TrialLesson } from './ui/TrialLesson/TrialLesson';

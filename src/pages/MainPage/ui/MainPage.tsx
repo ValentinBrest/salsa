@@ -1,15 +1,15 @@
 import SnowStorm from 'react-snowstorm';
 import { AboutSalsa } from 'widgets/AboutSalsa';
-import { Answers } from 'widgets/Answers';
-import { Events } from 'widgets/Events';
-import { Form } from 'widgets/Form';
 import { Information } from 'widgets/Information';
 import { Intro } from 'widgets/Intro';
 import { Lessons } from 'widgets/Lessons';
+import { LookSalsa } from 'widgets/LookSalsa';
 import { Photos } from 'widgets/Photos';
 import { Prices } from 'widgets/Prices';
+import { Questions } from 'widgets/Questions';
 import { Salsa } from 'widgets/Salsa';
 import { School } from 'widgets/School';
+import { TrialLesson } from 'widgets/TrialLesson';
 
 interface MainPageProps {
     isSalsamaniaTheme?: boolean;
@@ -27,31 +27,24 @@ export const MainPage = ({
 
     return (
         <>
-            {/* {isSalsamaniaTheme ? (
-                <SalsaMania backgroundColor={bgSecond} setIsSalsamaniaTheme={setIsSalsamaniaTheme}/>
-            ) : ( */}
             <>
                 {isNewYear && <SnowStorm />}
-                <Intro
-                    isNewYear={isNewYear}
-                />
+                <Intro isNewYear={isNewYear} />
                 <AboutSalsa />
                 <Salsa backgroundColor={bgSecond} isNewYear={isNewYear} />
                 <School
-                backgroundColor={bgFirst}
-                backgroundColorCard={bgSecond}
-                isNewYear={isNewYear}
-            />
+                    backgroundColor={bgFirst}
+                    backgroundColorCard={bgSecond}
+                    isNewYear={isNewYear}
+                />
                 <Lessons backgroundColor={bgSecond} />
                 <Prices backgroundColor={bgFirst} isNewYear={isNewYear} />
-                <Events isNewYear={isNewYear} backgroundColor={bgSecond} />
+                <LookSalsa backgroundColor={bgSecond} isNewYear={isNewYear} />
                 <Photos isNewYear={isNewYear} backgroundColor={bgFirst} />
-                <Answers isNewYear={isNewYear} backgroundColor={bgSecond} />
+                <Questions backgroundColor={bgSecond} isNewYear={isNewYear} />
                 <Information isNewYear={isNewYear} backgroundColor={bgFirst} />
             </>
-            {/* )} */}
-            <Form backgroundColor={bgSecond} />
-        
+            <TrialLesson backgroundColor={bgSecond} />
         </>
     );
 };

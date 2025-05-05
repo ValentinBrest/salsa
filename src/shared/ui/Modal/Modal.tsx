@@ -13,11 +13,10 @@ interface ModalProps {
     isOpen?: boolean;
     onClose?: () => void;
     lazy?: boolean;
-    isMounted: boolean;
 }
 
 export const Modal = (props: ModalProps) => {
-    const { className, children, isOpen, onClose, isMounted } = props;
+    const { className = '', children, isOpen = false, onClose } = props;
 
     const mods: Record<string, boolean> = {
         [cl.opened]: isOpen,
@@ -39,7 +38,7 @@ export const Modal = (props: ModalProps) => {
                 closeHandler();
             }
         },
-        [closeHandler],
+        [closeHandler]
     );
 
     useEffect(() => {
@@ -52,29 +51,30 @@ export const Modal = (props: ModalProps) => {
         };
     }, [isOpen, onKeyDown]);
 
-    if (!isMounted) {
-        return null;
-    }
-
     return (
-        <Portal>
-            <div className={classNames(cl.Modal, mods, [className])}>
-                <div className={cl.overlay} onClick={closeHandler}>
-                    <Button
-                        title="Закрыть"
-                        onClick={closeHandler}
-                        square
-                        size={ButtonSize.XL}
-                        theme={ButtonTheme.CLEAR}
-                        className={cl.close}
-                    >
-                        <Close />
-                    </Button>
-                    <div className={cl.content} onClick={onContentClick}>
-                        {children}
+        <Portal element={document.body}>
+            {isOpen && (
+                <div className={classNames(cl.Modal, mods, [className])}>
+                    <div className={cl.overlay} onClick={closeHandler}>
+                        <Button
+                            title='Закрыть'
+                            onClick={onClose}
+                            square
+                            size={ButtonSize.XL}
+                            theme={ButtonTheme.CLEAR}
+                            className={cl.close}
+                        >
+                            <Close
+                                className={cl.close}
+                            />
+                        </Button>
+
+                        <div className={cl.content} onClick={onContentClick}>
+                            {children}
+                        </div>
                     </div>
                 </div>
-            </div>
+            )}
         </Portal>
     );
 };

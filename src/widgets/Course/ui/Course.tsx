@@ -1,8 +1,6 @@
-import { MutableRefObject, useRef, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Link as LinkScroll } from 'react-scroll';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useInfiniteScroll } from 'shared/lib/hook/useInfiniteScroll/useInfiniteScroll';
 import { Accordion, Button, ButtonSize, ButtonTheme, Card } from 'shared/ui';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 
@@ -24,14 +22,9 @@ export const Course = ({
     backgroundColorCard,
     isNewYear = false,
 }: CourseProps) => {
-    const [isVisible, setIsVisible] = useState(false);
-    const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
     const isMobileScreen = useMediaQuery({ query: '(max-width: 576px)' });
     const isTableScreen = useMediaQuery({ query: '(max-width: 992px)' });
-    useInfiniteScroll({
-        triggerRef,
-        callback: () => setIsVisible(true),
-    });
+    
 
     const getHeightAccordion = () => {
         if (isMobileScreen) {
@@ -51,7 +44,6 @@ export const Course = ({
             }}
             id='events'
             className={classNames(cl.Course, {}, [className])}
-            ref={triggerRef}
         >
             {isNewYear && (
                 <img
@@ -66,7 +58,7 @@ export const Course = ({
                 <div
                     className={classNames(
                         cl.superWrap,
-                        { [cl.active]: isVisible },
+                        {},
                         []
                     )}
                 >

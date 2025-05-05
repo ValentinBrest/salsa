@@ -1,5 +1,5 @@
 import { Course } from 'widgets/Course';
-import { Form } from 'widgets/Form';
+import { TrialLesson } from 'widgets/TrialLesson';
 
 interface CoursePageProps {
     isSalsamaniaTheme?: boolean;
@@ -16,8 +16,7 @@ export const CoursePage = ({
     return (
         <>
             <Course isNewYear={isNewYear} backgroundColor={bgSecond} backgroundColorCard={bgFirst}/>
-            
-            <Form backgroundColor={bgSecond} />
+            <TrialLesson backgroundColor={bgSecond} />
         </>
     );
 };

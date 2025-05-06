@@ -8,25 +8,25 @@ import m7 from '../../../../public/img/main/7.webp';
 import m8 from '../../../../public/img/main/8.webp';
 
 export const leftImg = [
-    { url: m1.src },
-    { url: m8.src },
-    { url: m6.src },
-    { url: m3.src },
+    { url: m1 },
+    { url: m8 },
+    { url: m6 },
+    { url: m3 },
 ];
 
 export const rightImg = [
-    { url: m2.src },
-    { url: m5.src },
-    { url: m7.src },
-    { url: m4.src },
+    { url: m2 },
+    { url: m5 },
+    { url: m7 },
+    { url: m4 },
 ];
 export const totalImg = [
-    { url: m2.src },
-    { url: m1.src },
-    { url: m8.src },
-    { url: m6.src },
-    { url: m5.src },
-    { url: m7.src },
-    { url: m3.src },
-    { url: m4.src },
+    { url: m2 },
+    { url: m1 },
+    { url: m8 },
+    { url: m6 },
+    { url: m5 },
+    { url: m7 },
+    { url: m3 },
+    { url: m4 },
 ];

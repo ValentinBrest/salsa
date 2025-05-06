@@ -1,5 +1,6 @@
 import SnowStorm from 'react-snowstorm';
 import { AboutSalsa } from 'widgets/AboutSalsa';
+import { ExpressCourse } from 'widgets/ExpressCourse';
 import { Information } from 'widgets/Information';
 import { Intro } from 'widgets/Intro';
 import { Lessons } from 'widgets/Lessons';
@@ -22,6 +23,7 @@ export const MainPage = ({
 }: MainPageProps) => {
     const bgSecond = 'var(--bg-color-second)';
     const bgFirst = 'var(--bg-color)';
+    const bgExpressCourse = 'var(--course-color)';
 
     const isNewYear = new Date() <= new Date('2025-01-15');
 
@@ -30,7 +32,8 @@ export const MainPage = ({
             <>
                 {isNewYear && <SnowStorm />}
                 <Intro isNewYear={isNewYear} />
-                <AboutSalsa />
+                <ExpressCourse backgroundColor={bgExpressCourse}/>
+                <AboutSalsa/>
                 <Salsa backgroundColor={bgSecond} isNewYear={isNewYear} />
                 <School
                     backgroundColor={bgFirst}

@@ -1,4 +1,5 @@
 import { useMediaQuery } from 'react-responsive';
+import { useNavigate } from 'react-router-dom';
 import { Link as LinkScroll } from 'react-scroll';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Accordion, Button, ButtonSize, ButtonTheme, Card } from 'shared/ui';
@@ -20,6 +21,7 @@ export const Course = ({
 }: CourseProps) => {
     const isMobileScreen = useMediaQuery({ query: '(max-width: 576px)' });
     const isTableScreen = useMediaQuery({ query: '(max-width: 992px)' });
+    const navigate = useNavigate();
 
     const getHeightAccordion = () => {
         if (isMobileScreen) {
@@ -48,7 +50,7 @@ export const Course = ({
                         theme={TextTheme.WITHOUT}
                         title={course.title}
                         className={cl.title}
-                        back={() => {}}
+                        back={() => navigate(-1)}
                     />
 
                     <div className={cl.wrap}>

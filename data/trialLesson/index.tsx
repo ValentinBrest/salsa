@@ -1,7 +1,7 @@
 import { footer } from '../footer';
 
 export const trialLesson = {
-    title: 'ЗАПИШИТЕСЬ НА ПРОБНЫЙ УРОК',
+    title: 'ЗАПИШИТЕСЬ НА',
     suptitle: 'Для этого отправьте',
     message: '➕',
     toDirect: ' в директ',

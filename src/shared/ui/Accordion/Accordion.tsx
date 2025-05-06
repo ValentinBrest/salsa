@@ -40,7 +40,7 @@ export const Accordion = (props: AccordionProps) => {
             theme={ButtonTheme.ARROW}
             onClick={() => setIsVisible(!isVisible)}
             isVisible={isVisible}
-        ></Button>
+        />
     );
 
     return (

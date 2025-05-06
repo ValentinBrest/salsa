@@ -15,8 +15,8 @@ export const CoursePage = ({
 
     return (
         <>
-            <Course isNewYear={isNewYear} backgroundColor={bgSecond} backgroundColorCard={bgFirst}/>
-            <TrialLesson backgroundColor={bgSecond} />
+            <Course backgroundColor={bgSecond} backgroundColorCard={bgFirst}/>
+            <TrialLesson backgroundColor={bgSecond} eventName={'ЭКСПРЕСС-КУРС'}/>
         </>
     );
 };

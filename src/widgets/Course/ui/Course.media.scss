@@ -1,21 +1,13 @@
-@media (max-width: 1200px) {
-    .wrap {
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        justify-content: space-around;
-        height: 100%;
-
-        iframe {
-            width: 500px;
-            height: 280px;
-            margin-bottom: 10px;
-        }
-    }
-}
-
 @media (max-width: 992px) {
     .Course {
         padding-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrap {
+        display: flex;
+        flex-direction: column;
     }
 }
 

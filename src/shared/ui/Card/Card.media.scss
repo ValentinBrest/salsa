@@ -1,3 +1,9 @@
+@media (max-width: 992px) {
+    .Card {
+        padding: 20px;
+    }
+}
+
 @media (max-width: 576px) {
     .Card {
         font-size: var(--font-size-m);

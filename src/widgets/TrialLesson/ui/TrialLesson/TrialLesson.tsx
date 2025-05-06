@@ -13,9 +13,10 @@ import cl from './TrialLesson.module.scss';
 interface TrialLessonProps {
     className?: string;
     backgroundColor?: string;
+    eventName?: string
 }
 
-export const TrialLesson = ({ backgroundColor }: TrialLessonProps) => {
+export const TrialLesson = ({ backgroundColor, eventName = 'ПРОБНЫЙ УРОК' }: TrialLessonProps) => {
     const {title, suptitle, message, toDirect, direct, messagePost} = trialLesson;
     return (
         <Template
@@ -25,7 +26,7 @@ export const TrialLesson = ({ backgroundColor }: TrialLessonProps) => {
             classWrap={cl.wrap}
         >
             <div>
-                <Text theme={TextTheme.WITHOUT} title={title} />
+                <Text theme={TextTheme.WITHOUT} title={`${title} ${eventName}`} />
                 <div className={cl.send}>
                     <Text className={cl.withoutMargin} text={suptitle} />
                     <div className={cl.wantToDance}>

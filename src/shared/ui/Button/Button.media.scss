@@ -1,16 +1,16 @@
 @media (max-width: 992px) {
     .size_xl {
-        font: var(--font-size-l);
+        font-size: var(--font-size-l);
     }
 
     .size_l {
-        font: var(--font-size-m);
+        font-size: var(--font-size-m);
     }
 }
 
 @media (max-width: 768px) {
     .size_l {
-        font: var(--font-size-l);
+        font-size: var(--font-size-l);
     }
 }
 

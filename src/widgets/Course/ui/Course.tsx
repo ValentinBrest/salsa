@@ -5,26 +5,21 @@ import { Accordion, Button, ButtonSize, ButtonTheme, Card } from 'shared/ui';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 
 import { course } from '../../../../data/course';
-import snowMan from '../../../../public/img/newYear/snowman.webp';
 
 import cl from './Course.module.scss';
-
 interface CourseProps {
     className?: string;
     backgroundColor?: string;
     backgroundColorCard?: string;
-    isNewYear?: boolean;
 }
 
 export const Course = ({
     className,
     backgroundColor,
     backgroundColorCard,
-    isNewYear = false,
 }: CourseProps) => {
     const isMobileScreen = useMediaQuery({ query: '(max-width: 576px)' });
     const isTableScreen = useMediaQuery({ query: '(max-width: 992px)' });
-    
 
     const getHeightAccordion = () => {
         if (isMobileScreen) {
@@ -40,28 +35,14 @@ export const Course = ({
         <section
             style={{
                 background: backgroundColor,
-                paddingBottom: isNewYear ? '120px' : '50px',
+                paddingBottom: '50px',
             }}
-            id='events'
+            id='course'
             className={classNames(cl.Course, {}, [className])}
         >
-            {isNewYear && (
-                <img
-                    loading='lazy'
-                    src={snowMan}
-                    className={cl.snowMan}
-                    alt='snowMan'
-                />
-            )}
-
+    
             <div className='container'>
-                <div
-                    className={classNames(
-                        cl.superWrap,
-                        {},
-                        []
-                    )}
-                >
+                <div className={classNames(cl.superWrap, {}, [])}>
                     <Text
                         animation={true}
                         theme={TextTheme.WITHOUT}
@@ -71,21 +52,19 @@ export const Course = ({
                     />
 
                     <div className={cl.wrap}>
-                        <iframe
-                            src='https://www.youtube.com/embed/csdyrQAglPU'
-                            srcDoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;height:100%;width:100%;object-fit:cover;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/csdyrQAglPU?autoplay=1><img src=https://img.youtube.com/vi/csdyrQAglPU/hqdefault.jpg alt='salsaBrest'><span>▶</span></a>"
-                            title='Экспресс курс по сальсе "Включи ЛЕТО на максимум!"'
-                            frameBorder='0'
-                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                            referrerPolicy='strict-origin-when-cross-origin'
-                            allowFullScreen
-                            loading='lazy'
-                        ></iframe>
-                    
+                        <video
+                            width='100%'
+                            height='540'
+                            preload='none'
+                            controls
+                            poster={'./video/poster.jpg'}
+                        >
+                            <source src='./video/1.mp4' type='video/mp4' />
+                        </video>
 
                         <Card className={cl.card}>
                             <Accordion
-                                startHeight='300px'
+                                startHeight='330px'
                                 height={getHeightAccordion()}
                                 background={backgroundColorCard}
                             >
@@ -131,12 +110,12 @@ export const Course = ({
                             </Accordion>
                             <LinkScroll
                                 href='/'
-                                to='form'
+                                to='trialLesson'
                                 smooth={true}
                                 className={cl.linkBtn}
                             >
                                 <Button
-                                    size={ButtonSize.L}
+                                    size={ButtonSize.ML}
                                     theme={ButtonTheme.OUTLINE}
                                     className={cl.btn}
                                 >

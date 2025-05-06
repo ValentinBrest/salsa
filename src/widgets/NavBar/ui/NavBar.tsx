@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, LinkScroll, NavLogo } from 'shared/ui';
 
@@ -8,6 +8,7 @@ import guitar from '../../../../public/img/instuments/guitar.webp';
 import { useMediaQuery } from 'react-responsive';
 import { Drawer } from 'shared/ui/Drawer';
 import cl from './NavBar.module.scss';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
 interface NavBarProps {
     className?: string;
@@ -18,9 +19,18 @@ export const NavBar = ({ className, setIsSalsamaniaTheme }: NavBarProps) => {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
     const isTableScreen = useMediaQuery({ query: '(max-width: 992px)' });
     const [isMobile, setIsMobile] = useState(false);
+    const location = useLocation()
+
+    const navigate = useNavigate()
+
     const onHandleMenu = () => {
+        !isMainPage && navigate('/')
         isMobile && setIsOpenMenu(!isOpenMenu);
     };
+
+    const isMainPage = useMemo(() => {
+        return location.pathname === '/'
+    }, [location])
 
     const navLinks = links.map((link) => {
         if (link?.items) {

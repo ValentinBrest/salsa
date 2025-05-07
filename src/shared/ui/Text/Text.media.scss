@@ -44,6 +44,8 @@
         line-height: var(--font-line-l);
         font-weight: 700;
     }
+
+    
 }
 
 @media (max-width: 576px) {
@@ -80,5 +82,16 @@
         line-height: var(--font-line-l);
         font-weight: 700;
         text-align: center;
+    }
+
+    .back {
+        width: 40px;
+        height: 40px;
+    }
+
+    .innerTitleWrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
     }
 }

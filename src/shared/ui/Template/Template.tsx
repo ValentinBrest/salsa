@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import { motion, Variants } from 'framer-motion';
 import cl from './Template.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { Link } from 'react-router-dom';
 
 interface TemplateProps {
     className?: string;
@@ -10,6 +11,7 @@ interface TemplateProps {
     id?: string;
     classWrap?: string;
     amount?: number;
+    link?: string;
 }
 
 const cardVariants: Variants = {
@@ -33,8 +35,9 @@ export const Template = ({
     id,
     classWrap = '',
     amount = 0.3,
+    link,
 }: TemplateProps) => {
-    return (
+    const content = (
         <motion.section
             initial='offscreen'
             whileInView='onscreen'
@@ -52,5 +55,13 @@ export const Template = ({
                 </motion.div>
             </div>
         </motion.section>
+    );
+
+    return link ? (
+        <Link to={link} className={cl.link}>
+            {content}
+        </Link>
+    ) : (
+        content
     );
 };

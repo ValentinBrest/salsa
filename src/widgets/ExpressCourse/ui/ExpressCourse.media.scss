@@ -1,20 +1,6 @@
-@media (max-width: 1200px) {
-    .ExpressCourse {
-        padding: var(--padding-xl);
-    }
-
-    .wrap {
-        gap: 10px;
-    }
-}
-
 @media (max-width: 992px) {
     .ExpressCourse {
         padding: var(--padding-l);
-    }
-
-    .wrap {
-        display: flex;
     }
 
 }
@@ -22,5 +8,30 @@
 @media (max-width: 768px) {
     .ExpressCourse {
         padding: var(--padding-m);
+    }
+
+    .subTitle {
+        line-height: var(--font-line-l);
+    }
+}
+
+
+@media (max-width: 576px) {
+    .title {
+        margin-bottom: 8px;
+    }
+
+    .saleImg {
+        width: 300px;
+    }
+
+    .saleText {
+        font-size: var(--font-size-ml);
+    }
+
+    .subTitle {
+        font-size: var(--font-size-m);
+        line-height: var(--font-line-m);
+        text-transform: uppercase;
     }
 }

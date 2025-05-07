@@ -9,6 +9,10 @@
         display: flex;
         flex-direction: column;
     }
+
+    .subTitle {
+        font-size: var(--font-size-ml);
+    }
 }
 
 @media (max-width: 576px) {

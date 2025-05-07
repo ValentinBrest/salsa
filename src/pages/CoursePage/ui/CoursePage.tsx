@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Course } from 'widgets/Course';
 import { TrialLesson } from 'widgets/TrialLesson';
 

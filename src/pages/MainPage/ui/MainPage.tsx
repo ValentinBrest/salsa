@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import SnowStorm from 'react-snowstorm';
 import { AboutSalsa } from 'widgets/AboutSalsa';
 import { ExpressCourse } from 'widgets/ExpressCourse';

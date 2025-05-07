@@ -59,7 +59,7 @@ export const Course = ({
                             height='540'
                             preload='none'
                             controls
-                            poster={'./video/poster.jpg'}
+                            poster={'./video/poster1.webp'}
                         >
                             <source src='./video/1.mp4' type='video/mp4' />
                         </video>
@@ -92,6 +92,10 @@ export const Course = ({
                                 <Text
                                     align={TextAlign.LEFT}
                                     text={course.price}
+                                />
+                                <Text
+                                    align={TextAlign.LEFT}
+                                    text={course.time}
                                 />
                                 <Text
                                     align={TextAlign.LEFT}

@@ -13,6 +13,7 @@ import {
     LOCAL_STORAGE_THEME_KEY_PREVIOUS,
     Theme,
 } from './providers/ThemeProvider/lib/ThemeContext';
+import { AppRouter } from 'app/providers/router';
 
 function App() {
     const [isSctollTo, setIsScrollTo] = useState(false);
@@ -48,34 +49,7 @@ function App() {
             <Suspense fallback=''>
                 <NavBar setIsSalsamaniaTheme={setIsSalsamaniaTheme} />
                 <main className='content-page'>
-                    <Routes>
-                        <Route
-                            path='/'
-                            element={
-                                <div style={{ width: '100%' }}>
-                                    <MainPage
-                                        isSalsamaniaTheme={isSalsamaniaTheme}
-                                        setIsSalsamaniaTheme={
-                                            setIsSalsamaniaTheme
-                                        }
-                                    />
-                                </div>
-                            }
-                        />
-                        <Route
-                            path='/course'
-                            element={
-                                <div style={{ width: '100%' }}>
-                                    <CoursePage
-                                        isSalsamaniaTheme={isSalsamaniaTheme}
-                                        setIsSalsamaniaTheme={
-                                            setIsSalsamaniaTheme
-                                        }
-                                    />
-                                </div>
-                            }
-                        />
-                    </Routes>
+                    {AppRouter()}
                     <LinkScroll
                         href='/'
                         to={'up'}

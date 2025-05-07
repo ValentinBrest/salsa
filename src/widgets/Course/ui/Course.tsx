@@ -61,7 +61,7 @@ export const Course = ({
                             controls
                             poster={poster}
                         >
-                            <source src='./1.mp4' type='video/mp4' />
+                            <source src='../../../../public/1.mp4' type='video/mp4' />
                         </video>
 
                         <Card className={cl.card}>

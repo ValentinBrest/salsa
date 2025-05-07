@@ -5,7 +5,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Accordion, Button, ButtonSize, ButtonTheme, Card } from 'shared/ui';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import poster from '../../../../public/img/poster.webp'
-import video from '../../../../public/video/1.mp4'
+import video from '../../../../public/video/1.mp4';
 import { course } from '../../../../data/course';
 
 import cl from './Course.module.scss';

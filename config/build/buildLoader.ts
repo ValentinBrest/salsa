@@ -20,7 +20,7 @@ export function buildLoader (isDev: boolean): webpack.RuleSetRule[] {
     };
 
     const fileLoader = {
-        test: /\.(png|jpe?g|gif|woff2|webp|woff)$/i,
+        test: /\.(png|jpe?g|gif|woff2|webp|woff|mp4)$/i,
         use: [
             {
                 loader: 'file-loader',

@@ -8,29 +8,29 @@ import guitar from '../../../../public/img/instuments/guitar.webp';
 import { useMediaQuery } from 'react-responsive';
 import { Drawer } from 'shared/ui/Drawer';
 import cl from './NavBar.module.scss';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 
 interface NavBarProps {
     className?: string;
-    setIsSalsamaniaTheme: (value: boolean) => void;
 }
 
-export const NavBar = ({ className, setIsSalsamaniaTheme }: NavBarProps) => {
+export const NavBar = ({ className }: NavBarProps) => {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
     const isTableScreen = useMediaQuery({ query: '(max-width: 992px)' });
     const [isMobile, setIsMobile] = useState(false);
-    const location = useLocation()
+    const location = useLocation();
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const onHandleMenu = () => {
-        !isMainPage && navigate('/')
+        !isMainPage && navigate('/');
         isMobile && setIsOpenMenu(!isOpenMenu);
     };
 
     const isMainPage = useMemo(() => {
-        return location.pathname === '/'
-    }, [location])
+        return location.pathname === '/';
+    }, [location]);
 
     const navLinks = links.map((link) => {
         if (link?.items) {
@@ -62,10 +62,9 @@ export const NavBar = ({ className, setIsSalsamaniaTheme }: NavBarProps) => {
             : document.body.classList.remove('lock');
     }, [isOpenMenu]);
 
-
     useEffect(() => {
         setIsMobile(isTableScreen);
-      }, [isTableScreen]);
+    }, [isTableScreen]);
 
     return (
         <>
@@ -89,8 +88,11 @@ export const NavBar = ({ className, setIsSalsamaniaTheme }: NavBarProps) => {
                         )}
 
                         {!isMobile && (
-                            <nav className={cl.links}>{navLinks}</nav>
+                            <nav className={cl.links}>
+                                {navLinks}
+                            </nav>
                         )}
+                        <ThemeSwitcher className={cl.switcher} />
                     </div>
                 </div>
             </header>

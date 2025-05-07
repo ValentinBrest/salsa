@@ -1,7 +1,7 @@
 import { memo, ReactNode } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 
-import BACK from '../../assets/icons/back.svg';
+import BACK from '../../../../public/icon/back.svg';
 
 import cl from './Text.module.scss';
 

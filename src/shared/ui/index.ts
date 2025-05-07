@@ -1,5 +1,4 @@
 import { Accordion } from 'shared/ui/Accordion/Accordion';
-import { Input } from 'shared/ui/Input/Input';
 import { Modal } from 'shared/ui/Modal/Modal';
 import { LinkScroll } from 'shared/ui/LinkScroll/LinkScroll';
 
@@ -15,8 +14,7 @@ export {
     Accordion,
     Button, 
     ButtonSize, 
-    Card, 
-    Input,
+    Card,
     Modal, 
     ButtonTheme,
     LinkScroll,

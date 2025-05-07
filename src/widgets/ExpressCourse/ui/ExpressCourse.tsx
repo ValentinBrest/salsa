@@ -1,4 +1,3 @@
-import { useMediaQuery } from 'react-responsive';
 import {
     Button,
     ButtonSize,
@@ -16,7 +15,6 @@ interface ExpressCourseProps {
 }
 
 export const ExpressCourse = ({ backgroundColor }: ExpressCourseProps) => {
-
     return (
         <Template
             backgroundColor={backgroundColor}

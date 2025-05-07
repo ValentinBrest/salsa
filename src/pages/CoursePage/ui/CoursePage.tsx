@@ -1,23 +1,17 @@
-import { useEffect } from 'react';
 import { Course } from 'widgets/Course';
 import { TrialLesson } from 'widgets/TrialLesson';
 
-interface CoursePageProps {
-    isSalsamaniaTheme?: boolean;
-    setIsSalsamaniaTheme?: (value: boolean) => void;
-}
-
-export const CoursePage = ({
-}: CoursePageProps) => {
+export const CoursePage = ({}) => {
     const bgSecond = 'var(--bg-color-second)';
     const bgFirst = 'var(--bg-color)';
 
-    const isNewYear = new Date() <= new Date('2025-01-15');
-
     return (
         <>
-            <Course backgroundColor={bgSecond} backgroundColorCard={bgFirst}/>
-            <TrialLesson backgroundColor={bgSecond} eventName={'ЭКСПРЕСС-КУРС'}/>
+            <Course backgroundColor={bgSecond} backgroundColorCard={bgFirst} />
+            <TrialLesson
+                backgroundColor={bgSecond}
+                eventName={'ЭКСПРЕСС-КУРС'}
+            />
         </>
     );
 };

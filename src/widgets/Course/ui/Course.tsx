@@ -4,7 +4,7 @@ import { Link as LinkScroll } from 'react-scroll';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Accordion, Button, ButtonSize, ButtonTheme, Card } from 'shared/ui';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
-
+import poster from '../../../../public/img/poster.webp'
 import { course } from '../../../../data/course';
 
 import cl from './Course.module.scss';
@@ -59,7 +59,7 @@ export const Course = ({
                             height='540'
                             preload='none'
                             controls
-                            poster={'./video/poster1.webp'}
+                            poster={poster}
                         >
                             <source src='./video/1.mp4' type='video/mp4' />
                         </video>

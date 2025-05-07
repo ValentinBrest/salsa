@@ -1,5 +1,3 @@
-
-
 import { Template, Text, TextTheme } from 'shared/ui';
 
 import { trialLesson } from '../../../../../data/trialLesson';

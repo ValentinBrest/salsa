@@ -5,6 +5,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Accordion, Button, ButtonSize, ButtonTheme, Card } from 'shared/ui';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import poster from '../../../../public/img/poster.webp'
+import video from '../../../../public/video/1.mp4'
 import { course } from '../../../../data/course';
 
 import cl from './Course.module.scss';
@@ -61,7 +62,7 @@ export const Course = ({
                             controls
                             poster={poster}
                         >
-                            <source src='../../../../public/1.mp4' type='video/mp4' />
+                            <source src={video} type='video/mp4' />
                         </video>
 
                         <Card className={cl.card}>

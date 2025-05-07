@@ -61,6 +61,7 @@ export const Course = ({
                             preload='none'
                             controls
                             poster={poster}
+                            webkit-playsinline playsInline
                         >
                             <source src={video} type='video/mp4' />
                         </video>

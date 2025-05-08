@@ -56,7 +56,7 @@ export const Text = memo((props: TextProps) => {
                         cl[align],
                     ])}
                 >
-                    <span className={cl.innerTitleWrap}>
+                    <div className={cl.innerTitleWrap}>
                         {back && (
                             <BACK onClick={() => back()} className={cl.back} />
                         )}
@@ -65,7 +65,7 @@ export const Text = memo((props: TextProps) => {
                         ) : (
                             <span>{title}</span>
                         )}
-                    </span>
+                    </div>
                 </div>
             )}
 

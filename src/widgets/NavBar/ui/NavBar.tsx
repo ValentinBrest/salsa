@@ -1,15 +1,15 @@
 import { useEffect, useMemo, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, LinkScroll, NavLogo } from 'shared/ui';
+import { Drawer } from 'shared/ui/Drawer';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 
 import { links } from '../../../../data/links/links';
 import guitar from '../../../../public/img/instuments/guitar.webp';
 
-import { useMediaQuery } from 'react-responsive';
-import { Drawer } from 'shared/ui/Drawer';
 import cl from './NavBar.module.scss';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 
 interface NavBarProps {
     className?: string;
@@ -25,6 +25,10 @@ export const NavBar = ({ className }: NavBarProps) => {
 
     const onHandleMenu = () => {
         !isMainPage && navigate('/');
+        isMobile && setIsOpenMenu(!isOpenMenu);
+    };
+
+    const onToachMove = () => {
         isMobile && setIsOpenMenu(!isOpenMenu);
     };
 
@@ -66,6 +70,30 @@ export const NavBar = ({ className }: NavBarProps) => {
         setIsMobile(isTableScreen);
     }, [isTableScreen]);
 
+    const menu = document.getElementById('menu');
+
+    useEffect(() => {
+        let startTouchY = 0;
+        let startTouchX = 0;
+        let endTouchY = 0;
+        let endTouchX = 0;
+
+        if (menu) {
+            menu.addEventListener('touchstart', (event) => {
+                startTouchY = event.changedTouches[0].pageY;
+                startTouchX = event.changedTouches[0].pageX;
+            });
+
+            menu.addEventListener('touchend', (event) => {
+                endTouchY = event.changedTouches[0].pageY;
+                endTouchX = event.changedTouches[0].pageX;
+
+                if ( Math.abs(endTouchX - startTouchX) < 40 && endTouchY < startTouchY) setIsOpenMenu(false);
+            });
+        }
+        
+    }, [menu]);
+
     return (
         <>
             <header id='up' className={classNames(cl.NavBar, {}, [className])}>
@@ -88,9 +116,7 @@ export const NavBar = ({ className }: NavBarProps) => {
                         )}
 
                         {!isMobile && (
-                            <nav className={cl.links}>
-                                {navLinks}
-                            </nav>
+                            <nav className={cl.links}>{navLinks}</nav>
                         )}
                         <ThemeSwitcher className={cl.switcher} />
                     </div>
@@ -98,6 +124,8 @@ export const NavBar = ({ className }: NavBarProps) => {
             </header>
             {isMobile && (
                 <div
+                    id='menu'
+                    onScroll={() => onToachMove()}
                     className={classNames(cl.menu, {
                         [cl.visible]: isOpenMenu,
                     })}

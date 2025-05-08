@@ -4,9 +4,10 @@ import { Link as LinkScroll } from 'react-scroll';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Accordion, Button, ButtonSize, ButtonTheme, Card } from 'shared/ui';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
-import poster from '../../../../public/img/poster.webp'
-import video from '../../../../public/video/1.mp4';
+
 import { course } from '../../../../data/course';
+import poster from '../../../../public/img/poster.webp';
+import video from '../../../../public/video/1.mp4';
 
 import cl from './Course.module.scss';
 interface CourseProps {
@@ -51,9 +52,9 @@ export const Course = ({
                         theme={TextTheme.WITHOUT}
                         title={course.title}
                         className={cl.title}
-                        back={() => navigate(-1)}
+                        back={() => navigate('/')}
                     />
-                    <Text text={course.datePage} className={cl.date} />
+                    {/* <Text text={course.datePage} className={cl.date} /> */}
 
                     <div className={cl.wrap}>
                         <video
@@ -62,7 +63,7 @@ export const Course = ({
                             preload='none'
                             controls
                             poster={poster}
-                            webkit-playsinline playsInline
+                            webkit-playsInline playsInline
                         >
                             <source src={video} type='video/mp4' />
                         </video>

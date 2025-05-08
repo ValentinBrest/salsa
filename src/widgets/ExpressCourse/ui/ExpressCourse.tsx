@@ -6,8 +6,10 @@ import {
     Text,
     TextTheme,
 } from 'shared/ui';
+
 import { course } from '../../../../data/course';
 import summerSale from '../../../../public/img/summerSale.webp';
+
 import cl from './ExpressCourse.module.scss';
 
 interface ExpressCourseProps {
@@ -30,7 +32,7 @@ export const ExpressCourse = ({ backgroundColor }: ExpressCourseProps) => {
                 title={course.title}
                 className={cl.title}
             />
-            <Text text={course.date} className={cl.date} />
+            {/* <Text text={course.date} className={cl.date} /> */}
             <div className={cl.saleWrap}>
                 <img
                     loading='lazy'

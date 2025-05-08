@@ -4,6 +4,7 @@ import orange from '../../../../public/img/newYear/orange.png';
 import cl from './School.module.scss';
 import { school } from '../../../../data/school';
 import { Accordion, Template, TextAlign, TextTheme, Text, Card } from 'shared/ui';
+import { useMediaQuery } from 'react-responsive';
 
 interface SchoolProps {
     backgroundColor?: string;
@@ -17,7 +18,7 @@ export const School = ({
     isNewYear = false,
 }: SchoolProps) => {
     const O = <img alt='o' src={orange} className={'toy large'} />;
-
+    const isMobileScreen = useMediaQuery({ query: '(max-width: 576px)' });
     return (
         <Template
             backgroundColor={backgroundColor}
@@ -53,7 +54,7 @@ export const School = ({
                         {school.text.map((item, index) => (
                             <Text
                                 key={index}
-                                align={TextAlign.LEFT}
+                                align={isMobileScreen ? TextAlign.CENTER : TextAlign.LEFT}
                                 className={cl.text}
                                 text={item}
                             />

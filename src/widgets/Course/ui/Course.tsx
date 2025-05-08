@@ -53,6 +53,7 @@ export const Course = ({
                         className={cl.title}
                         back={() => navigate(-1)}
                     />
+                    <Text text={course.datePage} className={cl.date} />
 
                     <div className={cl.wrap}>
                         <video

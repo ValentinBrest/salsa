@@ -1,3 +1,4 @@
+import { useMediaQuery } from 'react-responsive';
 import { Accordion, Template, TextAlign, Text } from 'shared/ui';
 import { lessons } from '../../../../data/lessons';
 import guiro from '../../../../public/img/instuments/guiro.webp';
@@ -8,6 +9,7 @@ interface LessonsProps {
 }
 
 export const Lessons = ({ backgroundColor }: LessonsProps) => {
+    const isMobileScreen = useMediaQuery({ query: '(max-width: 576px)' });
     return (
         <Template
             backgroundColor={backgroundColor}
@@ -24,7 +26,7 @@ export const Lessons = ({ backgroundColor }: LessonsProps) => {
                     linkId='lessons'
                 >
                     {lessons.text.map((item, index) => (
-                        <Text key={index} align={TextAlign.RIGHT} text={item} />
+                        <Text key={index} align={isMobileScreen ? TextAlign.CENTER : TextAlign.RIGHT} text={item} />
                     ))}
                 </Accordion>
             </div>

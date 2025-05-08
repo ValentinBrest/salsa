@@ -30,6 +30,7 @@ export const ExpressCourse = ({ backgroundColor }: ExpressCourseProps) => {
                 title={course.title}
                 className={cl.title}
             />
+            <Text text={course.date} className={cl.date} />
             <div className={cl.saleWrap}>
                 <img
                     loading='lazy'
@@ -37,19 +38,7 @@ export const ExpressCourse = ({ backgroundColor }: ExpressCourseProps) => {
                     alt={'sale'}
                     className={cl.saleImg}
                 />
-                <Text
-                    className={cl.saleText}
-                    text={
-                        <>
-                            {' '}
-                            Всего за <s>90</s>{' '}
-                            <b style={{ color: 'red' }}>60 р. в месяц</b>!!!{' '}
-                            <br></br>
-                            <br></br> Для стундентов -{' '}
-                            <b style={{ color: 'red' }}>40 р. в месяц</b>!!!
-                        </>
-                    }
-                />
+                <Text className={cl.saleText} text={course.saleText} />
             </div>
             <Button
                 size={ButtonSize.ML}

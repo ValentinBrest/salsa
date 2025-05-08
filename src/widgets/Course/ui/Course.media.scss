@@ -16,12 +16,12 @@
 }
 
 @media (max-width: 576px) {
-    .wrap {
-        iframe {
-            width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-        }
+    .title {
+        margin-bottom: 10px;
+    }
+    .date {
+        font-size: var(--font-size-l);
+        margin-bottom: 30px;
     }
 
     .title {

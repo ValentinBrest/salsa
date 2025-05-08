@@ -38,7 +38,6 @@ export const Information = ({
                         <Text
                             key={index}
                             className={cl.text}
-                            align={TextAlign.LEFT}
                             text={item}
                         />
                     ))}

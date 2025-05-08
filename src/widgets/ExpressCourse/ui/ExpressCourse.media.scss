@@ -13,12 +13,16 @@
     .subTitle {
         line-height: var(--font-line-l);
     }
+
+    .date {
+        font-size: var(--font-size-l);
+    }
 }
 
 
 @media (max-width: 576px) {
     .title {
-        margin-bottom: 8px;
+        margin-bottom: 16px;
     }
 
     .saleImg {

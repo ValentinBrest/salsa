@@ -126,11 +126,11 @@
 
 @media (max-width: 576px) {
     .NavBar {
-        height: calc(var(--navbar-height-mobile));
+        // height: calc(var(--navbar-height-mobile));
         padding: 5px;
     }
 
     .visible {
-        top: calc(var(--navbar-height-mobile));
+        top: calc(var(--navbar-height));
     }
 }

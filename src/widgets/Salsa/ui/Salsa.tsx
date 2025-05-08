@@ -4,6 +4,7 @@ import partSnow from '../../../../public/img/newYear/partSnow.webp';
 import { salsa } from '../../../../data/salsa';
 import cl from './Salsa.module.scss';
 import { Accordion, Template, TextAlign, Text } from 'shared/ui';
+import { useMediaQuery } from 'react-responsive';
 
 interface SalsaProps {
     backgroundColor?: string;
@@ -15,7 +16,8 @@ export const Salsa = ({
     isNewYear = false,
 }: SalsaProps) => {
     const O = <img src={gold} alt='o' className={'toy small'} />;
-
+    const isMobileScreen = useMediaQuery({ query: '(max-width: 576px)' });
+    
     return (
         <div className={cl.superWrap}>
             {isNewYear && (
@@ -54,7 +56,7 @@ export const Salsa = ({
                         {salsa.text.map((item, index) => (
                             <Text
                                 key={index}
-                                align={TextAlign.RIGHT}
+                                align={isMobileScreen ? TextAlign.CENTER : TextAlign.RIGHT}
                                 text={item}
                             />
                         ))}

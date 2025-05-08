@@ -203,10 +203,15 @@ main {
     .navbarLink {
         margin-right: 0;
         margin-bottom: 30px;
-        font-size: var(--font-size-m);
-        line-height: var(--font-line-m);
+        font-size: var(--font-size-ml);
+        line-height: var(--font-line-ml);
         text-decoration: none;
         position: relative;
+        font-weight: 700;
+    }
+
+    .drawerLink {
+        font-size: var(--font-size-ml);
     }
 
     .notFound {

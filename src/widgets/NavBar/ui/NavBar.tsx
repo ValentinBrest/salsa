@@ -78,20 +78,35 @@ export const NavBar = ({ className }: NavBarProps) => {
         let endTouchY = 0;
         let endTouchX = 0;
 
-        if (menu) {
-            menu.addEventListener('touchstart', (event) => {
-                startTouchY = event.changedTouches[0].pageY;
-                startTouchX = event.changedTouches[0].pageX;
-            });
-
-            menu.addEventListener('touchend', (event) => {
-                endTouchY = event.changedTouches[0].pageY;
-                endTouchX = event.changedTouches[0].pageX;
-
-                if ( Math.abs(endTouchX - startTouchX) < 40 && endTouchY < startTouchY) setIsOpenMenu(false);
-            });
+        function handleTouchStart(event) {
+            event.stopPropagation();
+            startTouchY = event.changedTouches[0].pageY;
+            startTouchX = event.changedTouches[0].pageX;
         }
-        
+
+        function handleTouchEnd(event) {
+            event.stopPropagation();
+            endTouchY = event.changedTouches[0].pageY;
+            endTouchX = event.changedTouches[0].pageX;
+
+            if (
+                Math.abs(endTouchX - startTouchX) < 40 &&
+                endTouchY < startTouchY
+            )
+                setIsOpenMenu(false);
+        }
+
+        if (menu) {
+            menu.addEventListener('touchstart', handleTouchStart);
+            menu.addEventListener('touchend', handleTouchEnd);
+        }
+
+        return () => {
+            if (menu) {
+                menu.removeEventListener('touchstart', handleTouchStart);
+                menu.removeEventListener('touchend', handleTouchEnd);
+            }
+        };
     }, [menu]);
 
     return (

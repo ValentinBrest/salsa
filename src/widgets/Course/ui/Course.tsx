@@ -116,6 +116,10 @@ export const Course = ({
                                         text={item}
                                     />
                                 ))}
+                                <Text
+                                    align={TextAlign.LEFT}
+                                    text={course.age}
+                                />
                                 <Text align={TextAlign.LEFT} text={course.ps} />
                             </Accordion>
                             <LinkScroll

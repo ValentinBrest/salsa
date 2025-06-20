@@ -1,3 +1,5 @@
-import { ExpressCourse } from './ui/ExpressCourse';
+import { PreviewExpressCourse } from './ui/preview/PreviewExpressCourse';
+import { InfoExpressCourse } from './ui/info/InfoExpressCourse';
 
-export {ExpressCourse};
+export {InfoExpressCourse};
+export {PreviewExpressCourse};

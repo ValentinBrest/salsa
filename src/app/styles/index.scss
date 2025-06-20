@@ -3,6 +3,10 @@
 @import "./themes/light";
 @import "./themes/dark";
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -158,7 +162,6 @@ main {
     color: var(--primary-color);
     text-decoration: none;
 }
-
 
 .pageup {
     cursor: pointer;

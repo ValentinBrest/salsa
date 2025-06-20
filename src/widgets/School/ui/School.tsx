@@ -23,7 +23,7 @@ export const School = ({
         <Template
             backgroundColor={backgroundColor}
             className={cl.School}
-            id={'school'}
+            id={school.id}
             classWrap={cl.decr}
         >
             {isNewYear ? (
@@ -47,7 +47,7 @@ export const School = ({
             <Accordion
                 height='3500px'
                 background={backgroundColor}
-                linkId='school'
+                linkId={school.id}
             >
                 <div className={cl.wrap}>
                     <div>

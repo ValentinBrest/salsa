@@ -1,6 +1,6 @@
 import { refineDate } from 'shared/lib/helpers/refineDate';
 import { AboutSalsa } from 'widgets/AboutSalsa';
-import { ExpressCourse } from 'widgets/ExpressCourse';
+import { PreviewExpressCourse } from 'widgets/ExpressCourse';
 import { Information } from 'widgets/Information';
 import { Intro } from 'widgets/Intro';
 import { Lessons } from 'widgets/Lessons';
@@ -10,7 +10,7 @@ import { Prices } from 'widgets/Prices';
 import { Questions } from 'widgets/Questions';
 import { Salsa } from 'widgets/Salsa';
 import { School } from 'widgets/School';
-import { TrialLesson } from 'widgets/TrialLesson';
+import { Register } from 'widgets/Register';
 
 export const MainPage = ({}) => {
     const bgSecond = 'var(--bg-color-second)';
@@ -22,7 +22,7 @@ export const MainPage = ({}) => {
     return (
         <>
             <Intro isNewYear={isNewYear} />
-            <ExpressCourse backgroundColor={bgExpressCourse} />
+            {/* <PreviewExpressCourse backgroundColor={bgExpressCourse} /> */}
             <AboutSalsa />
             <Salsa backgroundColor={bgSecond} isNewYear={isNewYear} />
             <School
@@ -36,7 +36,7 @@ export const MainPage = ({}) => {
             <Photos isNewYear={isNewYear} backgroundColor={bgFirst} />
             <Questions backgroundColor={bgSecond} isNewYear={isNewYear} />
             <Information isNewYear={isNewYear} backgroundColor={bgFirst} />
-            <TrialLesson backgroundColor={bgSecond} />
+            <Register backgroundColor={bgSecond} />
         </>
     );
 };

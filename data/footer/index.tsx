@@ -1,4 +1,7 @@
+import { CONTACT } from "../links/constants";
+
 export const footer = {
+    id: CONTACT,
     name: `© ${new Date().getFullYear()} Школа танцев «СальсаБрест»`,
     unp: 'УНП 291763778',
     telegramLabel: 'Телеграм-канал "СальсаБрест"',

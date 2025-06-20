@@ -1,4 +1,7 @@
+import { INFO } from "../links/constants";
+
 export const information = {
+    id: INFO,
     title: 'Юридическая информация',
     text: [
         ' Немного скучной, но необходимой  информации, касающейся юридических аспектов.',

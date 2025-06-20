@@ -14,7 +14,7 @@ export const Prices = ({ backgroundColor, isNewYear = false }: PricesProps) => {
         <Template
             backgroundColor={backgroundColor}
             className={cl.Prices}
-            id={'prices'}
+            id={prices.id}
             amount={0.1}
         >
             <Text title={prices.title} />

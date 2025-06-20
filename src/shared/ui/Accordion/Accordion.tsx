@@ -1,5 +1,4 @@
 import { ReactNode, useState } from 'react';
-import { Link as LinkScroll } from 'react-scroll';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui';
 
@@ -59,9 +58,9 @@ export const Accordion = (props: AccordionProps) => {
                 />
             </div>
             {isVisible && linkId ? (
-                <LinkScroll to={linkId} smooth={true}>
+                <a href={`#${linkId}`}>
                     {btn}
-                </LinkScroll>
+                </a>
             ) : (
                 btn
             )}

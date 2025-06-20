@@ -1,6 +1,8 @@
+import { REGISTER } from '../links/constants';
 import { footer } from '../footer';
 
-export const trialLesson = {
+export const register = {
+    id: REGISTER,
     title: 'ЗАПИШИТЕСЬ НА',
     suptitle: 'Для этого отправьте',
     message: '➕',

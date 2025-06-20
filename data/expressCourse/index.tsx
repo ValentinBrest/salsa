@@ -1,4 +1,7 @@
-export const course = {
+import { EXPRESS_COURSE } from "../links/constants";
+
+export const expressCourse = {
+    id: EXPRESS_COURSE,
     title: '«Включи ЛЕТО на максимум!»',
     subTitle: 'трёхмесячный экспресс-курс по парной сальсе',
     descr: (

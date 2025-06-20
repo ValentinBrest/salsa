@@ -31,7 +31,7 @@ export const Salsa = ({
                 backgroundColor={backgroundColor}
                 className={cl.Salsa}
                 classWrap={cl.wrap}
-                id={'salsa'}
+                id={salsa.id}
                 amount={0.2}
             >
                 <img src={saxophone} className={cl.sax} alt='саксофон' />
@@ -51,7 +51,7 @@ export const Salsa = ({
                     <Accordion
                         height='800px'
                         background={backgroundColor}
-                        linkId='salsa'
+                        linkId={salsa.id}
                     >
                         {salsa.text.map((item, index) => (
                             <Text

@@ -1,10 +1,7 @@
 
 import { Template, Text } from 'shared/ui';
 
-import {
-    questions,
-    questionsTitle,
-} from '../../../../../data/questions/questions';
+import {questions,} from '../../../../../data/questions/questions';
 import clave from '../../../../../public/img/instuments/clave.webp';
 import blue from '../../../../../public/img/newYear/blue.png';
 import { QuestionCard } from '../QuestionCard/QuestionCard';
@@ -26,7 +23,7 @@ export const Questions = ({
         <Template
             backgroundColor={backgroundColor}
             className={cl.Questions}
-            id={'question'}
+            id={questions.id}
             classWrap={cl.wrap}
             amount={0.1}
         >
@@ -36,11 +33,11 @@ export const Questions = ({
                     className={cl.title}
                 />
             ) : (
-                <Text title={questionsTitle} className={cl.title} />
+                <Text title={questions.title} className={cl.title} />
             )}
             <img src={clave} className={cl.clave} alt='клавы'/>
             
-            {questions.map((item) => (
+            {questions.text.map((item) => (
                 <QuestionCard
                     {...item}
                     key={item.id}

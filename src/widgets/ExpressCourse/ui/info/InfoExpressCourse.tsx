@@ -1,26 +1,26 @@
+import { REGISTER } from '../../../../../data/links/constants';
 import { useMediaQuery } from 'react-responsive';
 import { useNavigate } from 'react-router-dom';
-import { Link as LinkScroll } from 'react-scroll';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Accordion, Button, ButtonSize, ButtonTheme, Card } from 'shared/ui';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 
-import { course } from '../../../../data/course';
-import poster from '../../../../public/img/poster.webp';
-import video from '../../../../public/video/1.mp4';
+import { expressCourse } from '../../../../../data/expressCourse';
+import poster from '../../../../../public/img/poster.webp';
+import video from '../../../../../public/video/1.mp4';
 
-import cl from './Course.module.scss';
-interface CourseProps {
+import cl from './InfoExpressCourse.module.scss';
+interface InfoExpressCourseProps {
     className?: string;
     backgroundColor?: string;
     backgroundColorCard?: string;
 }
 
-export const Course = ({
+export const InfoExpressCourse = ({
     className,
     backgroundColor,
     backgroundColorCard,
-}: CourseProps) => {
+}: InfoExpressCourseProps) => {
     const isMobileScreen = useMediaQuery({ query: '(max-width: 576px)' });
     const isTableScreen = useMediaQuery({ query: '(max-width: 992px)' });
     const navigate = useNavigate();
@@ -41,8 +41,8 @@ export const Course = ({
                 background: backgroundColor,
                 paddingBottom: '50px',
             }}
-            id='course'
-            className={classNames(cl.Course, {}, [className])}
+            id={expressCourse.id}
+            className={classNames(cl.InfoExpressCourse, {}, [className])}
         >
     
             <div className='container'>
@@ -50,11 +50,11 @@ export const Course = ({
                     <Text
                         animation={true}
                         theme={TextTheme.WITHOUT}
-                        title={course.title}
+                        title={expressCourse.title}
                         className={cl.title}
                         back={() => navigate('/')}
                     />
-                    {/* <Text text={course.datePage} className={cl.date} /> */}
+                    {/* <Text text={expressCourse.datePage} className={cl.date} /> */}
 
                     <div className={cl.wrap}>
                         <video
@@ -73,20 +73,21 @@ export const Course = ({
                                 startHeight='330px'
                                 height={getHeightAccordion()}
                                 background={backgroundColorCard}
+                                linkId={expressCourse.id}
                             >
                                 <Text
-                                    text={course.subTitle}
+                                    text={expressCourse.subTitle}
                                     className={cl.subTitle}
                                 />
                                 <Text
                                     align={TextAlign.LEFT}
-                                    text={course.descr}
+                                    text={expressCourse.descr}
                                 />
                                 <Text
                                     align={TextAlign.LEFT}
-                                    text={course.programm}
+                                    text={expressCourse.programm}
                                 />
-                                {course.programmItems.map((item, index) => (
+                                {expressCourse.programmItems.map((item, index) => (
                                     <Text
                                         key={index}
                                         align={TextAlign.LEFT}
@@ -95,33 +96,31 @@ export const Course = ({
                                 ))}
                                 <Text
                                     align={TextAlign.LEFT}
-                                    text={course.price}
+                                    text={expressCourse.price}
                                 />
                                 <Text
                                     align={TextAlign.LEFT}
-                                    text={course.time}
+                                    text={expressCourse.time}
                                 />
                                 <Text
                                     align={TextAlign.LEFT}
-                                    text={course.place}
+                                    text={expressCourse.place}
                                 />
                                 <Text
                                     align={TextAlign.LEFT}
-                                    text={course.take}
+                                    text={expressCourse.take}
                                 />
-                                {course.takeItems.map((item, index) => (
+                                {expressCourse.takeItems.map((item, index) => (
                                     <Text
                                         key={index}
                                         align={TextAlign.LEFT}
                                         text={item}
                                     />
                                 ))}
-                                <Text align={TextAlign.LEFT} text={course.ps} />
+                                <Text align={TextAlign.LEFT} text={expressCourse.ps} />
                             </Accordion>
-                            <LinkScroll
-                                href='/'
-                                to='trialLesson'
-                                smooth={true}
+                            <a
+                                href={`#${REGISTER}`}
                                 className={cl.linkBtn}
                             >
                                 <Button
@@ -131,7 +130,7 @@ export const Course = ({
                                 >
                                     Участвовать
                                 </Button>
-                            </LinkScroll>
+                            </a>
                         </Card>
                     </div>
                 </div>

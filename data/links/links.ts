@@ -1,3 +1,5 @@
+import {ABOUT, SALSA, LOOK_SALSA, SCHOOL, LESSONS, INFO, PRICES, PHOTOS, QUESTION, CONTACT} from './constants'
+
 export const links = [
     {
     id: 7,
@@ -7,19 +9,19 @@ export const links = [
             id: 1,
             name: 'О сальсе',
             to: '/',
-            scroll: 'about',
+            scroll: ABOUT,
         },
         {
             id: 2,
             name: 'Почему сальса?',
             to: '/',
-            scroll: 'salsa',
+            scroll: SALSA,
         },
         {
             id: 3,
             name: 'Как выглядит сальса?',
             to: '/',
-            scroll: 'lookSalsa',
+            scroll: LOOK_SALSA,
         },
     ]
 },
@@ -31,19 +33,19 @@ export const links = [
             id: 0,
             name: 'Школа "СальсаБрест"',
             to: '/',
-            scroll: 'school',
+            scroll: SCHOOL,
         },
         {
             id: 1,
             name: 'Наши занятия',
             to: '/',
-            scroll: 'lessons',
+            scroll: LESSONS,
         },
         {
             id: 2,
             name: 'Юридическая информация',
             to: '/',
-            scroll: 'info',
+            scroll: INFO,
         },
     ]
 },
@@ -51,24 +53,24 @@ export const links = [
     id: 3,
     name: 'Цены',
     to: '/',
-    scroll: 'prices',
+    scroll: PRICES,
 },
 {
     id: 4,
     name: 'Фотогалерея',
     to: '/',
-    scroll: 'photos',
+    scroll: PHOTOS,
 },
 {
     id: 5,
     name: 'Вопросы',
     to: '/',
-    scroll: 'question',
+    scroll: QUESTION,
 },
 {
     id: 6,
     name: 'Контакты',
     to: '/',
-    scroll: 'contact',
+    scroll: CONTACT,
 },
 ];

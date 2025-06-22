@@ -58,9 +58,9 @@ export const Template = ({
     );
 
     return link ? (
-        <Link to={link} className={cl.link}>
+        <a href={link} className={cl.link}>
             {content}
-        </Link>
+        </a>
     ) : (
         content
     );

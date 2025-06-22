@@ -1,26 +1,26 @@
 import { Template, Text, TextTheme } from 'shared/ui';
 
-import { trialLesson } from '../../../../../data/trialLesson';
+import { register } from '../../../../../data/register';
 import Mail from '../../../../../public/icon/mail.svg';
 import Instagram from '../../../../../public/icon/social/instagram.svg';
 import Telegram from '../../../../../public/icon/social/telegram.svg';
 import dance from '../../../../../public/img/dance.webp';
 
-import cl from './TrialLesson.module.scss';
+import cl from './Register.module.scss';
 
-interface TrialLessonProps {
+interface RegisterProps {
     className?: string;
     backgroundColor?: string;
     eventName?: string
 }
 
-export const TrialLesson = ({ backgroundColor, eventName = 'ПРОБНЫЙ УРОК' }: TrialLessonProps) => {
-    const {title, suptitle, message, toDirect, direct, messagePost} = trialLesson;
+export const Register = ({ backgroundColor, eventName = 'ПРОБНЫЙ УРОК' }: RegisterProps) => {
+    const {title, suptitle, message, toDirect, direct, messagePost} = register;
     return (
         <Template
             backgroundColor={backgroundColor}
-            className={cl.TrialLesson}
-            id={'trialLesson'}
+            className={cl.Register}
+            id={register.id}
             classWrap={cl.wrap}
         >
             <div>
@@ -50,17 +50,17 @@ export const TrialLesson = ({ backgroundColor, eventName = 'ПРОБНЫЙ УР�
                         </a>
                     </div>
                     <Text text={messagePost} />
-                    <a href={`mailto:${trialLesson.mail}`} className={cl.mailWrap}>
+                    <a href={`mailto:${register.mail}`} className={cl.mailWrap}>
                         <Mail className={cl.mail}
                         />
-                        <Text text={trialLesson.mail} />
+                        <Text text={register.mail} />
                     </a>
                 </div>
             </div>
 
             <img
                 src={dance}
-                className={cl.trialLessonImg}
+                className={cl.registerImg}
                 alt='все на танцы'
             />
         </Template> 

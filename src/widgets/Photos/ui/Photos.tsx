@@ -68,7 +68,7 @@ export const Photos = ({
             <Template
                 backgroundColor={backgroundColor}
                 className={cl.Photos}
-                id={'photos'}
+                id={photos.id}
                 classWrap={cl.wrap}
                 amount={0.1}
             >

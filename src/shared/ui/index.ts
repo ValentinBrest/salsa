@@ -1,7 +1,5 @@
 import { Accordion } from 'shared/ui/Accordion/Accordion';
 import { Modal } from 'shared/ui/Modal/Modal';
-import { LinkScroll } from 'shared/ui/LinkScroll/LinkScroll';
-
 import { Button, ButtonSize, ButtonTheme } from './Button/Button';
 import { Card } from './Card/Card';
 import { NavLogo } from './NavLogo/NavLogo';
@@ -17,7 +15,6 @@ export {
     Card,
     Modal, 
     ButtonTheme,
-    LinkScroll,
     NavLogo,
     Slider,
     Template,

@@ -1,6 +1,7 @@
-.ExpressCourse {
+.PreviewExpressCourse {
     width: 100%;
     padding: var(--padding-l);
+    overflow: hidden;
 }
 
 .subTitle {
@@ -38,5 +39,4 @@
     margin-top: 20px;
 }
 
-
-@import "./ExpressCourse.media";
+@import "./PreviewExpressCourse.media";

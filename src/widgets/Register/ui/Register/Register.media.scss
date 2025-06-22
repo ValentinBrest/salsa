@@ -1,8 +1,8 @@
 @media (max-width: 1200px) {
-    .TrialLesson {
+    .Register {
         padding: var(--padding-xl);
     }
-    .trialLessonImg {
+    .registerImg {
         height: 670px;
     }
 }
@@ -19,7 +19,7 @@
 }
 
 @media (max-width: 768px) {
-    .TrialLesson {
+    .Register {
         padding: var(--padding-m);
     }
 
@@ -27,7 +27,7 @@
         display: flex;
         height: 100%;
     }
-    .trialLessonImg {
+    .registerImg {
         display: none;
     }
 
@@ -40,7 +40,7 @@
 }
 
 @media (max-width: 576px) {
-    .TrialLesson {
+    .Register {
         padding: var(--padding-m);
     }
 

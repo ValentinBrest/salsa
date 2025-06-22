@@ -1,6 +1,7 @@
-import React from 'react';
+import { SCHOOL } from "../links/constants";
 
 export const school = {
+    id: SCHOOL,
     title: 'Почему вам именно в школу «СальсаБрест»?',
     text: [
         <>

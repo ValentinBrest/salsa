@@ -1,7 +1,6 @@
 import cl from './Drawer.module.scss';
 import DownIcon from '../../../../../public/icon/down.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { LinkScroll } from 'shared/ui';
 
 interface Item {
     id: number;
@@ -32,15 +31,14 @@ export const Drawer = ({
             </div>
             <div className={cl.content}>
                 {items.map((link) => (
-                    <LinkScroll
-                        href='/'
-                        className={cl.link}
-                        name={link.name}
-                        to={link.scroll}
-                        key={link.id}
-                        onClick={() => onHandleMenu()}
-                        isDrawerLink={true}
-                    />
+                    <a
+                    className={classNames(cl.link, {}, ['drawerLink'])}
+                    href={`#${link.scroll}`}
+                    key={link.id}
+                    onClick={() => onHandleMenu()}
+                >
+                    {link.name}
+                </a>
                 ))}
             </div>
         </div>

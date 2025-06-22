@@ -7,29 +7,30 @@ import {
     TextTheme,
 } from 'shared/ui';
 
-import { course } from '../../../../data/course';
-import summerSale from '../../../../public/img/summerSale.webp';
+import { expressCourse } from '../../../../../data/expressCourse';
+import summerSale from '../../../../../public/img/summerSale.webp';
 
-import cl from './ExpressCourse.module.scss';
+import cl from './PreviewExpressCourse.module.scss';
 
-interface ExpressCourseProps {
+interface PreviewExpressCourseProps {
     backgroundColor?: string;
+    backgroundColorCard?: string;
 }
 
-export const ExpressCourse = ({ backgroundColor }: ExpressCourseProps) => {
+export const PreviewExpressCourse = ({ backgroundColor }: PreviewExpressCourseProps) => {
     return (
         <Template
             backgroundColor={backgroundColor}
-            className={cl.ExpressCourse}
-            id={'express'}
+            className={cl.PreviewExpressCourse}
+            id={expressCourse.id}
             classWrap={cl.wrap}
-            link={'/course'}
+            link={`/${expressCourse.id}`}
         >
-            <Text text={course.subTitle} className={cl.subTitle} />
+            <Text text={expressCourse.subTitle} className={cl.subTitle} />
             <Text
                 animation={true}
                 theme={TextTheme.WITHOUT}
-                title={course.title}
+                title={expressCourse.title}
                 className={cl.title}
             />
             {/* <Text text={course.date} className={cl.date} /> */}
@@ -40,7 +41,7 @@ export const ExpressCourse = ({ backgroundColor }: ExpressCourseProps) => {
                     alt={'sale'}
                     className={cl.saleImg}
                 />
-                <Text className={cl.saleText} text={course.saleText} />
+                <Text className={cl.saleText} text={expressCourse.saleText} />
             </div>
             <Button
                 size={ButtonSize.ML}

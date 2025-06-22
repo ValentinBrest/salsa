@@ -17,7 +17,7 @@ export const Footer = ({ className, backgroundColor }: FooterProps) => {
     return (
         <footer
             style={{ background: backgroundColor }}
-            id='contact'
+            id={footer.id}
             className={classNames(cl.Footer, {}, [className])}
         >
             <div className='container'>

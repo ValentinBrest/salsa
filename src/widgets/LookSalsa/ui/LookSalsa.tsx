@@ -30,7 +30,7 @@ export const LookSalsa = ({
             <Template
                 backgroundColor={backgroundColor}
                 className={cl.LookSalsa}
-                id={'lookSalsa'}
+                id={lookSalsa.id}
                 classWrap={cl.wrap}
                 amount={0.2}
             >

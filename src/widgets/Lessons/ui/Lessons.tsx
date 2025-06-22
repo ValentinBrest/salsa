@@ -14,7 +14,7 @@ export const Lessons = ({ backgroundColor }: LessonsProps) => {
         <Template
             backgroundColor={backgroundColor}
             className={cl.Lessons}
-            id={'lessons'}
+            id={lessons.id}
             classWrap={cl.wrap}
         >
             <div></div>
@@ -23,7 +23,7 @@ export const Lessons = ({ backgroundColor }: LessonsProps) => {
                 <Accordion
                     height='1400px'
                     background={backgroundColor}
-                    linkId='lessons'
+                    linkId={lessons.id}
                 >
                     {lessons.text.map((item, index) => (
                         <Text key={index} align={isMobileScreen ? TextAlign.CENTER : TextAlign.RIGHT} text={item} />

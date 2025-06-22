@@ -19,12 +19,12 @@ export const Information = ({
         <Template
             backgroundColor={backgroundColor}
             className={cl.Information}
-            id={'info'}
+            id={information.id}
             classWrap={cl.wrap}
             amount={0.2}
         >
             <Accordion
-                linkId='info'
+                linkId={information.id}
                 height='1000px'
                 background={backgroundColor}
             >

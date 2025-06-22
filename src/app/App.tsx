@@ -1,19 +1,25 @@
 import { Suspense, useEffect, useState } from 'react';
-import { Link as LinkScroll } from 'react-scroll';
 import { Footer } from 'widgets/Footer';
 import { NavBar } from 'widgets/NavBar';
 
 import Up from '../../public/icon/toUp.svg';
-
-import { useTheme } from './providers/ThemeProvider';
-import {
-    Theme,
-} from './providers/ThemeProvider/lib/ThemeContext';
 import { AppRouter } from 'app/providers/router';
+import { useLocation } from 'react-router-dom';
+
 
 function App() {
     const [isSctollTo, setIsScrollTo] = useState(false);
     const bgFirst = 'var(--bg-color)';
+    const location = useLocation();
+  
+    useEffect(() => {
+      if (location.hash) {
+        const element = document.querySelector(location.hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }, [location]);
 
     useEffect(() => {
         function handleMove() {
@@ -36,15 +42,13 @@ function App() {
                 <NavBar />
                 <main className='content-page'>
                     {AppRouter()}
-                    <LinkScroll
-                        href='/'
-                        to={'up'}
+                    <a
+                        href='#up'
                         aria-label='наверх'
-                        smooth={true}
                         className={`pageup ${isSctollTo ? 'activeScroll' : ''}`}
                     >
                         <Up className='up' />
-                    </LinkScroll>
+                    </a>
                 </main>
                 <Footer backgroundColor={bgFirst} />
             </Suspense>

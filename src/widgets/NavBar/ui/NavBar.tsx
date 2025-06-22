@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button, LinkScroll, NavLogo } from 'shared/ui';
+import { Button, NavLogo } from 'shared/ui';
 import { Drawer } from 'shared/ui/Drawer';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 
@@ -48,14 +48,14 @@ export const NavBar = ({ className }: NavBarProps) => {
             );
         } else {
             return (
-                <LinkScroll
-                    href='/'
-                    className='navbarLink'
-                    name={link.name}
-                    to={link.scroll ?? '/'}
+                <a
+                    className='navbarLink link'
+                    href={`#${link.scroll}`}
                     key={link.id}
                     onClick={() => onHandleMenu()}
-                />
+                >
+                    {link.name}
+                </a>
             );
         }
     });
@@ -78,35 +78,23 @@ export const NavBar = ({ className }: NavBarProps) => {
         let endTouchY = 0;
         let endTouchX = 0;
 
-        function handleTouchStart(event) {
-            event.stopPropagation();
-            startTouchY = event.changedTouches[0].pageY;
-            startTouchX = event.changedTouches[0].pageX;
-        }
-
-        function handleTouchEnd(event) {
-            event.stopPropagation();
-            endTouchY = event.changedTouches[0].pageY;
-            endTouchX = event.changedTouches[0].pageX;
-
-            if (
-                Math.abs(endTouchX - startTouchX) < 40 &&
-                endTouchY < startTouchY
-            )
-                setIsOpenMenu(false);
-        }
-
         if (menu) {
-            menu.addEventListener('touchstart', handleTouchStart);
-            menu.addEventListener('touchend', handleTouchEnd);
-        }
+            menu.addEventListener('touchstart', (event) => {
+                startTouchY = event.changedTouches[0].pageY;
+                startTouchX = event.changedTouches[0].pageX;
+            });
 
-        return () => {
-            if (menu) {
-                menu.removeEventListener('touchstart', handleTouchStart);
-                menu.removeEventListener('touchend', handleTouchEnd);
-            }
-        };
+            menu.addEventListener('touchend', (event) => {
+                endTouchY = event.changedTouches[0].pageY;
+                endTouchX = event.changedTouches[0].pageX;
+
+                if (
+                    Math.abs(endTouchX - startTouchX) < 40 &&
+                    endTouchY < startTouchY
+                )
+                    setIsOpenMenu(false);
+            });
+        }
     }, [menu]);
 
     return (

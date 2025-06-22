@@ -1,6 +1,9 @@
-export const questionsTitle = 'Вопросы';
+import { QUESTION } from "../links/constants";
 
-export const questions = [
+export const questions = {
+    id: QUESTION,
+    title: 'Вопросы',
+    text: [
     {
         id: 1,
         question: 'Где проходят занятия?',
@@ -70,4 +73,4 @@ export const questions = [
             </>
         ),
     },
-];
+]};

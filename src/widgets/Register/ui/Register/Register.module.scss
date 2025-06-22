@@ -1,4 +1,4 @@
-.TrialLesson {
+.Register {
     width: 100%;
     padding: var(--padding-l);
 }
@@ -10,7 +10,7 @@
     justify-content: space-between;
 }
 
-.trialLessonImg {
+.registerImg {
     border-radius: 15px;
     height: 620px;
     width: 100%;
@@ -83,4 +83,4 @@
     }
 }
 
-@import "./TrialLesson.media"
+@import "./Register.media"

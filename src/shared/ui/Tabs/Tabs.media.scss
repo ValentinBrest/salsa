@@ -1,0 +1,97 @@
+@media (max-width: 1200px) {
+    .subTitle {
+        font-size: var(--font-size-title-xs);
+        line-height: var(--font-line-title-xs);
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 992px) {
+    .title {
+        font-size: var(--font-size-title-sm);
+        line-height: var(--font-line-title-sm);
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .subTitle {
+        font-size: var(--font-size-xl);
+        line-height: var(--font-line-xl);
+        font-weight: 700;
+    }
+
+    .text {
+        font-size: var(--font-size-m);
+        line-height: var(--font-line-m);
+    }
+
+    .epigraph {
+        font-size: var(--font-size-m);
+        line-height: var(--font-line-m);
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: var(--font-size-title-s);
+        line-height: var(--font-line-title-s);
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .subTitle {
+        font-size: var(--font-size-l);
+        line-height: var(--font-line-l);
+        font-weight: 700;
+    }
+
+    
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: var(--font-size-xl);
+        line-height: var(--font-line-xl);
+        font-weight: 700;
+        text-align: center;
+
+        span {
+            &::before {
+                width: 5%;
+            }
+
+            &::after {
+                width: 5%;
+            }
+        }
+    }
+
+    .text {
+        font-size: var(--font-size-m);
+        line-height: var(--font-line-m);
+    }
+
+    .epigraph {
+        width: 280px;
+        font-size: var(--font-size-sm);
+        line-height: var(--font-line-sm);
+    }
+
+    .subTitle {
+        font-size: var(--font-size-l);
+        line-height: var(--font-line-l);
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .back {
+        width: 40px;
+        height: 40px;
+    }
+
+    .innerTitleWrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+}

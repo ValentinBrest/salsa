@@ -1,11 +1,13 @@
 import { memo} from 'react';
-import SimpleImageSlider from 'react-simple-image-slider';
 import { useMediaQuery } from 'react-responsive';
+import SimpleImageSlider from 'react-simple-image-slider';
 
 
 interface SliderProps {
     images: string[] | Record<"url", string>[],
     mobileImages?: string[] | Record<"url", string>[],
+    autoPlay? : boolean;
+    showNavs?: boolean;
 }
 
 export const Slider = memo((props: SliderProps) => {
@@ -13,6 +15,8 @@ export const Slider = memo((props: SliderProps) => {
     const {
         images,
         mobileImages,
+        autoPlay = true,
+        showNavs = false,
     } = props;
 
     return (
@@ -21,8 +25,8 @@ export const Slider = memo((props: SliderProps) => {
             height={'100%'}
             images={mobileImages && isMobileScreen ? mobileImages : images && !isMobileScreen ? images : ['']}
             showBullets={false}
-            showNavs={false}
-            autoPlay={true}
+            showNavs={showNavs}
+            autoPlay={autoPlay}
             autoPlayDelay={5}
         />
     );

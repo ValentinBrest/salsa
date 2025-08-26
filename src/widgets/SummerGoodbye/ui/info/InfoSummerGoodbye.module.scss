@@ -1,0 +1,133 @@
+.InfoSummerGoodbye {
+    overflow: hidden;
+    width: 100%;
+    padding: var(--padding-l);
+    position: relative;
+}
+
+.introWrap {
+    display: grid;
+    // align-items: center;
+    grid-template-columns: 0.7fr 1fr;
+    gap: 50px;
+}
+
+.volleyballWrap {
+    display: grid;
+    // align-items: center;
+    grid-template-columns:  1fr 0.4fr;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.mainTitle {
+    margin: 0;
+    font-size: var(--font-size-title-xs);
+}
+
+.title, 
+.titlePlace, 
+.subTitlePlace {
+    margin: 40px 0 20px;
+    font-size: var(--font-size-title-xs);
+}
+.titlePlace, .subTitlePlace {
+    // margin: 0;
+}
+
+.subTitlePlace {
+    margin: 0 0 20px;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.poster {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.volleyballImage {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.teacherWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    align-items: center;
+    gap: 20px;
+}
+
+.invertedTeacherWrap {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.photo {
+    width: 300px;
+    border-radius: 5px;
+}
+
+.info {
+    width: 100%;
+}
+
+.date {
+    font-size: var(--font-size-xl);
+    text-transform: uppercase;
+}
+
+.card {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cardMaster {
+    padding: 0;
+}
+
+.djDescr {
+    margin-top: var(--margin-m);
+}
+
+.prices {
+    margin-top: 30px;
+}
+
+.warpImages {
+    position: relative;
+    height: 500px;
+}
+
+.subTitle {
+    font-size: var(--font-size-l);
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+.linkBtn {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.btn {
+    font-style: normal;
+    margin: 30px 0;
+    color: var(--inverted-primary-color);
+}
+
+.active {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 1s;
+}
+
+@import "./InfoSummerGoodbye.media";

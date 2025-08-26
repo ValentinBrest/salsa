@@ -24,12 +24,13 @@ interface TextProps {
     text?: ReactNode;
     hardTitle?: Array<string | JSX.Element>;
     epigraph?: ReactNode;
-    subTitle?: string;
+    subTitle?: ReactNode;
     theme?: TextTheme;
     align?: TextAlign;
     author?: ReactNode;
     animation?: boolean;
     back?: () => void;
+    id?: string;
 }
 
 export const Text = memo((props: TextProps) => {
@@ -45,12 +46,14 @@ export const Text = memo((props: TextProps) => {
         hardTitle,
         animation,
         back,
+        id,
     } = props;
 
     return (
         <>
             {title && (
                 <div
+                    id={id}
                     className={classNames(cl.title, { [cl[theme]]: true }, [
                         className,
                         cl[align],
@@ -71,6 +74,7 @@ export const Text = memo((props: TextProps) => {
 
             {hardTitle && (
                 <div
+                    id={id}
                     className={classNames(cl.title, { [cl[theme]]: true }, [
                         className,
                         cl[align],
@@ -82,6 +86,7 @@ export const Text = memo((props: TextProps) => {
 
             {subTitle && (
                 <div
+                    id={id}
                     className={classNames(cl.subTitle, { [cl[theme]]: true }, [
                         className,
                         cl[align],
@@ -93,6 +98,7 @@ export const Text = memo((props: TextProps) => {
 
             {text && (
                 <div
+                    id={id}
                     className={classNames(cl.text, { [cl[theme]]: true }, [
                         className,
                         cl[align],
@@ -104,6 +110,7 @@ export const Text = memo((props: TextProps) => {
 
             {epigraph && (
                 <div
+                    id={id}
                     className={classNames(cl.epigraph, { [cl[theme]]: true }, [
                         className,
                         cl[align],

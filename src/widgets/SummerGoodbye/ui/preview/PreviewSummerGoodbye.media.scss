@@ -1,0 +1,41 @@
+@media (max-width: 992px) {
+    .PreviewSummerGoodbye {
+        padding: var(--padding-l);
+    }
+
+}
+
+@media (max-width: 768px) {
+    .PreviewSummerGoodbye {
+        padding: var(--padding-m);
+    }
+
+    .subTitle {
+        line-height: var(--font-line-l);
+    }
+
+    .date {
+        font-size: var(--font-size-l);
+    }
+}
+
+
+@media (max-width: 576px) {
+    .title {
+        margin-bottom: 16px;
+    }
+
+    .saleImg {
+        width: 300px;
+    }
+
+    .saleText {
+        font-size: var(--font-size-ml);
+    }
+
+    .subTitle {
+        font-size: var(--font-size-m);
+        line-height: var(--font-line-m);
+        text-transform: uppercase;
+    }
+}

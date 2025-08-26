@@ -1,7 +1,7 @@
 
 import { Template, Text } from 'shared/ui';
 
-import {questions,} from '../../../../../data/questions/questions';
+import {questions} from '../../../../../data/questions/questions';
 import clave from '../../../../../public/img/instuments/clave.webp';
 import blue from '../../../../../public/img/newYear/blue.png';
 import { QuestionCard } from '../QuestionCard/QuestionCard';

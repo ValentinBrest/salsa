@@ -50,12 +50,12 @@ export const Accordion = (props: AccordionProps) => {
                 {...otherProps}
             >
                 {children}
-                <div
+                {!isVisible &&<div
                     style={{
                         background: `linear-gradient(to bottom, rgb(255 255 255 / 0%), ${background} 80%)`,
                     }}
                     className={cl.bottom}
-                />
+                />}
             </div>
             {isVisible && linkId ? (
                 <a href={`#${linkId}`}>

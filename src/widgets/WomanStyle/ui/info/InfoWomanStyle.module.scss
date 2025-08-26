@@ -1,0 +1,48 @@
+.InfoWomanStyle {
+    overflow: hidden;
+    width: 100%;
+    padding: var(--padding-l);
+    position: relative;
+}
+
+.wrap {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.date {
+    font-size: var(--font-size-xl);
+    text-transform: uppercase;
+}
+
+.card {
+    font-style: normal;
+}
+
+.subTitle {
+    font-size: var(--font-size-l);
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+.linkBtn {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.btn {
+    font-style: normal;
+    margin-top: 30px;
+    color: var(--inverted-primary-color);
+}
+
+.active {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 1s;
+}
+
+@import "./InfoWomanStyle.media";

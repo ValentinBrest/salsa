@@ -1,0 +1,44 @@
+.PreviewSummerGoodbye {
+    width: 100%;
+    padding: var(--padding-l);
+    overflow: hidden;
+}
+
+.subTitle {
+    font-size: var(--font-size-l);
+    text-transform: uppercase;
+}
+
+.date {
+    font-size: var(--font-size-xl);
+    text-transform: uppercase;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.saleWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.saleImg {
+    width: 400px;
+}
+
+.dateText {
+    margin-top: 20px;
+    font-size: var(--font-size-l);
+}
+
+.btn {
+    margin-top: 20px;
+    color: var(--gold-color);
+}
+
+@import "./PreviewSummerGoodbye.media";

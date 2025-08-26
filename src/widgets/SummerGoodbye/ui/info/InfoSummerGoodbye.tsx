@@ -135,7 +135,7 @@ export const InfoSummerGoodbye = ({
                         />
                         <Accordion
                             linkId={summerGoodbye.masterClasses.id}
-                            height='2800px'
+                            height='3000px'
                             background={backgroundColorCard}
                         >
                             <Card className={cl.cardMaster}>

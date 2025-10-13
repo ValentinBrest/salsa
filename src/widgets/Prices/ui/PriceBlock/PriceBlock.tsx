@@ -43,7 +43,7 @@ export const PriceBlock = ({
             className={classNames(cl.Prices, {}, [className])}
         >
             {isNewYear && (
-                <img src={meshok} className={cl.meshok} alt='meshok' />
+                <img src={meshok} className={cl.meshok} alt='meshok' loading="lazy"/>
             )}
             <div className={cl.wrap}>
                 {!isMobile && <div />}

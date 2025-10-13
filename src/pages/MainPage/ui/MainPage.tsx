@@ -10,7 +10,6 @@ import { Questions } from 'widgets/Questions';
 import { Register } from 'widgets/Register';
 import { Salsa } from 'widgets/Salsa';
 import { School } from 'widgets/School';
-import { PreviewSummerGoodbye } from 'widgets/SummerGoodbye';
 
 export const MainPage = ({}) => {
     const bgSecond = 'var(--bg-color-second)';
@@ -22,7 +21,6 @@ export const MainPage = ({}) => {
     return (
         <>
             <Intro isNewYear={isNewYear} />
-            <PreviewSummerGoodbye backgroundColor={bgSummerGoodbye} />
             <AboutSalsa />
             <Salsa backgroundColor={bgSecond} isNewYear={isNewYear} />
             <School

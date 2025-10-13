@@ -61,7 +61,7 @@ export const Photos = ({
     }, [isModalOpen]);
 
     const styles = isLaptopScreen ? { width: '100%' } : {};
-    const O = <img src={toy} alt='o' className={'toy medium'} />;
+    const O = <img src={toy} alt='o' className={'toy medium'} loading="lazy"/>;
 
     return (
         <>
@@ -92,6 +92,7 @@ export const Photos = ({
                                 className={cl.cart}
                                 data-order={index + 1}
                                 alt='фото'
+                                loading="lazy"
                             />
                             <Zoom
                                 className={cl.zoom}

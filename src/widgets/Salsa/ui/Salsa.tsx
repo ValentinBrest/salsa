@@ -15,7 +15,7 @@ export const Salsa = ({
     backgroundColor,
     isNewYear = false,
 }: SalsaProps) => {
-    const O = <img src={gold} alt='o' className={'toy small'} />;
+    const O = <img src={gold} alt='o' className={'toy small'} loading="lazy"/>;
     const isMobileScreen = useMediaQuery({ query: '(max-width: 576px)' });
     
     return (
@@ -25,6 +25,7 @@ export const Salsa = ({
                     src={partSnow}
                     className={cl.partSnow}
                     alt='partSnow'
+                    loading="lazy"
                 />
             )}
             <Template
@@ -34,7 +35,7 @@ export const Salsa = ({
                 id={salsa.id}
                 amount={0.2}
             >
-                <img src={saxophone} className={cl.sax} alt='саксофон' />
+                <img src={saxophone} className={cl.sax} alt='саксофон' loading="lazy" />
                 <div></div>
                 <div className={cl.decr}>
                     {isNewYear ? (

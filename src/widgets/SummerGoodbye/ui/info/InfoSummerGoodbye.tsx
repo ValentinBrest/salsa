@@ -55,6 +55,7 @@ export const InfoSummerGoodbye = ({
                             src={summerGoodbye.afisha}
                             alt='summerImg'
                             className={cl.poster}
+                            loading="lazy"
                         />
 
                         <div>
@@ -160,6 +161,7 @@ export const InfoSummerGoodbye = ({
                                                     src={item.src}
                                                     alt={item.name}
                                                     className={cl.photo}
+                                                    loading="lazy"
                                                 />
                                                 <div className={cl.info}>
                                                     <>
@@ -202,6 +204,7 @@ export const InfoSummerGoodbye = ({
                                         src={summerGoodbye.dj.src}
                                         alt={summerGoodbye.dj.name}
                                         className={cl.photo}
+                                        loading="lazy"
                                     />
                                     <div>
                                         <Text
@@ -253,6 +256,7 @@ export const InfoSummerGoodbye = ({
                                 src={summerGoodbye.volleyball.image}
                                 alt='summerImg'
                                 className={cl.volleyballImage}
+                                loading="lazy"
                             />
                         </div>
 

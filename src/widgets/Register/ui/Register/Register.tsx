@@ -62,6 +62,7 @@ export const Register = ({ backgroundColor, eventName = 'ПРОБНЫЙ УРОК
                 src={dance}
                 className={cl.registerImg}
                 alt='все на танцы'
+                loading="lazy"
             />
         </Template> 
     );

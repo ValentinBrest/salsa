@@ -60,7 +60,7 @@ export const School = ({
                             />
                         ))}
                     </div>
-                    <img src={bongi} className={cl.bongi} alt='бонги' />
+                    <img src={bongi} className={cl.bongi} alt='бонги' loading="lazy"/>
                 </div>
 
                 <Card background={backgroundColorCard} className={cl.card}>
@@ -68,7 +68,7 @@ export const School = ({
                 </Card>
 
                 <div className={cl.invertedwrap}>
-                    <img src={maria} alt='maria' className={cl.maria} />
+                    <img src={maria} alt='maria' className={cl.maria} loading="lazy"/>
                     <div>
                         <>
                             <Text subTitle={school.teacherTitle} />

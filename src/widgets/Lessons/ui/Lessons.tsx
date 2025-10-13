@@ -30,7 +30,7 @@ export const Lessons = ({ backgroundColor }: LessonsProps) => {
                     ))}
                 </Accordion>
             </div>
-            <img src={guiro} className={cl.guiro} alt='guiro' />
+            <img src={guiro} className={cl.guiro} alt='guiro' loading="lazy"/>
         </Template>
     );
 };

@@ -9,8 +9,8 @@ import { EXPRESS_COURSE, SUMMER_GOODBYE } from '../../../../../data/links/consta
 
 export const RoutePath: Record<string, string> = {
     'main': '/',
-    [EXPRESS_COURSE]: `/${EXPRESS_COURSE}`,
-    [SUMMER_GOODBYE]: `/${SUMMER_GOODBYE}`,
+    // [EXPRESS_COURSE]: `/${EXPRESS_COURSE}`,
+    // [SUMMER_GOODBYE]: `/${SUMMER_GOODBYE}`,
     'not_found': '*',
 };
 
@@ -23,10 +23,10 @@ export const routeConfig: RouteProps[] = [
     //     path: RoutePath[EXPRESS_COURSE],
     //     element: <ExpressCoursePage />,
     // },
-    {
-        path: RoutePath[SUMMER_GOODBYE],
-        element: <SummerGoodbyePage />,
-    },
+    // {
+    //     path: RoutePath[SUMMER_GOODBYE],
+    //     element: <SummerGoodbyePage />,
+    // },
     {
         path: RoutePath.not_found,
         element: <NotFoundPage />,

@@ -19,7 +19,7 @@ export const AboutSalsa = ({ backgroundColor }: AboutSalsaProps) => {
             <div className={cl.decr}>
                 {aboutSalsa.text.map((text, index) => <Text text={text} key={index}/>)}
             </div>
-            <img src={conga} className={cl.conga} alt='конги' />
+            <img src={conga} className={cl.conga} alt='конги' loading="lazy"/>
         </Template>
     );
 };

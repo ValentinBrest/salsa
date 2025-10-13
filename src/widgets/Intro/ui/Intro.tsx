@@ -51,6 +51,7 @@ export const Intro = ({
                             { [cl.logoNewYear]: isNewYear },
                             [cl.anim]
                         )}
+                        loading="lazy"
                         src={isNewYear ? logoNewYear : logo}
                         alt='salsa-brest'
                     />

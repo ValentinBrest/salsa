@@ -3,17 +3,18 @@ import SimpleImageSlider from 'react-simple-image-slider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Modal } from 'shared/ui';
 
-import ph1 from '../../../../public/img/gallery/1-max.webp';
+import ph1 from '../../../../public/img/gallery/1.webp';
 import ph2 from '../../../../public/img/gallery/2.webp';
-import ph3 from '../../../../public/img/gallery/3-max.webp';
-import ph4 from '../../../../public/img/gallery/4-max.webp';
-import ph5 from '../../../../public/img/gallery/5-max.webp';
-import ph6 from '../../../../public/img/gallery/6-max.webp';
-import ph7 from '../../../../public/img/gallery/7-max.webp';
-import ph8 from '../../../../public/img/gallery/8.webp';
-import ph9 from '../../../../public/img/gallery/9.webp';
-import ph10 from '../../../../public/img/gallery/10.webp';
-import ph11 from '../../../../public/img/gallery/11.webp';
+import ph3 from '../../../../public/img/gallery/3.webp';
+import ph4 from '../../../../public/img/gallery/4.webp';
+import ph5 from '../../../../public/img/gallery/5.webp';
+import ph6 from '../../../../public/img/gallery/6.webp';
+import ph7 from '../../../../public/img/main/1.webp';
+import ph8 from '../../../../public/img/main/2.webp';
+import ph9 from '../../../../public/img/main/3.webp';
+import ph10 from '../../../../public/img/main/4.webp';
+import ph11 from '../../../../public/img/main/5.webp';
+import ph12 from '../../../../public/img/main/7.webp';
 
 import './PhotosModal.scss';
 
@@ -40,6 +41,7 @@ export const PhotosModal = (props: PhotosModalProps) => {
         { url: ph9 },
         { url: ph10 },
         { url: ph11 },
+        { url: ph12 },
     ];
     return (
         <Modal

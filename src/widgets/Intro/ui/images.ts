@@ -9,16 +9,16 @@ import m8 from '../../../../public/img/main/8.webp';
 
 export const leftImg = [
     { url: m1 },
-    { url: m8 },
-    { url: m6 },
     { url: m3 },
+    { url: m5 },
+    { url: m6 },
 ];
 
 export const rightImg = [
     { url: m2 },
-    { url: m5 },
-    { url: m7 },
     { url: m4 },
+    { url: m8 },
+    { url: m7 },
 ];
 export const totalImg = [
     { url: m2 },

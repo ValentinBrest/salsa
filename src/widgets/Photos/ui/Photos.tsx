@@ -10,14 +10,14 @@ import ph1 from '../../../../public/img/gallery/1.webp';
 import ph2 from '../../../../public/img/gallery/2.webp';
 import ph3 from '../../../../public/img/gallery/3.webp';
 import ph4 from '../../../../public/img/gallery/4.webp';
-import ph4mb from '../../../../public/img/gallery/4-mb.webp';
 import ph5 from '../../../../public/img/gallery/5.webp';
 import ph6 from '../../../../public/img/gallery/6.webp';
-import ph7 from '../../../../public/img/gallery/7.webp';
-import ph8 from '../../../../public/img/gallery/8.webp';
-import ph9 from '../../../../public/img/gallery/9.webp';
-import ph10 from '../../../../public/img/gallery/10.webp';
-import ph11 from '../../../../public/img/gallery/11.webp';
+import ph7 from '../../../../public/img/main/1.webp';
+import ph8 from '../../../../public/img/main/2.webp';
+import ph9 from '../../../../public/img/main/3.webp';
+import ph10 from '../../../../public/img/main/4.webp';
+import ph11 from '../../../../public/img/main/5.webp';
+import ph12 from '../../../../public/img/main/7.webp';
 import toy from '../../../../public/img/newYear/green.png';
 
 import { PhotosModal } from './PhotosModal';
@@ -36,13 +36,10 @@ export const Photos = ({
     isNewYear = false,
 }: PhotosProps) => {
     const isLaptopScreen = useMediaQuery({ query: '(max-width: 992px)' });
-    const isTableScreen = useMediaQuery({ query: '(max-width: 768px)' });
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [curImg, setCurImg] = useState(1);
 
-    const photosAll = isTableScreen
-        ? [ph1, ph2, ph3, ph4mb, ph5, ph6, ph7, ph8, ph9, ph10, ph11]
-        : [ph1, ph2, ph3, ph4, ph5, ph6, ph7, ph8, ph9, ph10, ph11];
+    const photosAll = [ph1, ph2, ph3, ph4, ph5, ph6, ph7, ph8, ph9, ph10, ph11, ph12];
 
     const onCloseModal = useCallback(() => {
         setIsModalOpen(false);

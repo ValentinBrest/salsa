@@ -112,7 +112,7 @@ export const NavBar = ({ className }: NavBarProps) => {
                                     className={classNames(
                                         cl.burger,
                                         { [cl.active]: isOpenMenu },
-                                        [className]
+                                        [className],
                                     )}
                                 />
                             </Button>

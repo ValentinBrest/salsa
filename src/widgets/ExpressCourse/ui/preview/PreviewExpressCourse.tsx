@@ -8,7 +8,7 @@ import {
 } from 'shared/ui';
 
 import { expressCourse } from '../../../../../data/expressCourse';
-import summerSale from '../../../../../public/img/summerSale.webp';
+import posterPreview from '../../../../../public/img/poster.webp';
 
 import cl from './PreviewExpressCourse.module.scss';
 
@@ -37,11 +37,11 @@ export const PreviewExpressCourse = ({ backgroundColor }: PreviewExpressCoursePr
             <div className={cl.saleWrap}>
                 <img
                     loading='lazy'
-                    src={summerSale}
+                    src={posterPreview}
                     alt={'sale'}
                     className={cl.saleImg}
                 />
-                <Text className={cl.saleText} text={expressCourse.saleText} />
+                {/* <Text className={cl.saleText} text={expressCourse.saleText} /> */}
             </div>
             <Button
                 size={ButtonSize.ML}

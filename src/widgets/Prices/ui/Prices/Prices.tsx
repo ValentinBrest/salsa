@@ -1,7 +1,9 @@
-import { PriceBlock } from '../PriceBlock/PriceBlock';
-import cl from './Prices.module.scss';
+import { Template, Text,TextAlign } from 'shared/ui';
+
 import { prices } from '../../../../../data/prices';
-import { Template, TextAlign, Text } from 'shared/ui';
+import { PriceBlock } from '../PriceBlock/PriceBlock';
+
+import cl from './Prices.module.scss';
 
 interface PricesProps {
     className?: string;

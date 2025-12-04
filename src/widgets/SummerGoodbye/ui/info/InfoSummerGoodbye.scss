@@ -2,19 +2,21 @@
     position: relative;
     height: 500px;
     margin-bottom: 20px;
+
     & div {
         background-color: unset !important;
     }
 
     .rsis-container {
         & div {
+            background-repeat: no-repeat;
             background-position: center !important;
             background-size: contain !important;
-            background-repeat: no-repeat;
         }
+
         .rsis-image {
-            background-size: contain !important;
             background-repeat: no-repeat;
+            background-size: contain !important;
         }
     }
 }

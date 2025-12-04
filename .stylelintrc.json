@@ -9,6 +9,7 @@
         "indentation": [4],
 		"selector-class-pattern": null,
         "color-function-notation": "modern",
-        "property-no-vendor-prefix" : null
+        "property-no-vendor-prefix" : null,
+        "no-invalid-position-at-import-rule": null
     }
 }

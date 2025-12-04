@@ -1,5 +1,6 @@
 import { refineDate } from 'shared/lib/helpers/refineDate';
 import { AboutSalsa } from 'widgets/AboutSalsa';
+import { PreviewExpressCourse } from 'widgets/ExpressCourse';
 import { Information } from 'widgets/Information';
 import { Intro } from 'widgets/Intro';
 import { Lessons } from 'widgets/Lessons';
@@ -14,13 +15,14 @@ import { School } from 'widgets/School';
 export const MainPage = ({}) => {
     const bgSecond = 'var(--bg-color-second)';
     const bgFirst = 'var(--bg-color)';
-    const bgSummerGoodbye = 'var(--summer-goodbye-color)';
+
 
     const isNewYear = refineDate();
 
     return (
         <>
             <Intro isNewYear={isNewYear} />
+            <PreviewExpressCourse backgroundColor={bgSecond} />
             <AboutSalsa />
             <Salsa backgroundColor={bgSecond} isNewYear={isNewYear} />
             <School

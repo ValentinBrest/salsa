@@ -1,11 +1,11 @@
 .NotFoundContent {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - var(--navbar-height) - 150px);
     gap: 50px;
-}
+    align-items: center;
+    justify-content: center;
 
+    min-height: calc(100vh - var(--navbar-height) - 150px);
+}
 
 .img {
     width: 300px;
@@ -21,18 +21,19 @@
 .btn {
     margin-top: 10px;
 
+    .link {
+        color: var(--primary-color);
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
     &:hover {
         background: var(--primary-color);
+
         .link {
             color: var(--bg-color);
         }
     }
-}
-
-.link {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: var(--primary-color);
 }
 
 @media (max-width: 768px) {

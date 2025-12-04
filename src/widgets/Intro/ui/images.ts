@@ -23,10 +23,10 @@ export const rightImg = [
 export const totalImg = [
     { url: m2 },
     { url: m1 },
-    { url: m8 },
-    { url: m6 },
-    { url: m5 },
-    { url: m7 },
     { url: m3 },
     { url: m4 },
+    { url: m6 },
+    { url: m7 },
+    { url: m5 },
+    { url: m8 },
 ];

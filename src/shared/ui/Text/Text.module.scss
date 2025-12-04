@@ -1,8 +1,9 @@
 .title {
     margin-bottom: var(--margin-m);
+
     font-size: var(--font-size-title-m);
-    line-height: var(--font-line-title-m);
     font-weight: 700;
+    line-height: var(--font-line-title-m);
     color: var(--gold-color);
     text-align: center;
     letter-spacing: inherit;
@@ -51,25 +52,28 @@
 }
 
 .animation {
-    background: linear-gradient(90deg, #d39f64, #ffb400, #ff3333, #d39f64);
-    background-size: 200% auto;
-    background-clip: text;
+    background: linear-gradient(90deg, #d39f64, #ffb400, #f33, #d39f64);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% auto;
+
     animation: textflow 5s linear infinite;
-  }
-  @keyframes textflow {
-    from {background-position: 0% center}         
-    to {background-position: 200% center}
-  }
+
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes textflow {
+    from { background-position: 0% center; }
+    to { background-position: 200% center; }
+}
 
 .subTitle {
     padding: 0 10px;
 
     font-size: var(--font-size-xl);
-    line-height: var(--font-line-xl);
     font-weight: 700;
     font-style: inherit;
+    line-height: var(--font-line-xl);
     color: var(--inverted-primary-color);
     letter-spacing: inherit;
 }
@@ -80,8 +84,8 @@
     margin-bottom: var(--margin-s);
 
     font-size: var(--font-size-ml);
-    line-height: var(--font-line-ml);
     font-style: inherit;
+    line-height: var(--font-line-ml);
     color: var(--inverted-primary-color);
 }
 
@@ -117,8 +121,8 @@
 
 .without {
     font-size: var(--font-size-title-m);
-    line-height: var(--font-line-title-m);
     font-weight: 700;
+    line-height: var(--font-line-title-m);
 
     span {
         &::before {
@@ -149,12 +153,13 @@
 }
 
 .back {
-    width: 70px;
-    height: 70px;
     cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+
     // position: absolute;
     // left: -100px;
-
 }
 
 @import "./Text.media";

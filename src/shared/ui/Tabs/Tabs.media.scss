@@ -1,23 +1,23 @@
 @media (max-width: 1200px) {
     .subTitle {
         font-size: var(--font-size-title-xs);
-        line-height: var(--font-line-title-xs);
         font-weight: 700;
+        line-height: var(--font-line-title-xs);
     }
 }
 
 @media (max-width: 992px) {
     .title {
         font-size: var(--font-size-title-sm);
-        line-height: var(--font-line-title-sm);
         font-weight: 700;
+        line-height: var(--font-line-title-sm);
         text-align: center;
     }
 
     .subTitle {
         font-size: var(--font-size-xl);
-        line-height: var(--font-line-xl);
         font-weight: 700;
+        line-height: var(--font-line-xl);
     }
 
     .text {
@@ -34,25 +34,23 @@
 @media (max-width: 768px) {
     .title {
         font-size: var(--font-size-title-s);
-        line-height: var(--font-line-title-s);
         font-weight: 700;
+        line-height: var(--font-line-title-s);
         text-align: center;
     }
 
     .subTitle {
         font-size: var(--font-size-l);
-        line-height: var(--font-line-l);
         font-weight: 700;
+        line-height: var(--font-line-l);
     }
-
-    
 }
 
 @media (max-width: 576px) {
     .title {
         font-size: var(--font-size-xl);
-        line-height: var(--font-line-xl);
         font-weight: 700;
+        line-height: var(--font-line-xl);
         text-align: center;
 
         span {
@@ -79,8 +77,8 @@
 
     .subTitle {
         font-size: var(--font-size-l);
-        line-height: var(--font-line-l);
         font-weight: 700;
+        line-height: var(--font-line-l);
         text-align: center;
     }
 

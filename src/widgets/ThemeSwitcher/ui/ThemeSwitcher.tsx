@@ -1,8 +1,9 @@
 import { Theme, useTheme } from 'app/providers/ThemeProvider';
-import DarkIcon from '../../../../public/icon/moon.svg';
-import LightIcon from '../../../../public/icon/sun.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui';
+
+import DarkIcon from '../../../../public/icon/moon.svg';
+import LightIcon from '../../../../public/icon/sun.svg';
 
 interface ThemeSwitcherProps {
     className?: string;

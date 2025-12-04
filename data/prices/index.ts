@@ -1,4 +1,4 @@
-import { PRICES } from "../links/constants";
+import { PRICES } from '../links/constants';
 
 export const prices = {
     id: PRICES,
@@ -20,5 +20,5 @@ export const prices = {
             ['Протанцовка* (1 час), при наличии абонемента', '5р.', '6р.', '8р.'],
             ['Протанцовка* (1 час), при отсутствии  абонемента', '7р.', '10р.', '12р.'],
         ],
-    }
+    },
 };

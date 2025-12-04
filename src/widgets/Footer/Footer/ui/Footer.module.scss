@@ -44,6 +44,10 @@
     margin: 0 5px;
 }
 
+.phoneWrap {
+    margin-bottom: 10px;
+}
+
 .mailWrap,
 .phoneWrap {
     position: relative;
@@ -53,7 +57,7 @@
 
     color: var(--footer-color);
     text-decoration: none;
-    
+
     &::before {
         content: "";
 
@@ -80,10 +84,6 @@
     }
 }
 
-.phoneWrap {
-    margin-bottom: 10px;
-}
-
 .email,
 .phone {
     width: 20px;
@@ -104,27 +104,33 @@
 
 .direct {
     position: relative;
-    height: 100%;
-    text-align: center;
+
     display: inline-block;
+
+    height: 100%;
+
     font: var(--font-m);
-    
+    text-align: center;
 
     &::after {
         width: 230px;
     }
 
     &:hover::after {
-        border-radius: 3px;
         content: attr(data-text);
+
         position: absolute;
-        left: -110px;
-        right: 0%;
-        top: -30px;
         z-index: 1;
-        background: var(--inverted-primary-color);
+        top: -30px;
+        right: 0%;
+        left: -110px;
+
         padding: 5px;
+
         color: var(--primary-color);
+
+        background: var(--inverted-primary-color);
+        border-radius: 3px;
     }
 }
 

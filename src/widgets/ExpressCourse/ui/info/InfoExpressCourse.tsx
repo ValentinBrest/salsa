@@ -1,4 +1,3 @@
-import { REGISTER } from '../../../../../data/links/constants';
 import { useMediaQuery } from 'react-responsive';
 import { useNavigate } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -6,8 +5,8 @@ import { Accordion, Button, ButtonSize, ButtonTheme, Card } from 'shared/ui';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 
 import { expressCourse } from '../../../../../data/expressCourse';
+import { REGISTER } from '../../../../../data/links/constants';
 import poster from '../../../../../public/img/poster.webp';
-import video from '../../../../../public/video/1.mp4';
 
 import cl from './InfoExpressCourse.module.scss';
 interface InfoExpressCourseProps {
@@ -44,7 +43,6 @@ export const InfoExpressCourse = ({
             id={expressCourse.id}
             className={classNames(cl.InfoExpressCourse, {}, [className])}
         >
-    
             <div className='container'>
                 <div className={classNames(cl.superWrap, {}, [])}>
                     <Text
@@ -54,10 +52,16 @@ export const InfoExpressCourse = ({
                         className={cl.title}
                         back={() => navigate('/')}
                     />
-                    {/* <Text text={expressCourse.datePage} className={cl.date} /> */}
+                    <Text text={expressCourse.date} className={cl.date} />
 
                     <div className={cl.wrap}>
-                        <video
+                        <img
+                            src={poster}
+                            className={cl.poster}
+                            alt='бонги'
+                            loading='lazy'
+                        />
+                        {/* <video
                             width='100%'
                             height='540'
                             preload='none'
@@ -66,7 +70,7 @@ export const InfoExpressCourse = ({
                             webkit-playsInline playsInline
                         >
                             <source src={video} type='video/mp4' />
-                        </video>
+                        </video> */}
 
                         <Card className={cl.card}>
                             <Accordion
@@ -87,13 +91,15 @@ export const InfoExpressCourse = ({
                                     align={TextAlign.LEFT}
                                     text={expressCourse.programm}
                                 />
-                                {expressCourse.programmItems.map((item, index) => (
-                                    <Text
-                                        key={index}
-                                        align={TextAlign.LEFT}
-                                        text={item}
-                                    />
-                                ))}
+                                {expressCourse.programmItems.map(
+                                    (item, index) => (
+                                        <Text
+                                            key={index}
+                                            align={TextAlign.LEFT}
+                                            text={item}
+                                        />
+                                    ),
+                                )}
                                 <Text
                                     align={TextAlign.LEFT}
                                     text={expressCourse.price}
@@ -117,12 +123,12 @@ export const InfoExpressCourse = ({
                                         text={item}
                                     />
                                 ))}
-                                <Text align={TextAlign.LEFT} text={expressCourse.ps} />
+                                <Text
+                                    align={TextAlign.LEFT}
+                                    text={expressCourse.ps}
+                                />
                             </Accordion>
-                            <a
-                                href={`#${REGISTER}`}
-                                className={cl.linkBtn}
-                            >
+                            <a href={`#${REGISTER}`} className={cl.linkBtn}>
                                 <Button
                                     size={ButtonSize.ML}
                                     theme={ButtonTheme.OUTLINE}

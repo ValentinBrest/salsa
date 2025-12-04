@@ -1,8 +1,9 @@
 import { ReactNode } from 'react';
-import { motion, Variants } from 'framer-motion';
-import cl from './Template.module.scss';
-import { classNames } from 'shared/lib/classNames/classNames';
 import { Link } from 'react-router-dom';
+import { motion, Variants } from 'framer-motion';
+import { classNames } from 'shared/lib/classNames/classNames';
+
+import cl from './Template.module.scss';
 
 interface TemplateProps {
     className?: string;

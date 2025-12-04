@@ -1,5 +1,5 @@
-import { REGISTER } from '../links/constants';
 import { footer } from '../footer';
+import { REGISTER } from '../links/constants';
 
 export const register = {
     id: REGISTER,

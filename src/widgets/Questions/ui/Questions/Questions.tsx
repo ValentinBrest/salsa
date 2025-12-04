@@ -17,7 +17,7 @@ export const Questions = ({
     backgroundColor,
     isNewYear = false,
 }: QuestionsProps) => {
-    const O = <img src={blue} className={'toy medium'} alt='o' loading="lazy"/>;
+    const O = <img src={blue} className={'toy medium'} alt='o' loading='lazy'/>;
 
     return (
         <Template
@@ -35,7 +35,7 @@ export const Questions = ({
             ) : (
                 <Text title={questions.title} className={cl.title} />
             )}
-            <img src={clave} className={cl.clave} alt='клавы' loading="lazy"/>
+            <img src={clave} className={cl.clave} alt='клавы' loading='lazy'/>
             
             {questions.text.map((item) => (
                 <QuestionCard

@@ -1,10 +1,12 @@
+import { useMediaQuery } from 'react-responsive';
+import { Accordion, Card,Template, Text, TextAlign, TextTheme } from 'shared/ui';
+
+import { school } from '../../../../data/school';
 import bongi from '../../../../public/img/instuments/bongi.webp';
 import maria from '../../../../public/img/maria.webp';
 import orange from '../../../../public/img/newYear/orange.png';
+
 import cl from './School.module.scss';
-import { school } from '../../../../data/school';
-import { Accordion, Template, TextAlign, TextTheme, Text, Card } from 'shared/ui';
-import { useMediaQuery } from 'react-responsive';
 
 interface SchoolProps {
     backgroundColor?: string;
@@ -60,7 +62,7 @@ export const School = ({
                             />
                         ))}
                     </div>
-                    <img src={bongi} className={cl.bongi} alt='бонги' loading="lazy"/>
+                    <img src={bongi} className={cl.bongi} alt='бонги' loading='lazy'/>
                 </div>
 
                 <Card background={backgroundColorCard} className={cl.card}>
@@ -68,7 +70,7 @@ export const School = ({
                 </Card>
 
                 <div className={cl.invertedwrap}>
-                    <img src={maria} alt='maria' className={cl.maria} loading="lazy"/>
+                    <img src={maria} alt='maria' className={cl.maria} loading='lazy'/>
                     <div>
                         <>
                             <Text subTitle={school.teacherTitle} />

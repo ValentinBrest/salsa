@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import cl from './Tabs.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
+
+import cl from './Tabs.module.scss';
 
 // Типы для пропсов
 type TabItem = {

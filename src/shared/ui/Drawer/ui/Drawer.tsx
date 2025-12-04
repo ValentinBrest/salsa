@@ -1,6 +1,8 @@
-import cl from './Drawer.module.scss';
-import DownIcon from '../../../../../public/icon/down.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
+
+import DownIcon from '../../../../../public/icon/down.svg';
+
+import cl from './Drawer.module.scss';
 
 interface Item {
     id: number;
@@ -32,13 +34,13 @@ export const Drawer = ({
             <div className={cl.content}>
                 {items.map((link) => (
                     <a
-                    className={classNames(cl.link, {}, ['drawerLink'])}
-                    href={`#${link.scroll}`}
-                    key={link.id}
-                    onClick={() => onHandleMenu()}
-                >
-                    {link.name}
-                </a>
+                        className={classNames(cl.link, {}, ['drawerLink'])}
+                        href={`#${link.scroll}`}
+                        key={link.id}
+                        onClick={() => onHandleMenu()}
+                    >
+                        {link.name}
+                    </a>
                 ))}
             </div>
         </div>

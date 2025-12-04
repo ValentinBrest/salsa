@@ -4,8 +4,8 @@ import SimpleImageSlider from 'react-simple-image-slider';
 
 
 interface SliderProps {
-    images: string[] | Record<"url", string>[],
-    mobileImages?: string[] | Record<"url", string>[],
+    images: string[] | Record<'url', string>[],
+    mobileImages?: string[] | Record<'url', string>[],
     autoPlay? : boolean;
     showNavs?: boolean;
 }

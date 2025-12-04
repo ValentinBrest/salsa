@@ -1,4 +1,4 @@
-import { CONTACT } from "../links/constants";
+import { CONTACT } from '../links/constants';
 
 export const footer = {
     id: CONTACT,

@@ -38,10 +38,10 @@ module.exports = {
         'no-multi-spaces': 'error',
         'no-console': 'warn',
         quotes: ['error', 'single'],
-        'jsx-quotes': ['error', 'prefer-double'],
+        'jsx-quotes': ['error', 'prefer-single'],
         'comma-dangle': ['error', 'always-multiline'],
         '@typescript-eslint/ban-ts-comment': 'warn',
-        'max-len': ['error', { ignoreComments: true, code: 200 }],
+        'max-len': ['warning', { ignoreComments: true, code: 200 }],
         'react/display-name': 'off',
         'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
         'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies

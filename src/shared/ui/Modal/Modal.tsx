@@ -38,7 +38,7 @@ export const Modal = (props: ModalProps) => {
                 closeHandler();
             }
         },
-        [closeHandler]
+        [closeHandler],
     );
 
     useEffect(() => {

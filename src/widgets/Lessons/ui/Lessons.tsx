@@ -1,7 +1,9 @@
 import { useMediaQuery } from 'react-responsive';
-import { Accordion, Template, TextAlign, Text } from 'shared/ui';
+import { Accordion, Template, Text,TextAlign } from 'shared/ui';
+
 import { lessons } from '../../../../data/lessons';
 import guiro from '../../../../public/img/instuments/guiro.webp';
+
 import cl from './Lessons.module.scss';
 
 interface LessonsProps {
@@ -30,7 +32,7 @@ export const Lessons = ({ backgroundColor }: LessonsProps) => {
                     ))}
                 </Accordion>
             </div>
-            <img src={guiro} className={cl.guiro} alt='guiro' loading="lazy"/>
+            <img src={guiro} className={cl.guiro} alt='guiro' loading='lazy'/>
         </Template>
     );
 };

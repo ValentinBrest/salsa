@@ -64,10 +64,10 @@
 }
 
 .logo {
-    width: 180px;
-    height: 180px;
     position: relative;
     z-index: 50;
+    width: 180px;
+    height: 180px;
 }
 
 .logoNewYear {
@@ -87,8 +87,8 @@
     right: -16px;
 
     font-size: var(--font-size-title-xl);
-    line-height: var(--font-line-title-xl);
     font-weight: 700;
+    line-height: var(--font-line-title-xl);
 }
 
 .subtitle {
@@ -103,15 +103,15 @@
     padding: 5px 15px;
 
     font-size: var(--font-size-xl);
-    line-height: var(--font-line-xl);
     font-weight: 700;
+    line-height: var(--font-line-xl);
     text-align: center;
 }
 
 .salsaIsMore {
     font-size: var(--font-size-l);
-    line-height: var(--font-line-l);
     font-weight: 700;
+    line-height: var(--font-line-l);
 }
 
-@import "./Intro.media"
+@import "./Intro.media";

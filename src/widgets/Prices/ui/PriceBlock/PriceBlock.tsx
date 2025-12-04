@@ -1,9 +1,11 @@
-import { useMediaQuery } from 'react-responsive';
-import meshok from '../../../../../public/img/newYear/meshok.webp';
-import cl from './PriceBlock.module.scss';
 import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { TextTheme, Text } from 'shared/ui';
+import { Text,TextTheme } from 'shared/ui';
+
+import meshok from '../../../../../public/img/newYear/meshok.webp';
+
+import cl from './PriceBlock.module.scss';
 
 interface PriceBlock {
     header: ({
@@ -32,9 +34,9 @@ export const PriceBlock = ({
     const isTabletScreen = useMediaQuery({ query: '(max-width: 768px)' });
     const [isMobile, setIsMobile] = useState(false);
 
-     useEffect(() => {
-            setIsMobile(isTabletScreen);
-          }, [isTabletScreen]);
+    useEffect(() => {
+        setIsMobile(isTabletScreen);
+    }, [isTabletScreen]);
           
     return (
         <div
@@ -43,7 +45,7 @@ export const PriceBlock = ({
             className={classNames(cl.Prices, {}, [className])}
         >
             {isNewYear && (
-                <img src={meshok} className={cl.meshok} alt='meshok' loading="lazy"/>
+                <img src={meshok} className={cl.meshok} alt='meshok' loading='lazy'/>
             )}
             <div className={cl.wrap}>
                 {!isMobile && <div />}
@@ -83,12 +85,12 @@ export const PriceBlock = ({
                                     [cl.firstClm]: !(index % 4),
                                     [cl.third]: isMobile && !(index % 4),
                                 },
-                                [className]
+                                [className],
                             )}
                             text={item}
                             theme={TextTheme.ITALIC}
                         />
-                    ))
+                    )),
                 )}
             </div>
         </div>

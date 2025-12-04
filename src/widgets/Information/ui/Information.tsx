@@ -30,7 +30,7 @@ export const Information = ({
             >
                 <div className={cl.decr}>
                     {isNewYear && (
-                        <img src={tree} className={cl.tree} alt='ель' loading="lazy"/>
+                        <img src={tree} className={cl.tree} alt='ель' loading='lazy'/>
                     )}
                     <Text className={cl.title} title={information.title} />
 

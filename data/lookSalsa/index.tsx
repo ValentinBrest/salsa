@@ -1,4 +1,4 @@
-import { LOOK_SALSA } from "../links/constants";
+import { LOOK_SALSA } from '../links/constants';
 
 export const lookSalsa = {
     id: LOOK_SALSA,

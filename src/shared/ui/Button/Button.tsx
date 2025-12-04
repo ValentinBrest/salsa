@@ -65,7 +65,7 @@ export const Button: FC<ButtonProps> = (props) => {
                     <span className={cl.arrowLeft}></span>
                     <span className={cl.arrowRight}></span>
                 </div>
-            ) :  (
+            ) : (
                 children
             )}
         </button>

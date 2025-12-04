@@ -1,49 +1,53 @@
 .tabs {
-  width: 100%;
-  color: var(--inverted-primary-color)
+    width: 100%;
+    color: var(--inverted-primary-color);
 }
 
 .header {
-  display: grid;
+    display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
 .item {
-  padding: 10px 20px;
-  background: var(--bg-color);
-  border: 1px solid var(--bg-color-second);
-  cursor: pointer;
-  font-size: 16px;
-  transition: all 0.3s;
-  color: var(--inverted-primary-color);
+    cursor: pointer;
+
+    padding: 10px 20px;
+
+    font-size: 16px;
+    color: var(--inverted-primary-color);
+
+    background: var(--bg-color);
+    border: 1px solid var(--bg-color-second);
+
+    transition: all 0.3s;
 }
 
 .item:hover {
-  color: var(--light-color);
-  background: var(--gold-color);
+    color: var(--light-color);
+    background: var(--gold-color);
 }
 
 .item.active {
-  border-top: 2px solid #007bff;
-  border-bottom: unset;
-  color: #007bff;
-  background-color: var(--bg-color-second);
+    color: #007bff;
+    background-color: var(--bg-color-second);
+    border-top: 2px solid #007bff;
+    border-bottom: unset;
 }
 
 .item.disabled {
-  color: #ccc;
-  cursor: not-allowed;
+    cursor: not-allowed;
+    color: #ccc;
 }
 
 .content {
-  padding: 20px ;
-  background-color: var(--bg-color-second);
+    padding: 20px;
+    background-color: var(--bg-color-second);
 }
 
 /* Кастомные стили из примера использования */
 .custom-tabs .custom-active-tab {
-  border-bottom-color: #ff5722;
-  color: #ff5722;
+    color: #ff5722;
+    border-bottom-color: #ff5722;
 }
 
 @import "./Tabs.media";

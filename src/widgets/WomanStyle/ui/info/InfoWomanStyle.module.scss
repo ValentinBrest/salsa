@@ -1,15 +1,15 @@
 .InfoWomanStyle {
+    position: relative;
     overflow: hidden;
     width: 100%;
     padding: var(--padding-l);
-    position: relative;
 }
 
 .wrap {
     display: grid;
     grid-template-columns: 300px 1fr;
-    justify-content: space-around;
     gap: 20px;
+    justify-content: space-around;
 }
 
 .date {
@@ -23,19 +23,19 @@
 
 .subTitle {
     font-size: var(--font-size-l);
-    text-transform: uppercase;
     font-style: normal;
+    text-transform: uppercase;
 }
 
 .linkBtn {
     display: flex;
-    text-decoration: none;
     justify-content: center;
+    text-decoration: none;
 }
 
 .btn {
-    font-style: normal;
     margin-top: 30px;
+    font-style: normal;
     color: var(--inverted-primary-color);
 }
 

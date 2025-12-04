@@ -1,6 +1,8 @@
-import cl from './NavLogo.module.scss';
-import logo from '../../../../public/img/logo.webp';
 import { classNames } from 'shared/lib/classNames/classNames';
+
+import logo from '../../../../public/img/logo.webp';
+
+import cl from './NavLogo.module.scss';
 
 interface NavLogoProps {
     className?: string;

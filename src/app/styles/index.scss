@@ -35,30 +35,31 @@ body {
     height: 100%;
     min-height: 100vh;
 
+    font-family: Jost, "Times New Roman", sans-serif;
+
     background: var(--bg-color);
-    
-    font-family: "Jost", "Times New Roman", sans-serif;
 }
 
 .notFound {
     height: calc(100vh - 150px - var(--navbar-height));
-    background: var(--bg-color-second);
     padding: var(--padding-l);
+    background: var(--bg-color-second);
 
     .wrap {
-        height: 100%;
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        height: 100%;
     }
 }
 
 .modal {
     position: absolute;
+    z-index: 100;
     width: 100vh;
     height: 100%;
-    z-index: 100;
 }
 
 .container {
@@ -77,7 +78,6 @@ main {
     position: relative;
 }
 
-
 .toy {
     width: 30px;
 }
@@ -95,13 +95,14 @@ main {
 }
 
 .link {
+    cursor: pointer;
+
     position: relative;
 
     font-size: var(--font-size-m);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
-    cursor: pointer;
 
     background-image:
         linear-gradient(
@@ -152,23 +153,24 @@ main {
 }
 
 .navbarLink {
-    margin-right: 20px;
     position: relative;
+    margin-right: 20px;
 }
 
 .drawerLink {
     font-size: var(--font-size-m);
-    text-transform: none;
     color: var(--primary-color);
     text-decoration: none;
+    text-transform: none;
 }
 
 .pageup {
     cursor: pointer;
+
     position: fixed;
+    z-index: 10;
     right: 10px;
     bottom: 10px;
-    z-index: 10;
 }
 
 .pageup.link:hover::before {
@@ -204,13 +206,15 @@ main {
     }
 
     .navbarLink {
+        position: relative;
+
         margin-right: 0;
         margin-bottom: 30px;
+
         font-size: var(--font-size-ml);
+        font-weight: 700;
         line-height: var(--font-line-ml);
         text-decoration: none;
-        position: relative;
-        font-weight: 700;
     }
 
     .drawerLink {

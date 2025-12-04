@@ -1,12 +1,13 @@
 .InfoSummerGoodbye {
+    position: relative;
     overflow: hidden;
     width: 100%;
     padding: var(--padding-l);
-    position: relative;
 }
 
 .introWrap {
     display: grid;
+
     // align-items: center;
     grid-template-columns: 0.7fr 1fr;
     gap: 50px;
@@ -14,8 +15,9 @@
 
 .volleyballWrap {
     display: grid;
+
     // align-items: center;
-    grid-template-columns:  1fr 0.4fr;
+    grid-template-columns: 1fr 0.4fr;
     gap: 10px;
     margin-bottom: 40px;
 }
@@ -25,13 +27,15 @@
     font-size: var(--font-size-title-xs);
 }
 
-.title, 
-.titlePlace, 
+.title,
+.titlePlace,
 .subTitlePlace {
     margin: 40px 0 20px;
     font-size: var(--font-size-title-xs);
 }
-.titlePlace, .subTitlePlace {
+
+.titlePlace,
+.subTitlePlace {
     // margin: 0;
 }
 
@@ -57,10 +61,11 @@
 
 .teacherWrap {
     display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-    align-items: center;
     gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 30px;
 }
 
 .invertedTeacherWrap {
@@ -83,10 +88,10 @@
 }
 
 .card {
-    font-style: normal;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    font-style: normal;
 }
 
 .cardMaster {
@@ -108,19 +113,19 @@
 
 .subTitle {
     font-size: var(--font-size-l);
-    text-transform: uppercase;
     font-style: normal;
+    text-transform: uppercase;
 }
 
 .linkBtn {
     display: flex;
-    text-decoration: none;
     justify-content: center;
+    text-decoration: none;
 }
 
 .btn {
-    font-style: normal;
     margin: 30px 0;
+    font-style: normal;
     color: var(--inverted-primary-color);
 }
 

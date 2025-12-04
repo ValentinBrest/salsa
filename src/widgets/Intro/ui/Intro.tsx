@@ -1,11 +1,14 @@
-import { intro } from '../../../../data/intro';
-import logo from '../../../../public/img/logo.webp';
-import { leftImg, rightImg, totalImg } from './images';
-import logoNewYear from '../../../../public/img/newYear/logo.webp';
-import cl from './Intro.module.scss';
-import './Intro.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Slider } from 'shared/ui';
+
+import { intro } from '../../../../data/intro';
+import logo from '../../../../public/img/logo.webp';
+import logoNewYear from '../../../../public/img/newYear/logo.webp';
+
+import { leftImg, rightImg, totalImg } from './images';
+
+import './Intro.scss';
+import cl from './Intro.module.scss';
 
 interface IntroProps {
     className?: string;
@@ -49,9 +52,9 @@ export const Intro = ({
                         className={classNames(
                             cl.logo,
                             { [cl.logoNewYear]: isNewYear },
-                            [cl.anim]
+                            [cl.anim],
                         )}
-                        loading="lazy"
+                        loading='lazy'
                         src={isNewYear ? logoNewYear : logo}
                         alt='salsa-brest'
                     />

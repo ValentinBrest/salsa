@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Template } from 'shared/ui';
 import { Text, TextAlign } from 'shared/ui/Text/Text';
@@ -31,11 +30,9 @@ interface PhotosProps {
 }
 
 export const Photos = ({
-    className,
     backgroundColor,
     isNewYear = false,
 }: PhotosProps) => {
-    const isLaptopScreen = useMediaQuery({ query: '(max-width: 992px)' });
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [curImg, setCurImg] = useState(1);
 
@@ -57,8 +54,7 @@ export const Photos = ({
             : document.body.classList.remove('lock');
     }, [isModalOpen]);
 
-    const styles = isLaptopScreen ? { width: '100%' } : {};
-    const O = <img src={toy} alt='o' className={'toy medium'} loading="lazy"/>;
+    const O = <img src={toy} alt='o' className={'toy medium'} loading='lazy'/>;
 
     return (
         <>
@@ -89,7 +85,7 @@ export const Photos = ({
                                 className={cl.cart}
                                 data-order={index + 1}
                                 alt='фото'
-                                loading="lazy"
+                                loading='lazy'
                             />
                             <Zoom
                                 className={cl.zoom}

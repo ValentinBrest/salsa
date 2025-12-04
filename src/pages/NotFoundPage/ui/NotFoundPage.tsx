@@ -1,6 +1,8 @@
-import { Button, ButtonTheme } from 'shared/ui';
 import { Link } from 'react-router-dom';
+import { Button, ButtonTheme } from 'shared/ui';
+
 import notFound from '../../../../public/img/404.webp';
+
 import cl from './NotFoundPage.module.scss';
 
 interface NotFoundPageProps {

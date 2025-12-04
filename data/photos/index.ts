@@ -1,4 +1,4 @@
-import { PHOTOS } from "../links/constants";
+import { PHOTOS } from '../links/constants';
 
 export const photos = {
     id: PHOTOS,

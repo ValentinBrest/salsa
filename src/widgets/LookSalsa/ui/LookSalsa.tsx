@@ -24,7 +24,12 @@ export const LookSalsa = ({
             }}
         >
             {isNewYear && (
-                <img src={snowMan} className={cl.snowMan} alt='snowMan' loading="lazy"/>
+                <img
+                    src={snowMan}
+                    className={cl.snowMan}
+                    alt='snowMan'
+                    loading='lazy'
+                />
             )}
 
             <Template

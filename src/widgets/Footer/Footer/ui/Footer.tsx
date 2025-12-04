@@ -1,11 +1,12 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 
+import { footer } from '../../../../../data/footer';
 import Email from '../../../../../public/icon/social/email.svg';
 import Instagram from '../../../../../public/icon/social/instagram.svg';
 import Phone from '../../../../../public/icon/social/phone.svg';
 import Telegram from '../../../../../public/icon/social/telegram.svg';
 import Tiktok from '../../../../../public/icon/social/tiktok.svg';
-import { footer } from '../../../../../data/footer';
+
 import cl from './Footer.module.scss';
 
 interface FooterProps {

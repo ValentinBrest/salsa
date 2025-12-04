@@ -19,7 +19,7 @@ export const LinkScroll = memo((props: LinkScrollProps) => {
         name,
         isDrawerLink = false,
         onClick,
-        children
+        children,
     } = props;
 
     return (
@@ -29,7 +29,7 @@ export const LinkScroll = memo((props: LinkScrollProps) => {
             className={classNames(
                 '',
                 { drawerLink: isDrawerLink, link: !isDrawerLink },
-                [className]
+                [className],
             )}
             onClick={onClick}
         >

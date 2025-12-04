@@ -3,25 +3,26 @@
 }
 
 .Salsa {
+    position: relative;
     overflow: hidden;
     width: 100%;
     padding: var(--padding-l);
-    position: relative;
 }
 
 .partSnow {
     position: absolute;
-    left: 52%;
-    opacity: 0.4;
+    z-index: 3;
     top: 0;
+    left: 52%;
+
     width: 202px;
     height: 109px;
-    z-index: 3;
+
+    opacity: 0.4;
 }
 
 .wrap {
     position: relative;
-
     display: grid;
     grid-template-columns: 25% 75%;
 }
@@ -48,6 +49,5 @@
 .epigraph {
     align-self: self-end;
 }
-
 
 @import "./Salsa.media";

@@ -1,6 +1,9 @@
 @media (max-width: 992px) {
     .wrap {
-        grid-template-rows: [row1-start] 100px [row2]  60px [row3] 60px [row4] 60px [row5] 80px [row6] 80px [row7] 60px [row8] 60px [row9] 60px [last];
+        grid-template-rows:
+            [row1-start] 100px [row2]  60px [row3]
+            60px [row4] 60px [row5] 80px [row6] 80px
+            [row7] 60px [row8] 60px [row9] 60px [last];
     }
 
     .title {
@@ -25,10 +28,16 @@
     .meshok {
         display: none;
     }
+
     .wrap {
         display: grid;
         grid-template-columns: [start] 1fr [line2] 1fr [line3] 1fr [end];
-        grid-template-rows: [row1-start] 100px [row2]  50px [row3] 50px [row4] 65px [row5] 50px [row6] 65px [row7] 50px [row8] 65px [row9] 50px [row10] 65px [row11] 50px [row12] 65px [row13] 50px [row14] 65px [row15] 50px [row16] 65px [row17] 50px [last];
+        grid-template-rows:
+            [row1-start] 100px [row2]  50px [row3] 50px
+            [row4] 65px [row5] 50px [row6] 65px [row7] 50px
+            [row8] 65px [row9] 50px [row10] 65px [row11] 50px
+            [row12] 65px [row13] 50px [row14] 65px [row15] 50px
+            [row16] 65px [row17] 50px [last];
         gap: 3px;
 
         margin-top: 25px;
@@ -64,22 +73,25 @@
 
 @media (max-width: 450px) {
     .wrap {
-        grid-template-rows: [row1-start] 100px [row2]  50px [row3] 50px [row4] 60px [row5] 50px [row6] 60px [row7] 50px [row8] 60px [row9] 50px [row10] 60px [row11] 50px [row12] 60px [row13] 50px [row14] 60px [row15] 50px [row16] 60px [row17] 50px [last];
+        grid-template-rows:
+            [row1-start] 100px [row2]  50px [row3] 50px [row4] 60px
+            [row5] 50px [row6] 60px [row7] 50px [row8] 60px [row9] 50px
+            [row10] 60px [row11] 50px [row12] 60px [row13] 50px [row14] 60px
+            [row15] 50px [row16] 60px [row17] 50px [last];
     }
 
     .student,
     .body {
         font-size: var(--font-size-m);
-        line-height: var(--font-line-m);
         font-style: italic;
+        line-height: var(--font-line-m);
         hyphens: manual;
     }
 
     .old,
     .note {
         font-size: var(--font-size-s);
-        line-height: var(--font-line-s);
         font-style: italic;
+        line-height: var(--font-line-s);
     }
-
 }

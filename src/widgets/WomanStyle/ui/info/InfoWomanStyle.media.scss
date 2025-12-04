@@ -18,17 +18,17 @@
 @media (max-width: 576px) {
     .title {
         margin-bottom: 10px;
-    }
-    .date {
-        font-size: var(--font-size-l);
-        margin-bottom: 30px;
-    }
 
-    .title {
         span {
-            &::before, &::after {
+            &::before,
+            &::after {
                 display: none;
             }
         }
+    }
+
+    .date {
+        margin-bottom: 30px;
+        font-size: var(--font-size-l);
     }
 }

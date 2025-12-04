@@ -38,7 +38,8 @@
 
     .title {
         span {
-            &::before, &::after {
+            &::before,
+            &::after {
                 display: none;
             }
         }
@@ -48,6 +49,7 @@
 @media (max-width: 420px) {
     .videoWrap {
         grid-template-columns: 1fr;
+
         iframe {
             width: 100%;
             height: 200px;

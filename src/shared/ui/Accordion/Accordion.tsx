@@ -9,7 +9,7 @@ interface AccordionProps {
     className?: string;
     children: ReactNode;
     background?: string;
-    linkId?: string
+    linkId?: string;
     startHeight?: string;
 }
 
@@ -30,11 +30,13 @@ export const Accordion = (props: AccordionProps) => {
         [cl.open]: isVisible,
     };
 
-    const clOpen = isVisible ? { maxHeight: height } : {maxHeight: startHeight};
+    const clOpen = isVisible
+        ? { maxHeight: height }
+        : { maxHeight: startHeight };
 
     const btn = (
         <Button
-            title="Свернуть или развернуть текст"
+            title='Свернуть или развернуть текст'
             background={background}
             theme={ButtonTheme.ARROW}
             onClick={() => setIsVisible(!isVisible)}
@@ -50,20 +52,16 @@ export const Accordion = (props: AccordionProps) => {
                 {...otherProps}
             >
                 {children}
-                {!isVisible &&<div
-                    style={{
-                        background: `linear-gradient(to bottom, rgb(255 255 255 / 0%), ${background} 80%)`,
-                    }}
-                    className={cl.bottom}
-                />}
+                {!isVisible && (
+                    <div
+                        style={{
+                            background: `linear-gradient(to bottom, rgb(255 255 255 / 0%), ${background} 80%)`,
+                        }}
+                        className={cl.bottom}
+                    />
+                )}
             </div>
-            {isVisible && linkId ? (
-                <a href={`#${linkId}`}>
-                    {btn}
-                </a>
-            ) : (
-                btn
-            )}
+            {isVisible && linkId ? <a href={`#${linkId}`}>{btn}</a> : btn}
         </>
     );
 };

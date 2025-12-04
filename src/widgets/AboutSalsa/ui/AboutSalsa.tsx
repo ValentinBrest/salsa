@@ -1,7 +1,9 @@
 
 import { Template, Text } from 'shared/ui';
+
 import { aboutSalsa } from '../../../../data/aboutSalsa';
 import conga from '../../../../public/img/instuments/conga.webp';
+
 import cl from './AboutSalsa.module.scss';
 
 interface AboutSalsaProps {
@@ -19,7 +21,7 @@ export const AboutSalsa = ({ backgroundColor }: AboutSalsaProps) => {
             <div className={cl.decr}>
                 {aboutSalsa.text.map((text, index) => <Text text={text} key={index}/>)}
             </div>
-            <img src={conga} className={cl.conga} alt='конги' loading="lazy"/>
+            <img src={conga} className={cl.conga} alt='конги' loading='lazy'/>
         </Template>
     );
 };

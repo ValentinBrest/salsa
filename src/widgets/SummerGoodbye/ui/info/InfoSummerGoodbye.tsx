@@ -28,7 +28,7 @@ export const InfoSummerGoodbye = ({
     backgroundColorCard,
 }: InfoSummerGoodbyeProps) => {
     const registerBtn = (link, text = 'Зарегистироваться') => (
-        <a target='_blank' href={link} className={cl.linkBtn}>
+        <a target='_blank' href={link} className={cl.linkBtn} rel='noreferrer'>
             <Button
                 size={ButtonSize.ML}
                 theme={ButtonTheme.OUTLINE}
@@ -55,7 +55,7 @@ export const InfoSummerGoodbye = ({
                             src={summerGoodbye.afisha}
                             alt='summerImg'
                             className={cl.poster}
-                            loading="lazy"
+                            loading='lazy'
                         />
 
                         <div>
@@ -103,7 +103,7 @@ export const InfoSummerGoodbye = ({
                                                 align={TextAlign.LEFT}
                                                 text={item}
                                             />
-                                        )
+                                        ),
                                     ),
                                 },
                                 {
@@ -118,7 +118,7 @@ export const InfoSummerGoodbye = ({
                                                         align={TextAlign.LEFT}
                                                         text={item}
                                                     />
-                                                )
+                                                ),
                                             )}
                                         </>
                                     ),
@@ -154,14 +154,14 @@ export const InfoSummerGoodbye = ({
                                                         [cl.invertedTeacherWrap]:
                                                             index % 2 !== 0,
                                                     },
-                                                    []
+                                                    [],
                                                 )}
                                             >
                                                 <img
                                                     src={item.src}
                                                     alt={item.name}
                                                     className={cl.photo}
-                                                    loading="lazy"
+                                                    loading='lazy'
                                                 />
                                                 <div className={cl.info}>
                                                     <>
@@ -190,21 +190,21 @@ export const InfoSummerGoodbye = ({
                                             </div>
                                             <Divider />
                                         </div>
-                                    )
+                                    ),
                                 )}
 
                                 <div
                                     className={classNames(
                                         cl.teacherWrap,
                                         {},
-                                        []
+                                        [],
                                     )}
                                 >
                                     <img
                                         src={summerGoodbye.dj.src}
                                         alt={summerGoodbye.dj.name}
                                         className={cl.photo}
-                                        loading="lazy"
+                                        loading='lazy'
                                     />
                                     <div>
                                         <Text
@@ -248,7 +248,7 @@ export const InfoSummerGoodbye = ({
                                 />
                                 {registerBtn(
                                     summerGoodbye.volleyball.link,
-                                    'Регистрация на турнир'
+                                    'Регистрация на турнир',
                                 )}
                             </div>
 
@@ -256,7 +256,7 @@ export const InfoSummerGoodbye = ({
                                 src={summerGoodbye.volleyball.image}
                                 alt='summerImg'
                                 className={cl.volleyballImage}
-                                loading="lazy"
+                                loading='lazy'
                             />
                         </div>
 
@@ -274,7 +274,7 @@ export const InfoSummerGoodbye = ({
 
                                 {registerBtn(
                                     summerGoodbye.volleyball.link,
-                                    'Регистрация на турнир'
+                                    'Регистрация на турнир',
                                 )}
                             </Card>
                         </Accordion>

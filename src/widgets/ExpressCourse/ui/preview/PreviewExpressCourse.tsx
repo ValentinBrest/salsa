@@ -45,7 +45,7 @@ export const PreviewExpressCourse = ({ backgroundColor }: PreviewExpressCoursePr
             </div>
             <Button
                 size={ButtonSize.ML}
-                theme={ButtonTheme.OUTLINE}
+                theme={ButtonTheme.BACKGROUND}
                 className={cl.btn}
             >
                 Подробнее

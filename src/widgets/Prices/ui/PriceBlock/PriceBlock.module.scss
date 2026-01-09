@@ -16,8 +16,7 @@
     grid-template-columns: [start] 35% [line2] 20% [line3] 20% [line4] 23% [end];
     grid-template-rows:
         [row1-start] 100px [row2] 60px [row3] 60px
-        [row4] 60px [row5] 75px [row6] 75px [row7]
-        75px [row8] 75px [row9] 75px [last];
+        [row4] 60px [row5] 75px [last];
     gap: 10px;
     align-items: center;
 

@@ -21,11 +21,11 @@ export const Prices = ({ backgroundColor, isNewYear = false }: PricesProps) => {
         >
             <Text title={prices.title} />
             <PriceBlock prices={prices.priceBlock} isNewYear={isNewYear} />
-            <Text
+            {/* <Text
                 className={cl.text}
                 align={TextAlign.LEFT}
                 text={prices.note}
-            />
+            /> */}
         </Template>
     );
 };

@@ -13,6 +13,8 @@ interface SalsaProps {
     isNewYear?: boolean;
 }
 
+const {id, epigraph, text, title} = salsa;
+
 export const Salsa = ({
     backgroundColor,
     isNewYear = false,
@@ -34,29 +36,29 @@ export const Salsa = ({
                 backgroundColor={backgroundColor}
                 className={cl.Salsa}
                 classWrap={cl.wrap}
-                id={salsa.id}
+                id={id}
                 amount={0.2}
             >
                 <img src={saxophone} className={cl.sax} alt='саксофон' loading='lazy' />
-                <div></div>
+                <div/>
                 <div className={cl.decr}>
                     {isNewYear ? (
                         <Text hardTitle={['П', O, 'чему сальса?']} />
                     ) : (
-                        <Text title={salsa.title} />
+                        <Text title={title} />
                     )}
                     <Text
                         align={TextAlign.RIGHT}
                         className={cl.epigraph}
-                        epigraph={salsa.epigraph.text}
-                        author={salsa.epigraph.author}
+                        epigraph={epigraph.text}
+                        author={epigraph.author}
                     />
                     <Accordion
                         height='800px'
                         background={backgroundColor}
-                        linkId={salsa.id}
+                        linkId={id}
                     >
-                        {salsa.text.map((item, index) => (
+                        {text.map((item, index) => (
                             <Text
                                 key={index}
                                 align={isMobileScreen ? TextAlign.CENTER : TextAlign.RIGHT}

@@ -58,7 +58,7 @@ export const InfoExpressCourse = ({
                         <img
                             src={poster}
                             className={cl.poster}
-                            alt='бонги'
+                            alt='poster'
                             loading='lazy'
                         />
                         {/* <video

@@ -1,0 +1,36 @@
+.wrapHeader {
+    display: grid;
+    grid-template-columns: 35% 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+    gap: 10px;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+
+    text-align: center;
+    word-wrap: normal;
+}
+
+.old {
+    margin-bottom: 0;
+    font-size: var(--font-size-m);
+    font-style: italic;
+    line-height: var(--font-line-m);
+}
+
+.category {
+    margin-bottom: 0;
+    font-style: italic;
+    word-break: break-word;
+}
+
+@import "./PriceHeader.media"

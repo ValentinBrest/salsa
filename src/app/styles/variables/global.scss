@@ -80,14 +80,19 @@
     // price
     --price-header-color-light: #cbe0e4;
     --price-header-color-dark: rgb(58 14 66);
-    --price-color-light-even: #c1b6bc9f;
-    --price-color-dark-even: #1e1144c7;
-    --price-color-light-odd: #c9ccdd9f;
-    --price-color-dark-odd: #36072e;
     --overlay-color: rgba(0 0 0 / 80%);
     --gradient-color-one: #553c9a;
     --gradient-color-two: #ee4b2b;
     --blue-color: #ffe9c2;
+
+    --price-header-color-light-category1: #68c9919f;
+    --price-header-color-dark-category1: rgb(82, 13, 53);
+
+    --price-header-color-light-category2: #dfd2a0;
+    --price-header-color-dark-category2: rgb(20, 66, 14);
+
+    --price-header-color-light-category3: #c1b6bc9f;
+    --price-header-color-dark-category3: rgb(32, 14, 66);
 
     // z - Индексы
     --menu-z-index: 10;

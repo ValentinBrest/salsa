@@ -71,7 +71,7 @@ export const Photos = ({
                     <Text title={photos.title} />
                 )}
 
-                <Text text={photos.subtitle} align={TextAlign.CENTER} />
+                <Text className={cl.subtitle} text={photos.subtitle} align={TextAlign.CENTER} />
                 <div className={cl.gallery} onClick={(e) => onOpenModal(e)}>
                     {photosAll.map((item, index) => (
                         <div

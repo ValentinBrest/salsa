@@ -11,6 +11,8 @@ interface PricesProps {
     isNewYear?: boolean;
 }
 
+const {title, notes} = prices;
+
 export const Prices = ({ backgroundColor, isNewYear = false }: PricesProps) => {
     return (
         <Template
@@ -19,9 +21,9 @@ export const Prices = ({ backgroundColor, isNewYear = false }: PricesProps) => {
             id={prices.id}
             amount={0.1}
         >
-            <Text title={prices.title} />
-            <PriceBlock prices={prices.priceBlock} isNewYear={isNewYear} />
-            {prices.note.map((item, index) => (
+            <Text title={title} />
+            <PriceBlock isNewYear={isNewYear} />
+            {notes.map((item, index) => (
                 <Text
                     key={index}
                     className={cl.text}

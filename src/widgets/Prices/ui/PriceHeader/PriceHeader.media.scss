@@ -1,0 +1,28 @@
+@media (max-width: 992px) {
+    .old {
+        font-style: italic;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapHeader{
+        grid-auto-rows: 60px;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 450px) {
+    .category {
+        font-size: var(--font-size-m);
+        font-style: italic;
+        line-height: var(--font-line-m);
+        hyphens: manual;
+    }
+
+    .old {
+        font-size: var(--font-size-s);
+        font-style: italic;
+        line-height: var(--font-line-s);
+    }
+}

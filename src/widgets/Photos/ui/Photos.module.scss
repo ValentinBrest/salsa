@@ -4,6 +4,10 @@
     padding: var(--padding-l);
 }
 
+.subtitle {
+    margin-bottom: var(--margin-s);
+}
+
 .gallery {
     display: grid;
     grid-auto-rows: 300px;

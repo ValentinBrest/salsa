@@ -11,69 +11,17 @@
     height: 190px;
 }
 
-.wrap {
-    display: grid;
-    grid-template-columns: [start] 35% [line2] 20% [line3] 20% [line4] 23% [end];
-    grid-template-rows:
-        [row1-start] 100px [row2] 60px [row3] 60px
-        [row4] 60px [row5] 75px [row6] 75px [last];
-    gap: 10px;
-    align-items: center;
 
-    margin-top: 20px;
+.category1 {
+    background-color: var(--price-header-color-category1);
 }
 
-.header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    height: 100%;
-
-    text-align: center;
-    word-wrap: normal;
-
-    background-color: var(--price-header-color);
+.category2 {
+    background-color: var(--price-header-color-category2);
 }
 
-.body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    height: 100%;
-    margin-bottom: 0;
-
-    font-style: italic;
-    text-align: center;
-}
-
-.even {
-    font-weight: 600;
-    background-color: var(--price-color-even);
-}
-
-.odd {
-    font-weight: 600;
-    background-color: var(--price-color-odd);
-}
-
-.old {
-    margin-bottom: 0;
-    font-size: var(--font-size-m);
-    font-style: italic;
-    line-height: var(--font-line-m);
-}
-
-.firstClm {
-    font-weight: 400;
-    background-color: var(--price-header-color);
-}
-
-.student {
-    margin-bottom: 0;
-    font-style: italic;
+.category3 {
+    background-color: var(--price-header-color-category3);
 }
 
 @import "./PriceBlock.media"

@@ -21,11 +21,15 @@ export const Prices = ({ backgroundColor, isNewYear = false }: PricesProps) => {
         >
             <Text title={prices.title} />
             <PriceBlock prices={prices.priceBlock} isNewYear={isNewYear} />
-            <Text
-                className={cl.text}
-                align={TextAlign.LEFT}
-                text={prices.note}
-            />
+            {prices.note.map((item, index) => (
+                <Text
+                    key={index}
+                    className={cl.text}
+                    align={TextAlign.LEFT}
+                    text={item}
+                />
+            ))}
+            
         </Template>
     );
 };

@@ -5,8 +5,8 @@ export const prices = {
     title: 'Цены',
     notes: [
         '*Абонемент для студентов дневной формы обучения.',
-        '** Скидка на парные абонементы действует с 15.01.2026 - 31.12.2026.',
-        '***Абонемент на два направления. Например: на женский стиль и парную сальсу.'
+        '** Скидка на парные абонементы действует с 19.01.2026 - 31.12.2026.',
+        '***Например, на женский стиль и парную сальсу.'
     ],
     
     header: [
@@ -37,8 +37,8 @@ export const prices = {
         },
         {
             key: 'seasonTicketOnTwo',
-            name: 'Абонемент на 16 занятий*** ',
-            prices:  [ {oldPrice: null, currentPrice: '85р'}, {oldPrice: null, currentPrice: '115р'}, {oldPrice: null, currentPrice: '135р'}],
+            name: 'Абонемент на два направления*** на 16 занятий ',
+            prices:  [ {oldPrice: null, currentPrice: '75р'}, {oldPrice: null, currentPrice: '115р'}, {oldPrice: null, currentPrice: '140р'}],
         },
     ],
 };

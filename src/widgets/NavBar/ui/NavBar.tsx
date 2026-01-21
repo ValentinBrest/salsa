@@ -50,7 +50,7 @@ export const NavBar = ({ className }: NavBarProps) => {
             return (
                 <a
                     className='navbarLink link'
-                    href={`#${link.scroll}`}
+                    href={link.scroll ? `#${link.scroll}` : `${link.to}`  }
                     key={link.id}
                     onClick={() => onHandleMenu()}
                 >

@@ -8,16 +8,7 @@
     display: grid;
     grid-template-columns: 75% 20%;
     gap: 10px;
-}
-
-.invertedwrap {
     position: relative;
-
-    display: grid;
-    grid-template-columns: 30% 69%;
-    gap: 10px;
-
-    margin-top: 30px;
 }
 
 .bongi {
@@ -29,16 +20,6 @@
     width: 280px;
 
     opacity: 0.75;
-}
-
-.maria {
-    align-self: end;
-
-    width: 342px;
-    height: 352px;
-    height: auto;
-
-    object-fit: contain;
 }
 
 .text {
@@ -54,6 +35,13 @@
     justify-content: center;
 
     width: 100%;
+}
+
+.btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
 }
 
 @import "./School.media";

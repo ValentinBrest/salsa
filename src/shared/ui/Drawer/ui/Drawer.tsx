@@ -8,7 +8,7 @@ interface Item {
     id: number;
     name: string;
     to: string;
-    scroll: string;
+    scroll?: string;
 }
 
 interface DrawerProps {
@@ -35,7 +35,7 @@ export const Drawer = ({
                 {items.map((link) => (
                     <a
                         className={classNames(cl.link, {}, ['drawerLink'])}
-                        href={`#${link.scroll}`}
+                         href={link.scroll ? `#${link.scroll}` : `${link.to}`  }
                         key={link.id}
                         onClick={() => onHandleMenu()}
                     >

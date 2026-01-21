@@ -1,12 +1,12 @@
 import { useMediaQuery } from 'react-responsive';
-import { Accordion, Card,Template, Text, TextAlign, TextTheme } from 'shared/ui';
+import { Button, ButtonTheme, Template, Text, TextAlign, TextTheme } from 'shared/ui';
 
 import { school } from '../../../../data/school';
 import bongi from '../../../../public/img/instuments/bongi.webp';
-import maria from '../../../../public/img/maria.webp';
 import orange from '../../../../public/img/newYear/orange.png';
 
 import cl from './School.module.scss';
+import { Link } from 'react-router-dom';
 
 interface SchoolProps {
     backgroundColor?: string;
@@ -46,45 +46,26 @@ export const School = ({
                 />
             )}
 
-            <Accordion
-                height='3500px'
-                background={backgroundColor}
-                linkId={school.id}
-            >
-                <div className={cl.wrap}>
-                    <div>
-                        {school.text.map((item, index) => (
-                            <Text
-                                key={index}
-                                align={isMobileScreen ? TextAlign.CENTER : TextAlign.LEFT}
-                                className={cl.text}
-                                text={item}
-                            />
-                        ))}
-                    </div>
-                    <img src={bongi} className={cl.bongi} alt='бонги' loading='lazy'/>
+            <div className={cl.wrap}>
+                <div>
+                    <Text
+                        align={
+                            isMobileScreen ? TextAlign.CENTER : TextAlign.LEFT
+                        }
+                        className={cl.text}
+                        text={school.text}
+                    />
                 </div>
-
-                <Card background={backgroundColorCard} className={cl.card}>
-                    {school.note}
-                </Card>
-
-                <div className={cl.invertedwrap}>
-                    <img src={maria} alt='maria' className={cl.maria} loading='lazy'/>
-                    <div>
-                        <>
-                            <Text subTitle={school.teacherTitle} />
-                            {school.teacherText.map((item, index) => (
-                                <Text
-                                    key={index}
-                                    align={TextAlign.CENTER}
-                                    text={item}
-                                />
-                            ))}
-                        </>
-                    </div>
-                </div>
-            </Accordion>
+                <img
+                    src={bongi}
+                    className={cl.bongi}
+                    alt='бонги'
+                    loading='lazy'
+                />
+            </div>
+            <Button theme={ButtonTheme.OUTLINE} className={cl.btn}>
+                <a href={'/school'}>Подробнее</a>
+            </Button>
         </Template>
     );
 };

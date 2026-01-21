@@ -32,8 +32,7 @@ export const links = [
             {
                 id: 0,
                 name: 'Школа "СальсаБрест"',
-                to: '/',
-                scroll: SCHOOL,
+                to: `/${SCHOOL}`,
             },
             {
                 id: 1,

@@ -2,15 +2,6 @@
     .School {
         padding: var(--padding-xl);
     }
-
-    .wrap {
-        grid-template-columns: 70% 30%;
-        gap: 10px;
-    }
-
-    .invertedwrap {
-        grid-template-columns: 40% 59%;
-    }
 }
 
 @media (max-width: 992px) {
@@ -18,22 +9,13 @@
         padding: var(--padding-l);
     }
 
-    .wrap {
-        display: flex;
-    }
-
-    .bongi {
-        opacity: 0.1;
+    .teacherTitle {
+        font-size: var(--font-size-xl);
     }
 
     .invertedwrap {
         display: flex;
         flex-direction: column;
-    }
-
-    .maria {
-        align-self: center;
-        width: 50%;
     }
 }
 
@@ -42,11 +24,7 @@
         padding: var(--padding-m);
     }
 
-    .wrap {
-        gap: unset;
-    }
-
-    .maria {
+    .image {
         width: 485px;
     }
 
@@ -66,7 +44,7 @@
 }
 
 @media (max-width: 485px) {
-    .maria {
+    .image {
         width: 100%;
     }
 }

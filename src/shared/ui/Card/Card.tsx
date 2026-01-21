@@ -7,7 +7,7 @@ interface CardProps {
     className?: string;
     children?: ReactNode;
     background?: string;
-    withoutPic?: boolean;
+    
 }
 
 export const Card = memo((props: CardProps) => {

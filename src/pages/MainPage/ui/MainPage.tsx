@@ -1,6 +1,6 @@
 import { refineDate } from 'shared/lib/helpers/refineDate';
 import { AboutSalsa } from 'widgets/AboutSalsa';
-import { PreviewExpressCourse } from 'widgets/ExpressCourse';
+// import { PreviewExpressCourse } from 'widgets/ExpressCourse';
 import { Information } from 'widgets/Information';
 import { Intro } from 'widgets/Intro';
 import { Lessons } from 'widgets/Lessons';
@@ -22,7 +22,7 @@ export const MainPage = ({}) => {
     return (
         <>
             <Intro isNewYear={isNewYear} />
-            <PreviewExpressCourse backgroundColor={bgSecond} />
+            {/* <PreviewExpressCourse backgroundColor={bgSecond} /> */}
             <AboutSalsa />
             <Salsa backgroundColor={bgSecond} isNewYear={isNewYear} />
             <School

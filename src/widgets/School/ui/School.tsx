@@ -6,17 +6,14 @@ import bongi from '../../../../public/img/instuments/bongi.webp';
 import orange from '../../../../public/img/newYear/orange.png';
 
 import cl from './School.module.scss';
-import { Link } from 'react-router-dom';
 
 interface SchoolProps {
     backgroundColor?: string;
-    backgroundColorCard?: string;
     isNewYear?: boolean;
 }
 
 export const School = ({
     backgroundColor,
-    backgroundColorCard,
     isNewYear = false,
 }: SchoolProps) => {
     const O = <img alt='o' src={orange} className={'toy large'} />;

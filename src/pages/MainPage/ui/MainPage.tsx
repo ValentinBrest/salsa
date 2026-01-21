@@ -27,7 +27,6 @@ export const MainPage = ({}) => {
             <Salsa backgroundColor={bgSecond} isNewYear={isNewYear} />
             <School
                 backgroundColor={bgFirst}
-                backgroundColorCard={bgSecond}
                 isNewYear={isNewYear}
             />
             <Lessons backgroundColor={bgSecond} />

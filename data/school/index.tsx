@@ -73,7 +73,7 @@ export const schoolPage = {
             ),
         },
         {
-            id: 3,
+            id: 4,
             isNote: true,
             title: <>📌 Важное примечание</>,
             description: (

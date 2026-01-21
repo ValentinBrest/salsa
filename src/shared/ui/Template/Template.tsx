@@ -13,6 +13,8 @@ interface TemplateProps {
     classWrap?: string;
     amount?: number;
     link?: string;
+    isMotion?: boolean;
+
 }
 
 const cardVariants: Variants = {
@@ -37,6 +39,7 @@ export const Template = ({
     classWrap = '',
     amount = 0.3,
     link,
+    isMotion = true
 }: TemplateProps) => {
     const content = (
         <motion.section
@@ -49,7 +52,7 @@ export const Template = ({
         >
             <div className='container'>
                 <motion.div
-                    variants={cardVariants}
+                    variants={isMotion ? cardVariants : {}}
                     className={classNames(classWrap, {}, [])}
                 >
                     {children}

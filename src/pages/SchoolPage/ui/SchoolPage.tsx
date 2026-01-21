@@ -3,7 +3,6 @@ import { Button, ButtonTheme, Card, Template, Text, TextAlign, TextTheme } from 
 import { schoolPage } from '../../../../data/school';
 import Instagram from '../../../../public/icon/social/insta.svg';
 import cl from './SchoolPage.module.scss';
-import { Link } from 'react-router-dom';
 
 interface SchoolPageProps {
     className?: string;
@@ -20,6 +19,7 @@ export const SchoolPage = ({ backgroundColorCard }: SchoolPageProps) => {
         <Template
             className={cl.School}
             backgroundColor={backgroundColorCard || bgFirst}
+            isMotion={false}
         >
             <Text
                 className={cl.title}

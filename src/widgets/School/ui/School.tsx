@@ -5,6 +5,7 @@ import { school } from '../../../../data/school';
 import bongi from '../../../../public/img/instuments/bongi.webp';
 import orange from '../../../../public/img/newYear/orange.png';
 
+import { useNavigate } from 'react-router-dom';
 import cl from './School.module.scss';
 
 interface SchoolProps {
@@ -18,6 +19,8 @@ export const School = ({
 }: SchoolProps) => {
     const O = <img alt='o' src={orange} className={'toy large'} />;
     const isMobileScreen = useMediaQuery({ query: '(max-width: 576px)' });
+    const navigate = useNavigate();
+
     return (
         <Template
             backgroundColor={backgroundColor}
@@ -60,8 +63,8 @@ export const School = ({
                     loading='lazy'
                 />
             </div>
-            <Button theme={ButtonTheme.OUTLINE} className={cl.btn}>
-                <a href={'/school'}>Подробнее</a>
+            <Button theme={ButtonTheme.OUTLINE} className={cl.btn} onClick={() => navigate('/school')}>
+                Подробнее
             </Button>
         </Template>
     );

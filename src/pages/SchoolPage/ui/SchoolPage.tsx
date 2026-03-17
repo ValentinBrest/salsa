@@ -1,4 +1,5 @@
 import { useMediaQuery } from 'react-responsive';
+import { useNavigate } from 'react-router-dom';
 import { Button, ButtonTheme, Card, Template, Text, TextAlign, TextTheme } from 'shared/ui';
 import { schoolPage } from '../../../../data/school';
 import Instagram from '../../../../public/icon/social/insta.svg';
@@ -14,6 +15,7 @@ const bgFirst = 'var(--bg-color-second)';
 
 export const SchoolPage = ({ backgroundColorCard }: SchoolPageProps) => {
     const isMobileScreen = useMediaQuery({ query: '(max-width: 576px)' });
+    const navigate = useNavigate();
 
     return (
         <Template
@@ -110,10 +112,8 @@ export const SchoolPage = ({ backgroundColorCard }: SchoolPageProps) => {
                     </div>
                 );
             })}
-            <Button theme={ButtonTheme.OUTLINE} className={cl.btn}>
-                <a href='/'>
+            <Button theme={ButtonTheme.OUTLINE} className={cl.btn} onClick={() => navigate('/')}>
                     На главную
-                </a>
             </Button>
         </Template>
     );

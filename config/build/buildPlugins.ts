@@ -1,9 +1,12 @@
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import webpack from 'webpack';
 
 export function buildPlugins (html: string, isDev: boolean): webpack.WebpackPluginInstance[] {
+    const isProd = !isDev;
+
     const plugins = [
         new HtmlWebpackPlugin({
             template: html,
@@ -20,6 +23,17 @@ export function buildPlugins (html: string, isDev: boolean): webpack.WebpackPlug
 
     if (isDev) {
         plugins.push(new ReactRefreshWebpackPlugin({overlay: false}));
+    }
+     if (isProd) {
+        plugins.push(
+            new CopyPlugin({
+                patterns: [
+                    { from: 'public/logo', to: 'logo' },
+                    { from: 'public/browserconfig.xml', to: 'browserconfig.xml' },
+                    { from: 'public/site.webmanifest', to: 'site.webmanifest' }
+                ],
+            }),
+        );
     }
     
     return plugins;

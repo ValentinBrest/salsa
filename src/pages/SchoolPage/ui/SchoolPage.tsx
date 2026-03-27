@@ -33,7 +33,7 @@ export const SchoolPage = ({ backgroundColorCard }: SchoolPageProps) => {
                     <Card
                         key={item.id}
                         className={cl.card}
-                        background={item?.isNote && '#ffe6e6'}
+                        background={item?.isNote && 'var(--notice-color)'}
                     >
                         <Text
                             text={item?.title}
@@ -86,7 +86,7 @@ export const SchoolPage = ({ backgroundColorCard }: SchoolPageProps) => {
                                 <Card
                                     key={item.id}
                                     className={cl.card}
-                                    background='#ffeeda'
+                                    background='var(--card-color)'
                                 >
                                     <Text
                                         text={item?.title}
